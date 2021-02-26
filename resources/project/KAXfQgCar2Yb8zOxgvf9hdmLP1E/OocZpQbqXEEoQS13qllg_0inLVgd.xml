@@ -1,4 +1,4 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Info Type="StartUp" Visible="0" Icon="" File="utils/openMainScript.m" Name="openMainScript">
+<Info Type="StartUp" Visible="1" Icon="" File="utils/openMainScript.m" Name="Open Main Script">
     <Extension Value="40f3d2b5-47c0-4703-acae-9296960ee3f0" Name="StartUpPrev" />
 </Info>
