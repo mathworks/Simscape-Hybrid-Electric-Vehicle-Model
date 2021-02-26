@@ -2,7 +2,7 @@
 
 Version 1
 
-Copyright 2020 The MathWorks, Inc.
+Copyright 2021 The MathWorks, Inc.
 
 ## Introduction
 
@@ -27,7 +27,7 @@ Simscape Electrical, Powertrain Blockset
 
 ## How to Use
 
-Open `HEVDevel.prj` in MATLAB.
-It will automatically open `MainScript.mlx`.
+Open `SimscapeHybridEV.prj` in MATLAB.
+It will automatically open `HEV_main_script.mlx`.
 The script contains hyperlinks to open the models,
 parameter files, and simulation driver scripts.
