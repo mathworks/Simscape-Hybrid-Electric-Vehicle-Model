@@ -1,0 +1,132 @@
+component MotorDriveUnitBasic
+% Simple Motor Drive Unit
+% This block models a motor drive unit which takes torque command input
+% at TrqCmd port to control the rotor speed.
+% Connect DC electric power supply at nodes Vplus and Vminus.
+% Connect mechanical rotational elements at nodes R and C.<br/>
+% <br/>
+% You can adjust the motor efficiency with block parameters.
+% Use the linked script to visually check the effect of parameter settings
+% to the efficiency contours.<br/>
+% <br/>
+% <a href="matlab:MotorDriveUnitBasic_block_info">Plot</a> efficiency contour.
+% <br/>
+% <a href="matlab:edit MotorDriveUnitBasic_block_info.mlx">Open</a>
+% script for efficiency contour visualization
+
+% Copyright 2021 The MathWorks, Inc.
+
+  parameters
+    trq_max = { 163 'N*m' };  % Maximum rated torque
+    spd_max = { 17000 'rpm' };  % Maximum rated speed
+    power_max = { 53 'kW'};  % Maximum rated power
+    response_time_const = { 0.02 's' };  % Torque response time constant
+    action_spd = simscape.enum.assert.action.warn  % Action on overspeed
+
+    efficiency_pct = 97;  % Motor efficiency E(S,T) in % at speed S ant torque T
+    spd_eff = { 2000 'rpm' };  % Motor speed S for E(S,T)
+    trq_eff = { 50 'N*m' };  % Motor torque T for E(S,T)
+    iron_to_nominal_ratio = 0.1;  % Ratio of iron loss to nominal loss
+    elec_loss_const = { 30 'W' };  % Constant electrical loss
+
+    J_rotor = { 0.001 'kg*m^2' };  % Rotor inertia
+    k_damp = { 0.005 'N*m/(rad/s)' };  % Rotor damping coefficient
+    initial_spd = { 0 'rpm' };  % Initial rotor speed
+  end
+  equations
+    assert( trq_max > 0 )
+    assert( spd_max > 0 )
+    assert( power_max > 0 )
+    assert( trq_max*spd_max >= power_max )
+    assert( response_time_const > 0 )
+
+    assert( efficiency_pct > 0 )
+    assert( efficiency_pct < 100 )
+    assert( spd_eff > 0 )
+    assert( trq_eff > 0 )
+    assert( iron_to_nominal_ratio > 0 )
+    assert( iron_to_nominal_ratio < 1 )
+    assert( elec_loss_const > 0 )
+
+    assert( J_rotor > 0 )  % Inertia must be non-zero.
+    assert( k_damp >= 0 )
+  end
+
+  parameters (Access=private)
+    % Mechanical power at speed S and torque T for the efficiency E(S,T)
+    mechpow_eff = trq_eff*spd_eff;
+
+    % Total losses at S and T
+    total_loss_eff = mechpow_eff/(efficiency_pct/100) - mechpow_eff;
+
+    % Nominal losses at S and T
+    nominal_losses_eff = (100/efficiency_pct - 1)*mechpow_eff;
+
+    % Iron losses at S and T
+    iron_loss_eff = iron_to_nominal_ratio * nominal_losses_eff;
+  end
+
+  annotations
+    UILayout = [ ...
+      UIGroup("Electrical Torque", trq_max, spd_max, power_max, response_time_const) ...
+      UIGroup("Electrical Losses", efficiency_pct, spd_eff, trq_eff, ...
+                                   iron_to_nominal_ratio, elec_loss_const ) ...
+      UIGroup("Mechanical", J_rotor, k_damp, initial_spd) ...
+    ]
+  end
+
+  inputs
+    trq_in = { 0 'N*m' }; % TrqCmd
+  end
+  nodes
+    Vp = foundation.electrical.electrical;  % Vplus
+    Vm = foundation.electrical.electrical;  % Vminus
+  end
+  nodes
+    R = foundation.mechanical.rotational.rotational;  % R
+    C = foundation.mechanical.rotational.rotational;  % C
+  end
+  annotations
+    trq_in : Side = top;
+    [Vp, Vm] : Side = left;
+    [R, C] : Side = right;
+  end
+
+  components (ExternalAccess=observe)
+    mdu = ee.electromech.motor_and_drive( ...
+            torque_speed_param = 2, ...  % 2 for max torque and power
+            overtorque_param = 0, ...  % 0 for no, i.e., do not allow overtorque
+            torque_max = trq_max, ...
+            power_max = power_max, ...
+            Tc = response_time_const, ...
+            losses_param = 1, ...  % 1 for single efficiency measurement
+            eff = efficiency_pct, ...
+            w_eff = spd_eff, ...
+            T_eff = trq_eff, ...
+            Piron = iron_loss_eff, ...  % derived parameter
+            Pbase = elec_loss_const, ...
+            Res = { 0 'Ohm' }, ...  % Supply series resistance
+            J = J_rotor, ...
+            lam = k_damp, ...
+            speed0 = initial_spd );
+  end
+
+  connections
+    % inputs
+    connect( trq_in, mdu.Tr );
+    % nodes
+    connect( Vp, mdu.Vp );
+    connect( Vm, mdu.Vm );
+    connect( R, mdu.R );
+    connect( C, mdu.C );
+    % outputs
+    connect( mdu.Omega, spd );
+  end
+
+  outputs, spd = { 0 'rad/s' }; end
+  annotations, spd : ExternalAccess = none; end
+  equations
+    assert(spd < spd_max, 'Rotor speed', Action=action_spd);
+  end
+
+end  % component

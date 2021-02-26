@@ -1,0 +1,60 @@
+component SimpleVehicle
+% Rudimentary Longitudinal Vehicle
+% This block models a rudimentary longitudinal vehicle model
+% having a brake force input but with no air-drag and tire-rolling resistance.
+% Tire split is not considered. Road surface is assumed to be flat.
+% Use this block if you need ideal vehicle longitudinal velocity as output and
+% braking force as input.
+%
+% Input port BrkF takes braking force in Newton.
+% Output port V outputs the vehicle longitudinal velocity in km/hr.
+% Node Axle is a mechanical rotational node.
+% Connect Axle node to the gear train system.
+
+% Copyright 2021 The MathWorks, Inc.
+
+  parameters
+    R = { 0.3 'm' };  % Tire rolling radius
+    M = { 1500 'kg' };  % Vehicle mass
+  end
+
+  inputs
+    BrkF = { 0 'N' };
+  end
+
+  nodes
+    Axle = foundation.mechanical.rotational.rotational;
+  end
+
+  outputs
+    V_out = { 0 'km/hr' };  % V
+  end
+
+  annotations
+    BrkF : Side = top;
+    Axle : Side = left;
+    V_out : Side = right;
+  end
+
+  variables
+    v = { value={ 0 'km/hr' }, priority=priority.high };
+  end
+
+  variables (Access = private)
+    axle_trq = { 0 'N*m' };
+    axle_spd = { 0 'rpm' };
+    F_brake = { 0 'N' };
+  end
+
+  branches
+    axle_trq : Axle.t -> *;
+  end
+
+  equations
+    F_brake == max(0, BrkF)*tanh(axle_spd/{0.1 'rpm'});
+    axle_spd == Axle.w;
+    v == R*axle_spd;
+    M*der(v) == axle_trq/R - F_brake;
+    V_out == v;
+  end
+end

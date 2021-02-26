@@ -1,0 +1,76 @@
+component DcDcConverterCustom
+% Simple DC-DC Converter
+% Bidirectional with dynamics. No droop.
+
+% Copyright 2012-2021 The MathWorks, Inc.
+
+  parameters
+    v_ref = { 650 'V' };  % Output voltage reference
+    P_rated = { 200 'kW' };  % Rated output power
+    eff_pct = { 97 '1' };  % Percentage efficiency
+    P_fixed = { 100 'W' };  % Fixed converter losses
+    tau = { 0.02 's' };  % Voltage regulation time constant
+    i_batt_max = { 500 'A' };  % Maximum battery-side current
+  end
+  equations
+    assert(v_ref > 0)
+    assert(P_rated > 0)
+    assert(eff_pct > 0)
+    assert(P_fixed > 0)
+    assert(tau > 0)
+    assert(isfinite(tau))
+  end
+
+  parameters (Access=private)
+    i_rated = P_rated/v_ref;
+    R_out = ((100/eff_pct - 1)*P_rated - P_fixed)/i_rated^2;
+  end
+
+  nodes
+    p_batt = foundation.electrical.electrical; % B+:left
+    n_batt = foundation.electrical.electrical; % B-:left
+    p_load = foundation.electrical.electrical; % L+:right
+    n_load = foundation.electrical.electrical; % L-:right
+  end
+
+  variables (Access=protected)
+    i_batt = { 0 'A' };  % Battery-side current
+    v_batt = { 0 'V' };  % Battery-side voltage
+    i_load = { 0 'A' };  % Load-side current
+    v_load = { 0 'V' };  % Load-side voltage
+    v_internal = { value={ 650 'V' }, priority=priority.high};
+  end
+
+  branches
+    i_batt: p_batt.i -> n_batt.i;
+    i_load: p_load.i -> n_load.i;
+  end
+
+  intermediates (ExternalAccess=observe)
+    power_dissipated = P_fixed + i_load^2*R_out;  % keep this for logging and analysis
+  end
+
+  intermediates (ExternalAccess=none)
+    net_power = power_dissipated - v_load*i_load;
+  end
+
+  equations
+    v_batt == p_batt.v - n_batt.v;
+    v_load == p_load.v - n_load.v;
+    assert( v_batt > 0 );
+
+    % Internal
+    tau*der(v_internal) == -v_internal + v_ref - R_out*i_load;
+
+    % Load-side
+    v_load == v_internal + R_out*i_load;
+
+    % Battery-side
+    if gt(net_power, i_batt_max*v_batt)
+        i_batt == i_batt_max;
+    else
+        i_batt == net_power/v_batt;
+    end
+    %assert( i_batt < i_batt_max , Action=simscape.enum.assert.action.warn );
+  end
+end  % component
