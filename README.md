@@ -2,7 +2,7 @@
 
 Version 1
 
-Copyright 2020 The MathWorks, Inc.
+Copyright 2021 The MathWorks, Inc.
 
 ## Introduction
 
