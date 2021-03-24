@@ -16,7 +16,7 @@ testharness.batteryInternalR_Ohm = 0.05;
 testharness.vehicleMass_kg = 1500;
 testharness.tireRollingRadius_m = 0.3;
 testharness.reducerGearRatio_1 = 53/17 * 73/21;  % HEV 53/17*73/21 = 10.8375
-testharness.gearTrainFriction_Nm_per_rpm = 0.01;
+testharness.geartrainFriction_Nm_per_rpm = 0.01;
 
 
 motorGenerator2.trqMax_Nm = 163;  % P610

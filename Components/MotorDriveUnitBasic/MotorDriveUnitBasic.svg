@@ -3,6 +3,7 @@
 <!-- Copyright 2021 The MathWorks, Inc. -->
 <path fill="#fff" stroke="#000" stroke-width="5"
  d="M 0 0 h 120 0 v 0 90 h -120 0 z"/>
-<style>.ss14 { font: bold 14px sans-serif; }</style>
-<text x="5" y="50" fill="#000" class="ss14">Motor Drive Unit</text>
+<style>.ss12 { font: bold 12px sans-serif; }</style>
+<text x="28" y="44" fill="#000" class="ss12">Motor Drive</text>
+<text x="50" y="60" fill="#000" class="ss12">Unit</text>
 </svg>

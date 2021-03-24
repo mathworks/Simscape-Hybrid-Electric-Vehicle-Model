@@ -14,7 +14,7 @@ parent = nvpairs.PlotParent;
 %%
 parent.Position(3:4) = [700 500];  % width height
 
-tl = tiledlayout(parent, 3, 2);
+tl = tiledlayout(parent, 2, 2);
 
 ax = nexttile(tl);
 vals = logsout.get("Motor Speed").Values;
@@ -25,21 +25,13 @@ title("Motor Speed (rpm)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Overall Efficiency").Values;
-plot(ax, vals.Time, vals.Data, 'LineWidth',2)
-hold on;  grid on
-xlabel("Time (s)")
-title("Overall Efficiency (0-1)")
-hold off
-
-
-ax = nexttile(tl);
 vals = logsout.get("Motor Torque").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel("Time (s)")
 title("Motor Torque (N*m)")
 hold off
+
 
 ax = nexttile(tl);
 vals = logsout.get("Electrical Loss").Values;
@@ -49,7 +41,6 @@ xlabel("Time (s)")
 xlim([0 inf])
 title("Electrical Loss (kW)")
 hold off
-
 
 ax = nexttile(tl);
 vals = logsout.get("Mechanical Power").Values;

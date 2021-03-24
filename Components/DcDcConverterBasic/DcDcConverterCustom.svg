@@ -3,7 +3,7 @@
 <!-- Copyright 2020-2021 The MathWorks, Inc. -->
 <path fill="#fff" stroke="#000" stroke-width="5"
  d="M 0 0 h 120 0 v 0 90 h -120 0 z"/>
-<style>.ss14 { font: bold 14px sans-serif; }</style>
-<text x="38" y="45" fill="#000" class="ss14">DC-DC</text>
-<text x="27" y="65" fill="#000" class="ss14">Converter</text>
+<style>.ss12 { font: bold 12px sans-serif; }</style>
+<text x="42" y="45" fill="#000" class="ss12">DC-DC</text>
+<text x="32" y="65" fill="#000" class="ss12">Converter</text>
 </svg>

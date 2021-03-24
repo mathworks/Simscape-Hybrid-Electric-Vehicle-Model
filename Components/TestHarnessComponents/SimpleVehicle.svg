@@ -3,7 +3,7 @@
 <!-- Copyright 2020 The MathWorks, Inc. -->
 <path fill="#fff" stroke="#000" stroke-width="5"
  d="M 0 0 h 120 0 v 0 90 h -120 0 z"/>
-<style>.ss14 { font: bold 14px sans-serif; }</style>
-<text x="40" y="40" fill="#000" class="ss14">Simple</text>
-<text x="40" y="60" fill="#000" class="ss14">Vehicle</text>
+<style>.ss12 { font: bold 12px sans-serif; }</style>
+<text x="42" y="40" fill="#000" class="ss12">Simple</text>
+<text x="42" y="60" fill="#000" class="ss12">Vehicle</text>
 </svg>

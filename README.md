@@ -6,28 +6,30 @@ Copyright 2021 The MathWorks, Inc.
 
 ## Introduction
 
-This is a MATLAB Project containing a Hybrid Electric
-Vehicle (HEV) model and its components such as
-motor, high voltage battery, and longitudinal vehicle.
-This project demonstrates Simscape's modular and
-multi-fidelity modeling technology.
+This is a Hybrid Electric Vehicle (HEV) model in Simscape,
+suitable for the system level simulation of
+longitudinal vehicle behavior as it runs faster than real time.
+The model consists of components such as motor, engine,
+power-split device, and so on,
+and it is built in a modular manner using Subsystem Reference
+demonstrating a workflow where components are built and tested
+individually and also they can be easily integrated into
+a complete vehicle system model.
 
-The HEV model is built in a simple and modular fashion,
-and it can run faster than real-time.
-It is suitable as a baseline model for drive cycle simulation
-to estimate vehicle's electrical efficiency and
-other vehicle-level information.
+The HEV model and its components are managed in
+a MATLAB Project and
+some components come with their own test setups.
 
 ## Tool Requirements
 
-Supported MATLAB Version: R2020b
+Supported MATLAB Version: R2020b or newer releases
 
-Required: MATLAB, Simulink, Simscape, Simscape Driveline,
-Simscape Electrical, Powertrain Blockset
+Required: MATLAB, Simulink, Stateflow, Simscape,
+Simscape Driveline, Simscape Electrical, Powertrain Blockset
 
 ## How to Use
 
-Open `SimscapeHybridEV.prj` in MATLAB.
-It will automatically open `HEV_main_script.mlx`.
-The script contains hyperlinks to open the models,
-parameter files, and simulation driver scripts.
+Open `HybridElectricVehicle.prj` in MATLAB, and
+it will automatically open the Live Script `HEV_main_script.mlx`.
+The script contains the description of the model and
+hyperlinks to models and scripts.

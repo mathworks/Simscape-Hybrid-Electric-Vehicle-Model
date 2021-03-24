@@ -52,7 +52,7 @@ plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, "dy_threshold",0.2)
 xlabel("Time (s)")
-title("Torque (N*m)")
+title("Axle Torque (N*m)")
 hold off
 
 
@@ -76,20 +76,11 @@ vals = logsout.get("Torque Command Input").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 setMinimumYRange(ax, vals.Data, "dy_threshold",0.2)
 xlabel("Time (s)")
-title("Torques (N*m)")
+title("Motor Torques (N*m)")
 legend(["Actual", "Command"], "location","best")
 hold off
 
 
-
-ax = nexttile(tl);
-vals = logsout.get("Motor Efficiency").Values;
-plot(ax, vals.Time, vals.Data, 'LineWidth',2)
-hold on;  grid on
-setMinimumYRange(ax, vals.Data, "dy_threshold",2)
-xlabel(ax, "Time (s)")
-title(ax, "Motor Efficiency (1)")
-hold off
 
 ax = nexttile(tl);
 vals = logsout.get("Motor Current").Values;

@@ -12,7 +12,7 @@ component MotorDriveUnitBasic
 % <a href="matlab:MotorDriveUnitBasic_block_info">Plot</a> efficiency contour.
 % <br/>
 % <a href="matlab:edit MotorDriveUnitBasic_block_info.mlx">Open</a>
-% script for efficiency contour visualization
+% script for efficiency contour visualization.
 
 % Copyright 2021 The MathWorks, Inc.
 

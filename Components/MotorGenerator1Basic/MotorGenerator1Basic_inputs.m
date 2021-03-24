@@ -7,7 +7,7 @@ arguments
   nvpairs.InputPattern (1,1) {mustBeMember(nvpairs.InputPattern, {...
       'all_zero' ...
       'generate' ...
-      'no engine reverse' ...
+      'no_engine_reverse' ...
     })} = 'all_zero'
   nvpairs.PlotParent (1,1) matlab.ui.Figure
 end
@@ -37,7 +37,7 @@ switch input_pattern
     fig_width = 600;
     fig_height = 300;
 
-  case 'no engine reverse'
+  case 'no_engine_reverse'
     t_end = 800;
     inputTimeTable.EngTrqCmd_Nm = timetable([0 -100 -200 -300 -300]', 'RowTimes',seconds([0 500 600 700 t_end])');
     inputTimeTable.Mg1TrqCmd_Nm = timetable([0 40 40]', 'RowTimes',seconds([0 100 t_end])');

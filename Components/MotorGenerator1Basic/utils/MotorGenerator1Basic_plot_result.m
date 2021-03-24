@@ -14,7 +14,7 @@ parent = nvpairs.PlotParent;
 %%
 parent.Position(3:4) = [600 500];  % width height
 
-tl = tiledlayout(parent, 3, 2);
+tl = tiledlayout(parent, 2, 2);
 
 signame = "MG1 Speed";
 unitstr = "(rpm)";
@@ -35,7 +35,6 @@ hold on;  grid on
 xlabel("Time (s)")
 title(signame + " " + unitstr)
 hold off
-
 
 
 signame = "MG1 Torque";
@@ -59,19 +58,6 @@ hold on;  grid on
 vals = logsout.get(signame + " Command").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel("Time (s)")
-title(signame + " " + unitstr)
-hold off
-
-
-
-signame = "MG1 Efficiency";
-unitstr = "(0-1)";
-ax = nexttile(tl);
-vals = logsout.get(signame).Values;
-plot(ax, vals.Time, vals.Data, 'LineWidth',2)
-hold on;  grid on
-xlabel("Time (s)")
-xlim([0 inf])
 title(signame + " " + unitstr)
 hold off
 

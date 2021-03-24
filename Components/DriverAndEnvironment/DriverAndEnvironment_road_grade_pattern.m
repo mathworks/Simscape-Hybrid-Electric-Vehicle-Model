@@ -1,4 +1,4 @@
-function [inputSignals, inputBus, t_end] = DriverAndEnvironment_road_grade_pattern(nvpairs)
+function [inputSignals, inputBus, opt] = DriverAndEnvironment_road_grade_pattern(nvpairs)
 %% Road Grade Pattern Input Signal
 
 % Copyright 2021 The MathWorks, Inc.
@@ -19,6 +19,9 @@ do_plot = false;
 if isfield(nvpairs, 'PlotParent')
   do_plot = true;
   parent = nvpairs.PlotParent;
+  opt.fig_width = 300;
+  opt.fig_height = 200;
+  opt.line_width = 2;
 end
 
 inputPatternConst = @(c) timetable([c c]', 'RowTimes',seconds([0 1])');
@@ -27,36 +30,38 @@ t_end = 1;
 
 switch input_pattern
   case {'all_zero', 'flat'}
-    inputTimeTable.RoadGrade_pct = inputPatternConst(0);
+    RoadGrade = inputPatternConst(0);
 
   case 'uphill_3_percent'
-    inputTimeTable.RoadGrade_pct = inputPatternConst(3);
+    RoadGrade = inputPatternConst(3);
 
   case 'downhill_5_percent'
-    inputTimeTable.RoadGrade_pct = inputPatternConst(-5);
+    RoadGrade = inputPatternConst(-5);
 
 end
+
+opt.t_end = t_end;
 
 %%
 
 % inputSignals and inputBus workspace variables defined below are used
 % in the From Workspace block.
 
-inputSignals.RoadGrade = inputTimeTable.RoadGrade_pct;
-inputSignals.RoadGrade.Properties.VariableNames = {'RoadGrade'};
-inputSignals.RoadGrade.Properties.VariableUnits = {'%'};
-inputSignals.RoadGrade.Properties.VariableContinuity = {'step'};
-inputBusElem(1) = Simulink.BusElement;
-inputBusElem(1).Name = 'RoadGrade';
-inputBusElem(1).Unit = '%';
+RoadGrade.Properties.VariableNames = {'RoadGrade'};
+RoadGrade.Properties.VariableUnits = {'%'};
+RoadGrade.Properties.VariableContinuity = {'continuous'};
+
+inputSignals.RoadGrade = RoadGrade;
 
 inputBus = Simulink.Bus;
-inputBus.Elements = inputBusElem;
+inputBus.Elements(1) = Simulink.BusElement;
+inputBus.Elements(1).Name = 'RoadGrade';
+inputBus.Elements(1).Unit = '%';
 
 if do_plot
   syncedInputs = synchronize( ...
     inputSignals.RoadGrade );
-  stk = stackedplot( parent, syncedInputs, 'LineWidth',2 );
+  stk = stackedplot( parent, syncedInputs, 'LineWidth',opt.line_width );
   stk.GridVisible = 'on';
 end
 
