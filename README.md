@@ -20,12 +20,16 @@ The HEV model and its components are managed in
 a MATLAB Project and
 some components come with their own test setups.
 
+![Model Screenshot](utils/PowerSplitHEV_SpeedTracking.png)
+
+![Plot of Simulation Result](utils/simulation_result.png)
+
 ## Tool Requirements
 
 Supported MATLAB Version: R2020b or newer releases
 
-Required: MATLAB, Simulink, Stateflow, Simscape,
-Simscape Driveline, Simscape Electrical, Powertrain Blockset
+Required: MATLAB, Simulink, Stateflow, Powertrain Blockset,
+Simscape, Simscape Driveline, Simscape Electrical
 
 ## How to Use
 

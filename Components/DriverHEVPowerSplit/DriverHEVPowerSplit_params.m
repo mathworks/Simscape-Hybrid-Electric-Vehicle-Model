@@ -24,7 +24,7 @@ driver.brakeRate_N_per_s = 1000;
 
 driver.hvbattCapacity_Ahr = batteryHighVoltage.capacity_Ahr;
 driver.hvbattSocHighMid_pct = 90;
-driver.hvbattSocMidLow_pct = 70;  % was 50. must be low < high
+driver.hvbattSocMidLow_pct = 70;
 driver.hvbattSocLowEmpty_pct = 6;
 
 % MG2 Controller:

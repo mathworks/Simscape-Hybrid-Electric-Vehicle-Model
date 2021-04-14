@@ -7,7 +7,7 @@
 v = ver('matlab');
 if not(v.Version == "9.9")
   release = "R2020b";
-  disp("This project was developed in " + release + ",")
+  disp("This project was developed in " + release + ".")
   disp("This MATLAB is " + v.Release(2:end-1) + ".")
   clear release
 end
