@@ -8,7 +8,7 @@
 % These are for controller/driver only.
 % ICs for plant are defined elsewhere.
 
-initial.driverHVBattSOC_pct = 95;
+initial.driverHVBattSOC_pct = 85;
 
 initial.driverBrakeForce_N = 8000;
 initial.driverBrakeOn_tf = true;
@@ -42,7 +42,7 @@ driver.mg1EngSpd_rpm = 0.1;
 
 % Engine On Off logic for Engine and MG1 control:
 driver.engOnVehSpd_kph = 50;  % Always use engine above this threshold
-driver.chgSpd_kph = 40;  % Threshold vehicle speed to charge battery if driving while charge level not high
+driver.chgSpd_kph = 70;  % Threshold vehicle speed to charge battery if driving while charge level not high
 
 % Engine Controller:
 driver.engTrqMax_Nm = engine.trqMax_Nm;

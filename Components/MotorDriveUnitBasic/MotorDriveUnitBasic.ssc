@@ -23,7 +23,7 @@ component MotorDriveUnitBasic
     response_time_const = { 0.02 's' };  % Torque response time constant
     action_spd = simscape.enum.assert.action.warn  % Action on overspeed
 
-    efficiency_pct = 97;  % Motor efficiency E(S,T) in % at speed S ant torque T
+    efficiency_pct = 97;  % Motor efficiency E(S,T) in % at speed S and torque T
     spd_eff = { 2000 'rpm' };  % Motor speed S for E(S,T)
     trq_eff = { 50 'N*m' };  % Motor torque T for E(S,T)
     iron_to_nominal_ratio = 0.1;  % Ratio of iron loss to nominal loss

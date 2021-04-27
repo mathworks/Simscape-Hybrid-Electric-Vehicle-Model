@@ -40,7 +40,7 @@ opt.useFromWorkspace = true;
 opt.useKph = true;
 
 % Default value for initial SOC
-initial.HVBattery_SOC_pct = 95;
+initial.HVBattery_SOC_pct = 75;
 
 inputPatternConst = @(c) timetable([c c]', 'RowTimes',seconds([0 1])');
 
