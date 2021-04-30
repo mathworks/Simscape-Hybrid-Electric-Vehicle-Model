@@ -1,4 +1,4 @@
-# Hybrid Electric Vehicle Model in Simscape(TM)
+# Hybrid Electric Vehicle Model in Simscape&trade;
 
 Version 1
 
@@ -17,7 +17,7 @@ individually and also they can be easily integrated into
 a complete vehicle system model.
 
 The HEV model and its components are managed in
-a MATLAB(R) project and
+a MATLAB&reg; project and
 some components come with their own test setups.
 
 ![Model Screenshot](utils/PowerSplitHEV_SpeedTracking.png)
@@ -28,9 +28,9 @@ some components come with their own test setups.
 
 Supported MATLAB version: R2020b or newer releases
 
-Required: MATLAB, Simulink(R), Stateflow(R),
-Powertrain Blockset(TM),
-Simscape(TM), Simscape Driveline(TM), Simscape Electrical(TM)
+Required: MATLAB, Simulink&reg;, Stateflow&reg;,
+Powertrain Blockset&trade;,
+Simscape&trade;, Simscape Driveline&trade;, Simscape Electrical&trade;
 
 ## How to Use
 
