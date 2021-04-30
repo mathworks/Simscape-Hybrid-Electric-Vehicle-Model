@@ -4,6 +4,8 @@ Version 1
 
 Copyright 2021 The MathWorks, Inc.
 
+https://www.mathworks.com/
+
 ## Introduction
 
 This is a Hybrid Electric Vehicle (HEV) model in Simscape,
@@ -28,9 +30,14 @@ some components come with their own test setups.
 
 Supported MATLAB version: R2020b or newer releases
 
-Required: MATLAB, Simulink&reg;, Stateflow&reg;,
-Powertrain Blockset&trade;,
-Simscape&trade;, Simscape Driveline&trade;, Simscape Electrical&trade;
+Required:
+[MATLAB](https://www.mathworks.com/products/matlab.html),
+[Simulink&reg;](https://www.mathworks.com/products/simulink.html),
+[Stateflow&reg;](https://www.mathworks.com/products/stateflow.html),
+[Powertrain Blockset&trade;](https://www.mathworks.com/products/powertrain.html),
+[Simscape&trade;](https://www.mathworks.com/products/simscape.html),
+[Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
+[Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html)
 
 ## How to Use
 
@@ -38,3 +45,7 @@ Open `HybridElectricVehicle.prj` in MATLAB, and
 it will automatically open the Live Script `HEV_main_script.mlx`.
 The script contains the description of the model and
 hyperlinks to models and scripts.
+
+## License
+
+See [`LICENSE.txt`](LICENSE.txt).
