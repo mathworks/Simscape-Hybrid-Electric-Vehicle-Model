@@ -16,7 +16,11 @@ DriverHEVPowerSplit_params
 
 %% Override initial conditions and block parameter values
 
-initial.driverHVBattSOC_pct = initial_DrvPtn.HVBattery_SOC_pct;
+initial_SOC_pct = initial_DrvPtn.HVBattery_SOC_pct;
+% initial_SOC_pct = 75;
+
+initial.hvBatteryCapacity_kWh = batteryHighVoltage.nominalCapacity_kWh * initial_SOC_pct/100;
+initial.driverHVBattSOC_pct = initial_SOC_pct;
 
 initial.driverBrakeForce_N = 8000;
 initial.driverBrakeOn_tf = true;

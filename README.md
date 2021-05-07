@@ -8,7 +8,7 @@ https://www.mathworks.com/
 
 ## Introduction
 
-This is a Hybrid Electric Vehicle (HEV) model in Simscape,
+This is a Power-Split Hybrid Electric Vehicle (HEV) model in Simscape,
 suitable for the system level simulation of
 longitudinal vehicle behavior as it runs faster than real time.
 The model consists of components such as motor, engine,
@@ -35,7 +35,7 @@ Required:
 [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
 [Stateflow&reg;](https://www.mathworks.com/products/stateflow.html),
 [Powertrain Blockset&trade;](https://www.mathworks.com/products/powertrain.html),
-[Simscape&trade;](https://www.mathworks.com/products/simscape.html),
+[Simscape](https://www.mathworks.com/products/simscape.html),
 [Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
 [Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html)
 

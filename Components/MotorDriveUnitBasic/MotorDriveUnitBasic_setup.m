@@ -14,7 +14,7 @@ initial.motorDriveUnit_spd_rpm = 0;
 
 %% Parameters
 
-batteryHighVoltage.capacity_Ahr = 50;
+batteryHighVoltage.capacity_Ahr = 2500;  % about 9kWh in Li-ion (3.5V-3.7V cell)
 batteryHighVoltage.voltage_V = 650;
 batteryHighVoltage.internal_R_Ohm = 0.1;
 

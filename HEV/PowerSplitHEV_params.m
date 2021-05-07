@@ -1,26 +1,7 @@
 %% Parameters for Power-Split HEV System
-% Parameters in this script are meant for a small sedan-type hybrid car.
+% Parameters in this script are for a small sedan-type hybrid car.
 
 % Copyright 2021 The MathWorks, Inc.
-
-%% Initial conditions
-% These are for plant only.
-% ICs for controller/driver are defined elsewhere.
-
-initial.vehicleSpeed_kph = 0;
-initial.motorGenerator2_speed_rpm = 0;
-initial.motorGenerator1_speed_rpm = 0;
-initial.engine_speed_rpm = 0;
-initial.engine_torque_Nm = 0;
-
-%% Simulation smoothing parameters
-
-smoothing.planetary_meshing_loss_thresholds_W = [10, 10];
-
-smoothing.gear_meshing_loss_threshold_W = 10;
-
-smoothing.vehicle_speed_threshold_kph = 1;
-smoothing.axle_speed_threshold_rpm = 1;
 
 %% Vehicle
 
@@ -28,17 +9,19 @@ smoothing.axle_speed_threshold_rpm = 1;
 vehicle.mass_kg = 1400 + 50*0.7 + 70*2;  % 1575
 
 vehicle.tireRollingRadius_m = 0.3;
-vehicle.roadLoadA_N = 175;
+vehicle.roadLoadA_N = 175;  % A = tire_rolling_coeeficient * mass * g
 vehicle.roadLoadB_N_per_kph = 0;
-vehicle.roadLoadC_N_per_kph2 = 0.032;
+vehicle.roadLoadC_N_per_kph2 = 0.032;  % C = 0.5 * Cd * frontal_area * air_density
 vehicle.roadLoad_gravAccel_m_per_s2 = 9.81;
 
 %% High Voltage Battery
 
-% A rather large capacity is used.
-batteryHighVoltage.capacity_Ahr = 30;
+batteryHighVoltage.nominalCapacity_kWh = 4;
+batteryHighVoltage.voltagePerCell_V = 3.7;  % 3.5V to 3.7V assuming Lithium-ion
+batteryHighVoltage.nominalCharge_Ah = ...
+  batteryHighVoltage.nominalCapacity_kWh / batteryHighVoltage.voltagePerCell_V * 1000;
 
-batteryHighVoltage.voltage_V = 200;
+batteryHighVoltage.packVoltage_V = 200;
 batteryHighVoltage.internal_R_Ohm = 0.1;
 
 %% DC-DC Converter
@@ -54,14 +37,14 @@ dcDcConverter.timeConstant_s = 0.02;
 
 %% Power-Split Device
 
-powerSplit.reducer_counterDriveGearRatio = 53/65;  % 53/65==0.8154
-powerSplit.reducer_MG2GearRatio = 53/17;  % 53/17==3.1176
-powerSplit.reducer_differentialGearRatio = 21/73;  % 73/21==3.4762
+powerSplit.reducer_counterDriveGearRatio = 53/65;
+powerSplit.reducer_MG2GearRatio = 53/17;
+powerSplit.reducer_differentialGearRatio = 21/73;
 powerSplit.reducer_efficiency = 0.98;
 powerSplit.reducer_friction_Nm_per_rpm = [0.001, 0.001];  % base, follower
 powerSplit.reducer_inertia_kg_m2 = 0.001;
 
-powerSplit.planetary_ringToSunGearRatio = 78/30;  % 78/30==2.6
+powerSplit.planetary_ringToSunGearRatio = 78/30;
 powerSplit.planetary_efficiencies = [0.98, 0.98];  % Sun-Planet, Ring-Planet
 powerSplit.planetary_frictions_Nm_per_rpm = [0.001, 0.001];  % Sun-Carrier, Planet-Carrier frictions
 powerSplit.planetary_planetGearInertia_kg_m2 = 0.001;
@@ -101,3 +84,25 @@ engine.trqMax_Nm = 145;
 engine.lag_s = 0.1;
 engine.inertia_kg_m2 = 0.02;
 engine.damping_Nm_per_rpm = 0.02;
+
+%% Initial conditions
+% These are for plant only.
+% ICs for controller/driver are defined elsewhere.
+
+initial.highVoltageBatterySOC_pct = 85;
+initial.hvBatteryCharge_Ah = batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
+
+initial.vehicleSpeed_kph = 0;
+initial.motorGenerator2_speed_rpm = 0;
+initial.motorGenerator1_speed_rpm = 0;
+initial.engine_speed_rpm = 0;
+initial.engine_torque_Nm = 0;
+
+%% Simulation smoothing parameters
+
+smoothing.planetary_meshing_loss_thresholds_W = [10, 10];
+
+smoothing.gear_meshing_loss_threshold_W = 10;
+
+smoothing.vehicle_speed_threshold_kph = 1;
+smoothing.axle_speed_threshold_rpm = 1;

@@ -20,3 +20,5 @@ drivingPattern.useFromWorkspace_tf = opt1.useFromWorkspace;
 
 % Simulation time
 t_end = max(opt1.t_end, opt2.t_end);
+
+dt = 0;  % 0 for variable-step solver
