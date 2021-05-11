@@ -8,7 +8,7 @@ https://www.mathworks.com/
 
 ## Introduction
 
-This is an Electric Vehicle model in Simscape,
+This is a Hybrid Electric Vehicle model in Simscape,
 demonstrating some new festures of the recent releases
 of MATLAB&reg;
 and featuring Subsystem Reference which enables
