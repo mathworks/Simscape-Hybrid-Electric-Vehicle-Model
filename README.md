@@ -8,22 +8,19 @@ https://www.mathworks.com/
 
 ## Introduction
 
-This is a Hybrid Electric Vehicle (HEV) model in Simscape,
-demonstrating some new festures of the recent releases
+This example includes a Hybrid Electric Vehicle model
+in Simscape,
+demonstrating some new features of the recent releases
 of MATLAB&reg;
 and featuring Subsystem Reference which enables
 modular physical modeling workflow.
 
-As an example use case, this release includes
-an abstract Power-Split Hybrid Electric Vehicle model
+The model includes
+an abstract Power-Split Hybrid Electric Vehicle (HEV) model
 with a simple rule-based controller
-for drive cycle simulation using
-the Drive Cycle Source block from Powertrain Blockset&trade;.
-For more engaged applications in automotive use cases
-such as detailed energy efficiency analysis with
-a sophisticated hybrid vehicle controller,
-check out the Powertrain Reference Applications
-in Powertrain Blockset.
+for speed tracking simulation.
+For more elaborate models of vehicles with control algorithms,
+please see dedicated toolboxes such as Powertrain Blockset&trade;.
 
 The included abstract model is suitable
 for the system level simulation of
@@ -32,7 +29,7 @@ as it runs faster than real time.
 The model consists of components such as motor, engine,
 power-split device, and so on,
 and they are built in a modular manner using
-Subsystem Reference and Simscape Product Family
+Subsystem Reference and Simscape&trade; product family
 demonstrating a workflow where
 physical components are built and tested individually
 and also they can be easily integrated into
