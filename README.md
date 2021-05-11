@@ -14,13 +14,16 @@ of MATLAB&reg;
 and featuring Subsystem Reference which enables
 modular physical modeling workflow.
 
-As an application, this release includes
+As an example use case, this release includes
 an abstract Power-Split Hybrid Electric Vehicle model
 with a simple rule-based controller
-for speed tracking simulation.
-For more engaged uses in automotive applications,
-it is recommended to use dedicated toolboxes such as
-Powertrain Blockset&trade;.
+for drive cycle simulation using
+the Drive Cycle Source block from Powertrain Blockset&trade;.
+For more engaged applications in automotive use cases
+such as detailed energy efficiency analysis with
+a sophisticated hybrid vehicle controller,
+check out the Powertrain Reference Applications
+in Powertrain Blockset.
 
 The included abstract model is suitable
 for the system level simulation of
