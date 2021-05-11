@@ -9,7 +9,7 @@ https://www.mathworks.com/
 ## Introduction
 
 This example includes a Hybrid Electric Vehicle model
-in Simscape,
+in Simscape&trade;,
 demonstrating some new features of the recent releases
 of MATLAB&reg;
 and featuring Subsystem Reference which enables
@@ -29,7 +29,7 @@ as it runs faster than real time.
 The model consists of components such as motor, engine,
 power-split device, and so on,
 and they are built in a modular manner using
-Subsystem Reference and Simscape&trade; product family
+Subsystem Reference and Simscape product family
 demonstrating a workflow where
 physical components are built and tested individually
 and also they can be easily integrated into
