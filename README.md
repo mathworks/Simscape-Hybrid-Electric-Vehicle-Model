@@ -8,18 +8,35 @@ https://www.mathworks.com/
 
 ## Introduction
 
-This is a Power-Split Hybrid Electric Vehicle (HEV) model in Simscape,
-suitable for the system level simulation of
-longitudinal vehicle behavior as it runs faster than real time.
+This is an Electric Vehicle model in Simscape,
+demonstrating some new festures of the recent releases
+of MATLAB&reg;
+and featuring Subsystem Reference which enables
+modular physical modeling workflow.
+
+As an application, this release includes
+an abstract Power-Split Hybrid Electric Vehicle (HEV) model
+with a simple rule-based controller
+for speed tracking simulation.
+For more engaged uses in automotive applications,
+it is recommended to use dedicated toolboxes such as
+Powertrain Blockset&trade;.
+
+The included abstract model is suitable
+for the system level simulation of
+longitudinal vehicle behavior
+as it runs faster than real time.
 The model consists of components such as motor, engine,
 power-split device, and so on,
-and it is built in a modular manner using Subsystem Reference
-demonstrating a workflow where components are built and tested
-individually and also they can be easily integrated into
+and they are built in a modular manner using
+Subsystem Reference and Simscape&trade; Product Family
+demonstrating a workflow where
+physical components are built and tested individually
+and also they can be easily integrated into
 a complete vehicle system model.
 
 The HEV model and its components are managed in
-a MATLAB&reg; project and
+a MATLAB project and
 some components come with their own test setups.
 
 ![Model Screenshot](utils/PowerSplitHEV_SpeedTracking.png)
@@ -34,7 +51,7 @@ Required:
 [MATLAB](https://www.mathworks.com/products/matlab.html),
 [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
 [Stateflow&reg;](https://www.mathworks.com/products/stateflow.html),
-[Powertrain Blockset&trade;](https://www.mathworks.com/products/powertrain.html),
+[Powertrain Blockset](https://www.mathworks.com/products/powertrain.html),
 [Simscape](https://www.mathworks.com/products/simscape.html),
 [Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
 [Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html)
