@@ -17,10 +17,16 @@ modular physical modeling workflow.
 
 The model includes
 an abstract Power-Split Hybrid Electric Vehicle (HEV) model
-with a simple rule-based controller
-for speed tracking simulation.
-For more elaborate models of vehicles with control algorithms,
-please see dedicated toolboxes such as Powertrain Blockset&trade;.
+with a simple rule-based controller for speed tracking simulation.
+It can be used to better understand
+how to work with Simscape subsystem
+for an automotive application.
+For a vehicle model that includes a more detailed models
+for the supervisory and engine controllers,
+please see the reference applications in 
+[Powertrain Blockset&trade;][url_ptbsref].
+
+[url_ptbsref]:https://www.mathworks.com/help/autoblks/powertrain-reference-applications.html
 
 The included abstract model is suitable
 for the system level simulation of
