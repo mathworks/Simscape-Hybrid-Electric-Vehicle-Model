@@ -17,14 +17,17 @@ modular physical modeling workflow.
 
 The model includes
 an abstract Power-Split Hybrid Electric Vehicle (HEV) model
-with a simple rule-based controller for speed tracking simulation.
+with a simple rule-based controller
+for speed tracking simulation.
 It can be used to better understand
-how to work with Simscape subsystem
+how to work with [Subsystem Reference][url_subref]
 for an automotive application.
-For a vehicle model that includes a more detailed models
-for the supervisory and engine controllers,
-please see the reference applications in 
+For a vehicle model that includes
+more detailed supervisory and engine controllers,
+please see the reference applications in
 [Powertrain Blockset&trade;][url_ptbsref].
+
+[url_subref]:https://www.mathworks.com/help/simulink/ug/referenced-subsystem-1.html
 
 [url_ptbsref]:https://www.mathworks.com/help/autoblks/powertrain-reference-applications.html
 
