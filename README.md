@@ -74,6 +74,18 @@ it will automatically open the Live Script `HEV_main_script.mlx`.
 The script contains the description of the model and
 hyperlinks to models and scripts.
 
+## How to Use in MATLAB Online
+
+You can try this in [MATLAB Online][url_online].
+In MATLAB Online, from the **HOME** tab in the toolstrip,
+select **Add-Ons** &rarr; **Get Add-Ons**
+to open the Add-On Explorer.
+Then search for the submission name,
+navigate to the submission page,
+click **Add** button, and select **Save to MATLAB Drive**.
+
+[url_online]:https://www.mathworks.com/products/matlab-online.html
+
 ## License
 
 See [`LICENSE.txt`](LICENSE.txt).
