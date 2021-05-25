@@ -1,5 +1,7 @@
 # Hybrid Electric Vehicle Model in Simscape&trade;
 
+[![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
+
 Version 1
 
 Copyright 2021 The MathWorks, Inc.
