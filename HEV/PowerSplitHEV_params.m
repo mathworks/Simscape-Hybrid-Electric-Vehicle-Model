@@ -9,7 +9,7 @@
 vehicle.mass_kg = 1400 + 50*0.7 + 70*2;  % 1575
 
 vehicle.tireRollingRadius_m = 0.3;
-vehicle.roadLoadA_N = 175;  % A = tire_rolling_coeeficient * mass * g
+vehicle.roadLoadA_N = 175;  % A = tire_rolling_coefficient * mass * g
 vehicle.roadLoadB_N_per_kph = 0;
 vehicle.roadLoadC_N_per_kph2 = 0.032;  % C = 0.5 * Cd * frontal_area * air_density
 vehicle.roadLoad_gravAccel_m_per_s2 = 9.81;
