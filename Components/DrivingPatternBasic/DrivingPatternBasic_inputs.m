@@ -13,6 +13,7 @@ arguments
       'accelerate_decelerate_kph' ...
       'accelerate_decelerate_mph' ...
       'simple_drive_pattern' ...
+      'simple_slow_drive_pattern' ...
       'ftp75_mph' ...
     })} = 'all_zero'
   nvpairs.TimeStep (1,1) double {mustBePositive} = 0.1
@@ -227,6 +228,33 @@ switch input_pattern
     t_end = 200;
     % Define signal trace:
     VehSpdRef = timetable([0 0 0      30 30   30 30     40 40   40 40     20 20   20 20      0 0       0  0   45 45 45     55 55 55     95 95   95 95      70 70     70 70       30 30     30 30        0 0     0]', ...
+       'RowTimes',seconds([0 9.5 10   15 15.5 19.5 20   25 25.5 29.5 30   35 35.5 39.5 40   45 45.5 49.5 50   58 58.5 59   65 65.5 66   85 85.5 89.5 90   110 110.5 119.5 120   150 150.5 159.5 160   190 190.5 t_end])');
+    % Make the signal trace smooth using Akima interpolation:
+    VehSpdRef = retime(VehSpdRef, 'regular','makima', 'TimeStep',seconds(dt));
+    % Remove the negative wiggle:
+    VehSpdRef.Var1(VehSpdRef.Var1 < 0) = 0;
+    % Calculate the acceleration:
+    tmp = diff(VehSpdRef.Var1)/dt * 1000/3600;  % (km/hr)/s to m/s^2 conversion
+    VehAccRef = timetable([tmp; tmp(end)], 'RowTimes',VehSpdRef.Time);
+    inputSignals.VehSpdRef = VehSpdRef;                
+    inputSignals.VehSpdRef.Properties.VariableNames = {'VehSpdRef'};
+    inputSignals.VehSpdRef.Properties.VariableUnits = {'km/hr'};
+    inputSignals.VehSpdRef.Properties.VariableContinuity = {'continuous'};
+    inputSignals.VehAccRef = VehAccRef;
+    inputSignals.VehAccRef.Properties.VariableNames = {'VehAccRef'};
+    inputSignals.VehAccRef.Properties.VariableUnits = {'m/s^2'};
+    inputSignals.VehAccRef.Properties.VariableContinuity = {'continuous'};
+    inputBus.Elements(1) = Simulink.BusElement;
+    inputBus.Elements(1).Name = 'VehSpdRef';
+    inputBus.Elements(1).Unit = 'km/hr';
+    inputBus.Elements(2) = Simulink.BusElement;
+    inputBus.Elements(2).Name = 'VehAccRef';
+    inputBus.Elements(2).Unit = 'm/s^2';
+
+  case 'simple_slow_drive_pattern'
+    t_end = 200;
+    % Define signal trace:
+    VehSpdRef = timetable([0 0 0      20 20   20 20     30 30   30 30     10 10   10 10      0 0       0  0   25 25 25     35 35 35     45 45   45 45      30 30     30 30       15 15     15 15        0 0     0]', ...
        'RowTimes',seconds([0 9.5 10   15 15.5 19.5 20   25 25.5 29.5 30   35 35.5 39.5 40   45 45.5 49.5 50   58 58.5 59   65 65.5 66   85 85.5 89.5 90   110 110.5 119.5 120   150 150.5 159.5 160   190 190.5 t_end])');
     % Make the signal trace smooth using Akima interpolation:
     VehSpdRef = retime(VehSpdRef, 'regular','makima', 'TimeStep',seconds(dt));

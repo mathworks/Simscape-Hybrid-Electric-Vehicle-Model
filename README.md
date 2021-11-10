@@ -2,7 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1
+Version 1.1
 
 Copyright 2021 The MathWorks, Inc.
 
@@ -56,7 +56,7 @@ some components come with their own test setups.
 
 ## Tool Requirements
 
-Supported MATLAB version: R2020b or newer releases
+Supported MATLAB version: R2021a or newer releases
 
 Required:
 [MATLAB](https://www.mathworks.com/products/matlab.html),
@@ -66,6 +66,29 @@ Required:
 [Simscape](https://www.mathworks.com/products/simscape.html),
 [Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
 [Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html)
+
+Optional:
+[Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html)
+
+## What's New in Version 1.1
+
+### Highlights
+
+Parameter Sweep Workflow in Live Script
+
+- Demonstrates how to investigate the effect of reduction gear ratio,
+  high-voltage battery capacity and high-voltage battery weight
+  on the electrical efficiency.
+  You can optionally use Parallel Computing Toolbox to shorten
+  total simulation time.
+- Watch [YouTube video](https://www.youtube.com/watch?v=cbo83A8K_4w)
+  showing the workflow as well as real-time application.
+  - Real-Time application presented in the video will be added
+    to this project in future updates.
+
+### Other Updates
+
+- MATLAB R2021a or newer release is required.
 
 ## How to Use
 

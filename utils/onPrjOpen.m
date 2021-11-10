@@ -4,11 +4,9 @@
 %
 % Copyright 2020-2021 The MathWorks, Inc.
 
-v = ver('matlab');
-if not(v.Version == "9.9")
-  release = "R2020b";
-  disp("This project was developed in " + release + ".")
-  disp("This MATLAB is " + v.Release(2:end-1) + ".")
+if not(contains(string(ver('matlab').Release), "R2021a"))
+  disp("This project was developed in R2021a.")
+  versionhar = ver('matlab').Release;
+  disp("This MATLAB Release is " + versionhar(2:end-1) + ".")
   clear release
 end
-clear v
