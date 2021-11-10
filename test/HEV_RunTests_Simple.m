@@ -5,7 +5,7 @@
 %% Create test suite
 
 import matlab.unittest.TestSuite;
-s1 = TestSuite.fromClass(?HEV_UnitTest);
+s1 = TestSuite.fromMethod(?HEV_UnitTest, 'minimalTest_HevSpeedTracking_10s');
 suite = s1;
 
 %% Create test runner
@@ -13,21 +13,7 @@ suite = s1;
 runner = matlab.unittest.TestRunner.withTextOutput( ...
   'OutputDetail', matlab.unittest.Verbosity.Detailed);
 
-%% Set up report
-
-% XML
-%{=
-runner.addPlugin( ...
-  matlab.unittest.plugins.XMLPlugin.producingJUnitFormat('testResults.xml'));
-%}
-
-% PDF
-%{=
-runner.addPlugin( ...
-  matlab.unittest.plugins.TestReportPlugin.producingPDF('testReport.pdf'));
-%}
-
-%% Run test
+%% Run tests
 
 results = runner.run(suite);
 assertSuccess(results);

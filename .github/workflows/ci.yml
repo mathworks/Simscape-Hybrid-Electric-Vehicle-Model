@@ -1,0 +1,29 @@
+# GitHub Actions Workflow with MATLAB Actions
+
+# Copyright 2021 The MathWorks, Inc.
+
+name: MATLAB Build
+
+on:
+
+  push:
+    branches: [ main ]
+
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  matlab-job:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+
+      - name: Run tests
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject('HybridElectricVehicle.prj'); HEV_RunTests_Simple;
