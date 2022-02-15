@@ -7,10 +7,10 @@ name: MATLAB Build
 on:
 
   push:
-    branches: [ main ]
+    branches: [ main, 21a-devel ]
 
   pull_request:
-    branches: [ main ]
+    branches: [ main, 21a-devel ]
 
 jobs:
   matlab-job:
@@ -26,4 +26,4 @@ jobs:
       - name: Run tests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject('HybridElectricVehicle.prj'); HEV_RunTests_Simple;
+          command: openProject(pwd); runTests_Project;
