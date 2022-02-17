@@ -13,7 +13,7 @@ on:
     branches: [ main, 21a-devel ]
 
 jobs:
-  matlab-job:
+  matlab-job-21b:
     runs-on: ubuntu-latest
     steps:
 
@@ -22,6 +22,25 @@ jobs:
 
       - name: Setup MATLAB
         uses: matlab-actions/setup-matlab@v1
+        with:
+          release: R2021b
+
+      - name: Run tests
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject(pwd); runTests_Project;
+
+  matlab-job-21a:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+        with:
+          release: R2021a
 
       - name: Run tests
         uses: matlab-actions/run-command@v1

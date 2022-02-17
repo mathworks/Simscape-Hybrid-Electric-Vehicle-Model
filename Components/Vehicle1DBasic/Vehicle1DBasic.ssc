@@ -9,12 +9,13 @@ component Vehicle1DBasic
 % and 100% grade (45 degrees).<br/>
 % <br/>
 % To see the plot of the road-load resisting force,
-% click the links below.<br/>
-% <br/>
-% <a href="matlab:Vehicle1DBasic_block_info;">Plot</a>
-% the road-load resisting force.<br/>
-% <a href="matlab:edit Vehicle1DBasic_block_info">Open</a>
-% the plot script.
+% click the links below.
+% <ul>
+% <li> <a href="matlab:Vehicle1DBasic_block_info;">Plot</a>
+%      the road-load resisting force.</li>
+% <li> <a href="matlab:edit Vehicle1DBasic_block_info">Open</a>
+%      the plot script.</li>
+% </ul>
 
 % Copyright 2020-2021 The MathWorks, Inc.
 
