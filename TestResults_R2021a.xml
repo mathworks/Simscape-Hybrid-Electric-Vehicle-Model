@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+
+  <testsuite errors="0" failures="0" name="UnitTests_PowerSplitHEV_SpeedTracking" skipped="0" tests="6" time="137.8424">
+    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runSpeedTrackingSim_10s" time="15.9618"/>
+    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runLiveScript_1" time="16.8094"/>
+    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runAccelDecelSim" time="15.3692"/>
+    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runSimpleDrivePatternSim" time="14.4554"/>
+    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runFTP75Sim" time="15.5634"/>
+    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runHEVParameterSweepWorkflow" time="59.6831"/>
+  </testsuite>
+
+  <testsuite errors="0" failures="0" name="UnitTests_Project" skipped="0" tests="1" time="10.294">
+    <testcase classname="UnitTests_Project" name="projectRunChecks" time="10.294"/>
+  </testsuite>
+
+</testsuites>

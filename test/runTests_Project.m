@@ -1,9 +1,13 @@
 %% Script to run unit tests
+% This script runs all the unit tests that are the child classes of
+% matlab.unittest.TestCase in the project.
+% Unit test classes are automatically detected by
+% the matlab.unittest.TestSuite.fromFolder function.
 
 % Copyright 2021-2022 The MathWorks, Inc.
 
 relstr = matlabRelease().Release;
-disp("This MATLAB Release: " + relstr)
+disp("This is MATLAB " + relstr)
 
 %% Create test suite
 

@@ -14,7 +14,7 @@ PowerSplitHEV_SpeedTracking_select_accel_decel
 PowerSplitHEV_params
 
 % Controller/Driver - load this after plant
-DriverHEVPowerSplit_params
+HEVPowerSplitControl_params
 
 %% Override initial conditions and block parameter values
 

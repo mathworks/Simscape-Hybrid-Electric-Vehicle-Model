@@ -3,7 +3,7 @@
 % Copyright 2021 The MathWorks, Inc.
 
 mdl = "PowerSplitHEV_SpeedTracking";
-if not(bdIsLoaded(mdl)), open_system(mdl); end
+if not(bdIsLoaded(mdl)), load_system(mdl); end
 
 input_pattern = "ftp75_mph";
 disp("Selecting " + input_pattern + " (input_pattern workspace variable)")
