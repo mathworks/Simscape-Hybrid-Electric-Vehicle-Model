@@ -2,9 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1.1
-
-Copyright 2021 The MathWorks, Inc.
+Version 1.2.alpha (In Development)
 
 https://www.mathworks.com/
 
@@ -50,7 +48,7 @@ The HEV model and its components are managed in
 a MATLAB project and
 some components come with their own test setups.
 
-![Model Screenshot](utils/PowerSplitHEV_SpeedTracking.png)
+![Model Screenshot](utils/image_PowerSplitHEV_SpeedTracking.png)
 
 ![Plot of Simulation Result](utils/simulation_result.png)
 
@@ -69,6 +67,24 @@ Required:
 
 Optional:
 [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html)
+
+## What's New in Version 1.2
+
+_Version 1.2 is still in development._
+_This section is likely to be updated._
+
+- **MATLAB Unit Test** files are included for some models and scripts.
+  More will be added.
+- **Github Actions** continuous integration is used to automatically
+  run unit tests when the repository in GitHub receives a push.
+  For more information about using GitHub Actions with MATLAB,
+  see [MATLAB Actions](https://github.com/matlab-actions/overview).
+- Battery block from Simscape Electrical is added as
+  a new referenced subsystem for High-Voltage Battery component.
+- DC-DC Converter block from Simscape Electrical is added as
+  a new referenced subsystem for DC-DC Converter component.
+- Updated `PowerSplitHEV_SpeedTracking` model.
+- Cleaned up some models and scripts.
 
 ## What's New in Version 1.1
 
@@ -112,3 +128,5 @@ click **Add** button, and select **Save to MATLAB Drive**.
 ## License
 
 See [`LICENSE.txt`](LICENSE.txt).
+
+_Copyright 2021-2022 The MathWorks, Inc._

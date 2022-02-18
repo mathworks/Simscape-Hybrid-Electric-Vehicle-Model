@@ -48,21 +48,11 @@ inputPatternConst = @(c) timetable([c c]', 'RowTimes',seconds([0 1])');
 inputBus = Simulink.Bus;
 switch input_pattern
   case 'all_zero'
-    t_end = 1;
-    inputSignals.VehSpdRef = inputPatternConst(0);
-    inputSignals.VehSpdRef.Properties.VariableNames = {'VehSpdRef'};
-    inputSignals.VehSpdRef.Properties.VariableUnits = {'km/hr'};
-    inputSignals.VehSpdRef.Properties.VariableContinuity = {'continuous'};
-    inputSignals.VehAccRef = inputPatternConst(0);
-    inputSignals.VehAccRef.Properties.VariableNames = {'VehAccRef'};
-    inputSignals.VehAccRef.Properties.VariableUnits = {'m/s^2'};
-    inputSignals.VehAccRef.Properties.VariableContinuity = {'continuous'};
-    inputBus.Elements(1) = Simulink.BusElement;
-    inputBus.Elements(1).Name = 'VehSpdRef';
-    inputBus.Elements(1).Unit = 'km/hr';
-    inputBus.Elements(2) = Simulink.BusElement;
-    inputBus.Elements(2).Name = 'VehAccRef';
-    inputBus.Elements(2).Unit = 'm/s^2';
+    builder = DrivingPattern_InputSignalBuilder;
+    data = ConstantInput(builder);
+    inputSignals = data.Signals;
+    inputBus = data.Bus;
+    t_end = data.Options.StopTime_s;
     opt.fig_width = 200;
     opt.fig_height = 100;
 
@@ -170,31 +160,19 @@ switch input_pattern
     inputBus.Elements(2).Unit = 'm/s^2';
 
   case 'accelerate_decelerate_kph'
-    t_end = 400;
-    % Define signal trace:
-    VehSpdRef = timetable([0 0 0      120 120   120 120     0 0 0]',...
-       'RowTimes',seconds([0 9.5 10   150 150.5 249.5 250   350 350.5 t_end])');
-    % Make the signal trace smooth using Akima interpolation:
-    VehSpdRef = retime(VehSpdRef, 'regular','makima', 'TimeStep',seconds(dt));
-    % Remove the negative wiggle:
-    VehSpdRef.Var1(VehSpdRef.Var1 < 0) = 0;
-    % Calculate the acceleration:
-    tmp = diff(VehSpdRef.Var1)/dt * 1000/3600;  % (km/hr)/s to m/s^2 conversion
-    VehAccRef = timetable([tmp; tmp(end)], 'RowTimes',VehSpdRef.Time);
-    inputSignals.VehSpdRef = VehSpdRef;
-    inputSignals.VehSpdRef.Properties.VariableNames = {'VehSpdRef'};
-    inputSignals.VehSpdRef.Properties.VariableUnits = {'km/hr'};
-    inputSignals.VehSpdRef.Properties.VariableContinuity = {'continuous'};
-    inputSignals.VehAccRef = VehAccRef;
-    inputSignals.VehAccRef.Properties.VariableNames = {'VehAccRef'};
-    inputSignals.VehAccRef.Properties.VariableUnits = {'m/s^2'};
-    inputSignals.VehAccRef.Properties.VariableContinuity = {'continuous'};
-    inputBus.Elements(1) = Simulink.BusElement;
-    inputBus.Elements(1).Name = 'VehSpdRef';
-    inputBus.Elements(1).Unit = 'km/hr';
-    inputBus.Elements(2) = Simulink.BusElement;
-    inputBus.Elements(2).Name = 'VehAccRef';
-    inputBus.Elements(2).Unit = 'm/s^2';
+    builder = DrivingPattern_InputSignalBuilder;
+    data = ThreeStepSpeed(builder, ...
+              VehSpdRef_1_kph = 0, ...
+              VehSpdRef_2_kph = 120, ...
+              VehSpdRef_3_kph = 0, ...
+              VehSpdRef_1to2_ChangeStartTime = seconds(10), ...
+              VehSpdRef_1to2_ChangeEndTime = seconds(10+60), ...
+              VehSpdRef_2to3_ChangeStartTime = seconds(70+60), ...
+              VehSpdRef_2to3_ChangeEndTime = seconds(130+30), ...
+              StopTime = seconds(160+40) );
+    inputSignals = data.Signals;
+    inputBus = data.Bus;
+    t_end = data.Options.StopTime_s;
 
   case 'accelerate_decelerate_mph'
     opt.useKph = false;

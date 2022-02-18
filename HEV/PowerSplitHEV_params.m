@@ -17,6 +17,8 @@ vehicle.roadLoad_gravAccel_m_per_s2 = 9.81;
 %% High Voltage Battery
 
 batteryHighVoltage.nominalCapacity_kWh = 4;
+% batteryHighVoltage.nominalCapacity_kWh = 1;
+
 batteryHighVoltage.voltagePerCell_V = 3.7;  % 3.5V to 3.7V assuming Lithium-ion
 batteryHighVoltage.nominalCharge_Ah = ...
   batteryHighVoltage.nominalCapacity_kWh / batteryHighVoltage.voltagePerCell_V * 1000;
@@ -89,7 +91,9 @@ engine.damping_Nm_per_rpm = 0.02;
 % These are for plant only.
 % ICs for controller/driver are defined elsewhere.
 
-initial.highVoltageBatterySOC_pct = 85;
+% initial.highVoltageBatterySOC_pct = 85;
+initial.highVoltageBatterySOC_pct = 75;
+
 initial.hvBatteryCharge_Ah = batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
 
 initial.vehicleSpeed_kph = 0;
