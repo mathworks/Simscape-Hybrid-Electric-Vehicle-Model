@@ -17,7 +17,7 @@ parent = nvpair.PlotParent;
 
 parent.Position(3:4) = [800 700];  % width height
 
-tl = tiledlayout(parent, 3, 2, ...
+tl = tiledlayout(parent, 3, 3, ...
       'TileSpacing','compact', 'Padding','compact' );
 
 ax = nexttile(tl);
@@ -34,6 +34,14 @@ plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
 xlabel(ax, "Time (s)")
 title(ax, "MG2 Speed (rpm)")
+hold off
+
+ax = nexttile(tl);
+vals = logsout.get("MG2 Mechanical Power").Values;
+plot(ax, vals.Time, vals.Data, 'LineWidth',1)
+hold on;  grid on
+xlabel(ax, "Time (s)")
+title(ax, "MG2 Power (kW)")
 hold off
 
 
@@ -53,6 +61,14 @@ xlabel(ax, "Time (s)")
 title(ax, "MG1 Speed (rpm)")
 hold off
 
+ax = nexttile(tl);
+vals = logsout.get("MG1 Mechanical Power").Values;
+plot(ax, vals.Time, vals.Data, 'LineWidth',1)
+hold on;  grid on
+xlabel(ax, "Time (s)")
+title(ax, "MG1 Power (kW)")
+hold off
+
 
 ax = nexttile(tl);
 vals = logsout.get("HV Battery SOC").Values;
@@ -68,6 +84,14 @@ plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
 xlabel(ax, "Time (s)")
 title(ax, "Engine Speed (rpm)")
+hold off
+
+ax = nexttile(tl);
+vals = logsout.get("Engine Power").Values;
+plot(ax, vals.Time, vals.Data, 'LineWidth',1)
+hold on;  grid on
+xlabel(ax, "Time (s)")
+title(ax, "Engine Power (kW)")
 hold off
 
 

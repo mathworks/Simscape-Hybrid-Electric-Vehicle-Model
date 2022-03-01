@@ -50,7 +50,7 @@ some components come with their own test setups.
 
 ![Model Screenshot](utils/image_PowerSplitHEV_SpeedTracking.png)
 
-![Plot of Simulation Result](utils/simulation_result.png)
+![Plot of Simulation Result](utils/image_simulation_results_ftp75.png)
 
 ## Tool Requirements
 
@@ -71,18 +71,24 @@ Optional:
 ## What's New in Version 1.2
 
 _Version 1.2 is still in development._
-_This section is likely to be updated._
+_This section is subject to change._
 
-- **MATLAB Unit Test** files are included for some models and scripts.
-  More will be added.
+- **MATLAB Unit Test** files are added for some models and scripts.
+  More will follow.
 - **Github Actions** continuous integration is used to automatically
   run unit tests when the repository in GitHub receives a push.
-  For more information about using GitHub Actions with MATLAB,
+  For more general information about using GitHub Actions with MATLAB,
   see [MATLAB Actions](https://github.com/matlab-actions/overview).
 - Battery block from Simscape Electrical is added as
   a new referenced subsystem for High-Voltage Battery component.
+  (The previous model is included as well.)
 - DC-DC Converter block from Simscape Electrical is added as
   a new referenced subsystem for DC-DC Converter component.
+  (The previous model is included as well.)
+- Torsional Spring-Damper block from Simscape Driveline
+  is used in MG2, MG1, and Engine components.
+  These are necessary especially when they stop operating
+  and the energy must to be released to come to a complete stop.
 - Updated `PowerSplitHEV_SpeedTracking` model.
 - Cleaned up some models and scripts.
 

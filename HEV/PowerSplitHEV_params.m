@@ -17,8 +17,6 @@ vehicle.roadLoad_gravAccel_m_per_s2 = 9.81;
 %% High Voltage Battery
 
 batteryHighVoltage.nominalCapacity_kWh = 4;
-% batteryHighVoltage.nominalCapacity_kWh = 1;
-
 batteryHighVoltage.voltagePerCell_V = 3.7;  % 3.5V to 3.7V assuming Lithium-ion
 batteryHighVoltage.nominalCharge_Ah = ...
   batteryHighVoltage.nominalCapacity_kWh / batteryHighVoltage.voltagePerCell_V * 1000;
@@ -65,6 +63,8 @@ motorGenerator2.iron_loss_to_nominal_ratio = 0.1;
 motorGenerator2.elecLossConst_W = 30;
 motorGenerator2.rotorInertia_kg_m2 = 0.002;
 motorGenerator2.kDamp_Nm_per_radPerS = 0.005;
+motorGenerator2.dampSpringStiffness_Nm_per_rad = 10000;
+motorGenerator2.dampSpringFriction_Nm_per_rpm = 100;
 
 %% Motor-Generator 1
 
@@ -79,6 +79,8 @@ motorGenerator1.iron_loss_to_nominal_ratio = 0.1;
 motorGenerator1.elecLossConst_W = 20;
 motorGenerator1.rotorInertia_kg_m2 = 0.002;
 motorGenerator1.kDamp_Nm_per_radPerS = 0.005;
+motorGenerator1.dampSpringStiffness_Nm_per_rad = 10000;
+motorGenerator1.dampSpringFriction_Nm_per_rpm = 100;
 
 %% Engine
 
@@ -86,15 +88,17 @@ engine.trqMax_Nm = 145;
 engine.lag_s = 0.1;
 engine.inertia_kg_m2 = 0.02;
 engine.damping_Nm_per_rpm = 0.02;
+engine.dampSpringStiffness_Nm_per_rad = 10000;
+engine.dampSpringFriction_Nm_per_rpm = 100;
 
 %% Initial conditions
 % These are for plant only.
 % ICs for controller/driver are defined elsewhere.
 
-% initial.highVoltageBatterySOC_pct = 85;
-initial.highVoltageBatterySOC_pct = 75;
+initial.highVoltageBatterySOC_pct = 70;
 
-initial.hvBatteryCharge_Ah = batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
+initial.hvBatteryCharge_Ah = ...
+  batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
 
 initial.vehicleSpeed_kph = 0;
 initial.motorGenerator2_speed_rpm = 0;
@@ -110,3 +114,12 @@ smoothing.gear_meshing_loss_threshold_W = 10;
 
 smoothing.vehicle_speed_threshold_kph = 1;
 smoothing.axle_speed_threshold_rpm = 1;
+
+smoothing.mg2_dampSpringVelTol_rpm = 0.1;
+smoothing.mg1_dampSpringVelTol_rpm = 0.1;
+smoothing.engine_dampSpringVelTol_rpm = 0.1;
+
+%% Parameters for Controller
+
+% Run this after loading parameters for plant.
+HEVPowerSplitControl_params

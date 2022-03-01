@@ -19,7 +19,7 @@ properties
   VehSpdRef timetable
   VehAccRef timetable
 
-  % ### Other properties
+  % ## Other properties
 
   % Used to compute acceleration from speed.
   dt (1,1) duration = milliseconds(1)
