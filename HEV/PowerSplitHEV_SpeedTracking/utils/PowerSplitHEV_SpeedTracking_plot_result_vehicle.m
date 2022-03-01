@@ -1,7 +1,7 @@
 function PowerSplitHEV_SpeedTracking_plot_result_vehicle( nvpair )
 % plots the simulation result.
 
-% Copyright 2021 The MathWorks, Inc.
+% Copyright 2021-2022 The MathWorks, Inc.
 
 %% Process arguments
 
@@ -24,7 +24,7 @@ ax = nexttile(tl);
 vals = logsout.get("Vehicle Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = logsout.get("Vehicle Speed Reference").Values;
+vals = logsout.get("Vehicle Speed Reference (km/hr)").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Speed & Reference (km/hr)")

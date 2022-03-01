@@ -1,6 +1,6 @@
 %% Simulation Script for Power-Split HEV with Speed Tracking
 
-% Copyright 2021 The MathWorks, Inc.
+% Copyright 2021-2022 The MathWorks, Inc.
 
 %% Setup external inputs
 
@@ -8,11 +8,7 @@ PowerSplitHEV_SpeedTracking_select_accel_decel
 
 %% Load default initial conditions and block parameter values
 
-% Plant
 PowerSplitHEV_params
-
-% Controller/Driver - load this after plant
-HEVPowerSplitControl_params
 
 %% Override initial conditions and block parameter values
 

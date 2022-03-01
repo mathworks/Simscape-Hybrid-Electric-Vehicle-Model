@@ -2,9 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1.2.alpha (In Development)
-
-https://www.mathworks.com/
+Version 1.2.alpha
 
 ## Introduction
 
@@ -70,13 +68,13 @@ Optional:
 
 ## What's New in Version 1.2
 
-_Version 1.2 is still in development._
+_Version 1.2 is currently in development._
 _This section is subject to change._
 
 - **MATLAB Unit Test** files are added for some models and scripts.
-  More will follow.
+  More will be added in the coming updates.
 - **Github Actions** continuous integration is used to automatically
-  run unit tests when the repository in GitHub receives a push.
+  run unit tests when the repository in GitHub gets updated.
   For more general information about using GitHub Actions with MATLAB,
   see [MATLAB Actions](https://github.com/matlab-actions/overview).
 - Battery block from Simscape Electrical is added as
@@ -88,7 +86,7 @@ _This section is subject to change._
 - Torsional Spring-Damper block from Simscape Driveline
   is used in MG2, MG1, and Engine components.
   These are necessary especially when they stop operating
-  and the energy must to be released to come to a complete stop.
+  and the energy must be released to come to a complete stop.
 - Updated `PowerSplitHEV_SpeedTracking` model.
 - Cleaned up some models and scripts.
 

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="0" failures="0" name="UnitTests_PowerSplitHEV_SpeedTracking" skipped="0" tests="6" time="154.5874">
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runSpeedTrackingSim_10s" time="22.2991"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runLiveScript_1" time="19.8235"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runAccelDecelSim" time="15.5676"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runSimpleDrivePatternSim" time="15.7907"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runFTP75Sim" time="16.7155"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runHEVParameterSweepWorkflow" time="64.391"/>
+  <testsuite errors="0" failures="0" name="UnitTest_PowerSplitHEV_SpeedTracking" skipped="0" tests="11" time="314.033">
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runSpeedTrackingSim_10s" time="23.1425"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_allzero" time="20.1765"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_high_speed" time="20.6564"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_accelerate_decelerate_kph" time="19.7404"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_ftp75" time="39.1805"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_simple_drive_pattern" time="19.5426"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_main_script" time="53.2866"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_accel_decel" time="16.7358"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_ftp75" time="17.3099"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_simple_pattern" time="16.4081"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_sweep" time="67.8536"/>
   </testsuite>
 
 </testsuites>
