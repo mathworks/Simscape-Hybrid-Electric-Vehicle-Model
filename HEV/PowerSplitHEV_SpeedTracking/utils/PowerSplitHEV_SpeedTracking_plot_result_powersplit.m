@@ -46,7 +46,7 @@ hold off
 
 
 ax = nexttile(tl);
-vals = logsout.get("MG2 Torque Command").Values;
+vals = getValuesFromLogsout(logsout.get("MG2 Torque Command"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = logsout.get("MG2 Torque").Values;
@@ -56,7 +56,7 @@ title(ax, "MG2 Torques (N*m)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Engine Torque Command").Values;
+vals = getValuesFromLogsout(logsout.get("Engine Torque Command"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = logsout.get("Engine Torque").Values;
@@ -66,7 +66,7 @@ title(ax, "Engine Torques (N*m)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("MG1 Torque Command").Values;
+vals = getValuesFromLogsout(logsout.get("MG1 Torque Command"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = logsout.get("MG1 Torque").Values;

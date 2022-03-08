@@ -17,6 +17,8 @@ vehicle.roadLoad_gravAccel_m_per_s2 = 9.81;
 %% High Voltage Battery
 
 batteryHighVoltage.nominalCapacity_kWh = 4;
+% batteryHighVoltage.nominalCapacity_kWh = 1;
+
 batteryHighVoltage.voltagePerCell_V = 3.7;  % 3.5V to 3.7V assuming Lithium-ion
 batteryHighVoltage.nominalCharge_Ah = ...
   batteryHighVoltage.nominalCapacity_kWh / batteryHighVoltage.voltagePerCell_V * 1000;
@@ -85,8 +87,17 @@ motorGenerator1.dampSpringFriction_Nm_per_rpm = 100;
 %% Engine
 
 engine.trqMax_Nm = 145;
+engine.trqMaxSpd_rpm = 3500;
+engine.powerMax_kW = 75;
+
+engine.maxSpd_rpm = 7000;
+engine.stallSpd_rpm = 500;
+engine.smoothing_rpm = 100;
+
 engine.lag_s = 0.1;
+
 engine.inertia_kg_m2 = 0.02;
+
 engine.damping_Nm_per_rpm = 0.02;
 engine.dampSpringStiffness_Nm_per_rad = 10000;
 engine.dampSpringFriction_Nm_per_rpm = 100;

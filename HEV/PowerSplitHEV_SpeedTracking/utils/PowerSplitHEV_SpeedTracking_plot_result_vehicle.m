@@ -67,7 +67,7 @@ title(ax, "Axle Speed & Reference (rpm)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Brake Force").Values;
+vals = getValuesFromLogsout(logsout.get("Brake Force"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
