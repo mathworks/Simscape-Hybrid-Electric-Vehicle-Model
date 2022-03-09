@@ -1,0 +1,91 @@
+component EngineCustom
+% Abstract Engine Model
+% This block represents an abstract internal combustion engine.
+% The model is based on a thrid-order polynomial model.
+% Engine speed at peak power is automatically determined
+% from peak torque, peak torque speed, and peak power
+% according to the polynomial model.
+% <br/>
+% <br/>
+% View <a href="matlab:EngineUtility.plotCustomEngineCurves(gcb)">engine torque and power curves</a>.
+
+% Copyright 2022 The MathWorks, Inc.
+
+parameters
+  PeakTorque = { 230  'N*m' }  % Peak torque
+  PeakTorqueSpeed = { 4000  'rpm' }  % Engine speed at peak torque
+  PeakPower = { 130 'kW' }  % Peak power
+  MaxSpeed = { 7000 'rpm' }  % Maximum engine speed
+  StallSpeed = { 500 'rpm' }  % Engine stall speed
+  SmoothingWidth = { 100 'rpm' }  % Stall smoothing width
+end
+equations
+  assert( PeakTorque > 0 )
+  assert( PeakTorqueSpeed > 0 )
+  assert( PeakTorque*PeakTorqueSpeed < PeakPower )
+  assert( StallSpeed < PeakTorqueSpeed )
+  assert( SmoothingWidth > 0 )
+end
+
+parameters (Access = private)
+  PeakPowerSpeed = (3*PeakPower + sqrt(PeakPower*(9*PeakPower - 8*PeakTorque*PeakTorqueSpeed))) ...
+                   / (4*PeakTorque)
+  % Normalized engine speed at peak torque
+  w_NPT = PeakTorqueSpeed / PeakPowerSpeed
+  s_1 = (3 - 4*w_NPT) / (2*(1 - w_NPT));
+  s_2 = w_NPT / (1 - w_NPT);
+  s_3 = 1 / (2*(w_NPT - 1));
+  p_1 = s_1 * 2*PeakTorque/(3 - w_NPT);
+  p_2 = s_2 * 2*PeakTorque/(3 - w_NPT) / PeakPowerSpeed;
+  p_3 = s_3 * 2*PeakTorque/(3 - w_NPT) / PeakPowerSpeed^2;
+end
+equations
+  assert( PeakPowerSpeed > PeakTorqueSpeed )
+end
+
+inputs
+  TrqCmdIn = { 0 'N*m' }  % TrqCmd:left
+end
+
+nodes
+  B = foundation.mechanical.rotational.rotational  % B:left
+end
+
+nodes
+  F = foundation.mechanical.rotational.rotational  % F:right
+end
+
+variables
+  w = { 0 'rad/s' }  % Engine speed
+  trq = { 0 'N*m' }  % Engine torque
+end
+
+branches
+  trq : B.t -> F.t
+end
+
+intermediates (ExternalAccess = observe)
+  thr_Norm = max( 0 , min( TrqCmdIn/PeakTorque , 1 ))
+
+  w_Norm = w / PeakPowerSpeed
+
+  trq_Norm = 2*(s_1 + s_2*w_Norm + s_3*w_Norm^2)/(3 - w_NPT)
+
+  trq_WOT = PeakTorque*trq_Norm
+
+  % Smoothing factor near stall speed
+  smoothing_factor = if w > StallSpeed
+                       tanh(4 * (w - StallSpeed)/SmoothingWidth)
+                     else
+                       { 0 '1' }
+                     end
+end
+
+equations
+  w == F.w - B.w
+  assert( w < MaxSpeed )
+
+  trq == smoothing_factor*thr_Norm*trq_WOT
+end
+
+end  % component
