@@ -5,9 +5,8 @@ classdef UnitTest_PowerSplitHEV_SpeedTracking < matlab.unittest.TestCase
 
 methods (Test)
 
-%% Most basic test
-
-function runSpeedTrackingSim_10s(~)
+function openAndRun_1(~)
+%% Most basic check - open model and run simulation.
 % Check that the model runs without any warnings or errors.
 
   close all
@@ -18,6 +17,7 @@ function runSpeedTrackingSim_10s(~)
   t_end = 10;  % Simulation stop time in seconds
 
   load_system(mdl)
+
   simIn = Simulink.SimulationInput(mdl);
   simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
   sim(simIn);
@@ -26,10 +26,70 @@ function runSpeedTrackingSim_10s(~)
   bdclose all
 end  % function
 
-%% Simple tests
+function openAndRun_2_1(~)
+%% Check that the model runs without any warnings or errors.
+% Specify the referenced subsystems.
+
+  close all
+  bdclose all
+
+  mdl = "PowerSplitHEV_SpeedTracking";
+
+  t_end = 10;  % Simulation stop time in seconds
+
+  load_system(mdl)
+
+  set_param(mdl+"/High Voltage Battery", ...
+    "ReferencedSubsystem", "BatteryHVBasic_refsub")
+
+  set_param(mdl+"/DC-DC Converter", ...
+    "ReferencedSubsystem", "DcDcConverterBasic_refsub")
+
+  set_param(mdl+"/Power Split Drive Unit/Engine", ...
+    "ReferencedSubsystem", "EngineBasic_refsub")
+
+  simIn = Simulink.SimulationInput(mdl);
+  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  sim(simIn);
+
+  close all
+  bdclose all
+end  % function
+
+function openAndRun_2_2(~)
+%% Check that the model runs without any warnings or errors.
+% Specify the referenced subsystem.
+
+  close all
+  bdclose all
+
+  mdl = "PowerSplitHEV_SpeedTracking";
+
+  t_end = 10;  % Simulation stop time in seconds
+
+  load_system(mdl)
+
+  set_param(mdl+"/High Voltage Battery", ...
+    "ReferencedSubsystem", "BatteryHVElec_refsub")
+
+  set_param(mdl+"/DC-DC Converter", ...
+    "ReferencedSubsystem", "DcDcConverterElec_refsub")
+
+  set_param(mdl+"/Power Split Drive Unit/Engine", ...
+    "ReferencedSubsystem", "EngineCustom_refsub")
+
+  simIn = Simulink.SimulationInput(mdl);
+  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  sim(simIn);
+
+  close all
+  bdclose all
+end  % function
+
+%%
 
 function runLiveScript_allzero(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -44,7 +104,7 @@ function runLiveScript_allzero(~)
 end  % function
 
 function runLiveScript_high_speed(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -58,7 +118,7 @@ end  % function
 %% Live Scripts for drive pattern/cycle simulation
 
 function runLiveScript_accelerate_decelerate_kph(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -70,7 +130,7 @@ function runLiveScript_accelerate_decelerate_kph(~)
 end  % function
 
 function runLiveScript_ftp75(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -82,7 +142,7 @@ function runLiveScript_ftp75(~)
 end  % function
 
 function runLiveScript_simple_drive_pattern(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -94,7 +154,7 @@ function runLiveScript_simple_drive_pattern(~)
 end  % function
 
 function runLiveScript_main_script(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -108,7 +168,7 @@ end  % function
 %% M scripts for drive pattern/cycle simulation
 
 function runMScript_runsim_accel_decel(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -122,7 +182,7 @@ function runMScript_runsim_accel_decel(~)
 end  % function
 
 function runMScript_runsim_ftp75(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -136,7 +196,7 @@ function runMScript_runsim_ftp75(~)
 end  % function
 
 function runMScript_runsim_simple_pattern(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
@@ -152,7 +212,7 @@ end  % function
 %% Live Scripts for application workflows
 
 function runLiveScript_sweep(~)
-% Check that the script runs without any warnings or errors.
+%% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
