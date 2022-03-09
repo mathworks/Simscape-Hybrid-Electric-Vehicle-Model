@@ -1,17 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="0" failures="0" name="UnitTests_PowerSplitHEV_SpeedTracking" skipped="0" tests="6" time="137.8424">
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runSpeedTrackingSim_10s" time="15.9618"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runLiveScript_1" time="16.8094"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runAccelDecelSim" time="15.3692"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runSimpleDrivePatternSim" time="14.4554"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runFTP75Sim" time="15.5634"/>
-    <testcase classname="UnitTests_PowerSplitHEV_SpeedTracking" name="runHEVParameterSweepWorkflow" time="59.6831"/>
+  <testsuite errors="0" failures="0" name="UnitTest_Engine" skipped="0" tests="3" time="9.9742">
+    <testcase classname="UnitTest_Engine" name="run_harnessSimple_1" time="4.1454"/>
+    <testcase classname="UnitTest_Engine" name="run_harnessSimple_2_1" time="2.0676"/>
+    <testcase classname="UnitTest_Engine" name="run_harnessSimple_2_2" time="3.7612"/>
   </testsuite>
 
-  <testsuite errors="0" failures="0" name="UnitTests_Project" skipped="0" tests="1" time="10.294">
-    <testcase classname="UnitTests_Project" name="projectRunChecks" time="10.294"/>
+  <testsuite errors="0" failures="0" name="setup_EngineTest" skipped="0" tests="4" time="0.24591">
+    <testcase classname="setup_EngineTest" name="TestHarnessSet_upScript" time="0.16357"/>
+    <testcase classname="setup_EngineTest" name="LoadDefaultParameterValues" time="0.015082"/>
+    <testcase classname="setup_EngineTest" name="ModelAndBlockParameters" time="0.009375"/>
+    <testcase classname="setup_EngineTest" name="ExternalInputs" time="0.057886"/>
+  </testsuite>
+
+  <testsuite errors="0" failures="0" name="UnitTest_PowerSplitHEV_SpeedTracking" skipped="0" tests="11" time="306.0606">
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runSpeedTrackingSim_10s" time="36.6367"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_allzero" time="21.6487"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_high_speed" time="20.7027"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_accelerate_decelerate_kph" time="18.0372"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_ftp75" time="36.3599"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_simple_drive_pattern" time="17.7166"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_main_script" time="47.613"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_accel_decel" time="14.8522"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_ftp75" time="14.6492"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_simple_pattern" time="14.0075"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_sweep" time="63.8368"/>
+  </testsuite>
+
+  <testsuite errors="0" failures="1" name="UnitTests_Project" skipped="0" tests="1" time="26.8643">
+    <testcase classname="UnitTests_Project" name="projectRunChecks" time="26.8643">
+      <failure type="VerificationFailure">Verification failed in UnitTests_Project/projectRunChecks.
+    ---------------------
+    Framework Diagnostic:
+    ---------------------
+    verifyEqual failed.
+    --&gt; The logical values are not equal.
+    
+    Actual Value:
+      logical
+    
+       0
+    Expected Value:
+      logical
+    
+       1
+    ------------------
+    Stack Information:
+    ------------------
+    In D:\sandbox\isaacito\github-hev\21a-devel_local2\test\UnitTests_Project.m (UnitTests_Project.projectRunChecks) at 18</failure>
+    </testcase>
   </testsuite>
 
 </testsuites>
