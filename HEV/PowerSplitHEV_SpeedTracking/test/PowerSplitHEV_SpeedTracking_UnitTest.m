@@ -1,4 +1,4 @@
-classdef UnitTest_PowerSplitHEV_SpeedTracking < matlab.unittest.TestCase
+classdef PowerSplitHEV_SpeedTracking_UnitTest < matlab.unittest.TestCase
 % Class implementation of unit test
 
 % Copyright 2021-2022 The MathWorks, Inc.
