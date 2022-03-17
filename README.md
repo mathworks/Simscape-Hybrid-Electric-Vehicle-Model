@@ -68,45 +68,87 @@ Optional:
 
 ## What's New in Version 1.2
 
-_Version 1.2 is currently in development._
 _This section is subject to change._
+
+Version 1.2 is currently in development and may be broken :)
+
+Highlights
 
 - **MATLAB Unit Test** files are added for some models and scripts.
   More will be added in the coming updates.
-- **Github Actions** continuous integration is used to automatically
+- **GitHub Actions** continuous integration is used to automatically
   run unit tests when the repository in GitHub gets updated.
-  For more general information about using GitHub Actions with MATLAB,
-  see [MATLAB Actions](https://github.com/matlab-actions/overview).
+  - Set-up file: `.github/workflow/ci.yml`
+  - For more general information about using GitHub Actions with MATLAB,
+    see [MATLAB Actions](https://github.com/matlab-actions/overview).
+
+Models
+
 - Battery block from Simscape Electrical is added as
   a new referenced subsystem for High-Voltage Battery component.
-  (The previous model is included as well.)
+  The previous model is included as well.
 - DC-DC Converter block from Simscape Electrical is added as
   a new referenced subsystem for DC-DC Converter component.
-  (The previous model is included as well.)
-- Torsional Spring-Damper block from Simscape Driveline
-  is used in MG2, MG1, and Engine components.
-  These are necessary especially when they stop operating
-  and the energy must be released to come to a complete stop.
-- Updated `PowerSplitHEV_SpeedTracking` model.
-- Cleaned up some models and scripts.
+  The previous model is included as well.
+- Custom Engine block is added as a new referenced subsystem
+  for Engine component.
+  The previous model is included as well.
+  The custom block is parameterized with peak torque,
+  engine speed at peak torque, and peak power.
+  The block parameter window provides a link to
+  make the plots of engine torque and power curves.
+- MG2, MG1, and Engine components have
+  a torsional Spring-Damper block from Simscape Driveline
+  or equivalent blocks from Foundation Library.
+  This allows the energy to properly dissipate when necessary,
+  thereby improving simulation robustness and performance.
+- MG1 controller can start the engine.
+  This better models the power-split HEV controller.
+- In `PowerSplitHEV_SpeedTracking` model,
+  Scopes are moved to individual components.
+  This cleans up the model and makes model navigation easier.
+
+Test
+
+- Project top-level unit test is added.
+  See files under `test`.
+  - Test runner: `runTests_Project.m`.
+    This automatically finds all unit test implementation files
+    in the project folder tree and runs them.
+    GitHub Actions is configured to run this test runner.
+- Power-Split HEV system has unit test files
+  in `HEV` > `PowerSplitHEV_SpeedTracking` > `test`.
+  - Unit test implementation: `UnitTest_PowerSplitHEV_SpeedTracking.m`.
+  - Test runner: `runTests_PowerSplitHEV_SpeedTracking.m`.
+    Running this script performs unit test and produces
+    a MATLAB code coverage report.
+- Engine component has unit test files
+  in `Components` > `Engine` > `test`.
+  - Unit test implementation: `UnitTest_Engine.m`.
+  - Test runner: `runTests_Engine.m`.
+    Running this script performs unit test and produces
+    a MATLAB code coverage report.
+
+Other updates
+
+- Cleaned up some folders, models, and scripts.
 
 ## What's New in Version 1.1
 
-### Highlights
+Highlights
 
-Parameter Sweep Workflow in Live Script
+- Parameter Sweep Workflow in Live Script
+  - Demonstrates how to investigate the effect of reduction gear ratio,
+    high-voltage battery capacity and high-voltage battery weight
+    on the electrical efficiency.
+    You can optionally use Parallel Computing Toolbox to shorten
+    total simulation time.
+  - Watch [YouTube video](https://www.youtube.com/watch?v=cbo83A8K_4w)
+    showing the workflow as well as real-time application.
+    - Real-Time application presented in the video will be added
+      to this project in future updates.
 
-- Demonstrates how to investigate the effect of reduction gear ratio,
-  high-voltage battery capacity and high-voltage battery weight
-  on the electrical efficiency.
-  You can optionally use Parallel Computing Toolbox to shorten
-  total simulation time.
-- Watch [YouTube video](https://www.youtube.com/watch?v=cbo83A8K_4w)
-  showing the workflow as well as real-time application.
-  - Real-Time application presented in the video will be added
-    to this project in future updates.
-
-### Other Updates
+Other Updates
 
 - MATLAB R2021a or newer release is required.
 

@@ -1,55 +1,277 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="0" failures="0" name="UnitTest_Engine" skipped="0" tests="3" time="9.9742">
-    <testcase classname="UnitTest_Engine" name="run_harnessSimple_1" time="4.1454"/>
-    <testcase classname="UnitTest_Engine" name="run_harnessSimple_2_1" time="2.0676"/>
-    <testcase classname="UnitTest_Engine" name="run_harnessSimple_2_2" time="3.7612"/>
-  </testsuite>
-
-  <testsuite errors="0" failures="0" name="setup_EngineTest" skipped="0" tests="4" time="0.24591">
-    <testcase classname="setup_EngineTest" name="TestHarnessSet_upScript" time="0.16357"/>
-    <testcase classname="setup_EngineTest" name="LoadDefaultParameterValues" time="0.015082"/>
-    <testcase classname="setup_EngineTest" name="ModelAndBlockParameters" time="0.009375"/>
-    <testcase classname="setup_EngineTest" name="ExternalInputs" time="0.057886"/>
-  </testsuite>
-
-  <testsuite errors="0" failures="0" name="UnitTest_PowerSplitHEV_SpeedTracking" skipped="0" tests="11" time="306.0606">
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runSpeedTrackingSim_10s" time="36.6367"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_allzero" time="21.6487"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_high_speed" time="20.7027"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_accelerate_decelerate_kph" time="18.0372"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_ftp75" time="36.3599"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_simple_drive_pattern" time="17.7166"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_main_script" time="47.613"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_accel_decel" time="14.8522"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_ftp75" time="14.6492"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_simple_pattern" time="14.0075"/>
-    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_sweep" time="63.8368"/>
-  </testsuite>
-
-  <testsuite errors="0" failures="1" name="UnitTests_Project" skipped="0" tests="1" time="26.8643">
-    <testcase classname="UnitTests_Project" name="projectRunChecks" time="26.8643">
-      <failure type="VerificationFailure">Verification failed in UnitTests_Project/projectRunChecks.
-    ---------------------
-    Framework Diagnostic:
-    ---------------------
-    verifyEqual failed.
-    --&gt; The logical values are not equal.
-    
-    Actual Value:
-      logical
-    
-       0
-    Expected Value:
-      logical
-    
-       1
-    ------------------
-    Stack Information:
-    ------------------
-    In D:\sandbox\isaacito\github-hev\21a-devel_local2\test\UnitTests_Project.m (UnitTests_Project.projectRunChecks) at 18</failure>
+  <testsuite errors="3" failures="0" name="UnitTest_Engine" skipped="0" tests="6" time="17.9229">
+    <testcase classname="UnitTest_Engine" name="run_harnessSimple_1" time="4.5414"/>
+    <testcase classname="UnitTest_Engine" name="run_harnessSimple_2_1" time="2.451"/>
+    <testcase classname="UnitTest_Engine" name="run_harnessSimple_2_2" time="3.4475"/>
+    <testcase classname="UnitTest_Engine" name="run_harnessPowerSplit_1" time="2.7172">
+      <error>Error occurred in UnitTest_Engine/run_harnessPowerSplit_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'physmod:simscape:engine:sli:extensible:NoSolverBlockConnected'
+    --------------
+    Error Details:
+    --------------
+    Error using UnitTest_Engine/run_harnessPowerSplit_1 (line 94)
+    ['harnessPowerSplit_Engine/Engine/Engine Friction', 'harnessPowerSplit_Engine/Engine/Engine Inertia', 'harnessPowerSplit_Engine/Engine/Flywheel Case', 'harnessPowerSplit_Engine/Engine/Measurement', 'harnessPowerSplit_Engine/Engine/Mechanical Rotational Reference 1', 'harnessPowerSplit_Engine/Engine/Mechanical Rotational Reference 2', 'harnessPowerSplit_Engine/Engine/PS Saturation', 'harnessPowerSplit_Engine/Engine/PS Transfer Function', 'harnessPowerSplit_Engine/Engine/Rotational Damper', 'harnessPowerSplit_Engine/Engine/Rotational Spring', 'harnessPowerSplit_Engine/Engine/Simscape Component', 'harnessPowerSplit_Engine/Engine/Unidirectional Clutch']: Each physical network must be connected to exactly one Solver Configuration block. There is no Solver Configuration block connected to Physical Network with the following blocks: 'harnessPowerSplit_Engine/Engine'
+    'harnessPowerSplit_Engine/Engine/Engine Friction'
+    'harnessPowerSplit_Engine/Engine/Engine Inertia'
+    'harnessPowerSplit_Engine/Engine/Flywheel Case'
+    'harnessPowerSplit_Engine/Engine/Measurement'
+    'harnessPowerSplit_Engine/Engine/Measurement/Ideal Rotational
+    Motion Sensor'
+    'harnessPowerSplit_Engine/Engine/Measurement/Ideal Torque Sensor'
+    'harnessPowerSplit_Engine/Engine/Measurement/Mechanical
+    Rotational Reference'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS Product'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Engine/Mechanical
+    Rotational Reference 1'
+    'harnessPowerSplit_Engine/Engine/Mechanical
+    Rotational Reference 2'
+    'harnessPowerSplit_Engine/Engine/PS Saturation'
+    'harnessPowerSplit_Engine/Engine/PS Transfer Function'
+    'harnessPowerSplit_Engine/Engine/Rotational Damper'
+    'harnessPowerSplit_Engine/Engine/Rotational Spring'
+    'harnessPowerSplit_Engine/Engine/Simscape Component'
+    'harnessPowerSplit_Engine/Engine/Unidirectional
+    Clutch'
+    'harnessPowerSplit_Engine/Free End'
+    'harnessPowerSplit_Engine/Ideal Torque Source'
+    'harnessPowerSplit_Engine/Measure'
+    'harnessPowerSplit_Engine/Measure/Ideal Rotational
+    Motion Sensor'
+    'harnessPowerSplit_Engine/Measure/Ideal Torque Sensor'
+    'harnessPowerSplit_Engine/Measure/Mechanical
+    Rotational Reference1'
+    'harnessPowerSplit_Engine/Measure/PS Product'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Mechanical
+    Rotational Reference 2'
+    'harnessPowerSplit_Engine/Planetary Gear'
+    'harnessPowerSplit_Engine/Reducer Drive Gear (B) to
+    Differential Gear (F)'
+    'harnessPowerSplit_Engine/Reducer Driven Gear (F) to
+    Counter Drive Gear (B)'
+    'harnessPowerSplit_Engine/Simulink-PS
+    Converter'
+    'harnessPowerSplit_Engine/Simulink-PS
+    Converter1'
+    'harnessPowerSplit_Engine/Torsional
+    Spring-Damper1'
+    'harnessPowerSplit_Engine/Vehicle'
+    'harnessPowerSplit_Engine/Vehicle/Geartrain Friction'
+    'harnessPowerSplit_Engine/Vehicle/Mechanical
+    Rotational Reference1'
+    'harnessPowerSplit_Engine/Vehicle/PS Integrator'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Vehicle/Reduction Gear'
+    'harnessPowerSplit_Engine/Vehicle/Simple Vehicle'
+    'harnessPowerSplit_Engine/Vehicle/Simulink-PS
+    Converter'</error>
     </testcase>
+    <testcase classname="UnitTest_Engine" name="run_harnessPowerSplit_2_1" time="2.5147">
+      <error>Error occurred in UnitTest_Engine/run_harnessPowerSplit_2_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'physmod:simscape:engine:sli:extensible:NoSolverBlockConnected'
+    --------------
+    Error Details:
+    --------------
+    Error using UnitTest_Engine/run_harnessPowerSplit_2_1 (line 117)
+    ['harnessPowerSplit_Engine/Engine/Engine Friction', 'harnessPowerSplit_Engine/Engine/Engine Inertia', 'harnessPowerSplit_Engine/Engine/Flywheel Case', 'harnessPowerSplit_Engine/Engine/Ideal Torque Sensor', 'harnessPowerSplit_Engine/Engine/Ideal Torque Source', 'harnessPowerSplit_Engine/Engine/Mechanical Rotational Reference 1', 'harnessPowerSplit_Engine/Engine/Mechanical Rotational Reference 2', 'harnessPowerSplit_Engine/Engine/PS Saturation', 'harnessPowerSplit_Engine/Engine/PS-Simulink Converter', 'harnessPowerSplit_Engine/Engine/PS-Simulink Converter1', 'harnessPowerSplit_Engine/Engine/PS Transfer Function', 'harnessPowerSplit_Engine/Engine/Rotational Damper', 'harnessPowerSplit_Engine/Engine/Rotational Spring', 'harnessPowerSplit_Engine/Engine/Unidirectional Clutch']: Each physical network must be connected to exactly one Solver Configuration block. There is no Solver Configuration block connected to Physical Network with the following blocks: 'harnessPowerSplit_Engine/Engine'
+    'harnessPowerSplit_Engine/Engine/Engine Friction'
+    'harnessPowerSplit_Engine/Engine/Engine Inertia'
+    'harnessPowerSplit_Engine/Engine/Flywheel Case'
+    'harnessPowerSplit_Engine/Engine/Ideal Torque Sensor'
+    'harnessPowerSplit_Engine/Engine/Ideal Torque Source'
+    'harnessPowerSplit_Engine/Engine/Mechanical
+    Rotational Reference 1'
+    'harnessPowerSplit_Engine/Engine/Mechanical
+    Rotational Reference 2'
+    'harnessPowerSplit_Engine/Engine/PS Saturation'
+    'harnessPowerSplit_Engine/Engine/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Engine/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Engine/PS Transfer Function'
+    'harnessPowerSplit_Engine/Engine/Rotational Damper'
+    'harnessPowerSplit_Engine/Engine/Rotational Spring'
+    'harnessPowerSplit_Engine/Engine/Unidirectional
+    Clutch'
+    'harnessPowerSplit_Engine/Free End'
+    'harnessPowerSplit_Engine/Ideal Torque Source'
+    'harnessPowerSplit_Engine/Measure'
+    'harnessPowerSplit_Engine/Measure/Ideal Rotational
+    Motion Sensor'
+    'harnessPowerSplit_Engine/Measure/Ideal Torque Sensor'
+    'harnessPowerSplit_Engine/Measure/Mechanical
+    Rotational Reference1'
+    'harnessPowerSplit_Engine/Measure/PS Product'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Mechanical
+    Rotational Reference 2'
+    'harnessPowerSplit_Engine/Planetary Gear'
+    'harnessPowerSplit_Engine/Reducer Drive Gear (B) to
+    Differential Gear (F)'
+    'harnessPowerSplit_Engine/Reducer Driven Gear (F) to
+    Counter Drive Gear (B)'
+    'harnessPowerSplit_Engine/Simulink-PS
+    Converter'
+    'harnessPowerSplit_Engine/Simulink-PS
+    Converter1'
+    'harnessPowerSplit_Engine/Torsional
+    Spring-Damper1'
+    'harnessPowerSplit_Engine/Vehicle'
+    'harnessPowerSplit_Engine/Vehicle/Geartrain Friction'
+    'harnessPowerSplit_Engine/Vehicle/Mechanical
+    Rotational Reference1'
+    'harnessPowerSplit_Engine/Vehicle/PS Integrator'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Vehicle/Reduction Gear'
+    'harnessPowerSplit_Engine/Vehicle/Simple Vehicle'
+    'harnessPowerSplit_Engine/Vehicle/Simulink-PS
+    Converter'</error>
+    </testcase>
+    <testcase classname="UnitTest_Engine" name="run_harnessPowerSplit_2_2" time="2.251">
+      <error>Error occurred in UnitTest_Engine/run_harnessPowerSplit_2_2 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'physmod:simscape:engine:sli:extensible:NoSolverBlockConnected'
+    --------------
+    Error Details:
+    --------------
+    Error using UnitTest_Engine/run_harnessPowerSplit_2_2 (line 140)
+    ['harnessPowerSplit_Engine/Engine/Engine Friction', 'harnessPowerSplit_Engine/Engine/Engine Inertia', 'harnessPowerSplit_Engine/Engine/Flywheel Case', 'harnessPowerSplit_Engine/Engine/Measurement', 'harnessPowerSplit_Engine/Engine/Mechanical Rotational Reference 1', 'harnessPowerSplit_Engine/Engine/Mechanical Rotational Reference 2', 'harnessPowerSplit_Engine/Engine/PS Saturation', 'harnessPowerSplit_Engine/Engine/PS Transfer Function', 'harnessPowerSplit_Engine/Engine/Rotational Damper', 'harnessPowerSplit_Engine/Engine/Rotational Spring', 'harnessPowerSplit_Engine/Engine/Simscape Component', 'harnessPowerSplit_Engine/Engine/Unidirectional Clutch']: Each physical network must be connected to exactly one Solver Configuration block. There is no Solver Configuration block connected to Physical Network with the following blocks: 'harnessPowerSplit_Engine/Engine'
+    'harnessPowerSplit_Engine/Engine/Engine Friction'
+    'harnessPowerSplit_Engine/Engine/Engine Inertia'
+    'harnessPowerSplit_Engine/Engine/Flywheel Case'
+    'harnessPowerSplit_Engine/Engine/Measurement'
+    'harnessPowerSplit_Engine/Engine/Measurement/Ideal Rotational
+    Motion Sensor'
+    'harnessPowerSplit_Engine/Engine/Measurement/Ideal Torque Sensor'
+    'harnessPowerSplit_Engine/Engine/Measurement/Mechanical
+    Rotational Reference'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS Product'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Engine/Measurement/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Engine/Mechanical
+    Rotational Reference 1'
+    'harnessPowerSplit_Engine/Engine/Mechanical
+    Rotational Reference 2'
+    'harnessPowerSplit_Engine/Engine/PS Saturation'
+    'harnessPowerSplit_Engine/Engine/PS Transfer Function'
+    'harnessPowerSplit_Engine/Engine/Rotational Damper'
+    'harnessPowerSplit_Engine/Engine/Rotational Spring'
+    'harnessPowerSplit_Engine/Engine/Simscape Component'
+    'harnessPowerSplit_Engine/Engine/Unidirectional
+    Clutch'
+    'harnessPowerSplit_Engine/Free End'
+    'harnessPowerSplit_Engine/Ideal Torque Source'
+    'harnessPowerSplit_Engine/Measure'
+    'harnessPowerSplit_Engine/Measure/Ideal Rotational
+    Motion Sensor'
+    'harnessPowerSplit_Engine/Measure/Ideal Torque Sensor'
+    'harnessPowerSplit_Engine/Measure/Mechanical
+    Rotational Reference1'
+    'harnessPowerSplit_Engine/Measure/PS Product'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Measure/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Mechanical
+    Rotational Reference 2'
+    'harnessPowerSplit_Engine/Planetary Gear'
+    'harnessPowerSplit_Engine/Reducer Drive Gear (B) to
+    Differential Gear (F)'
+    'harnessPowerSplit_Engine/Reducer Driven Gear (F) to
+    Counter Drive Gear (B)'
+    'harnessPowerSplit_Engine/Simulink-PS
+    Converter'
+    'harnessPowerSplit_Engine/Simulink-PS
+    Converter1'
+    'harnessPowerSplit_Engine/Torsional
+    Spring-Damper1'
+    'harnessPowerSplit_Engine/Vehicle'
+    'harnessPowerSplit_Engine/Vehicle/Geartrain Friction'
+    'harnessPowerSplit_Engine/Vehicle/Mechanical
+    Rotational Reference1'
+    'harnessPowerSplit_Engine/Vehicle/PS Integrator'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter1'
+    'harnessPowerSplit_Engine/Vehicle/PS-Simulink
+    Converter2'
+    'harnessPowerSplit_Engine/Vehicle/Reduction Gear'
+    'harnessPowerSplit_Engine/Vehicle/Simple Vehicle'
+    'harnessPowerSplit_Engine/Vehicle/Simulink-PS
+    Converter'</error>
+    </testcase>
+  </testsuite>
+
+  <testsuite errors="0" failures="0" name="PowerSplitDriveUnit_UnitTest" skipped="0" tests="10" time="122.3137">
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_1" time="9.1095"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_1" time="9.0234"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_2" time="8.5129"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_main_script_1" time="20.1019"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_1" time="13.3495"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_2" time="12.4791"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_3" time="12.5444"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_4" time="12.4797"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_5" time="12.3435"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_6" time="12.3698"/>
+  </testsuite>
+
+  <testsuite errors="0" failures="0" name="UnitTest_PowerSplitHEV_SpeedTracking" skipped="0" tests="13" time="395.7158">
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="openAndRun_1" time="33.842"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="openAndRun_2_1" time="17.0861"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="openAndRun_2_2" time="16.3955"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_allzero" time="18.4631"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_high_speed" time="21.4932"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_accelerate_decelerate_kph" time="18.691"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_ftp75" time="40.8233"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_simple_drive_pattern" time="18.8209"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_main_script" time="56.2056"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_accel_decel" time="19.9473"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_ftp75" time="18.0366"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runMScript_runsim_simple_pattern" time="16.2609"/>
+    <testcase classname="UnitTest_PowerSplitHEV_SpeedTracking" name="runLiveScript_sweep" time="99.6503"/>
   </testsuite>
 
 </testsuites>
