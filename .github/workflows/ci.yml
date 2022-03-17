@@ -1,11 +1,10 @@
 # GitHub Actions Workflow with MATLAB Actions
 
-# Copyright 2021 The MathWorks, Inc.
+# Copyright 2021-2022 The MathWorks, Inc.
 
 name: MATLAB Build
 
 on:
-
   push:
     branches: [ main, 21a-devel ]
 
@@ -13,6 +12,23 @@ on:
     branches: [ main, 21a-devel ]
 
 jobs:
+  matlab-job-22a:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Setup MATLAB
+        uses: matlab-actions/setup-matlab@v1
+        with:
+          release: R2022a
+
+      - name: Run tests
+        uses: matlab-actions/run-command@v1
+        with:
+          command: openProject(pwd); HEVProject_runtests;
+
   matlab-job-21b:
     runs-on: ubuntu-latest
     steps:
@@ -28,7 +44,7 @@ jobs:
       - name: Run tests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); runTests_Project;
+          command: openProject(pwd); HEVProject_runtests;
 
   matlab-job-21a:
     runs-on: ubuntu-latest
@@ -45,4 +61,4 @@ jobs:
       - name: Run tests
         uses: matlab-actions/run-command@v1
         with:
-          command: openProject(pwd); runTests_Project;
+          command: openProject(pwd); HEVProject_runtests;
