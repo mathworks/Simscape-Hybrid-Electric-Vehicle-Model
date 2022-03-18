@@ -112,22 +112,21 @@ Test
 
 - Project top-level unit test is added.
   See files under `test`.
-  - Test runner: `runTests_Project.m`.
-    This automatically finds all unit test implementation files
+  - `HEVProject_runtests.m`
+    automatically finds all unit test implementation files
     in the project folder tree and runs them.
-    GitHub Actions is configured to run this test runner.
+    `.github/workflow/ci.yml` for GitHub Actions uses this
+    to perform unit test.
 - Power-Split HEV system has unit test files
   in `HEV` > `PowerSplitHEV_SpeedTracking` > `test`.
-  - Unit test implementation: `UnitTest_PowerSplitHEV_SpeedTracking.m`.
-  - Test runner: `runTests_PowerSplitHEV_SpeedTracking.m`.
+  - Unit test implementation: `PowerSplitHEV_SpeedTracking_UnitTest.m`.
+  - Test runner: `PowerSplitHEV_SpeedTracking_runtests.m`.
     Running this script performs unit test and produces
-    a MATLAB code coverage report.
+    a MATLAB code coverage report in HTML.
+- Power-Split Drive Unit component has unit test files
+  in `Components` > `PowerSplitDriveUnit` > `test`.
 - Engine component has unit test files
   in `Components` > `Engine` > `test`.
-  - Unit test implementation: `UnitTest_Engine.m`.
-  - Test runner: `runTests_Engine.m`.
-    Running this script performs unit test and produces
-    a MATLAB code coverage report.
 
 Other updates
 
