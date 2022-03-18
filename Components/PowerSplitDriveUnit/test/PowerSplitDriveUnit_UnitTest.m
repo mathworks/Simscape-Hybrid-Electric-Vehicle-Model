@@ -18,12 +18,10 @@ function run_harness_model_1(testCase)
 
   mdl = testCase.modelName;
 
-  t_end = 10;  % Simulation stop time in seconds
-
   load_system(mdl)
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, "StopTime","10");
 
   sim(simIn);
 
@@ -39,14 +37,12 @@ function run_harness_model_2_1(testCase)
 
   mdl = testCase.modelName;
 
-  t_end = 10;  % Simulation stop time in seconds
-
   load_system(mdl)
 
   set_param(mdl+"/Power Split Drive Unit/Engine", "ReferencedSubsystem", "EngineBasic_refsub")
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, "StopTime","10");
 
   sim(simIn);
 
@@ -62,14 +58,12 @@ function run_harness_model_2_2(testCase)
 
   mdl = testCase.modelName;
 
-  t_end = 10;  % Simulation stop time in seconds
-
   load_system(mdl)
 
   set_param(mdl+"/Power Split Drive Unit/Engine", "ReferencedSubsystem", "EngineCustom_refsub")
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, "StopTime","10");
 
   sim(simIn);
 
@@ -78,97 +72,63 @@ function run_harness_model_2_2(testCase)
 end  % function
 
 %% Test for Scripts
-
-function run_main_script_1(testCase)
-%% Run script
 % Check that the script runs without any warnings or errors.
 
+function run_main_script_1(~)
   close all
   bdclose all
-
   PowerSplitDriveUnit_main_script
-
   close all
   bdclose all
-end  % function
+end
 
-function run_script_1(testCase)
-%% Run script
-% Check that the script runs without any warnings or errors.
-
+function run_script_1(~)
   close all
   bdclose all
-
   PowerSplitDriveUnitBasic_testcase_basic
-
   close all
   bdclose all
-end  % function
+end
 
-function run_script_2(testCase)
-%% Run script
-% Check that the script runs without any warnings or errors.
-
+function run_script_2(~)
   close all
   bdclose all
-
   PowerSplitDriveUnitBasic_testcase_driveAxle
-
   close all
   bdclose all
-end  % function
+end
 
-function run_script_3(testCase)
-%% Run script
-% Check that the script runs without any warnings or errors.
-
+function run_script_3(~)
   close all
   bdclose all
-
   PowerSplitDriveUnitBasic_testcase_driveMg2
-
   close all
   bdclose all
-end  % function
+end
 
-function run_script_4(testCase)
-%% Run script
-% Check that the script runs without any warnings or errors.
-
+function run_script_4(~)
   close all
   bdclose all
-
   PowerSplitDriveUnitBasic_testcase_driveMg1
-
   close all
   bdclose all
-end  % function
+end
 
-function run_script_5(testCase)
-%% Run script
-% Check that the script runs without any warnings or errors.
-
+function run_script_5(~)
   close all
   bdclose all
-
   PowerSplitDriveUnitBasic_testcase_lockAxle_driveMg1
-
   close all
   bdclose all
-end  % function
+end
 
-function run_script_6(testCase)
-%% Run script
-% Check that the script runs without any warnings or errors.
-
+function run_script_6(~)
   close all
   bdclose all
-
   PowerSplitDriveUnitBasic_testcase_power_split
-
   close all
   bdclose all
-end  % function
+end
 
 end  % methods (Test)
 end  % classdef
