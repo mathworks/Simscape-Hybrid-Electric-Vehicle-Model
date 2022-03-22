@@ -2,15 +2,20 @@
 
 % Copyright 2020-2021 The MathWorks, Inc.
 
+%% Load default parameters
+
+% PowerSplitHEV_params
+
 %% Input signals
 
-[inputSignals_Vehicle1D, inputBus_Vehicle1D, t_end] = ...
-  Vehicle1DBasic_inputs("InputPattern", "acceleration");
+vehSigBuilder = Vehicle1D_InputSignalBuilder;
 
-%% Initial conditions
+vehicleInputData = Constant(vehSigBuilder);
 
-initial.vehicleSpeed_kph = 0;
-initial.GeartrainSpeed_rpm = 0;
+%%
+vehicle_InputSignals = vehicleInputData.Signals;
+vehicle_InputBus = vehicleInputData.Bus;
+t_end = vehicleInputData.Options.StopTime_s;
 
 %% Block parameters
 
@@ -28,3 +33,10 @@ gearTrain.inertia_kg_m2 = 161.1;  % 1790*0.3^2==161.1
 % M = 1200 kg --> M*r^2 = 108 kg*m^2
 % M = 1600 kg --> M*r^2 = 144 kg*m^2
 % M = 2000 kg --> M*r^2 = 180 kg*m^2
+
+smoothing.vehicle_speed_threshold_kph = 1;
+smoothing.axle_speed_threshold_rpm = 1;
+
+%% Initial conditions
+
+initial.vehicleSpeed_kph = 0;
