@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="11" time="42.1137">
-    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="5.3105"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.058753"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="2.3479"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="1.1616"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="3.2577"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_1" time="5.3219"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="4.2733"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="4.9502"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="4.3051"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.9304"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="7.1965"/>
+  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="12" time="44.4456">
+    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="5.0928"/>
+    <testcase classname="Vehicle1D_UnitTest" name="block_info_script_1" time="1.8285"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.087602"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="2.1652"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="1.1005"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="3.3489"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_1" time="4.8648"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="4.7863"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="4.8546"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="4.2657"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="4.0289"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="8.0219"/>
   </testsuite>
 
 </testsuites>

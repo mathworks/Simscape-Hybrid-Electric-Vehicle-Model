@@ -1,25 +1,26 @@
 %% Setup Script for Simple 1D Vehicle
+% This script is run automatically when harness model opens.
+% If you edit this file, make sure to run this
+% before running harness model for simulation.
 
 % Copyright 2020-2021 The MathWorks, Inc.
-
-%% Load default parameters
-
-% PowerSplitHEV_params
 
 %% Input signals
 
 vehSigBuilder = Vehicle1D_InputSignalBuilder;
 
-vehicleInputData = Constant(vehSigBuilder);
+% ### Select input signal pattern
+%vehicleInputData = Constant(vehSigBuilder);
+vehicleInputData = DriveAxle(vehSigBuilder);
 
-%%
 vehicle_InputSignals = vehicleInputData.Signals;
 vehicle_InputBus = vehicleInputData.Bus;
+
 t_end = vehicleInputData.Options.StopTime_s;
 
 %% Block parameters
 
-vehicle.mass_kg = 1790;  % 1790kg for 2016 Toyota Prius (XW50, P610)
+vehicle.mass_kg = 1790;
 vehicle.tireRollingRadius_m = 0.3;
 vehicle.roadLoadA_N = 175;
 vehicle.roadLoadB_N_per_kph = 0;

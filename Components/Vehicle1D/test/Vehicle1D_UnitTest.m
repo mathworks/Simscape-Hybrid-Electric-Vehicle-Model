@@ -31,6 +31,28 @@ function run_harness_model_1(testCase)
   bdclose all
 end  % function
 
+function block_info_script_1(testCase)
+%% Check that the block info script works.
+
+  close all
+  bdclose all
+
+  mdl = testCase.modelName;
+  load_system(mdl)
+
+  % Select subsystem
+  set_param(0, "CurrentSystem", mdl+"/Longitudinal Vehicle")
+
+  % Select block
+  set_param(gcs, "CurrentBlock", "Longitudinal Vehicle")
+
+  % A proper block must be selected for this script to work.
+  Vehicle1DUtility.reportVehicle1DCustomBlock
+
+  close all
+  bdclose all
+end  % function
+
 %% Test for Inputs
 % Check that the Input Signal Builder class works.
 

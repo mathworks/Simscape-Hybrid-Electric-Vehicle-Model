@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="0" failures="0" name="Engine_UnitTest" skipped="0" tests="7" time="34.166">
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_1" time="4.6522"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_1" time="2.4338"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_2" time="3.7148"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_1" time="4.9445"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_1" time="4.917"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_2" time="4.6682"/>
-    <testcase classname="Engine_UnitTest" name="run_main_script_1" time="8.8354"/>
+  <testsuite errors="0" failures="0" name="Engine_UnitTest" skipped="0" tests="10" time="36.7487">
+    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_1" time="1.5487"/>
+    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_2" time="0.81135"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_1" time="4.017"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_1" time="3.7454"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_2" time="2.7435"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_1" time="4.8456"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_1" time="4.7494"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_2" time="4.6096"/>
+    <testcase classname="Engine_UnitTest" name="plot_script_1" time="1.4965"/>
+    <testcase classname="Engine_UnitTest" name="run_main_script_1" time="8.1817"/>
   </testsuite>
 
 </testsuites>
