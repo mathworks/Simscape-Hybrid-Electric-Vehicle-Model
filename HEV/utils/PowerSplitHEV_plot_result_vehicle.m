@@ -21,27 +21,27 @@ tl = tiledlayout(parent, 3, 2, ...
       'TileSpacing','compact', 'Padding','compact' );
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed"));
+vals = logsout.get("Vehicle Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed Reference (km/hr)"));
+vals = logsout.get("Vehicle Speed Reference (km/hr)").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Speed & Reference (km/hr)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle Incline"));
+vals = logsout.get("Vehicle Incline").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = getValuesFromLogsout(logsout.get("Road Grade"));
+vals = logsout.get("Road Grade").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Incline (deg) & Road Grade (%)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle G Force"));
+vals = logsout.get("Vehicle G Force").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
@@ -49,7 +49,7 @@ title(ax, "G Force (-)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Brake On Off"));
+vals = logsout.get("Brake On Off").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
@@ -57,7 +57,7 @@ title(ax, "Brake On Off")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Axle Speed"));
+vals = logsout.get("Axle Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = logsout.get("Axle Speed Reference").Values;

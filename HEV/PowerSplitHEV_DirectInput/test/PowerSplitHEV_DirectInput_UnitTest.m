@@ -1,10 +1,10 @@
-classdef PowerSplitHEV_SpeedTracking_UnitTest < matlab.unittest.TestCase
+classdef PowerSplitHEV_DirectInput_UnitTest < matlab.unittest.TestCase
 % Class implementation of unit test
 
 % Copyright 2021-2022 The MathWorks, Inc.
 
 properties (Constant)
-  modelName = "PowerSplitHEV_SpeedTracking";
+  modelName = "PowerSplitHEV_system_model";
 end
 
 methods (Test)
@@ -20,7 +20,7 @@ function defaultReferencedSubsystems_1(testCase)
   load_system(mdl)
 
   refSubName = get_param(mdl+"/Controller & Environment", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'PowerSplitHEV_SpeedTracking_DrvEnv_refsub');
+  verifyEqual(testCase, refSubName, 'PowerSplitHEV_DirectInput_refsub');
 
   refSubName = get_param(mdl+"/High Voltage Battery", "ReferencedSubsystem");
   verifyEqual(testCase, refSubName, 'BatteryHVElec_refsub');
@@ -38,14 +38,14 @@ function defaultReferencedSubsystems_1(testCase)
   bdclose all
 end
 
-function openAndRun_1(~)
+function openAndRun_1(testCase)
 %% Most basic check - open model and run simulation.
 % Check that the model runs without any warnings or errors.
 
   close all
   bdclose all
 
-  mdl = "PowerSplitHEV_SpeedTracking";
+  mdl = testCase.modelName;
 
   t_end = 10;  % Simulation stop time in seconds
 
@@ -59,14 +59,14 @@ function openAndRun_1(~)
   bdclose all
 end  % function
 
-function openAndRun_2_1(~)
+function openAndRun_2_1(testCase)
 %% Check that the model runs without any warnings or errors.
 % Specify the referenced subsystems.
 
   close all
   bdclose all
 
-  mdl = "PowerSplitHEV_SpeedTracking";
+  mdl = testCase.modelName;
 
   t_end = 10;  % Simulation stop time in seconds
 
@@ -89,14 +89,14 @@ function openAndRun_2_1(~)
   bdclose all
 end  % function
 
-function openAndRun_2_2(~)
+function openAndRun_2_2(testCase)
 %% Check that the model runs without any warnings or errors.
 % Specify the referenced subsystem.
 
   close all
   bdclose all
 
-  mdl = "PowerSplitHEV_SpeedTracking";
+  mdl = testCase.modelName;
 
   t_end = 10;  % Simulation stop time in seconds
 
@@ -119,142 +119,87 @@ function openAndRun_2_2(~)
   bdclose all
 end  % function
 
-%%
+%% Test for Scripts
+% Check that scripts run without any warnings or errors.
 
-function runLiveScript_allzero(~)
-%% Check that the script runs without any warnings or errors.
-
+function runLiveScript_DirectInput_Constant(~)
   close all
   bdclose all
 
-  % "All Zero" simulation is the most basic simulation
+  % The "Constant" simulation is the most basic simulation
   % where nothing interesting happens,
   % but this ensures that everything in the script works fine.
-  evalin("base", "PowerSplitHEV_SpeedTracking_all_zero");
+  PowerSplitHEV_DI_testcase_Constant
 
   close all
   bdclose all
-end  % function
+end
 
-function runLiveScript_high_speed(~)
-%% Check that the script runs without any warnings or errors.
-
+function runLiveScript_DirectInput_Accel(~)
   close all
   bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_high_speed");
-
+  PowerSplitHEV_DI_testcase_Accel
   close all
   bdclose all
-end  % function
+end
 
-%% Live Scripts for drive pattern/cycle simulation
-
-function runLiveScript_accelerate_decelerate_kph(~)
-%% Check that the script runs without any warnings or errors.
-
+function runLiveScript_DirectInput_Downhill(~)
   close all
   bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_accelerate_decelerate_kph");
-
+  PowerSplitHEV_DI_testcase_Downhill
   close all
   bdclose all
-end  % function
+end
 
-function runLiveScript_ftp75(~)
-%% Check that the script runs without any warnings or errors.
-
+function runLiveScript_DirectInput_Downhill_2(~)
   close all
   bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_ftp75");
-
+  PowerSplitHEV_DI_testcase_Downhill_2
   close all
   bdclose all
-end  % function
+end
 
-function runLiveScript_simple_drive_pattern(~)
-%% Check that the script runs without any warnings or errors.
-
+function runLiveScript_DirectInput_MG1Drive(~)
   close all
   bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_simple_drive_pattern");
-
+  PowerSplitHEV_DI_testcase_MG1Drive
   close all
   bdclose all
-end  % function
+end
 
+function runLiveScript_DirectInput_MG2Drive(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_MG2Drive
+  close all
+  bdclose all
+end
+
+function runLiveScript_DirectInput_MG2Drive_2(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_MG2Drive_2
+  close all
+  bdclose all
+end
+
+function runLiveScript_DirectInput_PowerSplitDrive(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_PowerSplitDrive
+  close all
+  bdclose all
+end
+
+%{
 function runLiveScript_main_script(~)
-%% Check that the script runs without any warnings or errors.
-
   close all
   bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_main_script");
-
+  PowerSplitHEV_DirectInput_main_script
   close all
   bdclose all
-end  % function
-
-%% M scripts for drive pattern/cycle simulation
-
-function runMScript_runsim_accel_decel(~)
-%% Check that the script runs without any warnings or errors.
-
-  close all
-  bdclose all
-
-  % This sets up external inputs and override some parameters
-  % then runs simulation.
-  PowerSplitHEV_SpeedTracking_runsim_accel_decel
-
-  close all
-  bdclose all
-end  % function
-
-function runMScript_runsim_ftp75(~)
-%% Check that the script runs without any warnings or errors.
-
-  close all
-  bdclose all
-
-  % This sets up external inputs and override some parameters
-  % then runs simulation.
-  PowerSplitHEV_SpeedTracking_runsim_ftp75
-
-  close all
-  bdclose all
-end  % function
-
-function runMScript_runsim_simple_pattern(~)
-%% Check that the script runs without any warnings or errors.
-
-  close all
-  bdclose all
-
-  % This sets up external inputs and override some parameters
-  % then runs simulation.
-  PowerSplitHEV_SpeedTracking_runsim_simple_pattern
-
-  close all
-  bdclose all
-end  % function
-
-%% Live Scripts for application workflows
-
-function runLiveScript_sweep(~)
-%% Check that the script runs without any warnings or errors.
-
-  close all
-  bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_sweep");
-
-  close all
-  bdclose all
-end  % function
+end
+%}
 
 end  % methods (Test)
 end  % classdef

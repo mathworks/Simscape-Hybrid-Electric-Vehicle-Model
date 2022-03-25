@@ -8,11 +8,7 @@ PowerSplitHEV_SpeedTracking_select_ftp75
 
 %% Load default initial conditions and block parameter values
 
-% Plant
 PowerSplitHEV_params
-
-% Controller/Driver - load this after plant
-HEVPowerSplitControl_params
 
 %% Override initial conditions and block parameter values
 

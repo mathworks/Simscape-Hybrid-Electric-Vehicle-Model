@@ -1,7 +1,7 @@
-function PowerSplitHEV_SpeedTracking_plot_result_vehicle( nvpair )
+function PowerSplitHEV_SpeedTracking_plot_result_compact( nvpair )
 % plots the simulation result.
 
-% Copyright 2021-2022 The MathWorks, Inc.
+% Copyright 2021 The MathWorks, Inc.
 
 %% Process arguments
 
@@ -15,63 +15,84 @@ parent = nvpair.PlotParent;
 
 %% Plot
 
-parent.Position(3:4) = [700 500];  % width height
+parent.Position(3:4) = [800 700];  % width height
 
-tl = tiledlayout(parent, 3, 2, ...
+tl = tiledlayout(parent, 3, 3, ...
       'TileSpacing','compact', 'Padding','compact' );
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed"));
+vals = logsout.get("Vehicle Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed Reference (km/hr)"));
-plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
-title(ax, "Vehicle Speed & Reference (km/hr)")
+title(ax, "Longitudinal Vehicle Speed (km/hr)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle Incline"));
+vals = logsout.get("MG2 Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = getValuesFromLogsout(logsout.get("Road Grade"));
-plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
-title(ax, "Vehicle Incline (deg) & Road Grade (%)")
+title(ax, "MG2 Speed (rpm)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle G Force"));
+vals = logsout.get("MG2 Mechanical Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
-title(ax, "G Force (-)")
+title(ax, "MG2 Mechanical Power (kW)")
+hold off
+
+
+ax = nexttile(tl);
+vals = logsout.get("Vehicle G Force").Values;
+plot(ax, vals.Time, vals.Data, 'LineWidth',2)
+hold on;  grid on
+xlabel(ax, "Time (s)")
+title(ax, "Longitudinal G Force")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Brake On Off"));
+vals = logsout.get("MG1 Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
-title(ax, "Brake On Off")
+title(ax, "MG1 Speed (rpm)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Axle Speed"));
+vals = logsout.get("MG1 Mechanical Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = logsout.get("Axle Speed Reference").Values;
-plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
-title(ax, "Axle Speed & Reference (rpm)")
+title(ax, "MG1 Mechanical Power (kW)")
+hold off
+
+
+ax = nexttile(tl);
+vals = logsout.get("HV Battery SOC").Values;
+plot(ax, vals.Time, vals.Data, 'LineWidth',2)
+hold on;  grid on
+xlabel(ax, "Time (s)")
+title(ax, "HV Battery SOC (%)")
 hold off
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Brake Force"));
+vals = logsout.get("Engine Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
-title(ax, "Brake Force (N)")
+title(ax, "Engine Speed (rpm)")
 hold off
+
+ax = nexttile(tl);
+vals = logsout.get("Engine Power").Values;
+plot(ax, vals.Time, vals.Data, 'LineWidth',2)
+hold on;  grid on
+xlabel(ax, "Time (s)")
+title(ax, "Engine Power (kW)")
+hold off
+
 
 end

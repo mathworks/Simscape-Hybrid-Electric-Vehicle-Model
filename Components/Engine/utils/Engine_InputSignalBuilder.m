@@ -81,7 +81,7 @@ methods
 
     if not(inpObj.VisiblePlot_tf)
       % Invisible figure.
-      inpObj.ParentFigure = figure(Visible = 'off');
+      inpObj.ParentFigure = figure('Visible', 'off');
     elseif isfield(nvpairs, 'ParentFigure')
       % This function's ParentFigure option is specified.
       assert(isa(nvpairs.ParentFigure, 'matlab.ui.Figure'))
