@@ -3,6 +3,11 @@ function [inputSignals, inputBus, initial, opt] = DrivingPatternBasic_inputs(nvp
 
 % Copyright 2021 The MathWorks, Inc.
 
+%{
+tmpSig = DrivingPatternBasic_inputs("InputPattern","accelerate_decelerate_kph");
+
+%}
+
 arguments
   nvpairs.InputPattern (1,1) {mustBeMember(nvpairs.InputPattern, {...
       'all_zero' ...

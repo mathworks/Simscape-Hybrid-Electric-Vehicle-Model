@@ -20,7 +20,7 @@ function defaultReferencedSubsystems_1(testCase)
   load_system(mdl)
 
   refSubName = get_param(mdl+"/Controller & Environment", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'PowerSplitHEV_SpeedTracking_DrvEnv_refsub');
+  verifyEqual(testCase, refSubName, 'PowerSplitHEV_SpeedTracking_refsub');
 
   refSubName = get_param(mdl+"/High Voltage Battery", "ReferencedSubsystem");
   verifyEqual(testCase, refSubName, 'BatteryHVElec_refsub');

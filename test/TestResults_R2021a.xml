@@ -1,57 +1,217 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="0" failures="0" name="Engine_UnitTest" skipped="0" tests="7" time="125.4939">
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_1" time="87.1424"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_1" time="3.1509"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_2" time="6.6815"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_1" time="6.4197"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_1" time="5.0641"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_2" time="4.3942"/>
-    <testcase classname="Engine_UnitTest" name="run_main_script_1" time="12.6412"/>
+  <testsuite errors="0" failures="0" name="Engine_UnitTest" skipped="0" tests="10" time="63.8776">
+    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_1" time="15.4552"/>
+    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_2" time="2.089"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_1" time="11.4586"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_1" time="3.9562"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_2" time="2.8542"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_1" time="4.8882"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_1" time="4.8738"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_2" time="4.1566"/>
+    <testcase classname="Engine_UnitTest" name="plot_script_1" time="4.2404"/>
+    <testcase classname="Engine_UnitTest" name="run_main_script_1" time="9.9055"/>
   </testsuite>
 
-  <testsuite errors="0" failures="0" name="PowerSplitDriveUnit_UnitTest" skipped="0" tests="10" time="127.6256">
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_1" time="10.646"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_1" time="9.0755"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_2" time="8.6203"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_main_script_1" time="20.3955"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_1" time="17.7837"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_2" time="12.3329"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_3" time="12.1151"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_4" time="12.7989"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_5" time="12.0784"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_6" time="11.7794"/>
+  <testsuite errors="0" failures="0" name="PowerSplitDriveUnit_UnitTest" skipped="0" tests="10" time="123.6913">
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_1" time="9.4213"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_1" time="8.7808"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_2" time="8.4491"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_main_script_1" time="19.1548"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_1" time="16.3485"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_2" time="14.2782"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_3" time="12.1915"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_4" time="11.5065"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_5" time="11.8426"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_6" time="11.718"/>
   </testsuite>
 
-  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="11" time="38.2401">
-    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="5.0204"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.066291"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="1.0038"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="0.86106"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="4.8615"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_1" time="4.1118"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="3.9936"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="4.2402"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="4.1155"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.543"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="6.4229"/>
+  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="12" time="35.9989">
+    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="3.5839"/>
+    <testcase classname="Vehicle1D_UnitTest" name="block_info_script_1" time="1.3017"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.073024"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="0.82357"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="0.8376"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="3.6967"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_1" time="3.7965"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="3.9953"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="4.4511"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="3.66"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.5686"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="6.2109"/>
   </testsuite>
 
-  <testsuite errors="0" failures="0" name="PowerSplitHEV_SpeedTracking_UnitTest" skipped="0" tests="13" time="336.2978">
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_1" time="31.9593"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_1" time="15.8888"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_2" time="14.5863"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_allzero" time="16.9286"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_high_speed" time="19.2763"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_accelerate_decelerate_kph" time="17.1343"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_ftp75" time="39.3115"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_simple_drive_pattern" time="17.6817"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_main_script" time="50.4185"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_accel_decel" time="14.9763"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_ftp75" time="15.3885"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_simple_pattern" time="14.7251"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_sweep" time="68.0224"/>
+  <testsuite errors="3" failures="1" name="PowerSplitHEV_DirectInput_UnitTest" skipped="0" tests="12" time="161.1238">
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="defaultReferencedSubsystems_1" time="6.3902">
+      <failure type="VerificationFailure">Verification failed in PowerSplitHEV_DirectInput_UnitTest/defaultReferencedSubsystems_1.
+    ---------------------
+    Framework Diagnostic:
+    ---------------------
+    verifyEqual failed.
+    --&gt; The character arrays are not equal.
+    
+    Actual char:
+        PowerSplitHEV_SpeedTracking_refsub
+    Expected char:
+        PowerSplitHEV_DirectInput_refsub
+    ------------------
+    Stack Information:
+    ------------------
+    In D:\sandbox\isaacito\github-hev\21a-devel_local2\HEV\PowerSplitHEV_DirectInput\test\PowerSplitHEV_DirectInput_UnitTest.m (PowerSplitHEV_DirectInput_UnitTest.defaultReferencedSubsystems_1) at 23</failure>
+    </testcase>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="openAndRun_1" time="14.6602">
+      <error>Error occurred in PowerSplitHEV_DirectInput_UnitTest/openAndRun_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Parameters:BlkParamUndefined'
+    --------------
+    Error Details:
+    --------------
+    Error using PowerSplitHEV_DirectInput_UnitTest/openAndRun_1 (line 56)
+    Error evaluating parameter &lt;a href="matlab:Simulink.internal.OpenBlockParamsDialog(['PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source'],'dt');"&gt;'dt'&lt;/a&gt; in '&lt;a href="matlab:open_and_hilite_hyperlink ('PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source','error')"&gt;PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source&lt;/a&gt;'
+    
+    Caused by:
+        Error using Simulink.Simulation.internal.DesktopSimHelper&gt;@(simIn)builtin('sim',simIn)
+        Unrecognized function or variable 'dt'.
+            Error using Simulink.Simulation.internal.DesktopSimHelper&gt;@(simIn)builtin('sim',simIn)
+            Variable 'dt' does not exist. </error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="openAndRun_2_1" time="9.5871">
+      <error>Error occurred in PowerSplitHEV_DirectInput_UnitTest/openAndRun_2_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Parameters:BlkParamUndefined'
+    --------------
+    Error Details:
+    --------------
+    Error using PowerSplitHEV_DirectInput_UnitTest/openAndRun_2_1 (line 86)
+    Error evaluating parameter &lt;a href="matlab:Simulink.internal.OpenBlockParamsDialog(['PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source'],'dt');"&gt;'dt'&lt;/a&gt; in '&lt;a href="matlab:open_and_hilite_hyperlink ('PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source','error')"&gt;PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source&lt;/a&gt;'
+    
+    Caused by:
+        Error using Simulink.Simulation.internal.DesktopSimHelper&gt;@(simIn)builtin('sim',simIn)
+        Unrecognized function or variable 'dt'.
+            Error using Simulink.Simulation.internal.DesktopSimHelper&gt;@(simIn)builtin('sim',simIn)
+            Variable 'dt' does not exist. </error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="openAndRun_2_2" time="7.871">
+      <error>Error occurred in PowerSplitHEV_DirectInput_UnitTest/openAndRun_2_2 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Parameters:BlkParamUndefined'
+    --------------
+    Error Details:
+    --------------
+    Error using PowerSplitHEV_DirectInput_UnitTest/openAndRun_2_2 (line 116)
+    Error evaluating parameter &lt;a href="matlab:Simulink.internal.OpenBlockParamsDialog(['PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source'],'dt');"&gt;'dt'&lt;/a&gt; in '&lt;a href="matlab:open_and_hilite_hyperlink ('PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source','error')"&gt;PowerSplitHEV_system_model/Controller &amp; Environment/Driving Pattern/Drive Cycle Source&lt;/a&gt;'
+    
+    Caused by:
+        Error using Simulink.Simulation.internal.DesktopSimHelper&gt;@(simIn)builtin('sim',simIn)
+        Unrecognized function or variable 'dt'.
+            Error using Simulink.Simulation.internal.DesktopSimHelper&gt;@(simIn)builtin('sim',simIn)
+            Variable 'dt' does not exist. </error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_Constant" time="17.8843"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_Accel" time="14.7323"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_Downhill" time="14.5333"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_Downhill_2" time="14.4845"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_MG1Drive" time="15.4925"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_MG2Drive" time="15.1049"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_MG2Drive_2" time="15.9607"/>
+    <testcase classname="PowerSplitHEV_DirectInput_UnitTest" name="runLiveScript_DirectInput_PowerSplitDrive" time="14.4229"/>
+  </testsuite>
+
+  <testsuite errors="5" failures="0" name="PowerSplitHEV_SpeedTracking_UnitTest" skipped="0" tests="14" time="270.7434">
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="defaultReferencedSubsystems_1" time="0.19832">
+      <error>Error occurred in PowerSplitHEV_SpeedTracking_UnitTest/defaultReferencedSubsystems_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Commands:OpenSystemUnknownSystem'
+    --------------
+    Error Details:
+    --------------
+    Error using load_system (line 21)
+    No system or file called 'PowerSplitHEV_SpeedTracking' found.
+    
+    Error in PowerSplitHEV_SpeedTracking_UnitTest/defaultReferencedSubsystems_1 (line 20)
+      load_system(mdl)</error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_1" time="0.027301">
+      <error>Error occurred in PowerSplitHEV_SpeedTracking_UnitTest/openAndRun_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Commands:OpenSystemUnknownSystem'
+    --------------
+    Error Details:
+    --------------
+    Error using load_system (line 21)
+    No system or file called 'PowerSplitHEV_SpeedTracking' found.
+    
+    Error in PowerSplitHEV_SpeedTracking_UnitTest/openAndRun_1 (line 52)
+      load_system(mdl)</error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_1" time="0.024144">
+      <error>Error occurred in PowerSplitHEV_SpeedTracking_UnitTest/openAndRun_2_1 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Commands:OpenSystemUnknownSystem'
+    --------------
+    Error Details:
+    --------------
+    Error using load_system (line 21)
+    No system or file called 'PowerSplitHEV_SpeedTracking' found.
+    
+    Error in PowerSplitHEV_SpeedTracking_UnitTest/openAndRun_2_1 (line 73)
+      load_system(mdl)</error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_2" time="0.054489">
+      <error>Error occurred in PowerSplitHEV_SpeedTracking_UnitTest/openAndRun_2_2 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Commands:OpenSystemUnknownSystem'
+    --------------
+    Error Details:
+    --------------
+    Error using load_system (line 21)
+    No system or file called 'PowerSplitHEV_SpeedTracking' found.
+    
+    Error in PowerSplitHEV_SpeedTracking_UnitTest/openAndRun_2_2 (line 103)
+      load_system(mdl)</error>
+    </testcase>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_allzero" time="19.555"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_high_speed" time="21.933"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_accelerate_decelerate_kph" time="17.2926"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_ftp75" time="58.4207"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_simple_drive_pattern" time="19.827"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_main_script" time="75.725"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_accel_decel" time="18.3229"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_ftp75" time="18.7961"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_simple_pattern" time="18.6784"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_sweep" time="1.8885">
+      <error>Error occurred in PowerSplitHEV_SpeedTracking_UnitTest/runLiveScript_sweep and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'Simulink:Commands:OpenSystemUnknownSystem'
+    --------------
+    Error Details:
+    --------------
+    Error using load_system (line 21)
+    No system or file called 'PowerSplitHEV_SpeedTracking' found.
+    
+    Error in PowerSplitHEV_SpeedTracking_sweep (line 70)
+    if not(bdIsLoaded(mdl)), load_system(mdl); end
+    
+    Error in PowerSplitHEV_SpeedTracking_UnitTest/runLiveScript_sweep (line 253)
+      evalin("base", "PowerSplitHEV_SpeedTracking_sweep");</error>
+    </testcase>
   </testsuite>
 
 </testsuites>

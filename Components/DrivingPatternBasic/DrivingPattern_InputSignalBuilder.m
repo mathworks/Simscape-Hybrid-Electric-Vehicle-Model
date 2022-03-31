@@ -4,6 +4,13 @@ classdef DrivingPattern_InputSignalBuilder < handle
 % Copyright 2021-2022 The MathWorks, Inc.
 
 %{
+DrivingPattern_InputSignalBuilder("Plot_tf",true).Constant;
+%}
+%{
+DrivingPattern_InputSignalBuilder("Plot_tf",true).ThreeStepSpeed;
+%}
+
+%{
 builder = DrivingPattern_InputSignalBuilder;
 builder.Plot_tf = true;
 builder.SavePlot_tf = true;
@@ -40,7 +47,7 @@ end
 
 methods
 
-  function inpObj = InputSignalBuilder(nvpairs)
+  function inpObj = DrivingPattern_InputSignalBuilder(nvpairs)
   %%
     arguments
       nvpairs.Plot_tf
@@ -55,7 +62,7 @@ methods
 
     % Default signals are created in the constructor so that
     % the plotSignals function works right after creating a class object.
-    Input_Constant(inpObj);
+    Constant(inpObj);
 
   end
 
@@ -118,7 +125,7 @@ methods
 
   %% Patterns
 
-  function signalData = ConstantInput(inpObj, nvpairs)
+  function signalData = Constant(inpObj, nvpairs)
   %%
     arguments
       inpObj

@@ -2,9 +2,18 @@
 
 % Copyright 2021 The MathWorks, Inc.
 
+modelName = "PowerSplitHEV_system_model";
+
+if not(bdIsLoaded(modelName))
+  load_system(modelName)
+end
+
 %% Setup external inputs
 
 PowerSplitHEV_SpeedTracking_select_simple_pattern
+
+% t_end should have been loaded.
+disp("Simulation stop time: " + t_end)
 
 %% Load default initial conditions and block parameter values
 
@@ -12,7 +21,7 @@ PowerSplitHEV_params
 
 %% Override initial conditions and block parameter values
 
-initial_SOC_pct = initial_DrvPtn.HVBattery_SOC_pct;
+initial_SOC_pct = drivePatternInitialConditions.HVBattery_SOC_pct;
 % initial_SOC_pct = 75;
 
 initial.hvBatteryCapacity_kWh = batteryHighVoltage.nominalCapacity_kWh * initial_SOC_pct/100;
@@ -29,10 +38,10 @@ initial.engine_torque_Nm = 0;
 
 %% Set simulation input
 
-in = Simulink.SimulationInput(mdl);
-in = in.setModelParameter('StopTime',num2str(t_end));
+in = Simulink.SimulationInput(modelName);
+in = in.setModelParameter('StopTime', num2str(t_end));
 
 %% Run simulation
 
-disp("Running simulation for " + input_pattern)
+disp("Running simulation...")
 out = sim(in);

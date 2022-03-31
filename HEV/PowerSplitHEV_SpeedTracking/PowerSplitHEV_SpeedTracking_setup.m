@@ -2,19 +2,20 @@
 
 % Copyright 2021 The MathWorks, Inc.
 
-%% Select drive pattern
+%% Load drive pattern
 
-PowerSplitHEV_SpeedTracking_select_accel_decel
-% PowerSplitHEV_SpeedTracking_select_simple_pattern
-% PowerSplitHEV_SpeedTracking_select_ftp75
+inputPatternStr = "accelerate_decelerate_kph";
+% inputPatternStr = "simple_drive_pattern";
+% inputPatternStr = "ftp75_mph";
+
+PowerSplitHEV_SpeedTracking_selectInput( ...
+  "InputPattern", inputPatternStr, ...
+  "DisplayMessage", false );
 
 %% Load default parameters
 
 % Plant
 PowerSplitHEV_params
-
-% Controller/Driver - load this after plant
-HEVPowerSplitControl_params
 
 %% Override initial conditions and block parameter values
 
