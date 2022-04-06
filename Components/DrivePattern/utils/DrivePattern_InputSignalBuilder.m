@@ -52,65 +52,6 @@ methods
 
   end
 
-  function plotSignals(inpObj, nvpairs)
-  %%
-    arguments
-      inpObj
-      nvpairs.ParentFigure (1,1) matlab.ui.Figure
-    end
-
-    syncedInputs = synchronize( ...
-      inpObj.VehSpd, ...
-      inpObj.VehAcc );
-
-    addUnitString = @(tt) ...
-      string(tt.Properties.VariableNames) ...
-        + " (" + string(tt.Properties.VariableUnits) + ")";
-
-    dispLbl = { ...
-      addUnitString(inpObj.VehSpd)
-      addUnitString(inpObj.VehAcc) };
-
-    if not(inpObj.VisiblePlot_tf)
-      % Invisible figure.
-      inpObj.ParentFigure = figure('Visible', 'off');
-    elseif isfield(nvpairs, 'ParentFigure')
-      % This function's ParentFigure option is specified.
-      inpObj.ParentFigure = nvpairs.ParentFigure;
-    else
-      % Create a new figure.
-      inpObj.ParentFigure = figure;  % Do not use Visible='on'
-    end
-
-    stk = stackedplot( inpObj.ParentFigure, syncedInputs );
-    stk.LineWidth = inpObj.LineWidth;
-    stk.GridVisible = 'on';
-    stk.DisplayLabels = dispLbl;
-    % stackedplot does not have Interpreter=off setting for the title.
-    % To prevent '_' from being interpreted as a subscript directive,
-    % replace it with a space.
-    % Note that title() does not work with stackedplot either.
-    stk.Title = strrep(inpObj.FunctionName, '_', ' ');
-
-    % Making the figure taller than the default plot window height can
-    % make the top part of the window go outside the monitor screen.
-    % To prevent it, lower the x position of the window,
-    % assuming that lowering the window position is safer
-    % because the visibility of the window top is more important
-    % that of the window bottom.
-    pos = inpObj.ParentFigure.Position;
-    h_orig = pos(4);
-    w = inpObj.FigureWidth;
-    h_new = inpObj.FigureHeight;
-    inpObj.ParentFigure.Position = [pos(1), pos(2)-(h_new-h_orig), w, h_new];
-
-    if inpObj.SavePlot_tf
-      exportgraphics(gca, inpObj.SavePlotImageFileName)
-    end  % if
-  end  % function
-
-  %% Patterns
-
   function signalData = Constant(inpObj, nvpairs)
   %%
     arguments
@@ -141,133 +82,13 @@ methods
 
   end  % function
 
-  function signalData = Step3(inpObj, nvpairs)
-  %%
-    arguments
-      inpObj
-      nvpairs.VehSpdUnit {mustBeMember(nvpairs.VehSpdUnit, {'m/s', 'km/hr', 'mph'})} = "km/hr"
-      nvpairs.VehSpd_1 (1,1) double {mustBeNonnegative} = 0
-      nvpairs.VehSpd_2 (1,1) double {mustBeNonnegative} = 100
-      nvpairs.VehSpd_3 (1,1) double {mustBeNonnegative} = 0
-      nvpairs.VehSpd_1to2_ChangeStartTime (1,1) duration = seconds(10)
-      nvpairs.VehSpd_1to2_ChangeEndTime (1,1) duration = seconds(10+30)
-      nvpairs.VehSpd_2to3_ChangeStartTime (1,1) duration = seconds(40+20)
-      nvpairs.VehSpd_2to3_ChangeEndTime (1,1) duration = seconds(60+30)
-      nvpairs.StopTime (1,1) duration = seconds(90+10)
-    end
-
-    % Record the function name for convenience.
-    ds = dbstack;
-    thisFunctionFullName = ds(1).name;
-    inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
-
-    inpObj.StopTime = nvpairs.StopTime;
-    t_end = seconds(nvpairs.StopTime);
-
-    unitStr = nvpairs.VehSpdUnit;
-
-    x1 = nvpairs.VehSpd_1;
-    x2 = nvpairs.VehSpd_2;
-    x3 = nvpairs.VehSpd_3;
-    t1 = seconds(nvpairs.VehSpd_1to2_ChangeStartTime);
-    t2 = seconds(nvpairs.VehSpd_1to2_ChangeEndTime);
-    t3 = seconds(nvpairs.VehSpd_2to3_ChangeStartTime);
-    t4 = seconds(nvpairs.VehSpd_2to3_ChangeEndTime);
-    assert( 0.01 < t1 )
-    assert( t1 < t2 )
-    assert( t2+0.01 < t3 )
-    assert( t3 < t4 )
-    assert( t4+0.01 < t_end )
-    BuildSignal_VehSpd(inpObj, unitStr, ...
-      'Data',         [x1 x1   x1 x2 x2      x2 x3 x3      x3], ...
-      'Time', seconds([0  0.01 t1 t2 t2+0.01 t3 t4 t4+0.01 t_end]));
-
-    if inpObj.Plot_tf
-      plotSignals(inpObj);
-    end
-
-    signalData = BundleSignals(inpObj);
-
-  end  % function
-
-  function signalData = Step5(inpObj, nvpairs)
-  %%
-    arguments
-      inpObj
-      nvpairs.VehSpdUnit {mustBeMember(nvpairs.VehSpdUnit, {'m/s', 'km/hr', 'mph'})} = "km/hr"
-
-      nvpairs.VehSpd_1 (1,1) double {mustBeNonnegative} = 10
-      nvpairs.VehSpd_2 (1,1) double {mustBeNonnegative} = 20
-      nvpairs.VehSpd_3 (1,1) double {mustBeNonnegative} = 30
-      nvpairs.VehSpd_4 (1,1) double {mustBeNonnegative} = 40
-      nvpairs.VehSpd_5 (1,1) double {mustBeNonnegative} = 50
-
-      nvpairs.VehSpd_1_ChangeStartTime (1,1) duration = seconds(30)
-      nvpairs.VehSpd_1_ChangeEndTime (1,1) duration = seconds(30 + 10)
-
-      nvpairs.VehSpd_2_ChangeStartTime (1,1) duration = seconds(40 + 30)
-      nvpairs.VehSpd_2_ChangeEndTime (1,1) duration = seconds(70 + 10)
-
-      nvpairs.VehSpd_3_ChangeStartTime (1,1) duration = seconds(80 + 30)
-      nvpairs.VehSpd_3_ChangeEndTime (1,1) duration = seconds(110 + 10)
-
-      nvpairs.VehSpd_4_ChangeStartTime (1,1) duration = seconds(120 + 30)
-      nvpairs.VehSpd_4_ChangeEndTime (1,1) duration = seconds(150 + 10)
-
-      nvpairs.StopTime (1,1) duration = seconds(160 + 40)
-    end
-
-    % Record the function name for convenience.
-    ds = dbstack;
-    thisFunctionFullName = ds(1).name;
-    inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
-
-    inpObj.StopTime = nvpairs.StopTime;
-    t_end = seconds(nvpairs.StopTime);
-
-    unitStr = nvpairs.VehSpdUnit;
-
-    x1 = nvpairs.VehSpd_1;
-    x2 = nvpairs.VehSpd_2;
-    x3 = nvpairs.VehSpd_3;
-    x4 = nvpairs.VehSpd_4;
-    x5 = nvpairs.VehSpd_5;
-    t1 = seconds(nvpairs.VehSpd_1_ChangeStartTime);
-    t2 = seconds(nvpairs.VehSpd_1_ChangeEndTime);
-    t3 = seconds(nvpairs.VehSpd_2_ChangeStartTime);
-    t4 = seconds(nvpairs.VehSpd_2_ChangeEndTime);
-    t5 = seconds(nvpairs.VehSpd_3_ChangeStartTime);
-    t6 = seconds(nvpairs.VehSpd_3_ChangeEndTime);
-    t7 = seconds(nvpairs.VehSpd_4_ChangeStartTime);
-    t8 = seconds(nvpairs.VehSpd_4_ChangeEndTime);
-    assert( 0.01 < t1 )
-    assert( t1 < t2 )
-    assert( t2+0.01 < t3 )
-    assert( t3 < t4 )
-    assert( t4+0.01 < t5 )
-    assert( t5 < t6 )
-    assert( t6+0.01 < t7 )
-    assert( t7 < t8 )
-    assert( t8+0.01 < t_end )
-    BuildSignal_VehSpd(inpObj, unitStr, ...
-      'Data',         [x1 x1   x1 x2 x2      x2 x3 x3      x3 x4 x4      x4 x5 x5      x5], ...
-      'Time', seconds([0  0.01 t1 t2 t2+0.01 t3 t4 t4+0.01 t5 t6 t6+0.01 t7 t8 t8+0.01 t_end]));
-
-    if inpObj.Plot_tf
-      plotSignals(inpObj);
-    end
-
-    signalData = BundleSignals(inpObj);
-
-  end  % function
-
   function signalData = Accelerate_Decelerate(inpObj, nvpairs)
   %%
     arguments
       inpObj
       nvpairs.Acceleration_StartTime = seconds(10)
       nvpairs.Acceleration_EndTime = seconds(10 + 30)
-      nvpairs.PeakSpeed = 120
+      nvpairs.PeakSpeed = 100
       nvpairs.VehSpdUnit {mustBeMember(nvpairs.VehSpdUnit, {'m/s', 'km/hr', 'mph'})} = "km/hr"
       nvpairs.Deceleration_StartTime = seconds(40 + 90)
       nvpairs.Deceleration_EndTime = seconds(130 + 60)
@@ -414,6 +235,183 @@ methods
     % This function does not define signals, thus From Workspace block isnot used.
     signalData.Options.useFromWorkspace = false;
 
+  end  % function
+
+  function signalData = Step3(inpObj, nvpairs)
+  %%
+    arguments
+      inpObj
+      nvpairs.VehSpdUnit {mustBeMember(nvpairs.VehSpdUnit, {'m/s', 'km/hr', 'mph'})} = "km/hr"
+      nvpairs.VehSpd_1 (1,1) double {mustBeNonnegative} = 0
+      nvpairs.VehSpd_2 (1,1) double {mustBeNonnegative} = 100
+      nvpairs.VehSpd_3 (1,1) double {mustBeNonnegative} = 0
+      nvpairs.VehSpd_1to2_ChangeStartTime (1,1) duration = seconds(10)
+      nvpairs.VehSpd_1to2_ChangeEndTime (1,1) duration = seconds(10+30)
+      nvpairs.VehSpd_2to3_ChangeStartTime (1,1) duration = seconds(40+20)
+      nvpairs.VehSpd_2to3_ChangeEndTime (1,1) duration = seconds(60+30)
+      nvpairs.StopTime (1,1) duration = seconds(90+10)
+    end
+
+    % Record the function name for convenience.
+    ds = dbstack;
+    thisFunctionFullName = ds(1).name;
+    inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
+
+    inpObj.StopTime = nvpairs.StopTime;
+    t_end = seconds(nvpairs.StopTime);
+
+    unitStr = nvpairs.VehSpdUnit;
+
+    x1 = nvpairs.VehSpd_1;
+    x2 = nvpairs.VehSpd_2;
+    x3 = nvpairs.VehSpd_3;
+    t1 = seconds(nvpairs.VehSpd_1to2_ChangeStartTime);
+    t2 = seconds(nvpairs.VehSpd_1to2_ChangeEndTime);
+    t3 = seconds(nvpairs.VehSpd_2to3_ChangeStartTime);
+    t4 = seconds(nvpairs.VehSpd_2to3_ChangeEndTime);
+    assert( 0.01 < t1 )
+    assert( t1 < t2 )
+    assert( t2+0.01 < t3 )
+    assert( t3 < t4 )
+    assert( t4+0.01 < t_end )
+    BuildSignal_VehSpd(inpObj, unitStr, ...
+      'Data',         [x1 x1   x1 x2 x2      x2 x3 x3      x3], ...
+      'Time', seconds([0  0.01 t1 t2 t2+0.01 t3 t4 t4+0.01 t_end]));
+
+    if inpObj.Plot_tf
+      plotSignals(inpObj);
+    end
+
+    signalData = BundleSignals(inpObj);
+
+  end  % function
+
+  function signalData = Step5(inpObj, nvpairs)
+  %%
+    arguments
+      inpObj
+      nvpairs.VehSpdUnit {mustBeMember(nvpairs.VehSpdUnit, {'m/s', 'km/hr', 'mph'})} = "km/hr"
+
+      nvpairs.VehSpd_1 (1,1) double {mustBeNonnegative} = 10
+      nvpairs.VehSpd_2 (1,1) double {mustBeNonnegative} = 20
+      nvpairs.VehSpd_3 (1,1) double {mustBeNonnegative} = 30
+      nvpairs.VehSpd_4 (1,1) double {mustBeNonnegative} = 40
+      nvpairs.VehSpd_5 (1,1) double {mustBeNonnegative} = 50
+
+      nvpairs.VehSpd_1_ChangeStartTime (1,1) duration = seconds(30)
+      nvpairs.VehSpd_1_ChangeEndTime (1,1) duration = seconds(30 + 10)
+
+      nvpairs.VehSpd_2_ChangeStartTime (1,1) duration = seconds(40 + 30)
+      nvpairs.VehSpd_2_ChangeEndTime (1,1) duration = seconds(70 + 10)
+
+      nvpairs.VehSpd_3_ChangeStartTime (1,1) duration = seconds(80 + 30)
+      nvpairs.VehSpd_3_ChangeEndTime (1,1) duration = seconds(110 + 10)
+
+      nvpairs.VehSpd_4_ChangeStartTime (1,1) duration = seconds(120 + 30)
+      nvpairs.VehSpd_4_ChangeEndTime (1,1) duration = seconds(150 + 10)
+
+      nvpairs.StopTime (1,1) duration = seconds(160 + 40)
+    end
+
+    % Record the function name for convenience.
+    ds = dbstack;
+    thisFunctionFullName = ds(1).name;
+    inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
+
+    inpObj.StopTime = nvpairs.StopTime;
+    t_end = seconds(nvpairs.StopTime);
+
+    unitStr = nvpairs.VehSpdUnit;
+
+    x1 = nvpairs.VehSpd_1;
+    x2 = nvpairs.VehSpd_2;
+    x3 = nvpairs.VehSpd_3;
+    x4 = nvpairs.VehSpd_4;
+    x5 = nvpairs.VehSpd_5;
+    t1 = seconds(nvpairs.VehSpd_1_ChangeStartTime);
+    t2 = seconds(nvpairs.VehSpd_1_ChangeEndTime);
+    t3 = seconds(nvpairs.VehSpd_2_ChangeStartTime);
+    t4 = seconds(nvpairs.VehSpd_2_ChangeEndTime);
+    t5 = seconds(nvpairs.VehSpd_3_ChangeStartTime);
+    t6 = seconds(nvpairs.VehSpd_3_ChangeEndTime);
+    t7 = seconds(nvpairs.VehSpd_4_ChangeStartTime);
+    t8 = seconds(nvpairs.VehSpd_4_ChangeEndTime);
+    assert( 0.01 < t1 )
+    assert( t1 < t2 )
+    assert( t2+0.01 < t3 )
+    assert( t3 < t4 )
+    assert( t4+0.01 < t5 )
+    assert( t5 < t6 )
+    assert( t6+0.01 < t7 )
+    assert( t7 < t8 )
+    assert( t8+0.01 < t_end )
+    BuildSignal_VehSpd(inpObj, unitStr, ...
+      'Data',         [x1 x1   x1 x2 x2      x2 x3 x3      x3 x4 x4      x4 x5 x5      x5], ...
+      'Time', seconds([0  0.01 t1 t2 t2+0.01 t3 t4 t4+0.01 t5 t6 t6+0.01 t7 t8 t8+0.01 t_end]));
+
+    if inpObj.Plot_tf
+      plotSignals(inpObj);
+    end
+
+    signalData = BundleSignals(inpObj);
+
+  end  % function
+
+  function plotSignals(inpObj, nvpairs)
+  %%
+    arguments
+      inpObj
+      nvpairs.ParentFigure (1,1) matlab.ui.Figure
+    end
+
+    syncedInputs = synchronize( ...
+      inpObj.VehSpd, ...
+      inpObj.VehAcc );
+
+    addUnitString = @(tt) ...
+      string(tt.Properties.VariableNames) ...
+        + " (" + string(tt.Properties.VariableUnits) + ")";
+
+    dispLbl = { ...
+      addUnitString(inpObj.VehSpd)
+      addUnitString(inpObj.VehAcc) };
+
+    if not(inpObj.VisiblePlot_tf)
+      % Invisible figure.
+      inpObj.ParentFigure = figure('Visible', 'off');
+    elseif isfield(nvpairs, 'ParentFigure')
+      % This function's ParentFigure option is specified.
+      inpObj.ParentFigure = nvpairs.ParentFigure;
+    else
+      % Create a new figure.
+      inpObj.ParentFigure = figure;  % Do not use Visible='on'
+    end
+
+    stk = stackedplot( inpObj.ParentFigure, syncedInputs );
+    stk.LineWidth = inpObj.LineWidth;
+    stk.GridVisible = 'on';
+    stk.DisplayLabels = dispLbl;
+    % stackedplot does not have Interpreter=off setting for the title.
+    % To prevent '_' from being interpreted as a subscript directive,
+    % replace it with a space.
+    % Note that title() does not work with stackedplot either.
+    stk.Title = strrep(inpObj.FunctionName, '_', ' ');
+
+    % Making the figure taller than the default plot window height can
+    % make the top part of the window go outside the monitor screen.
+    % To prevent it, lower the x position of the window,
+    % assuming that lowering the window position is safer
+    % because the visibility of the window top is more important
+    % that of the window bottom.
+    pos = inpObj.ParentFigure.Position;
+    h_orig = pos(4);
+    w = inpObj.FigureWidth;
+    h_new = inpObj.FigureHeight;
+    inpObj.ParentFigure.Position = [pos(1), pos(2)-(h_new-h_orig), w, h_new];
+
+    if inpObj.SavePlot_tf
+      exportgraphics(gca, inpObj.SavePlotImageFileName)
+    end  % if
   end  % function
 
 end  % methods

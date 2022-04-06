@@ -4,7 +4,7 @@ classdef PowerSplitHEV_SpeedTracking_UnitTest < matlab.unittest.TestCase
 % Copyright 2021-2022 The MathWorks, Inc.
 
 properties (Constant)
-  modelName = "PowerSplitHEV_SpeedTracking";
+  modelName = "PowerSplitHEV_system_model";
 end
 
 methods (Test)
@@ -38,14 +38,14 @@ function defaultReferencedSubsystems_1(testCase)
   bdclose all
 end
 
-function openAndRun_1(~)
+function openAndRun_1(testCase)
 %% Most basic check - open model and run simulation.
 % Check that the model runs without any warnings or errors.
 
   close all
   bdclose all
 
-  mdl = "PowerSplitHEV_SpeedTracking";
+  mdl = testCase.modelName;
 
   t_end = 10;  % Simulation stop time in seconds
 
@@ -59,14 +59,14 @@ function openAndRun_1(~)
   bdclose all
 end  % function
 
-function openAndRun_2_1(~)
+function openAndRun_2_1(testCase)
 %% Check that the model runs without any warnings or errors.
 % Specify the referenced subsystems.
 
   close all
   bdclose all
 
-  mdl = "PowerSplitHEV_SpeedTracking";
+  mdl = testCase.modelName;
 
   t_end = 10;  % Simulation stop time in seconds
 
@@ -89,14 +89,14 @@ function openAndRun_2_1(~)
   bdclose all
 end  % function
 
-function openAndRun_2_2(~)
+function openAndRun_2_2(testCase)
 %% Check that the model runs without any warnings or errors.
 % Specify the referenced subsystem.
 
   close all
   bdclose all
 
-  mdl = "PowerSplitHEV_SpeedTracking";
+  mdl = testCase.modelName;
 
   t_end = 10;  % Simulation stop time in seconds
 
@@ -121,28 +121,27 @@ end  % function
 
 %%
 
-function runLiveScript_allzero(~)
+function runLiveScript_basic(~)
 %% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
 
-  % "All Zero" simulation is the most basic simulation
-  % where nothing interesting happens,
+  % This is the most basic simulation where nothing interesting happens,
   % but this ensures that everything in the script works fine.
-  evalin("base", "PowerSplitHEV_SpeedTracking_all_zero");
+  evalin("base", "PowerSplitHEV_SpeedTracking_testcase_basic");
 
   close all
   bdclose all
 end  % function
 
-function runLiveScript_high_speed(~)
+function runLiveScript_highSpeed(~)
 %% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_high_speed");
+  evalin("base", "PowerSplitHEV_SpeedTracking_testcase_highSpeed");
 
   close all
   bdclose all
@@ -150,37 +149,37 @@ end  % function
 
 %% Live Scripts for drive pattern/cycle simulation
 
-function runLiveScript_accelerate_decelerate_kph(~)
+function runLiveScript_Accelerate_Decelerate(~)
 %% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_accelerate_decelerate_kph");
+  evalin("base", "PowerSplitHEV_SpeedTracking_Accelerate_Decelerate");
 
   close all
   bdclose all
 end  % function
 
-function runLiveScript_ftp75(~)
+function runLiveScript_SimpleDrivePattern(~)
 %% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_ftp75");
+  evalin("base", "PowerSplitHEV_SpeedTracking_SimpleDrivePattern");
 
   close all
   bdclose all
 end  % function
 
-function runLiveScript_simple_drive_pattern(~)
+function runLiveScript_FTP75(~)
 %% Check that the script runs without any warnings or errors.
 
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_simple_drive_pattern");
+  evalin("base", "PowerSplitHEV_SpeedTracking_FTP75");
 
   close all
   bdclose all
@@ -192,7 +191,7 @@ function runLiveScript_main_script(~)
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_main_script");
+  evalin("base", "PowerSplitHEV_SpeedTracking_main_script")
 
   close all
   bdclose all
@@ -208,7 +207,7 @@ function runMScript_runsim_accel_decel(~)
 
   % This sets up external inputs and override some parameters
   % then runs simulation.
-  PowerSplitHEV_SpeedTracking_runsim_accel_decel
+  evalin("base", "PowerSplitHEV_SpeedTracking_runsim_accel_decel")
 
   close all
   bdclose all
@@ -222,7 +221,7 @@ function runMScript_runsim_ftp75(~)
 
   % This sets up external inputs and override some parameters
   % then runs simulation.
-  PowerSplitHEV_SpeedTracking_runsim_ftp75
+  evalin("base", "PowerSplitHEV_SpeedTracking_runsim_ftp75")
 
   close all
   bdclose all
@@ -236,7 +235,7 @@ function runMScript_runsim_simple_pattern(~)
 
   % This sets up external inputs and override some parameters
   % then runs simulation.
-  PowerSplitHEV_SpeedTracking_runsim_simple_pattern
+  evalin("base", "PowerSplitHEV_SpeedTracking_runsim_simple_pattern")
 
   close all
   bdclose all
@@ -250,7 +249,7 @@ function runLiveScript_sweep(~)
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_sweep");
+  evalin("base", "PowerSplitHEV_SpeedTracking_sweep")
 
   close all
   bdclose all

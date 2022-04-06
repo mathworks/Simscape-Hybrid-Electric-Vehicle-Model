@@ -4,26 +4,27 @@
 
 %% Load drive pattern
 
-inputPatternStr = "accelerate_decelerate_kph";
-% inputPatternStr = "simple_drive_pattern";
-% inputPatternStr = "ftp75_mph";
+inputPattern = "Accelerate_Decelerate";
+% inputPattern = "SimpleDrivePattern";
+% inputPattern = "FTP75";
 
+% This loads some variables in the base workspace.
 PowerSplitHEV_SpeedTracking_selectInput( ...
-  "InputPattern", inputPatternStr, ...
+  "InputPattern", inputPattern, ...
   "DisplayMessage", false );
 
 %% Load default parameters
 
-% Plant
 PowerSplitHEV_params
 
-%% Override initial conditions and block parameter values
+%% Override defaults
 
-% initial_SOC_pct = initial_DrvPtn.HVBattery_SOC_pct;
-initial_SOC_pct = 75;
+tmp_initial_SOC_pct = 75;
 
-initial.hvBatteryCapacity_kWh = batteryHighVoltage.nominalCapacity_kWh * initial_SOC_pct/100;
-initial.driverHVBattSOC_pct = initial_SOC_pct;
+initial.hvBatteryCapacity_kWh = ...
+  batteryHighVoltage.nominalCapacity_kWh * tmp_initial_SOC_pct/100;
+
+initial.controllerHVBattSOC_pct = tmp_initial_SOC_pct;
 
 initial.driverBrakeForce_N = 8000;
 initial.driverBrakeOn_tf = true;

@@ -19,9 +19,8 @@ do_plot = false;
 if isfield(nvpairs, 'PlotParent')
   do_plot = true;
   parent = nvpairs.PlotParent;
-  opt.fig_width = 300;
-  opt.fig_height = 200;
-  opt.line_width = 2;
+  parent.Position(3:4) = [400 200];  % width height
+  line_width = 2;
 end
 
 inputPatternConst = @(c) timetable([c c]', 'RowTimes',seconds([0 1])');
@@ -61,7 +60,7 @@ inputBus.Elements(1).Unit = '%';
 if do_plot
   syncedInputs = synchronize( ...
     inputSignals.RoadGrade );
-  stk = stackedplot( parent, syncedInputs, 'LineWidth',opt.line_width );
+  stk = stackedplot( parent, syncedInputs, 'LineWidth',line_width );
   stk.GridVisible = 'on';
 end
 

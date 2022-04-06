@@ -1,7 +1,7 @@
 function PowerSplitHEV_SpeedTracking_plot_result_compact( nvpair )
-% plots the simulation result.
+% Plots simulation result.
 
-% Copyright 2021 The MathWorks, Inc.
+% Copyright 2021-2022 The MathWorks, Inc.
 
 %% Process arguments
 
@@ -17,13 +17,15 @@ parent = nvpair.PlotParent;
 
 parent.Position(3:4) = [800 700];  % width height
 
-tl = tiledlayout(parent, 3, 3, ...
-      'TileSpacing','compact', 'Padding','compact' );
+tl = tiledlayout(parent, 3, 3);
+tl.TileSpacing = 'compact';
+tl.Padding = 'compact';
 
 ax = nexttile(tl);
 vals = logsout.get("Vehicle Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Longitudinal Vehicle Speed (km/hr)")
 hold off
@@ -32,6 +34,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG2 Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG2 Speed (rpm)")
 hold off
@@ -40,6 +43,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG2 Mechanical Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG2 Power (kW)")
 hold off
@@ -49,6 +53,7 @@ ax = nexttile(tl);
 vals = logsout.get("Vehicle G Force").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Longitudinal G Force")
 hold off
@@ -57,6 +62,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG1 Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG1 Speed (rpm)")
 hold off
@@ -65,6 +71,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG1 Mechanical Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG1 Power (kW)")
 hold off
@@ -74,6 +81,7 @@ ax = nexttile(tl);
 vals = logsout.get("HV Battery SOC").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery SOC (%)")
 hold off
@@ -82,6 +90,7 @@ ax = nexttile(tl);
 vals = logsout.get("Engine Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Engine Speed (rpm)")
 hold off
@@ -90,9 +99,9 @@ ax = nexttile(tl);
 vals = logsout.get("Engine Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',1)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Engine Power (kW)")
 hold off
 
-
-end
+end  % function

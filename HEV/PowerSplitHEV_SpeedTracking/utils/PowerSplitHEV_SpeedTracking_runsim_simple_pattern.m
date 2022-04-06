@@ -1,6 +1,6 @@
 %% Simulation Script for Power-Split HEV with Speed Tracking
 
-% Copyright 2021 The MathWorks, Inc.
+% Copyright 2021-2022 The MathWorks, Inc.
 
 modelName = "PowerSplitHEV_system_model";
 
@@ -21,11 +21,12 @@ PowerSplitHEV_params
 
 %% Override initial conditions and block parameter values
 
-initial_SOC_pct = drivePatternInitialConditions.HVBattery_SOC_pct;
-% initial_SOC_pct = 75;
+tmp_initial_SOC_pct = 75;
 
-initial.hvBatteryCapacity_kWh = batteryHighVoltage.nominalCapacity_kWh * initial_SOC_pct/100;
-initial.driverHVBattSOC_pct = initial_SOC_pct;
+initial.hvBatteryCapacity_kWh = ...
+  batteryHighVoltage.nominalCapacity_kWh * tmp_initial_SOC_pct/100;
+
+initial.controllerHVBattSOC_pct = tmp_initial_SOC_pct;
 
 initial.driverBrakeForce_N = 8000;
 initial.driverBrakeOn_tf = true;

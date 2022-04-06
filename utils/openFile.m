@@ -2,10 +2,10 @@ function openFile(filename)
 % Opens a script file or a model file in the project.
 % Before opening the file, this script opens the Project if not open.
 
-% Copyright 2021 The MathWorks, inc.
+% Copyright 2021-2022 The MathWorks, inc.
 
 arguments
-  filename (1,1) string = "HEV_main_script.mlx"
+  filename (1,1) string = "HEVProject_main_script.mlx"
 end
 
 thisProjectFile = "HybridElectricVehicle.prj";
