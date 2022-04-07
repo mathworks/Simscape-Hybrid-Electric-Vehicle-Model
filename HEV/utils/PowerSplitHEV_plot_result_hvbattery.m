@@ -13,6 +13,9 @@ end
 logsout = nvpair.Dataset;
 parent = nvpair.PlotParent;
 
+vals = getValuesFromLogsout(logsout.get("HV Battery Current"));
+x_end = vals.Time(end);
+
 %% Plot
 
 parent.Position(3:4) = [700 500];  % width height
@@ -25,7 +28,7 @@ vals = getValuesFromLogsout(logsout.get("HV Battery SOC"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery SOC (%)")
 hold off
@@ -37,7 +40,7 @@ hold on;  grid on
 vals = getValuesFromLogsout(logsout.get("Battery-Side Current"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery Currents (A)")
 hold off
@@ -47,7 +50,7 @@ vals = getValuesFromLogsout(logsout.get("HV Battery Charge"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery Charge (A*hr)")
 hold off
@@ -59,7 +62,7 @@ hold on;  grid on
 vals = logsout.get("Battery-Side Voltage").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery Voltages (V)")
 hold off
@@ -68,7 +71,7 @@ ax = nexttile(tl);
 vals = getValuesFromLogsout(logsout.get("HV Battery Charge Level (0/1/2/3)"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery Charge Level (0/1/2/3)")
 hold off
@@ -78,7 +81,7 @@ vals = getValuesFromLogsout(logsout.get("Load-Side Current"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "DC-DC Load-Side Current (A)")
 hold off
@@ -88,7 +91,7 @@ vals = getValuesFromLogsout(logsout.get("HV Battery Power"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery Power (kW)")
 hold off
@@ -98,7 +101,7 @@ vals = getValuesFromLogsout(logsout.get("Load-Side Voltage"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, 'dy_threshold',0.02)
-xlim([0 vals.Time(end)])
+xlim([0 x_end])
 xlabel(ax, "Time (s)")
 title(ax, "DC-DC Load-Side Voltage (V)")
 hold off
