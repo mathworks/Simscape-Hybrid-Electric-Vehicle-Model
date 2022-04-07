@@ -7,36 +7,45 @@ properties (Constant)
   modelName = "PowerSplitHEV_system_model";
 end
 
-methods (Test)
+methods (TestClassSetup)
+%% Functions to be executed when this unit test class is instanciated.
 
-function defaultReferencedSubsystems_1(testCase)
-%% Test for Default Referenced Subsystems
-% This ensures that all the subsystem reference blocks in the model file have
-% intended referenced subsystems.
-  close all
-  bdclose all
+function setReferencedSubsystems(testCase)
+%% Set referenced subsystems for this unit test.
+% Note that other referenced subsystems may also be used in some tests.
+
+  disp("Running a function from TestClassSetup...")
+
+  % Teardown sets a function to be executed when the class object is destroyed.
+  % In this case, recover the "global default" referenced subsystems.
+  addTeardown(testCase, @PowerSplitHEV_resetReferencedSubsystems, testCase.modelName)
 
   mdl = testCase.modelName;
   load_system(mdl)
 
-  refSubName = get_param(mdl+"/Controller & Environment", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'PowerSplitHEV_DirectInput_refsub');
+  set_param( mdl + "/Controller & Environment", ...
+    "ReferencedSubsystem", "PowerSplitHEV_DirectInput_refsub");
 
-  refSubName = get_param(mdl+"/High Voltage Battery", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'BatteryHVElec_refsub');
+  set_param( mdl + "/High Voltage Battery", ...
+    "ReferencedSubsystem", "BatteryHVElec_refsub");
 
-  refSubName = get_param(mdl+"/DC-DC Converter", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'DcDcConverterElec_refsub');
+  set_param( mdl + "/DC-DC Converter", ...
+    "ReferencedSubsystem", "DcDcConverterElec_refsub");
 
-  refSubName = get_param(mdl+"/Power Split Drive Unit", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'PowerSplitDriveUnitBasic_refsub');
+  set_param( mdl + "/Power Split Drive Unit", ...
+    "ReferencedSubsystem", "PowerSplitDriveUnitBasic_refsub");
 
-  refSubName = get_param(mdl+"/Longitudinal Vehicle", "ReferencedSubsystem");
-  verifyEqual(testCase, refSubName, 'Vehicle1DCustom_refsub');
+  set_param( mdl + "/Longitudinal Vehicle", ...
+    "ReferencedSubsystem", "Vehicle1DCustom_refsub");
 
-  close all
-  bdclose all
-end
+  save_system(mdl)
+
+end  % function
+
+end  % methods (TestClassSetup)
+
+methods (Test)
+%% Test for Models
 
 function openAndRun_1(testCase)
 %% Most basic check - open model and run simulation.
@@ -61,7 +70,7 @@ end  % function
 
 function openAndRun_2_1(testCase)
 %% Check that the model runs without any warnings or errors.
-% Specify the referenced subsystems.
+% Test referenced subsystems that are different from this unit test's default.
 
   close all
   bdclose all
@@ -91,7 +100,7 @@ end  % function
 
 function openAndRun_2_2(testCase)
 %% Check that the model runs without any warnings or errors.
-% Specify the referenced subsystem.
+% Test referenced subsystems that are different from this unit test's default.
 
   close all
   bdclose all
@@ -131,14 +140,6 @@ function runLiveScript_DirectInput_Constant(~)
   % but this ensures that everything in the script works fine.
   PowerSplitHEV_DI_testcase_Constant
 
-  close all
-  bdclose all
-end
-
-function runLiveScript_DirectInput_Accel(~)
-  close all
-  bdclose all
-  PowerSplitHEV_DI_testcase_Accel
   close all
   bdclose all
 end
@@ -191,7 +192,6 @@ function runLiveScript_DirectInput_PowerSplitDrive(~)
   bdclose all
 end
 
-%{
 function runLiveScript_main_script(~)
   close all
   bdclose all
@@ -199,7 +199,6 @@ function runLiveScript_main_script(~)
   close all
   bdclose all
 end
-%}
 
 end  % methods (Test)
 end  % classdef

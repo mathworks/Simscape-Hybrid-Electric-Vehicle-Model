@@ -1,5 +1,5 @@
-function PowerSplitHEV_SpeedTracking_plot_result_powersplit( nvpair )
-% plots the simulation result.
+function PowerSplitHEV_plot_result_powersplit( nvpair )
+% Plots the simulation result.
 
 % Copyright 2021 The MathWorks, Inc.
 

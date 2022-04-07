@@ -1,4 +1,4 @@
-function PowerSplitHEV_SpeedTracking_example(inputPattern)
+function PowerSplitHEV_DirectInput_example(inputPattern)
 %% Run simulation and make plots
 % This function runs simulation for a specified drive pattern/cycle
 % with default settings and makes the plots of selected quantities.
@@ -7,8 +7,8 @@ function PowerSplitHEV_SpeedTracking_example(inputPattern)
 
 arguments
   inputPattern {mustBeTextScalar, mustBeMember(inputPattern, ...
-    ["Accelerate_Decelerate", "SimpleDrivePattern", "FTP75"])} ...
-    = "Accelerate_Decelerate"
+    ["PowerSplitDrive", "MG2Drive", "EngineDrive", "MG1Drive", "Downhill"])} ...
+    = "PowerSplitDrive"
 end
 
 mdl = "PowerSplitHEV_system_model";
@@ -20,12 +20,12 @@ end
 % Load defaults.
 PowerSplitHEV_params
 
-% Use speed tracking controller.
+% Use direct torque input.
 set_param(mdl+"/Controller & Environment", "ReferencedSubsystem", ...
-  "PowerSplitHEV_SpeedTracking_refsub")
+  "PowerSplitHEV_DirectInput_refsub")
 
 % This loads some variables in the base workspace.
-PowerSplitHEV_SpeedTracking_selectInput( ...
+PowerSplitHEV_DirectInput_selectInput( ...
   "InputPattern", inputPattern, ...
   "DisplayMessage", false )
 

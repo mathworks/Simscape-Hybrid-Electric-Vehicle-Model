@@ -1,37 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
 
-  <testsuite errors="1" failures="0" name="PowerSplitHEV_SpeedTracking_UnitTest" skipped="0" tests="14" time="436.2437">
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="defaultReferencedSubsystems_1" time="6.867"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_1" time="18.8073"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_1" time="17.7071"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_2" time="16.5653"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_basic" time="19.2637"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_highSpeed" time="23.3552"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_Accelerate_Decelerate" time="21.8999"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_SimpleDrivePattern" time="22.3409"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_FTP75" time="63.8705"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_main_script" time="82.7633"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_accel_decel" time="18.1048"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_ftp75" time="68.8826"/>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runMScript_runsim_simple_pattern" time="3.4127">
-      <error>Error occurred in PowerSplitHEV_SpeedTracking_UnitTest/runMScript_runsim_simple_pattern and it did not run to completion.
-    ---------
-    Error ID:
-    ---------
-    'MATLAB:undefinedVarOrClass'
-    --------------
-    Error Details:
-    --------------
-    Unable to resolve the name drivePatternInitialConditions.HVBattery_SOC_pct.
-    
-    Error in PowerSplitHEV_SpeedTracking_runsim_simple_pattern (line 24)
-    initial_SOC_pct = drivePatternInitialConditions.HVBattery_SOC_pct;
-    
-    Error in PowerSplitHEV_SpeedTracking_UnitTest/runMScript_runsim_simple_pattern (line 238)
-      evalin("base", "PowerSplitHEV_SpeedTracking_runsim_simple_pattern")</error>
-    </testcase>
-    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_sweep" time="52.4032"/>
+  <testsuite errors="0" failures="0" name="PowerSplitHEV_SpeedTracking_UnitTest" skipped="0" tests="10" time="363.3665">
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_1" time="26.0719"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_1" time="17.5135"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_2" time="15.8662"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_basic" time="18.9465"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_highSpeed" time="23.5987"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_Accelerate_Decelerate" time="21.6608"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_SimpleDrivePattern" time="22.5752"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_FTP75" time="62.1187"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_main_script" time="93.251"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_sweep" time="61.7639"/>
   </testsuite>
 
 </testsuites>

@@ -54,7 +54,7 @@ hevcontrol.engKp = 15;
 % These are for controller/driver only.
 % ICs for plant are defined elsewhere.
 
-initial.driverHVBattSOC_pct = initial.highVoltageBatterySOC_pct;
+initial.controllerHVBattSOC_pct = initial.highVoltageBatterySOC_pct;
 
 initial.driverBrakeForce_N = 8000;
 initial.driverBrakeOn_tf = true;

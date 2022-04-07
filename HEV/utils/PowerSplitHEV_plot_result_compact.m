@@ -1,17 +1,17 @@
-function PowerSplitHEV_SpeedTracking_plot_result_compact( nvpair )
-% plots the simulation result.
+function PowerSplitHEV_plot_result_compact( nvpairs )
+% Plots the simulation result.
 
-% Copyright 2021 The MathWorks, Inc.
+% Copyright 2021-2022 The MathWorks, Inc.
 
 %% Process arguments
 
 arguments
-  nvpair.Dataset (1,1) Simulink.SimulationData.Dataset
-  nvpair.PlotParent (1,1) matlab.ui.Figure
+  nvpairs.Dataset (1,1) Simulink.SimulationData.Dataset
+  nvpairs.PlotParent (1,1) matlab.ui.Figure
 end
 
-logsout = nvpair.Dataset;
-parent = nvpair.PlotParent;
+logsout = nvpairs.Dataset;
+parent = nvpairs.PlotParent;
 
 %% Plot
 

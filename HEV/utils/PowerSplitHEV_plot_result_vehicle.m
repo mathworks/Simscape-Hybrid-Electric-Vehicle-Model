@@ -1,5 +1,5 @@
-function PowerSplitHEV_SpeedTracking_plot_result_vehicle( nvpair )
-% plots the simulation result.
+function PowerSplitHEV_plot_result_vehicle( nvpair )
+% Plots the simulation result.
 
 % Copyright 2021-2022 The MathWorks, Inc.
 
@@ -21,27 +21,27 @@ tl = tiledlayout(parent, 3, 2, ...
       'TileSpacing','compact', 'Padding','compact' );
 
 ax = nexttile(tl);
-vals = logsout.get("Vehicle Speed").Values;
+vals = getValuesFromLogsout(logsout.get("Vehicle Speed"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = logsout.get("Vehicle Speed Reference (km/hr)").Values;
+vals = getValuesFromLogsout(logsout.get("Vehicle Speed Reference (km/hr)"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Speed & Reference (km/hr)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Vehicle Incline").Values;
+vals = getValuesFromLogsout(logsout.get("Vehicle Incline"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
-vals = logsout.get("Road Grade").Values;
+vals = getValuesFromLogsout(logsout.get("Road Grade"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Incline (deg) & Road Grade (%)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Vehicle G Force").Values;
+vals = getValuesFromLogsout(logsout.get("Vehicle G Force"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
@@ -49,7 +49,7 @@ title(ax, "G Force (-)")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Brake On Off").Values;
+vals = getValuesFromLogsout(logsout.get("Brake On Off"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlabel(ax, "Time (s)")
@@ -57,7 +57,7 @@ title(ax, "Brake On Off")
 hold off
 
 ax = nexttile(tl);
-vals = logsout.get("Axle Speed").Values;
+vals = getValuesFromLogsout(logsout.get("Axle Speed"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = logsout.get("Axle Speed Reference").Values;

@@ -4,7 +4,9 @@ function PowerSplitHEV_SpeedTracking_selectInput(nvpairs)
 % Copyright 2021-2022 The MathWorks, Inc.
 
 arguments
-  nvpairs.InputPattern {mustBeTextScalar} = "Accelerate_Decelerate"
+  nvpairs.InputPattern {mustBeTextScalar, mustBeMember(nvpairs.InputPattern, ...
+    ["Accelerate_Decelerate", "SimpleDrivePattern", "FTP75"])} ...
+    = "SimpleDrivePattern"
   nvpairs.DisplayMessage (1,1) logical = false
   nvpairs.DisplayPlot (1,1) logical = false
 end

@@ -132,5 +132,6 @@ smoothing.engine_dampSpringVelTol_rpm = 0.1;
 
 %% Parameters for Controller
 
-% Run this after loading parameters for plant.
+% Run the following script after loading parameters for plant.
+% Direct torque input does not need this, but it is always loaded for simplicity.
 HEVPowerSplitControl_params

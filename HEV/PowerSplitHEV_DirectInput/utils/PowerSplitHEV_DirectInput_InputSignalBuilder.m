@@ -3,15 +3,6 @@ classdef PowerSplitHEV_DirectInput_InputSignalBuilder < handle
 
 % Copyright 2022 The MathWorks, Inc.
 
-% You can run this class by selecting the following code
-% and pressing the F9 key.
-%{
-hevInputData = PowerSplitHEV_DirectInput_InputSignalBuilder().Constant;
-hevDirect_InputSignals = hevInputData.Signals;
-hevDirect_InputBus = hevInputData.Bus;
-t_end = hevInputData.Options.StopTime_s;
-%}
-
 properties
   % ### Signals
 
@@ -61,72 +52,6 @@ methods
 
   end
 
-  function plotSignals(inpObj, nvpairs)
-  %%
-    arguments
-      inpObj
-      nvpairs.ParentFigure (1,1)
-    end
-
-    syncedInputs = synchronize( ...
-                      inpObj.Mg2TrqCmd, ...
-                      inpObj.Mg1TrqCmd, ...
-                      inpObj.EngTrqCmd, ...
-                      inpObj.BrakeForce, ...
-                      inpObj.RoadGrade );
-
-    addUnitString = @(tt) ...
-      string(tt.Properties.VariableNames) ...
-        + " (" + string(tt.Properties.VariableUnits) + ")";
-
-    dispLbl = { ...
-      addUnitString(inpObj.Mg2TrqCmd), ...
-      addUnitString(inpObj.Mg1TrqCmd), ...
-      addUnitString(inpObj.EngTrqCmd), ...
-      addUnitString(inpObj.BrakeForce), ...
-      addUnitString(inpObj.RoadGrade) };
-
-    if not(inpObj.VisiblePlot_tf)
-      % Invisible figure.
-      inpObj.ParentFigure = figure('Visible', 'off');
-    elseif isfield(nvpairs, 'ParentFigure')
-      % This function's ParentFigure option is specified.
-      assert(isa(nvpairs.ParentFigure, 'matlab.ui.Figure'))
-      inpObj.ParentFigure = nvpairs.ParentFigure;
-    else
-      % Create a new figure.
-      inpObj.ParentFigure = figure;  % Do not use 'Visible','on'
-    end
-
-    stk = stackedplot( inpObj.ParentFigure, syncedInputs );
-    stk.LineWidth = inpObj.LineWidth;
-    stk.GridVisible = 'on';
-    stk.DisplayLabels = dispLbl;
-    % stackedplot does not have Interpreter=off setting for the title.
-    % To prevent '_' from being interpreted as a subscript directive,
-    % replace it with a space.
-    % Note that title() does not work with stackedplot either.
-    stk.Title = strrep(inpObj.FunctionName, '_', ' ');
-
-    % Making the figure taller than the default plot window height can
-    % make the top part of the window go outside the monitor screen.
-    % To prevent it, lower the x position of the window,
-    % assuming that lowering the window position is safer
-    % because the visibility of the window top is more important
-    % that of the window bottom.
-    pos = inpObj.ParentFigure.Position;
-    h_orig = pos(4);
-    w = inpObj.FigureWidth;
-    h_new = inpObj.FigureHeight;
-    inpObj.ParentFigure.Position = [pos(1), pos(2)-(h_new-h_orig), w, h_new];
-
-    if inpObj.SavePlot_tf
-      exportgraphics(gca, inpObj.SavePlotImageFileName)
-    end  % if
-  end  % function
-
-  %% Input Signal Patterns
-
   function signalData = Constant(inpObj, nvpairs)
   %%
     arguments
@@ -168,90 +93,6 @@ methods
 
     signalData = BundleSignals(inpObj);
   end  % function
-
-%{
-  function signalData = Step(inpObj, nvpairs)
-  %%
-    arguments
-      inpObj
-      nvpairs.BrakeForce_Const_N (1,1) {mustBeNonnegative} = 0
-      nvpairs.RoadGrade_Const_pct (1,1) {mustBeInRange(nvpairs.RoadGrade_Const_pct, -50, 50)} = 0
-
-      nvpairs.MG2TorqueCommand_1_Nm (1,1) = 20
-      nvpairs.MG2TorqueCommand_2_Nm (1,1) = 20
-
-      nvpairs.MG2TrqCmdChange_StartTime (1,1) duration = seconds(1000)
-      nvpairs.MG2TrqCmdChange_EndTime (1,1) duration = seconds(1000 + 2)
-
-      nvpairs.MG1TorqueCommand_1_Nm (1,1) = 0
-      nvpairs.MG1TorqueCommand_2_Nm (1,1) = -5
-
-      nvpairs.MG1TrqCmdChange_StartTime (1,1) duration = seconds(1500)
-      nvpairs.MG1TrqCmdChange_EndTime (1,1) duration = seconds(1500 + 2)
-
-      nvpairs.EngineTorqueCommand_1_Nm (1,1) {mustBeNonnegative} = 0
-      nvpairs.EngineTorqueCommand_2_Nm (1,1) {mustBeNonnegative} = 60
-
-      nvpairs.EngTrqCmdChange_StartTime (1,1) duration = seconds(500)
-      nvpairs.EngTrqCmdChange_EndTime (1,1) duration = seconds(500 + 2)
-
-      nvpairs.StopTime (1,1) duration = seconds(2000)
-    end
-
-    % Record the function name for convenience.
-    ds = dbstack;
-    thisFunctionFullName = ds(1).name;
-    inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
-
-    inpObj.StopTime = nvpairs.StopTime;
-    t_end = seconds(nvpairs.StopTime);
-
-    x1 = nvpairs.MG2TorqueCommand_1_Nm;
-    x2 = nvpairs.MG2TorqueCommand_2_Nm;
-    t1 = seconds(nvpairs.MG2TrqCmdChange_StartTime);
-    t2 = seconds(nvpairs.MG2TrqCmdChange_EndTime);
-    assert(0.1 < t1)
-    assert(t1 < t2)
-    assert(t2+0.1 < t_end)
-    BuildSignal_MG2TorqueCommand(inpObj, ...
-      'Data',        [x1 x1  x1 x2 x2     x2], ...
-      'Time',seconds([0  0.1 t1 t2 t2+0.1 t_end]));
-
-    x1 = nvpairs.MG1TorqueCommand_1_Nm;
-    x2 = nvpairs.MG1TorqueCommand_2_Nm;
-    t1 = seconds(nvpairs.MG1TrqCmdChange_StartTime);
-    t2 = seconds(nvpairs.MG1TrqCmdChange_EndTime);
-    assert(0.1 < t1)
-    assert(t1 < t2)
-    assert(t2+0.1 < t_end)
-    BuildSignal_MG1TorqueCommand(inpObj, ...
-      'Data',        [x1 x1  x1 x2 x2     x2], ...
-      'Time',seconds([0  0.1 t1 t2 t2+0.1 t_end]));
-
-    x1 = nvpairs.EngineTorqueCommand_1_Nm;
-    x2 = nvpairs.EngineTorqueCommand_2_Nm;
-    t1 = seconds(nvpairs.EngTrqCmdChange_StartTime);
-    t2 = seconds(nvpairs.EngTrqCmdChange_EndTime);
-    assert(0.1 < t1)
-    assert(t1 < t2)
-    assert(t2+0.1 < t_end)
-    BuildSignal_EngineTorqueCommand(inpObj, ...
-      'Data',        [x1 x1  x1 x2 x2     x2], ...
-      'Time',seconds([0  0.1 t1 t2 t2+0.1 t_end]));
-
-    x1 = nvpairs.BrakeForce_Const_N;
-    BuildSignal_BrakeForce(inpObj, 'Data',[x1 x1], 'Time',seconds([0 t_end]));
-
-    x1 = nvpairs.RoadGrade_Const_pct;
-    BuildSignal_RoadGrade(inpObj, 'Data',[x1 x1], 'Time',seconds([0 t_end]));
-
-    if inpObj.Plot_tf
-      plotSignals(inpObj);
-    end
-
-    signalData = BundleSignals(inpObj);
-  end  % function
-%}
 
   function signalData = Step3(inpObj, nvpairs)
   %%
@@ -1005,6 +846,70 @@ methods
 
     signalData = BundleSignals(inpObj);
 
+  end  % function
+
+  function plotSignals(inpObj, nvpairs)
+  %%
+    arguments
+      inpObj
+      nvpairs.ParentFigure (1,1)
+    end
+
+    syncedInputs = synchronize( ...
+                      inpObj.Mg2TrqCmd, ...
+                      inpObj.Mg1TrqCmd, ...
+                      inpObj.EngTrqCmd, ...
+                      inpObj.BrakeForce, ...
+                      inpObj.RoadGrade );
+
+    addUnitString = @(tt) ...
+      string(tt.Properties.VariableNames) ...
+        + " (" + string(tt.Properties.VariableUnits) + ")";
+
+    dispLbl = { ...
+      addUnitString(inpObj.Mg2TrqCmd), ...
+      addUnitString(inpObj.Mg1TrqCmd), ...
+      addUnitString(inpObj.EngTrqCmd), ...
+      addUnitString(inpObj.BrakeForce), ...
+      addUnitString(inpObj.RoadGrade) };
+
+    if not(inpObj.VisiblePlot_tf)
+      % Invisible figure.
+      inpObj.ParentFigure = figure('Visible', 'off');
+    elseif isfield(nvpairs, 'ParentFigure')
+      % This function's ParentFigure option is specified.
+      assert(isa(nvpairs.ParentFigure, 'matlab.ui.Figure'))
+      inpObj.ParentFigure = nvpairs.ParentFigure;
+    else
+      % Create a new figure.
+      inpObj.ParentFigure = figure;  % Do not use 'Visible','on'
+    end
+
+    stk = stackedplot( inpObj.ParentFigure, syncedInputs );
+    stk.LineWidth = inpObj.LineWidth;
+    stk.GridVisible = 'on';
+    stk.DisplayLabels = dispLbl;
+    % stackedplot does not have Interpreter=off setting for the title.
+    % To prevent '_' from being interpreted as a subscript directive,
+    % replace it with a space.
+    % Note that title() does not work with stackedplot either.
+    stk.Title = strrep(inpObj.FunctionName, '_', ' ');
+
+    % Making the figure taller than the default plot window height can
+    % make the top part of the window go outside the monitor screen.
+    % To prevent it, lower the x position of the window,
+    % assuming that lowering the window position is safer
+    % because the visibility of the window top is more important
+    % that of the window bottom.
+    pos = inpObj.ParentFigure.Position;
+    h_orig = pos(4);
+    w = inpObj.FigureWidth;
+    h_new = inpObj.FigureHeight;
+    inpObj.ParentFigure.Position = [pos(1), pos(2)-(h_new-h_orig), w, h_new];
+
+    if inpObj.SavePlot_tf
+      exportgraphics(gca, inpObj.SavePlotImageFileName)
+    end  % if
   end  % function
 
 end  % methods
