@@ -24,6 +24,7 @@ ax = nexttile(tl);
 vals = logsout.get("Vehicle Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Longitudinal Vehicle Speed (km/hr)")
 hold off
@@ -32,6 +33,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG2 Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG2 Speed (rpm)")
 hold off
@@ -40,6 +42,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG2 Mechanical Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG2 Mechanical Power (kW)")
 hold off
@@ -49,6 +52,7 @@ ax = nexttile(tl);
 vals = logsout.get("Vehicle G Force").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Longitudinal G Force")
 hold off
@@ -57,6 +61,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG1 Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG1 Speed (rpm)")
 hold off
@@ -65,6 +70,7 @@ ax = nexttile(tl);
 vals = logsout.get("MG1 Mechanical Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "MG1 Mechanical Power (kW)")
 hold off
@@ -74,6 +80,7 @@ ax = nexttile(tl);
 vals = logsout.get("HV Battery SOC").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "HV Battery SOC (%)")
 hold off
@@ -82,6 +89,7 @@ ax = nexttile(tl);
 vals = logsout.get("Engine Speed").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Engine Speed (rpm)")
 hold off
@@ -90,6 +98,7 @@ ax = nexttile(tl);
 vals = logsout.get("Engine Power").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Engine Power (kW)")
 hold off

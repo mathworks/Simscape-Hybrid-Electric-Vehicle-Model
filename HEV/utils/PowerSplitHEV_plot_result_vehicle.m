@@ -26,6 +26,7 @@ plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = getValuesFromLogsout(logsout.get("Vehicle Speed Reference (km/hr)"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Speed & Reference (km/hr)")
 hold off
@@ -36,6 +37,7 @@ plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = getValuesFromLogsout(logsout.get("Road Grade"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Vehicle Incline (deg) & Road Grade (%)")
 hold off
@@ -44,6 +46,7 @@ ax = nexttile(tl);
 vals = getValuesFromLogsout(logsout.get("Vehicle G Force"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "G Force (-)")
 hold off
@@ -52,6 +55,7 @@ ax = nexttile(tl);
 vals = getValuesFromLogsout(logsout.get("Brake On Off"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Brake On Off")
 hold off
@@ -62,6 +66,7 @@ plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 vals = logsout.get("Axle Speed Reference").Values;
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Axle Speed & Reference (rpm)")
 hold off
@@ -70,6 +75,7 @@ ax = nexttile(tl);
 vals = getValuesFromLogsout(logsout.get("Brake Force"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
+xlim([0 vals.Time(end)])
 xlabel(ax, "Time (s)")
 title(ax, "Brake Force (N)")
 hold off

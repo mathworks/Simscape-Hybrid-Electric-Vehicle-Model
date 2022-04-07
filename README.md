@@ -46,7 +46,7 @@ The HEV model and its components are managed in
 a MATLAB project and
 some components come with their own test setups.
 
-![Model Screenshot](utils/image_PowerSplitHEV_SpeedTracking.png)
+![Model Screenshot](utils/image_PowerSplitHEV_system_model.png)
 
 ![Plot of Simulation Result](utils/image_simulation_results_ftp75.png)
 
