@@ -2,7 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1.2
+Version 1.3.alpha
 
 ## Introduction
 
@@ -65,6 +65,11 @@ Required:
 
 Optional:
 [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html)
+
+## What's New in Version 1.3
+
+- Required MATLAB release is R2022a (or newer).
+- Simulink model files are saved in `mdl` format.
 
 ## What's New in Version 1.2
 
