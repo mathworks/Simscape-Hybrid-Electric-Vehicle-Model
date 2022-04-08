@@ -2,14 +2,14 @@
 
 # Copyright 2021-2022 The MathWorks, Inc.
 
-name: MATLAB Build
+name: MATLAB R2021a, 21b, 22a Builds
 
 on:
   push:
-    branches: [ main, 21a-devel ]
+    branches: [ R2021a ]
 
   pull_request:
-    branches: [ main, 21a-devel ]
+    branches: [ R2021a ]
 
 jobs:
   matlab-job-22a:
