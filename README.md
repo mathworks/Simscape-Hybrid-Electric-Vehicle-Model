@@ -2,7 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1.2.alpha
+Version 1.2
 
 ## Introduction
 
@@ -42,8 +42,8 @@ physical components are built and tested individually
 and also they can be easily integrated into
 a complete vehicle system model.
 
-The HEV model and its components are managed in
-a MATLAB project and
+The HEV model and its component files are managed
+by a MATLAB project and
 some components come with their own test setups.
 
 ![Model Screenshot](utils/image_PowerSplitHEV_system_model.png)
@@ -68,10 +68,6 @@ Optional:
 
 ## What's New in Version 1.2
 
-_This section is subject to change._
-
-Version 1.2 is currently in development and may be broken :)
-
 Highlights
 
 - **MATLAB Unit Test** files are added for some models and scripts.
@@ -84,6 +80,10 @@ Highlights
 
 Models
 
+- Power-Split HEV system model is refactored to clean up.
+  Previously two separate system models existed
+  for speed tracking simulation and direct torque input simulation.
+  They are now merged into one.
 - Battery block from Simscape Electrical is added as
   a new referenced subsystem for High-Voltage Battery component.
   The previous model is included as well.
@@ -104,33 +104,41 @@ Models
   thereby improving simulation robustness and performance.
 - MG1 controller can start the engine.
   This better models the power-split HEV controller.
-- In `PowerSplitHEV_SpeedTracking` model,
-  Scopes are moved to individual components.
-  This cleans up the model and makes model navigation easier.
+- Scopes are moved to individual components.
+  This cleans up models, streamlines development workflow,
+  and makes model navigation easier.
 
 Test
 
 - Project top-level unit test is added.
   See files under `test`.
-  - `HEVProject_runtests.m`
-    automatically finds all unit test implementation files
+  - `HEVProject_runtests.m` automatically finds all unit test files
     in the project folder tree and runs them.
     `.github/workflow/ci.yml` for GitHub Actions uses this
-    to perform unit test.
-- Power-Split HEV system has unit test files
-  in `HEV` > `PowerSplitHEV_SpeedTracking` > `test`.
-  - Unit test implementation: `PowerSplitHEV_SpeedTracking_UnitTest.m`.
-  - Test runner: `PowerSplitHEV_SpeedTracking_runtests.m`.
-    Running this script performs unit test and produces
-    a MATLAB code coverage report in HTML.
-- Power-Split Drive Unit component has unit test files
-  in `Components` > `PowerSplitDriveUnit` > `test`.
-- Engine component has unit test files
-  in `Components` > `Engine` > `test`.
+    to perform unit test when the repository is pushed to GitHub.
+- Power-Split HEV system model has unit test files in
+  - `HEV` > `PowerSplitHEV_DirectInput` > `test`
+  - `HEV` > `PowerSplitHEV_SpeedTracking` > `test`
+  - Unit test files:
+    - `PowerSplitHEV_DirectInput_UnitTest.m`
+    - `PowerSplitHEV_SpeedTracking_UnitTest.m`
+  - Test runners:
+    - `PowerSplitHEV_DirectInput_runtests.m`
+    - `PowerSplitHEV_SpeedTracking_runtests.m`
+    - Running these scripts perform unit test and produce
+      MATLAB code coverage report.
+- Vehicle1D component has unit test files in
+  - `Components` > `Vehicle1D` > `test`
+- Power-Split Drive Unit component has unit test files in
+  - `Components` > `PowerSplitDriveUnit` > `test`
+- Engine component has unit test files in
+  - `Components` > `Engine` > `test`
+- Drive Pattern component has unit test files in
+  - `Components` > `DrivePattern` > `test`
 
 Other updates
 
-- Cleaned up some folders, models, and scripts.
+- Refactored many folders, models, and scripts.
 
 ## What's New in Version 1.1
 
