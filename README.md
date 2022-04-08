@@ -50,28 +50,52 @@ some components come with their own test setups.
 
 ![Plot of Simulation Result](utils/image_simulation_results_ftp75.png)
 
-## Tool Requirements
+## For MATLAB R2022a
 
-Supported MATLAB version: R2021a or newer releases
+Power-Split HEV version 1.3 is currently under development
+and *may be broken*. :)
 
-Required:
-[MATLAB](https://www.mathworks.com/products/matlab.html),
-[Simulink&reg;](https://www.mathworks.com/products/simulink.html),
-[Stateflow&reg;](https://www.mathworks.com/products/stateflow.html),
-[Powertrain Blockset](https://www.mathworks.com/products/powertrain.html),
-[Simscape](https://www.mathworks.com/products/simscape.html),
-[Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
-[Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html)
+- Required:
+  [MATLAB](https://www.mathworks.com/products/matlab.html),
+  [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
+  [Simscape](https://www.mathworks.com/products/simscape.html),
+  [Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
+  [Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html),
+  [Stateflow&reg;](https://www.mathworks.com/products/stateflow.html),
+  [Powertrain Blockset](https://www.mathworks.com/products/powertrain.html)
+- Optional:
+  [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html)
 
-Optional:
-[Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html)
+Links
 
-## What's New in Version 1.3
+- Repository: https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2022a
 
-- Required MATLAB release is R2022a (or newer).
+### What will be New in Version 1.3
+
+- Required MATLAB release is R2022a or newer.
 - Simulink model files are saved in `mdl` format.
 
-## What's New in Version 1.2
+## For MATLAB R2021a and R2021b
+
+Power-Split HEV version 1.2 is available.
+
+- Required:
+  [MATLAB](https://www.mathworks.com/products/matlab.html),
+  [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
+  [Simscape](https://www.mathworks.com/products/simscape.html),
+  [Simscape Driveline&trade;](https://www.mathworks.com/products/simscape-driveline.html),
+  [Simscape Electrical&trade;](https://www.mathworks.com/products/simscape-electrical.html),
+  [Stateflow&reg;](https://www.mathworks.com/products/stateflow.html),
+  [Powertrain Blockset](https://www.mathworks.com/products/powertrain.html)
+- Optional:
+  [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html)
+
+Links
+
+- Zip: https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/archive/refs/tags/v1.2.0.zip
+- Repository: https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2021a
+
+### What's New in Version 1.2
 
 Highlights
 
@@ -145,7 +169,7 @@ Other updates
 
 - Refactored many folders, models, and scripts.
 
-## What's New in Version 1.1
+### What's New in Version 1.1
 
 Highlights
 
@@ -167,7 +191,7 @@ Other Updates
 ## How to Use
 
 Open `HybridElectricVehicle.prj` in MATLAB, and
-it will automatically open the Live Script `HEV_main_script.mlx`.
+it will automatically open the Live Script `HEVProject_main_script.mlx`.
 The script contains the description of the model and
 hyperlinks to models and scripts.
 

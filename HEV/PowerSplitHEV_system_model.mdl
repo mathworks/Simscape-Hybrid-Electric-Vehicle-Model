@@ -47,8 +47,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dc:creator>MathWorks</dc:creator>
   <dc:description></dc:description>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-04-08T14:28:40Z</dcterms:modified>
-  <cp:revision>5.6</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-04-08T15:08:55Z</dcterms:modified>
+  <cp:revision>5.8</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -151,8 +151,8 @@ PowerSplitHEV_system_model_setup
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">571331328</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.6&gt;</P>
+      <P Name="RTWModifiedTimeStamp">571334654</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.8&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ShowEditTimeWarnings">off</P>
@@ -174,7 +174,7 @@ PowerSplitHEV_system_model_setup
         </Array>
       </Object>
       <Object PropName="InstrumentedSignals" ObjectID="2" ClassName="Simulink.HMI.InstrumentedSignals">
-        <Array PropName="Persistence" Type="Struct" Dimension="55*1">
+        <Array PropName="Persistence" Type="Struct" Dimension="47*1">
           <MATStruct>
             <Field Name="UUID" Class="char">9477fa5b-df1d-4a32-8530-54db652cc8fd</Field>
             <Field Name="BlockPath_" Class="char">Measurement/From43</Field>
@@ -1016,129 +1016,9 @@ PowerSplitHEV_system_model_setup
             <Field Name="VisualType_" Class="char"/>
           </MATStruct>
           <MATStruct>
-            <Field Name="UUID" Class="char">8ad0b827-154f-43c5-8f67-fc5eeed79b02</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From28</Field>
-            <Field Name="SID_" Class="char">3427</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">ec8f0e90-13ff-4a92-b53a-24c911345556</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From29</Field>
-            <Field Name="SID_" Class="char">3447</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
             <Field Name="UUID" Class="char">9838c976-596e-4fbb-b4b1-1f7954af0b74</Field>
             <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From3</Field>
             <Field Name="SID_" Class="char">3645</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">a8f2d58e-ed27-4cdf-881c-4cad18c1e946</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From30</Field>
-            <Field Name="SID_" Class="char">3448</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">cda1d13f-a698-42f0-9f6f-7d3b4cacbb85</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From31</Field>
-            <Field Name="SID_" Class="char">3428</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">08c0a1f4-6186-47f9-b143-8f71c863634e</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From32</Field>
-            <Field Name="SID_" Class="char">3429</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">0f81bab8-1517-41b6-a9f7-59e5706925bc</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From33</Field>
-            <Field Name="SID_" Class="char">3430</Field>
             <Field Name="SubPath_" Class="char"/>
             <Field Name="OutputPortIndex_" Class="double">1.0</Field>
             <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
@@ -1219,46 +1099,6 @@ PowerSplitHEV_system_model_setup
             <Field Name="UUID" Class="char">ee6a9c64-3291-42df-95db-d3ac2a29bd51</Field>
             <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/From7</Field>
             <Field Name="SID_" Class="char">3649</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">3010af4b-3d25-43ab-8cba-d1785a6f8c38</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Measurement/Subsystem</Field>
-            <Field Name="SID_" Class="char">3651</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">577fb777-0c98-4d6e-a2f6-977fe6ecc6b3</Field>
-            <Field Name="BlockPath_" Class="char">Controller &amp; Environment/Power-Split HEV Controller/Battery Status</Field>
-            <Field Name="SID_" Class="char">3504</Field>
             <Field Name="SubPath_" Class="char"/>
             <Field Name="OutputPortIndex_" Class="double">1.0</Field>
             <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
@@ -2533,8 +2373,8 @@ Configuration</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="c2cc7548-2792-4532-9dd3-9691594ba8c5">
-    <Interface type="Interface" uuid="9ca0ce83-630e-46be-9a67-b5e6e73a5118"/>
+  <System type="System" uuid="70df2ac5-27d0-49d8-ac64-fc1ce5e2d13a">
+    <Interface type="Interface" uuid="9e8fafd4-b21d-42e5-a9bf-6589f3526415"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/LogicAnalyzerPlugin.xml
@@ -2601,7 +2441,6 @@ __MWOPC_PART_BEGIN__ /simulink/plugins/LogicAnalyzerPlugin.xml
     ]
   }
 }</P>
-  <P Name="LogicAnalyzerSignalOrdering">f4593f6b-377f-4f4a-82ce-9fc8bc59ea2d,dcc92243-f588-4676-9649-cf7417052bab,25d9b0f8-c601-4888-ad25-c8f625573e51,389d372a-021a-42e2-99b4-a0a9f8404b96,6b821e28-a65f-4dd8-9a84-e9d999fa7740,318456c1-bdd0-4691-873e-deae5b224aac,3c729422-2a24-45db-8d8a-f1e1b9863669,b7c3a316-20f8-47d4-a2ef-3063c94eece6,ec13f024-597b-4c9b-aa2b-2e337c93143c,a499350b-5156-445b-8f26-95f2a3642a65,aa7ebe68-365c-406b-93c1-6b6e713b64c3,d41bd403-eea4-40bf-a3b9-96c9ed9552ed,874710dd-311e-453a-bd61-fc482922f2b9,ced741f1-06dd-4222-afa9-621fd1fe19ca,ee6a9c64-3291-42df-95db-d3ac2a29bd51,f850bc00-3d68-40e6-855d-5086fb24f0f2,e755ca46-fab8-472a-bbf8-baae8f13fa5f,0c862e60-bbd5-4ce1-9728-657cdbc5006e,64a85960-9fb8-46ec-851d-00087851207d,1302eee2-1f3f-45dd-b03c-f29307658165,cda1d13f-a698-42f0-9f6f-7d3b4cacbb85,ed947697-0a89-46bd-bc39-25788a0dc2fa,04867fbc-1bbc-4cb9-9df3-d5aae5115bf9,5e102406-a630-45f9-b1be-5e9d57c4dff4,77013763-f908-4f80-8b94-df4a7245a906,f9634125-5eb5-40be-917d-95f0df441c82,c894997c-9d78-49b5-b43d-60a2e0d78e86,cb1dbfc8-ffb6-4151-bef5-5e317a53dd82,fa240884-7e00-4ac4-8bf7-7ca669cfb559,2f6df1e8-0e2f-4972-a11a-da1cae62614e,1b6e6a17-57f1-4ef7-9d5a-82a1aa689966,63479a86-0c00-44d7-8523-7b151f1cacac,c4b869f9-800f-4bce-b70b-d5dcc5abd1bb,0f81bab8-1517-41b6-a9f7-59e5706925bc,577fb777-0c98-4d6e-a2f6-977fe6ecc6b3,8ad0b827-154f-43c5-8f67-fc5eeed79b02,ec8f0e90-13ff-4a92-b53a-24c911345556,f0f026af-eff2-4fa7-bb4a-0b95196f7739,0e89ab6f-48fe-4719-8b33-453a77a3f3f2,9838c976-596e-4fbb-b4b1-1f7954af0b74,a8f2d58e-ed27-4cdf-881c-4cad18c1e946,3f1dfc80-37b6-4873-84d4-e915cae683ba,08c0a1f4-6186-47f9-b143-8f71c863634e,c8992fce-6f6f-4de3-8be9-a3f1c567bf07,73fcb58b-db21-41c3-9a0a-ccb0e4629ee3,3010af4b-3d25-43ab-8cba-d1785a6f8c38,ef046702-ba6d-4b3b-98ab-42669a11a87f,c48d7ae6-03eb-462b-90a6-cce8e312160b,f5fe827b-d964-4f44-ab9c-dd5771c6b73f,01f2eeb2-12c4-449a-acf2-941a044097ce,6b1aa7d7-7504-4e5d-9c2e-f551db9cfd6d,476aa7c7-ab50-43e6-bc65-99d5768c728b,486584e7-22cf-4fc8-a749-0a5d1f33990b,3afefd87-cb7f-4de2-8259-dda0092b4dbc,9aeb3736-9389-41a1-9859-73a6555d4c01,fa3d6f01-8f00-4ead-a734-cbfb04aada67,d70525e9-9e58-4a41-9bc4-c57d7f381e40,010c67d8-a6dd-4faf-9028-a8fd5ea16f19,43285bd9-3e91-405c-bc59-b8cc6506a1b7,41486b68-bf32-45d8-a484-5077de5a0e98,23abf5ad-84e6-43ae-8609-368f8708b35f,965eb9db-7712-4ffa-b061-a314b56f5a49,f2c54fc4-ff91-4eb4-8976-ccd8ec7378a9,c44a3c6f-fcb8-4097-9a40-4fbc398e9e15,782bc024-0dcc-489f-9393-0ca960a88d12,92126a0b-6945-4f1a-b4f3-25cdc9b85bdb,ded92639-0971-4d8b-aa69-5a7a7ccae000,63494438-737f-4e9f-970e-1dcf71c58f9e,cd1d47c2-a5d1-401c-8d4c-5fd2fc86ea58,63fbf540-2e0d-4753-bda8-864597a05282,9477fa5b-df1d-4a32-8530-54db652cc8fd</P>
 </LogicAnalyzerPlugin>
 
 __MWOPC_PART_BEGIN__ /simulink/plugins/NotesPlugin.xml
@@ -3353,27 +3192,27 @@ NOMO4P8Du44Dox28jwkAAAAASUVORK5CYII==
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="07c07bd6-8aca-4648-af9a-7d2c8d204382">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="fc531096-22d7-4ceb-8c67-1d40e1d1f524">
     <priorityDirection>HighNumberLast</priorityDirection>
     <editorState type="sltp.mm.core.EditorState" uuid="e7dec165-db76-4602-bfd3-32fb4e0d7cc6">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="380e0f69-9767-416e-866e-b05d2cfeb511"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="c92e03bf-c158-4b88-9d2c-1da25f172fd0">
-      <context type="sltp.mm.core.Context" uuid="07c07bd6-8aca-4648-af9a-7d2c8d204382"/>
+    <rootTask type="sltp.mm.core.Task" uuid="2ea1e0e3-f6a8-4768-a6d5-f5672cddcbf5">
+      <context type="sltp.mm.core.Context" uuid="fc531096-22d7-4ceb-8c67-1d40e1d1f524"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="0b3393ea-90c1-4007-b40a-c07d90b84304">
-        <tasks type="sltp.mm.core.Task" uuid="4f4a233f-1f42-45e5-b81f-f3f68c40ba33">
+      <subgraph type="sltp.mm.core.Graph" uuid="acc51b75-9ba2-46a2-998f-452a7cf3ba91">
+        <tasks type="sltp.mm.core.Task" uuid="76088113-a8cd-4b69-a71d-9f3328b8f1e8">
           <baseTask>true</baseTask>
-          <context type="sltp.mm.core.Context" uuid="07c07bd6-8aca-4648-af9a-7d2c8d204382"/>
+          <context type="sltp.mm.core.Context" uuid="fc531096-22d7-4ceb-8c67-1d40e1d1f524"/>
           <explicit>false</explicit>
           <id>1</id>
           <isTimed>true</isTimed>
           <name>Cont</name>
           <priority>40</priority>
-          <rates type="sltp.mm.core.Rate" uuid="0c4b6a44-19d7-4130-9a49-6105f8215f76">
+          <rates type="sltp.mm.core.Rate" uuid="0ad4fad4-fc28-4615-a28e-5816e72d9fa8">
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
@@ -3382,7 +3221,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>0</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="c834743c-38a7-4515-877f-d816e4d14dfb">
+          <rates type="sltp.mm.core.Rate" uuid="abf6bb69-6a12-45bf-9d64-b906aa921661">
             <annotation>FiM</annotation>
             <color>-2139062017</color>
             <hasBlocks>true</hasBlocks>
@@ -3392,7 +3231,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             </rateSpec>
             <sti>1</sti>
           </rates>
-          <rates type="sltp.mm.core.Rate" uuid="024619c6-3835-4cc6-8c89-91b35cfd05e4">
+          <rates type="sltp.mm.core.Rate" uuid="bf7c7f2f-a036-4ed9-b0b8-781eae05b847">
             <annotation>D1</annotation>
             <color>-436207361</color>
             <hasBlocks>true</hasBlocks>
@@ -4444,7 +4283,6 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3502.xml
     <P Name="Unit">km/hr</P>
     <Port>
       <P Name="PortNumber">1</P>
-      <P Name="PropagatedSignals">VehSpdKph</P>
     </Port>
   </Block>
   <Block BlockType="Inport" Name="VehSpdMph" SID="3505">
@@ -4753,11 +4591,10 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <System>
   <P Name="Location">[56, 26, 1297, 871]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
-  <P Name="Open">on</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">5985</P>
+  <P Name="SIDHighWatermark">6115</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="3324">
     <P Name="Ports">[4, 1]</P>
@@ -6165,7 +6002,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">758d041b-2a89-446a-a178-7700d6a6ccba</P>
     </Object>
-    <P Name="BDUuid" Class="char">8ce78c31-865d-4f09-8dd5-69c811fa80e9</P>
+    <P Name="BDUuid" Class="char">caefe60e-d031-41a3-90ef-e80bc4f0b4e6</P>
   </Object>
 </WindowsInfo>
 
