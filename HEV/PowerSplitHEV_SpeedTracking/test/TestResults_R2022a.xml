@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="PowerSplitHEV_SpeedTracking_UnitTest" skipped="0" tests="10" time="303.8667">
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_1" time="18.5113"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_1" time="17.1823"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="openAndRun_2_2" time="16.0737"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_basic" time="17.0455"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_highSpeed" time="22.6963"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_Accelerate_Decelerate" time="20.478"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_SimpleDrivePattern" time="20.7736"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_FTP75" time="78.6244"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_main_script" time="14.4742"/>
+    <testcase classname="PowerSplitHEV_SpeedTracking_UnitTest" name="runLiveScript_sweep" time="78.0074"/>
+  </testsuite>
+</testsuites>

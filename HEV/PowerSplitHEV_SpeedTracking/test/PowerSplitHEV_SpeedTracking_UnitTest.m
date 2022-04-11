@@ -140,7 +140,7 @@ function runLiveScript_basic(~)
 
   % This is the most basic simulation where nothing interesting happens,
   % but this ensures that everything in the script works fine.
-  evalin("base", "PowerSplitHEV_SpeedTracking_testcase_basic");
+  PowerSplitHEV_SpeedTracking_testcase_basic
 
   close all
   bdclose all
@@ -148,12 +148,9 @@ end  % function
 
 function runLiveScript_highSpeed(~)
 %% Check that the script runs without any warnings or errors.
-
   close all
   bdclose all
-
-  evalin("base", "PowerSplitHEV_SpeedTracking_testcase_highSpeed");
-
+  PowerSplitHEV_SpeedTracking_testcase_highSpeed
   close all
   bdclose all
 end  % function
@@ -166,7 +163,10 @@ function runLiveScript_Accelerate_Decelerate(~)
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_Accelerate_Decelerate");
+  % If script loads some variables to the base workspace
+  % (for example by calling a function which explicitly does so with assignin),
+  % the script must be explicitly evaluated in the base workspace.
+  evalin("base", "PowerSplitHEV_SpeedTracking_Accelerate_Decelerate")
 
   close all
   bdclose all
@@ -174,11 +174,13 @@ end  % function
 
 function runLiveScript_SimpleDrivePattern(~)
 %% Check that the script runs without any warnings or errors.
-
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_SimpleDrivePattern");
+  % If script loads some variables to the base workspace
+  % (for example by calling a function which explicitly does so with assignin),
+  % the script must be explicitly evaluated in the base workspace.
+  evalin("base", "PowerSplitHEV_SpeedTracking_SimpleDrivePattern")
 
   close all
   bdclose all
@@ -186,11 +188,13 @@ end  % function
 
 function runLiveScript_FTP75(~)
 %% Check that the script runs without any warnings or errors.
-
   close all
   bdclose all
 
-  evalin("base", "PowerSplitHEV_SpeedTracking_FTP75");
+  % If script loads some variables to the base workspace
+  % (for example by calling a function which explicitly does so with assignin),
+  % the script must be explicitly evaluated in the base workspace.
+  evalin("base", "PowerSplitHEV_SpeedTracking_FTP75")
 
   close all
   bdclose all
@@ -198,10 +202,12 @@ end  % function
 
 function runLiveScript_main_script(~)
 %% Check that the script runs without any warnings or errors.
-
   close all
   bdclose all
 
+  % If script loads some variables to the base workspace
+  % (for example by calling a function which explicitly does so with assignin),
+  % the script must be explicitly evaluated in the base workspace.
   evalin("base", "PowerSplitHEV_SpeedTracking_main_script")
 
   close all
@@ -216,6 +222,9 @@ function runLiveScript_sweep(~)
   close all
   bdclose all
 
+  % If script loads some variables to the base workspace
+  % (for example by calling a function which explicitly does so with assignin),
+  % the script must be explicitly evaluated in the base workspace.
   evalin("base", "PowerSplitHEV_SpeedTracking_sweep")
 
   close all

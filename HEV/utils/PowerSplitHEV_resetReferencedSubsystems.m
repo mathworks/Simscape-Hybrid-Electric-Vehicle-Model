@@ -23,7 +23,7 @@ set_param( modelName + "/Power Split Drive Unit", ...
   "ReferencedSubsystem", "PowerSplitDriveUnitBasic_refsub");
 
 set_param( modelName + "/Longitudinal Vehicle", ...
-  "ReferencedSubsystem", "Vehicle1DCustom_refsub");
+  "ReferencedSubsystem", "Vehicle1DDriveline_refsub");
 
 save_system(modelName)
 
