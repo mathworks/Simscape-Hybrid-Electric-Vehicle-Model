@@ -36,7 +36,7 @@ function setReferencedSubsystems(testCase)
     "ReferencedSubsystem", "PowerSplitDriveUnitBasic_refsub");
 
   set_param( mdl + "/Longitudinal Vehicle", ...
-    "ReferencedSubsystem", "Vehicle1DCustom_refsub");
+    "ReferencedSubsystem", "Vehicle1DDriveline_refsub");
 
   save_system(mdl)
 
@@ -88,6 +88,9 @@ function openAndRun_2_1(testCase)
 
   set_param(mdl+"/Power Split Drive Unit/Engine", ...
     "ReferencedSubsystem", "EngineBasic_refsub")
+
+  set_param(mdl+"/Longitudinal Vehicle", ...
+    "ReferencedSubsystem", "Vehicle1DCustom_refsub")
 
   simIn = Simulink.SimulationInput(mdl);
   simIn = setModelParameter(simIn, "StopTime",num2str(t_end));

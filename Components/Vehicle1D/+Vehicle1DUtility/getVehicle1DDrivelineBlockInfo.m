@@ -1,5 +1,5 @@
-function info = getVehicle1DCustomBlockInfo(blk_gcbh)
-% Collects block parameter values from Vehicle 1D Custom block.
+function info = getVehicle1DDriveineBlockInfo(blk_gcbh)
+% Collects block parameter values from longitudinal Vehicle block.
 % To use this function, make sure to select the block in Simulink canvas and
 % then pass gcbh to this function.
 
@@ -7,11 +7,11 @@ function info = getVehicle1DCustomBlockInfo(blk_gcbh)
 
 getp = @(p) evalin('base', get_param(blk_gcbh, p));
 
-info.M_e_kg = getp('M_e');
-info.R_tire_m = getp('R_tire');
+info.M_e_kg = getp('M_vehicle');
+info.R_tire_m = getp('R_tireroll');
 info.A_rl_N = getp('A_rl');
 info.B_rl_N_per_kph = getp('B_rl');
 info.C_rl_N_per_kph2 = getp('C_rl');
-info.grav_m_per_s2 = getp('grav');
+info.grav_m_per_s2 = getp('g');
 
 end

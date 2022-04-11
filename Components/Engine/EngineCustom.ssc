@@ -7,7 +7,7 @@ component EngineCustom
 % according to the polynomial model.
 % <br/>
 % <br/>
-% View <a href="matlab:EngineUtility.plotCustomEngineCurves(gcb)">engine torque and power curves</a>.
+% View <a href="matlab:EngineUtility.plotCustomEngineCurves(gcb);">engine torque and power curves</a>.
 
 % Copyright 2022 The MathWorks, Inc.
 

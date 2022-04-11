@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="PowerSplitHEV_UnitTest" skipped="0" tests="3" time="38.111">
+    <testcase classname="PowerSplitHEV_UnitTest" name="run_system_model_1" time="15.7908"/>
+    <testcase classname="PowerSplitHEV_UnitTest" name="run_report_script_1" time="1.8739"/>
+    <testcase classname="PowerSplitHEV_UnitTest" name="run_main_script_1" time="20.4463"/>
+  </testsuite>
+</testsuites>

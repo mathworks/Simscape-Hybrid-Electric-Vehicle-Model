@@ -1,4 +1,4 @@
-function plotCustomEngineCurves(blockpath)
+function f = plotCustomEngineCurves(blockpath)
 %%
 
 % Copyright 2022 The MathWorks, Inc.
