@@ -36,7 +36,7 @@ function setReferencedSubsystems(testCase)
     "ReferencedSubsystem", "PowerSplitDriveUnitBasic_refsub");
 
   set_param( mdl + "/Longitudinal Vehicle", ...
-    "ReferencedSubsystem", "Vehicle1DCustom_refsub");
+    "ReferencedSubsystem", "Vehicle1DDriveline_refsub");
 
   save_system(mdl)
 
@@ -160,6 +160,14 @@ function runLiveScript_DirectInput_Downhill_2(~)
   bdclose all
 end
 
+function runLiveScript_DirectInput_EngineDrive(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_EngineDrive
+  close all
+  bdclose all
+end
+
 function runLiveScript_DirectInput_MG1Drive(~)
   close all
   bdclose all
@@ -184,6 +192,30 @@ function runLiveScript_DirectInput_MG2Drive_2(~)
   bdclose all
 end
 
+function runLiveScript_DirectInput_MG2Drive_StartEng(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_MG2Drive_StartEngine
+  close all
+  bdclose all
+end
+
+function runLiveScript_DirectInput_MG2Drive_StartEng_2(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_MG2Drive_StartEngine_2
+  close all
+  bdclose all
+end
+
+function runLiveScript_DirectInput_Parked_EngChgBatt(~)
+  close all
+  bdclose all
+  PowerSplitHEV_DI_testcase_Parked_EngineChargeBattery
+  close all
+  bdclose all
+end
+
 function runLiveScript_DirectInput_PowerSplitDrive(~)
   close all
   bdclose all
@@ -195,7 +227,19 @@ end
 function runLiveScript_main_script(~)
   close all
   bdclose all
+
+  % Delete the png files of simulation result plots.
+  imgFolder = fullfile( ...
+    currentProject().RootFolder, "HEV", "PowerSplitHEV_DirectInput", "images");
+  delete(fullfile(imgFolder, "*.png"))
+
+  % First run creates png files.
   PowerSplitHEV_DirectInput_main_script
+
+  % Second run uses existing png files.
+  % This is for better code coverage.
+  PowerSplitHEV_DirectInput_main_script
+
   close all
   bdclose all
 end

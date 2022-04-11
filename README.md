@@ -70,10 +70,18 @@ Links
 
 - Repository: https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2022a
 
-### What will be New in Version 1.3
+### What's New in Version 1.3
+
+Overall
 
 - Required MATLAB release is R2022a or newer.
 - Simulink model files are saved in `mdl` format.
+
+Models
+
+- Longitudinal Vehicle block from Simscape Driveline is
+  added as a new (and default) Referenced Subsystem.
+  The previous custom block is still included too.
 
 ## For MATLAB R2021a and R2021b
 
