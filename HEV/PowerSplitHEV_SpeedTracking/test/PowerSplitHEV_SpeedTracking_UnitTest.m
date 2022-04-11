@@ -205,9 +205,20 @@ function runLiveScript_main_script(~)
   close all
   bdclose all
 
+  % Delete the png files of simulation result plots.
+  imgFolder = fullfile( ...
+    currentProject().RootFolder, "HEV", "PowerSplitHEV_SpeedTracking", "images");
+  delete(fullfile(imgFolder, "*.png"))
+
   % If script loads some variables to the base workspace
   % (for example by calling a function which explicitly does so with assignin),
   % the script must be explicitly evaluated in the base workspace.
+
+  % First run creates png files.
+  evalin("base", "PowerSplitHEV_SpeedTracking_main_script")
+
+  % Second run uses existing png files.
+  % This is to improve code coverage.
   evalin("base", "PowerSplitHEV_SpeedTracking_main_script")
 
   close all

@@ -237,7 +237,7 @@ function runLiveScript_main_script(~)
   PowerSplitHEV_DirectInput_main_script
 
   % Second run uses existing png files.
-  % This is for better code coverage.
+  % This is to improve code coverage.
   PowerSplitHEV_DirectInput_main_script
 
   close all
