@@ -2,7 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1.3.alpha
+Version 1.3
 
 ## Introduction
 
@@ -52,8 +52,7 @@ some components come with their own test setups.
 
 ## For MATLAB R2022a
 
-Power-Split HEV version 1.3 is currently under development
-and *may be broken*. :)
+Version 1.3 is available.
 This version requires
 [MATLAB](https://www.mathworks.com/products/matlab.html),
 [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
@@ -71,7 +70,7 @@ Git Repository - Fork or clone this to get Git repository data.
 
 ## For MATLAB R2021a and R2021b
 
-Power-Split HEV version 1.2 is available.
+Version 1.2 is available.
 This version requires
 [MATLAB](https://www.mathworks.com/products/matlab.html),
 [Simulink&reg;](https://www.mathworks.com/products/simulink.html),

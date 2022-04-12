@@ -6,12 +6,11 @@ MATLAB Release
 
 - This version requires MATLAB R2022a or newer.
 
-Project
-
-- Simulink model files are saved in `mdl` format.
-
 Models
 
+- Simulink model files are saved in `mdl` format.
+  Starting from R2021b, MDL format is based the new text format
+  which is feature parity with binary SLX format.
 - Longitudinal Vehicle block from Simscape Driveline is
   added as a new (and default) Referenced Subsystem.
   The previous custom block is still included too.
@@ -20,7 +19,7 @@ Models
 
 MATLAB Release
 
-- This version requires MATLAB R2021a ore newer.
+- This version requires MATLAB R2021a or newer.
 
 Highlights
 
