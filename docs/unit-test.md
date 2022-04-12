@@ -65,8 +65,7 @@ There is a project-level test runner script
 in the top [/test][url-prj-test] folder of the project.
 This script finds all the unit test implementation files
 in the project folder and runs all of them.
-Note that running this script may take long time to finish
-if components.
+Note that running this script may take long time to finish.
 
 [url-prj-test]:https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/main/test
 
