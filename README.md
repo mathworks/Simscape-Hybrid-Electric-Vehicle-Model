@@ -52,7 +52,7 @@ some components come with their own test setups.
 
 ## For MATLAB R2022a
 
-Version 1.3 is available.
+The latest version 1.3 is available.
 This version requires
 [MATLAB](https://www.mathworks.com/products/matlab.html),
 [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
@@ -64,17 +64,20 @@ This version requires
 and optionally
 [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html).
 
-Download Project - This does not include Git repository data.
+Fork or clone the repository:
 
-- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/archive/refs/tags/v1.3.1.zip
+- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2022a
 
-Git Repository - Fork or clone this to get Git repository data.
+To download the archived project without Git repository data,
+use the download button in [File Exchange][url-fx]
+or [GitHub][url-gh].
 
-- Repository: https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2022a
+[url-fx]:https://www.mathworks.com/matlabcentral/fileexchange/92820
+[url-gh]:https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model
 
 ## For MATLAB R2021a and R2021b
 
-Version 1.2 is available.
+Version 1.2, which is in maintenance mode, is available.
 This version requires
 [MATLAB](https://www.mathworks.com/products/matlab.html),
 [Simulink&reg;](https://www.mathworks.com/products/simulink.html),
@@ -89,10 +92,6 @@ and optionally
 Download Project - This does not include Git repository data.
 
 - https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/archive/refs/tags/v1.2.0.zip
-
-Git Repository - Fork or clone this to get Git repository data.
-
-- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2021a
 
 ## How to Use
 
