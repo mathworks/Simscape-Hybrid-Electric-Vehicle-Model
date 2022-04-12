@@ -194,7 +194,7 @@ function plot_script_1(testCase)
   % A proper block must be selected for this script to work.
   % This is assuming that the default referenced subsystem for the "Engine" subsystem
   % contains the custom Engine block.
-  EngineUtility.plotCustomEngineCurves(gcb)
+  EngineUtility.plotCustomEngineCurves(gcb);
 
   close all
   bdclose all

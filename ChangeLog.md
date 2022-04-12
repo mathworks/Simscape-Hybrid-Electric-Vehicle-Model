@@ -6,6 +6,10 @@ MATLAB Release
 
 - This version requires MATLAB R2022a or newer.
 
+Project
+
+- Files and folders are reorganized.
+
 Models
 
 - Simulink model files are saved in `mdl` format.

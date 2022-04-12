@@ -14,19 +14,27 @@ PrjRoot = currentProject().RootFolder;
 TopFolder = fullfile(PrjRoot, "Components", ComponentName);
 assert(isfolder(TopFolder))
 
+PackageFolder = fullfile(TopFolder, "+"+ComponentName+"Utility");
+assert(isfolder(PackageFolder))
+
+HarnessFolder = fullfile(TopFolder, "harnessModels");
+assert(isfolder(HarnessFolder))
+
 UnitTestFolder = fullfile(TopFolder, "test");
 assert(isfolder(UnitTestFolder))
+
+% TestCaseFolder = fullfile(TopFolder, "testcases");
+% assert(isfolder(TestCaseFolder))
+
+UtilsFolder = fullfile(TopFolder, "utils");
+assert(isfolder(UtilsFolder))
+
+%% Test Suite & Runner
 
 UnitTestFile = fullfile(UnitTestFolder, ComponentName+"_UnitTest.m");
 assert(isfile(UnitTestFile))
 
 suite = matlab.unittest.TestSuite.fromFile( UnitTestFile );
-
-PackageFolder = fullfile(TopFolder, "+"+ComponentName+"Utility");
-assert(isfolder(PackageFolder))
-
-UtilsFolder = fullfile(TopFolder, "utils");
-assert(isfolder(UtilsFolder))
 
 runner = matlab.unittest.TestRunner.withTextOutput( ...
             OutputDetail = matlab.unittest.Verbosity.Detailed );
@@ -55,13 +63,15 @@ coverageReport = matlab.unittest.plugins.codecoverage.CoverageReport( ...
                   MainFile = CoverageReportFile );
 
 plugin = matlab.unittest.plugins.CodeCoveragePlugin.forFile( ...
-  [ fullfile(UnitTestFolder, ComponentName+"_UnitTest.m"), ...
+  [ ...
     fullfile(PackageFolder, "plotCustomEngineCurves.m"), ...
-    fullfile(UtilsFolder, ComponentName+"_harness_setup.m"), ...
+    fullfile(HarnessFolder, ComponentName+"_harness_setup.m"), ...
+    fullfile(UnitTestFolder, ComponentName+"_UnitTest.m"), ...
     fullfile(UtilsFolder, ComponentName+"_InputSignalBuilder.m"), ...
     fullfile(UtilsFolder, ComponentName+"_plot_inputs_power_split.m"), ...
     fullfile(UtilsFolder, ComponentName+"_plot_inputs_simple.m"), ...
-    fullfile(UtilsFolder, ComponentName+"_plot_results.m") ], ...
+    fullfile(UtilsFolder, ComponentName+"_plot_results.m"), ...
+    fullfile(TopFolder, ComponentName+"_main_script.mlx") ], ...
   Producing = coverageReport );
 
 addPlugin(runner, plugin)

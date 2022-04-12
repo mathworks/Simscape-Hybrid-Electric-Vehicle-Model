@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="16" time="35.6949">
-    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1DDriveline" time="0.38707"/>
-    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1DCustom" time="0.36787"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="2.274"/>
-    <testcase classname="Vehicle1D_UnitTest" name="block_info_script_1" time="1.1661"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.049575"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="0.46394"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="0.46452"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="1.519"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_report_script_1" time="2.084"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_report_script_2" time="1.7383"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_1" time="3.7405"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="3.4135"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="4.0965"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="3.44"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.1051"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="7.3849"/>
+  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="16" time="40.3921">
+    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1DDriveline" time="0.43708"/>
+    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1DCustom" time="0.46342"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="2.6424"/>
+    <testcase classname="Vehicle1D_UnitTest" name="block_info_script_1" time="1.6305"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.060561"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="0.82904"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="0.64771"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="1.7771"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_report_script_1" time="3.411"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_report_script_2" time="2.599"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_1" time="3.5373"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="3.6922"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="4.8392"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="3.409"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.1044"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="7.3124"/>
   </testsuite>
 </testsuites>
