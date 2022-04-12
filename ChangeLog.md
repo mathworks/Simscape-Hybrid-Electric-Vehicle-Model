@@ -19,6 +19,11 @@ Models
   added as a new (and default) Referenced Subsystem.
   The previous custom block is still included too.
 
+GitHub Repository
+
+- GitHub Pages is enabled:
+  https://mathworks.github.io/Simscape-Hybrid-Electric-Vehicle-Model/
+
 ## Version 1.2 (2022)
 
 MATLAB Release

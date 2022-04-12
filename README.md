@@ -64,6 +64,10 @@ This version requires
 and optionally
 [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html).
 
+Download Project - This does not include Git repository data.
+
+- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/archive/refs/tags/v1.3.1.zip
+
 Git Repository - Fork or clone this to get Git repository data.
 
 - Repository: https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2022a
@@ -88,7 +92,7 @@ Download Project - This does not include Git repository data.
 
 Git Repository - Fork or clone this to get Git repository data.
 
-- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2021a0
+- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2021a
 
 ## How to Use
 
