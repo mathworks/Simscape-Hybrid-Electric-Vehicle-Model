@@ -43,8 +43,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2020-07-02T16:14:37Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-04-12T07:32:55Z</dcterms:modified>
-  <cp:revision>5.0</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-05-13T16:45:55Z</dcterms:modified>
+  <cp:revision>5.2</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -66,11 +66,11 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version information for MathWorks R2022a Release -->
 <MathWorks_version_info>
-  <version>9.12.0.1927505</version>
+  <version>9.12.0.1953994</version>
   <release>R2022a</release>
-  <description>Update 1</description>
-  <date>Apr 06 2022</date>
-  <checksum>1655851947</checksum>
+  <description>Update 2</description>
+  <date>May 09 2022</date>
+  <checksum>2519067153</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -116,8 +116,8 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">566930307</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.0&gt;</P>
+      <P Name="RTWModifiedTimeStamp">574364668</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.2&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ScheduleConnectors">off</P>
@@ -889,7 +889,38 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
       <Object ObjectID="14" Version="1.0" ClassName="SSC.SimscapeCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
-        <P Name="Components" Class="double">[]</P>
+        <Array PropName="Components" Type="Handle" Dimension="1*1">
+          <Object ObjectID="15" Version="22.0.0" ClassName="simmechanics.ConfigurationSet">
+            <P Name="DisabledProps" Class="double">[]</P>
+            <P Name="Description">Simscape Multibody</P>
+            <Array PropName="Components" Type="Handle" Dimension="1*2">
+              <Object ObjectID="16" Version="22.0.0" ClassName="simmechanics.DiagnosticsConfigSet">
+                <P Name="DisabledProps" Class="double">[]</P>
+                <P Name="Description">Diagnostics</P>
+                <P Name="Components" Class="double">[]</P>
+                <P Name="Name">DiagnosticsConfigSet</P>
+                <P Name="SimMechanicsInvalidVisualProperty">warning</P>
+                <P Name="SimMechanicsCrossSectionNullEdge">warning</P>
+                <P Name="SimMechanicsUnconnectedFramePorts">warning</P>
+                <P Name="SimMechanicsUnconnectedGeometryPorts">warning</P>
+                <P Name="SimMechanicsRedundantBlock">warning</P>
+                <P Name="SimMechanicsConflictingReferenceFrames">warning</P>
+                <P Name="SimMechanicsRigidlyBoundBlock">error</P>
+                <P Name="SimMechanicsUnsatisfiedHighPriorityTargets">warning</P>
+                <P Name="SimMechanicsJointTargetOverSpecification">error</P>
+              </Object>
+              <Object ObjectID="17" Version="22.0.0" ClassName="simmechanics.ExplorerConfigSet">
+                <P Name="DisabledProps" Class="double">[]</P>
+                <P Name="Description">Explorer</P>
+                <P Name="Components" Class="double">[]</P>
+                <P Name="Name">ExplorerConfigSet</P>
+                <P Name="SimMechanicsOpenEditorOnUpdate">on</P>
+                <P Name="InternalSimMechanicsExplorerSettings"/>
+              </Object>
+            </Array>
+            <P Name="Name">SimscapeMultibody</P>
+          </Object>
+        </Array>
         <P Name="Name">Simscape</P>
         <P Name="EditingMode">Full</P>
         <P Name="ExplicitSolverDiagnosticOptions">warning</P>
@@ -943,7 +974,42 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
   </Outport>
   <P Name="ParameterArgumentNames"/>
   <P Name="NumModelReferences">0</P>
-  <P Name="NumTestPointedSignals">0</P>
+  <P Name="NumTestPointedSignals">5</P>
+  <TestPointedSignal>
+    <P Name="SignalName">HV Battery Charge</P>
+    <P Name="FullBlockPath">$bdroot/Battery Status/PS-Simulink Converter1</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">HV Battery Current</P>
+    <P Name="FullBlockPath">$bdroot/Battery Status/PS-Simulink Converter2</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">HV Battery Voltage</P>
+    <P Name="FullBlockPath">$bdroot/Battery Status/PS-Simulink Converter3</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">HV Battery Power Loss</P>
+    <P Name="FullBlockPath">$bdroot/Battery Status/PS-Simulink Converter4</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
+  <TestPointedSignal>
+    <P Name="SignalName">HV Battery Power</P>
+    <P Name="FullBlockPath">$bdroot/Battery Status/Sum</P>
+    <P Name="LogSignal">1</P>
+    <P Name="MaxPoints">5000</P>
+    <P Name="Decimation">2</P>
+  </TestPointedSignal>
   <P Name="NumProvidedFunctions">0</P>
   <P Name="NumRequiredFunctions">0</P>
   <P Name="NumResetEvents">0</P>
@@ -1051,8 +1117,8 @@ Converter</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="2802eae8-5506-4afb-9807-d9561ac0b81e">
-    <Interface type="Interface" uuid="52816e1f-7431-4f4d-a903-cf2d2c5ad0af"/>
+  <System type="System" uuid="69ac37a5-5975-4f35-babd-a549055692c2">
+    <Interface type="Interface" uuid="95a32e60-6698-40fa-99f5-346c05d0eab1"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
@@ -1064,16 +1130,16 @@ __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="761a1819-54f2-409d-a4a7-95792ffaff89">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="cb40c47f-ab30-4ecf-883c-f8417ec70067">
     <editorState type="sltp.mm.core.EditorState" uuid="b5e1dae0-3ff0-4d48-9d79-cfd5a0cd5df8">
       <panelState type="sltp.mm.core.EditorPanelState" uuid="3cce0cbb-5306-4cf5-a710-e93afd368054"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="e532fbe8-1d11-437a-8f54-413cb63060e3">
-      <context type="sltp.mm.core.Context" uuid="761a1819-54f2-409d-a4a7-95792ffaff89"/>
+    <rootTask type="sltp.mm.core.Task" uuid="bab61608-dca9-4f74-bac2-288c8e9adfe5">
+      <context type="sltp.mm.core.Context" uuid="cb40c47f-ab30-4ecf-883c-f8417ec70067"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="0be9159a-9b12-4f8a-8e68-eaac5b0fac24"/>
+      <subgraph type="sltp.mm.core.Graph" uuid="8b2246ae-2394-4f55-875b-c796b5095db3"/>
     </rootTask>
   </sltp.mm.core.Context>
 </sltp_graph>
@@ -1102,12 +1168,12 @@ __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[99, 72, 1344, 940]</P>
+  <P Name="Location">[52, 7, 1293, 852]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <List ListType="InterfaceData">
     <P Name="Version">0</P>
-    <P Name="ModelData">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:null,&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfChildren&quot;:[{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;e0fe5f5f-2f41-4b7b-bb8f-39d90d25a603&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;4726bc3a-ca80-4be9-9daa-7ad83c83019d&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;52b69ce3-78a6-4274-943e-6102bf6ffdb2&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;a5311d91-cb16-4598-ae72-4c48f29647c7&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;cb213bb4-bc30-4747-a558-493fc29c1b4b&quot;}],&quot;children&quot;:[{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;22266aef-80c8-45ea-8462-6f64b2f0691c&quot;},&quot;indexOne&quot;:1,&quot;name&quot;:&quot;Charge&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;e0fe5f5f-2f41-4b7b-bb8f-39d90d25a603&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;A*hr&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;37101717-12f9-4508-a4c0-8d8d175734de&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;8a5508c5-0a89-444a-87b0-db1f5292a1bd&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;22266aef-80c8-45ea-8462-6f64b2f0691c&quot;},&quot;indexOne&quot;:2,&quot;name&quot;:&quot;Current&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;4726bc3a-ca80-4be9-9daa-7ad83c83019d&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;A&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;d517db79-04b1-4104-8acd-caf881299de1&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;42c65061-203f-4f51-ad53-3e69da815fd6&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;22266aef-80c8-45ea-8462-6f64b2f0691c&quot;},&quot;indexOne&quot;:3,&quot;name&quot;:&quot;PowerLoss&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;52b69ce3-78a6-4274-943e-6102bf6ffdb2&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;kW&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;3b355841-8e38-4e48-9e2b-59d3e9cda732&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;e7e57382-0992-477a-9159-d95b02c61ee8&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;22266aef-80c8-45ea-8462-6f64b2f0691c&quot;},&quot;indexOne&quot;:4,&quot;name&quot;:&quot;Power&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;a5311d91-cb16-4598-ae72-4c48f29647c7&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;kW&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;cd364f73-0f94-472b-af62-0eaf6a1ab08f&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;5af19bab-814a-4420-88d8-6d7f6daf5dab&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;22266aef-80c8-45ea-8462-6f64b2f0691c&quot;},&quot;indexOne&quot;:5,&quot;name&quot;:&quot;Voltage&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;cb213bb4-bc30-4747-a558-493fc29c1b4b&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;V&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;25c816b3-3549-4c68-b131-a8b1a22da573&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;02a84b20-dd2a-4a58-bba6-76f9ca967134&quot;}]},&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;22266aef-80c8-45ea-8462-6f64b2f0691c&quot;},&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:null},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;1b91f096-91d4-458c-9189-adf321df3a3f&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/mm_tree_node_datamodel/R2018b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
-    <P Name="Mappings">{&quot;port-tree&quot;:{&quot;bep-out&quot;:{&quot;1&quot;:&quot;1b91f096-91d4-458c-9189-adf321df3a3f&quot;}}}</P>
+    <P Name="ModelData">{&quot;entries&quot;:[{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:null,&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfChildren&quot;:[{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;092e8fa3-3307-4e98-b673-45ec4797cf6e&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;ac585cb6-abff-49a0-a676-27937efd9d80&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;9d912c2d-0969-49ee-8fc6-238d5fc6fce4&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;ff573081-ddf7-40f8-8333-7e8926cc3f37&quot;},{&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;41eea646-8d8b-4304-b62b-02f2dadaf735&quot;}],&quot;children&quot;:[{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;1dfffab0-2cd2-4a9b-a68a-f8ccc2034754&quot;},&quot;indexOne&quot;:1,&quot;name&quot;:&quot;Charge&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;092e8fa3-3307-4e98-b673-45ec4797cf6e&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;A*hr&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;c30c4449-b6be-411a-b9d8-2a056578b24a&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;095b243e-b4ea-4917-9432-21362ace6673&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;1dfffab0-2cd2-4a9b-a68a-f8ccc2034754&quot;},&quot;indexOne&quot;:2,&quot;name&quot;:&quot;Current&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;ac585cb6-abff-49a0-a676-27937efd9d80&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;A&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;96ba4a46-8bff-40ce-80c8-778930b4d9cf&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;ff9d53c9-969d-42af-a44a-1d818177998f&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;1dfffab0-2cd2-4a9b-a68a-f8ccc2034754&quot;},&quot;indexOne&quot;:3,&quot;name&quot;:&quot;PowerLoss&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;9d912c2d-0969-49ee-8fc6-238d5fc6fce4&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;kW&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;c73eb85b-1761-4dd4-a5ea-d576c3cb2aaa&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;4fd448f4-3622-48d8-bccf-089826687672&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;1dfffab0-2cd2-4a9b-a68a-f8ccc2034754&quot;},&quot;indexOne&quot;:4,&quot;name&quot;:&quot;Power&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;ff573081-ddf7-40f8-8333-7e8926cc3f37&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;kW&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;854123fa-6e6b-4ea7-82b6-d7f7ab5e44f4&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;bd36a899-5b1c-43fe-99df-ffd39dfd6405&quot;},{&quot;content&quot;:{&quot;blockAttrs&quot;:null,&quot;busTypeElementAttrs&quot;:null,&quot;busTypeRootAttrs&quot;:null,&quot;childAttrs&quot;:{&quot;content&quot;:{&quot;attrsOfParent&quot;:{&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;1dfffab0-2cd2-4a9b-a68a-f8ccc2034754&quot;},&quot;indexOne&quot;:5,&quot;name&quot;:&quot;Voltage&quot;},&quot;type&quot;:&quot;treeNode.ChildAttributes&quot;,&quot;uuid&quot;:&quot;41eea646-8d8b-4304-b62b-02f2dadaf735&quot;},&quot;msgQueueAttrs&quot;:null,&quot;parentAttrs&quot;:null,&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:{&quot;content&quot;:{&quot;unit&quot;:&quot;V&quot;},&quot;type&quot;:&quot;treeNode.SignalAttributes&quot;,&quot;uuid&quot;:&quot;5c330100-94ff-4567-8ba6-dfa329272820&quot;}},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;14dbf9fd-fef8-47c5-a891-4849bb8d9ebb&quot;}]},&quot;type&quot;:&quot;treeNode.ParentAttributes&quot;,&quot;uuid&quot;:&quot;1dfffab0-2cd2-4a9b-a68a-f8ccc2034754&quot;},&quot;propAttrs&quot;:null,&quot;signalAttrs&quot;:null},&quot;type&quot;:&quot;treeNode.TreeNode&quot;,&quot;uuid&quot;:&quot;ea18d49a-e899-4bd6-a845-30cf19f090a7&quot;}],&quot;packageUris&quot;:[&quot;http://schema.mathworks.com/mf0/mm_tree_node_datamodel/R2018b&quot;],&quot;version&quot;:&quot;1.0&quot;}</P>
+    <P Name="Mappings">{&quot;port-tree&quot;:{&quot;bep-out&quot;:{&quot;1&quot;:&quot;ea18d49a-e899-4bd6-a845-30cf19f090a7&quot;}}}</P>
   </List>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
@@ -1195,7 +1261,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
   </Block>
   <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter" SID="5">
     <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
-    <P Name="Position">[305, 250, 335, 270]</P>
+    <P Name="Position">[265, 250, 295, 270]</P>
     <P Name="ZOrder">-5</P>
     <P Name="ShowName">off</P>
     <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
@@ -1226,7 +1292,7 @@ Converter</P>
   </Block>
   <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter1" SID="6">
     <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
-    <P Name="Position">[305, 22, 330, 38]</P>
+    <P Name="Position">[265, 22, 290, 38]</P>
     <P Name="ZOrder">-6</P>
     <P Name="ShowName">off</P>
     <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
@@ -1254,10 +1320,15 @@ Converter</P>
       <P Name="Unit">A*hr</P>
       <P Name="AffineConversion">off</P>
     </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">HV Battery Charge</P>
+      <P Name="DataLogging">on</P>
+    </Port>
   </Block>
   <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter2" SID="7">
     <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
-    <P Name="Position">[305, 97, 325, 113]</P>
+    <P Name="Position">[265, 97, 285, 113]</P>
     <P Name="ZOrder">26</P>
     <P Name="ShowName">off</P>
     <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
@@ -1285,10 +1356,15 @@ Converter</P>
       <P Name="Unit">A</P>
       <P Name="AffineConversion">off</P>
     </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">HV Battery Current</P>
+      <P Name="DataLogging">on</P>
+    </Port>
   </Block>
   <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter3" SID="2353">
     <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
-    <P Name="Position">[305, 317, 320, 333]</P>
+    <P Name="Position">[265, 317, 280, 333]</P>
     <P Name="ZOrder">31</P>
     <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
     <P Name="LibraryVersion">6.0</P>
@@ -1314,10 +1390,15 @@ Converter</P>
       <P Name="Unit">V</P>
       <P Name="AffineConversion">off</P>
     </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">HV Battery Voltage</P>
+      <P Name="DataLogging">on</P>
+    </Port>
   </Block>
   <Block BlockType="Reference" Name="PS-Simulink&#xA;Converter4" SID="8">
     <P Name="Ports">[0, 1, 0, 0, 0, 1]</P>
-    <P Name="Position">[305, 162, 330, 188]</P>
+    <P Name="Position">[265, 162, 290, 188]</P>
     <P Name="ZOrder">-15</P>
     <P Name="ShowName">off</P>
     <P Name="AttributesFormatString">%&lt;Unit&gt;</P>
@@ -1345,6 +1426,11 @@ Converter</P>
       <P Name="Unit">kW</P>
       <P Name="AffineConversion">off</P>
     </InstanceData>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">HV Battery Power Loss</P>
+      <P Name="DataLogging">on</P>
+    </Port>
   </Block>
   <Block BlockType="Reference" Name="Power" SID="9">
     <P Name="Ports">[0, 0, 0, 0, 0, 2, 1]</P>
@@ -1387,17 +1473,22 @@ Converter</P>
       <P Name="ComponentVariantNames">gain</P>
       <P Name="ClassName">gain</P>
       <P Name="SchemaVersion">1</P>
-      <P Name="gain">batteryHighVoltage.internal_R_Ohm</P>
+      <P Name="gain">batteryHighVoltage.internalResistance_Ohm</P>
       <P Name="gain_unit">Ohm</P>
       <P Name="gain_conf">runtime</P>
     </InstanceData>
   </Block>
   <Block BlockType="Sum" Name="Sum" SID="11">
     <P Name="Ports">[2, 1]</P>
-    <P Name="Position">[360, 250, 380, 270]</P>
+    <P Name="Position">[320, 250, 340, 270]</P>
     <P Name="ZOrder">14</P>
     <P Name="ShowName">off</P>
     <P Name="Inputs">++|</P>
+    <Port>
+      <P Name="PortNumber">1</P>
+      <P Name="Name">HV Battery Power</P>
+      <P Name="DataLogging">on</P>
+    </Port>
   </Block>
   <Block BlockType="PMIOPort" Name="V" SID="12">
     <P Name="Position">[-115, 318, -85, 332]</P>
@@ -1411,7 +1502,7 @@ Converter</P>
     <P Name="Side">Left</P>
   </Block>
   <Block BlockType="Outport" Name="Out Bus Element" SID="14">
-    <P Name="Position">[415, 25, 425, 35]</P>
+    <P Name="Position">[470, 25, 480, 35]</P>
     <P Name="ZOrder">23</P>
     <P Name="BackgroundColor">black</P>
     <P Name="ShowName">off</P>
@@ -1427,7 +1518,7 @@ Converter</P>
     </List>
   </Block>
   <Block BlockType="Outport" Name="Out Bus Element3" SID="17">
-    <P Name="Position">[415, 100, 425, 110]</P>
+    <P Name="Position">[470, 100, 480, 110]</P>
     <P Name="ZOrder">27</P>
     <P Name="BackgroundColor">black</P>
     <P Name="ShowName">off</P>
@@ -1443,7 +1534,7 @@ Converter</P>
     </List>
   </Block>
   <Block BlockType="Outport" Name="Out Bus Element1" SID="15">
-    <P Name="Position">[415, 170, 425, 180]</P>
+    <P Name="Position">[470, 170, 480, 180]</P>
     <P Name="ZOrder">24</P>
     <P Name="BackgroundColor">black</P>
     <P Name="ShowName">off</P>
@@ -1459,7 +1550,7 @@ Converter</P>
     </List>
   </Block>
   <Block BlockType="Outport" Name="Out Bus Element2" SID="16">
-    <P Name="Position">[415, 255, 425, 265]</P>
+    <P Name="Position">[470, 255, 480, 265]</P>
     <P Name="ZOrder">25</P>
     <P Name="BackgroundColor">black</P>
     <P Name="ShowName">off</P>
@@ -1475,7 +1566,7 @@ Converter</P>
     </List>
   </Block>
   <Block BlockType="Outport" Name="Out Bus Element4" SID="2339">
-    <P Name="Position">[415, 320, 425, 330]</P>
+    <P Name="Position">[470, 320, 480, 330]</P>
     <P Name="ZOrder">30</P>
     <P Name="BackgroundColor">black</P>
     <P Name="ShowName">off</P>
@@ -1491,8 +1582,11 @@ Converter</P>
     </List>
   </Block>
   <Line>
+    <P Name="Name">HV Battery Voltage</P>
     <P Name="ZOrder">1</P>
+    <P Name="Labels">[1, 1]</P>
     <P Name="Src">2353#out:1</P>
+    <P Name="Points">[185, 0]</P>
     <P Name="Dst">2339#in:1</P>
   </Line>
   <Line LineType="Connection">
@@ -1501,15 +1595,18 @@ Converter</P>
     <P Name="Points">[-29, 0; 0, 55]</P>
     <Branch ConnectType="DEST_DEST">
       <P Name="Src">2353#lconn:1</P>
-      <P Name="Points">[-334, 0]</P>
+      <P Name="Points">[-294, 0]</P>
     </Branch>
     <Branch ConnectType="DEST_SRC">
       <P Name="Dst">12#rconn:1</P>
     </Branch>
   </Line>
   <Line>
+    <P Name="Name">HV Battery Current</P>
     <P Name="ZOrder">5</P>
+    <P Name="Labels">[1, 1]</P>
     <P Name="Src">7#out:1</P>
+    <P Name="Points">[180, 0]</P>
     <P Name="Dst">17#in:1</P>
   </Line>
   <Line>
@@ -1528,8 +1625,11 @@ Converter</P>
     <P Name="Dst">6#lconn:1</P>
   </Line>
   <Line>
+    <P Name="Name">HV Battery Power</P>
     <P Name="ZOrder">9</P>
+    <P Name="Labels">[1, 1]</P>
     <P Name="Src">11#out:1</P>
+    <P Name="Points">[125, 0]</P>
     <P Name="Dst">16#in:1</P>
   </Line>
   <Line LineType="Connection">
@@ -1561,17 +1661,21 @@ Converter</P>
         </Branch>
         <Branch ConnectType="DEST_DEST">
           <P Name="Src">7#lconn:1</P>
-          <P Name="Points">[-332, 0]</P>
+          <P Name="Points">[-292, 0]</P>
         </Branch>
       </Branch>
     </Branch>
   </Line>
   <Line>
+    <P Name="Name">HV Battery Charge</P>
     <P Name="ZOrder">19</P>
+    <P Name="Labels">[1, 1]</P>
     <P Name="Src">6#out:1</P>
+    <P Name="Points">[175, 0]</P>
     <P Name="Dst">14#in:1</P>
   </Line>
   <Line>
+    <P Name="Name">HV Battery Power Loss</P>
     <P Name="ZOrder">20</P>
     <P Name="Src">8#out:1</P>
     <P Name="Points">[35, 0]</P>
@@ -1581,6 +1685,8 @@ Converter</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">22</P>
+      <P Name="Labels">[1, 1]</P>
+      <P Name="Points">[140, 0]</P>
       <P Name="Dst">15#in:1</P>
     </Branch>
   </Line>
@@ -1601,11 +1707,10 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <System>
   <P Name="Location">[81, 58, 1185, 809]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
-  <P Name="Open">on</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">3282</P>
+  <P Name="SIDHighWatermark">11067</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="Inport" Name="Inputs" SID="3280">
     <P Name="Position">[210, 53, 240, 67]</P>
@@ -1697,7 +1802,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
       <P Name="ComponentVariantNames">resistor</P>
       <P Name="ClassName">resistor</P>
       <P Name="SchemaVersion">1</P>
-      <P Name="R">batteryHighVoltage.internal_R_Ohm</P>
+      <P Name="R">batteryHighVoltage.internalResistance_Ohm</P>
       <P Name="R_unit">Ohm</P>
       <P Name="R_conf">runtime</P>
       <P Name="i_specify">off</P>
@@ -1766,79 +1871,79 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="ZOrder">32</P>
   </Block>
   <Line LineType="Connection">
-    <P Name="ZOrder">301</P>
-    <P Name="Src">22#rconn:1</P>
-    <P Name="Points">[83, 0]</P>
-    <Branch ConnectType="DEST_SRC">
-      <P Name="Points">[0, 125]</P>
-      <Branch ConnectType="DEST_DEST">
-        <P Name="Src">21#rconn:2</P>
-        <P Name="Points">[-192, 0]</P>
+    <P Name="ZOrder">3060</P>
+    <P Name="Points">[338, 240; 0, 130; 7, 0]</P>
+    <P Name="Dst">19#rconn:1</P>
+    <Branch ConnectType="SRC_DEST">
+      <P Name="Points">[338, 115; 0, 125]</P>
+      <Branch ConnectType="SRC_DEST">
+        <P Name="Src">22#rconn:1</P>
+        <P Name="Points">[83, 0]</P>
       </Branch>
-      <Branch ConnectType="DEST_SRC">
-        <P Name="Points">[0, 130]</P>
-        <P Name="Dst">19#rconn:1</P>
+      <Branch ConnectType="SRC_DEST">
+        <P Name="Src">1962#lconn:2</P>
+        <P Name="Points">[-382, 0]</P>
       </Branch>
     </Branch>
-    <Branch ConnectType="DEST_DEST">
-      <P Name="Src">1962#lconn:2</P>
-      <P Name="Points">[-382, 0]</P>
+    <Branch ConnectType="SRC_DEST">
+      <P Name="Src">21#rconn:2</P>
+      <P Name="Points">[-192, 0]</P>
     </Branch>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">306</P>
-    <P Name="Src">1962#lconn:1</P>
-    <P Name="Points">[-65, 0; 0, 145]</P>
+    <P Name="ZOrder">3065</P>
+    <P Name="Src">21#lconn:1</P>
+    <P Name="Points">[55, 0]</P>
+    <Branch ConnectType="DEST_DEST">
+      <P Name="Src">1962#lconn:1</P>
+      <P Name="Points">[-65, 0; 0, 145]</P>
+    </Branch>
     <Branch ConnectType="DEST_SRC">
       <P Name="Dst">18#rconn:2</P>
     </Branch>
-    <Branch ConnectType="DEST_DEST">
-      <P Name="Src">21#lconn:1</P>
-      <P Name="Points">[55, 0]</P>
-    </Branch>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">2550</P>
+    <P Name="ZOrder">2559</P>
     <P Name="Src">18#rconn:1</P>
     <P Name="Points">[0, -15]</P>
     <P Name="Dst">1#lconn:2</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">2551</P>
+    <P Name="ZOrder">2560</P>
     <P Name="Src">18#lconn:1</P>
     <P Name="Points">[0, 55]</P>
     <P Name="Dst">20#rconn:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">2552</P>
+    <P Name="ZOrder">2561</P>
     <P Name="Src">19#lconn:1</P>
     <P Name="Dst">20#lconn:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">2553</P>
+    <P Name="ZOrder">2562</P>
     <P Name="Src">21#rconn:1</P>
     <P Name="Points">[-9, 0; 0, -30]</P>
     <P Name="Dst">1#lconn:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2554</P>
+    <P Name="ZOrder">2563</P>
     <P Name="Src">1#out:1</P>
     <P Name="Dst">24#in:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">2555</P>
+    <P Name="ZOrder">2564</P>
     <P Name="Src">23#rconn:1</P>
     <P Name="Dst">1962#rconn:1</P>
   </Line>
   <Line>
     <P Name="Name">&lt;signal1&gt;</P>
-    <P Name="ZOrder">2557</P>
+    <P Name="ZOrder">2565</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">3281#out:1</P>
     <P Name="Dst">3282#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2558</P>
+    <P Name="ZOrder">2566</P>
     <P Name="Src">3280#out:1</P>
     <P Name="Dst">3281#in:1</P>
   </Line>
@@ -1852,7 +1957,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="BackgroundColor">[0.901961, 0.901961, 1.000000]</P>
     <P Name="DropShadow">on</P>
     <P Name="AnnotationType">area_annotation</P>
-    <P Name="ZOrder">10</P>
+    <P Name="ZOrder">-170</P>
   </Annotation>
   <Annotation SID="2187">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1863,7 +1968,7 @@ p, li { white-space: pre-wrap; }
     <P Name="Position">[400, 456, 627, 472]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-21</P>
+    <P Name="ZOrder">-171</P>
   </Annotation>
 </System>
 
@@ -1901,14 +2006,26 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
           <P Name="LoadSaveID" Class="char">1</P>
-          <P Name="Extents" Class="double">[1578.0, 784.0]</P>
+          <P Name="Extents" Class="double">[1578.0, 783.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-309.859375, -106.37505833333333]</P>
-          <P Name="SceneRectInView" Class="double">[-309.859375, -106.37505833333333, 1052.0, 522.66666666666663]</P>
+          <P Name="Offset" Class="double">[-309.859375, -80.0208958333333]</P>
+          <P Name="SceneRectInView" Class="double">[-309.859375, -80.0208958333333, 1052.0, 522.0]</P>
         </Object>
       </Array>
       <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
         <Object ObjectID="7">
+          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
+          <P Name="ID" Class="char">Property Inspector</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Right</P>
+          <P Name="Width" Class="int32">426</P>
+          <P Name="Height" Class="int32">320</P>
+          <P Name="Minimized" Class="char">Unset</P>
+        </Object>
+        <Object ObjectID="8">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -1921,24 +2038,12 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">320</P>
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
-        <Object ObjectID="8">
-          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
-          <P Name="ID" Class="char">Property Inspector</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Right</P>
-          <P Name="Width" Class="int32">426</P>
-          <P Name="Height" Class="int32">320</P>
-          <P Name="Minimized" Class="char">Unset</P>
-        </Object>
       </Array>
       <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAxwD///8AAAABAAABxgAAAtT8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAC1AAAC1AAAAoAA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAIDAP///wAABmIAAANdAAAAAQAAAAIAAAABAAAAAvwAAAAA</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">e8fed8f7-915b-4aa7-9579-9e45ef2a5d12</P>
     </Object>
-    <P Name="BDUuid" Class="char">b61e89a7-31f0-4e0c-9568-0119a20a6dcf</P>
+    <P Name="BDUuid" Class="char">e7f6fff2-d1eb-484c-84e7-d177b326509a</P>
   </Object>
 </WindowsInfo>
 

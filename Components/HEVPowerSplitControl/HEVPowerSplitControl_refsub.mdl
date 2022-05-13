@@ -47,8 +47,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2020-08-04T16:28:06Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-04-08T14:28:39Z</dcterms:modified>
-  <cp:revision>5.10</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-05-13T16:36:39Z</dcterms:modified>
+  <cp:revision>5.11</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -70,11 +70,11 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version information for MathWorks R2022a Release -->
 <MathWorks_version_info>
-  <version>9.12.0.1912253</version>
+  <version>9.12.0.1953994</version>
   <release>R2022a</release>
-  <description>Update 1</description>
-  <date>Mar 22 2022</date>
-  <checksum>446091896</checksum>
+  <description>Update 2</description>
+  <date>May 09 2022</date>
+  <checksum>2519067153</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -118,8 +118,8 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">571332475</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.10&gt;</P>
+      <P Name="RTWModifiedTimeStamp">574364190</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.11&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ScheduleConnectors">off</P>
@@ -1057,8 +1057,8 @@ To Zero</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="817626be-2733-468d-b779-4c6aeb24afca">
-    <Interface type="Interface" uuid="b6707f43-c257-4079-a8e2-c99f842c8987"/>
+  <System type="System" uuid="e4dd8360-54b1-4693-a4ad-7e9bc7d09619">
+    <Interface type="Interface" uuid="4f2d9a4b-6c43-47fe-9cf8-7e5e597ab78d"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
@@ -1288,16 +1288,16 @@ pTn3/wGMj4ZujdIl2wAAAABJRU5ErkJggg==
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="3561d055-5829-41ae-ae95-d7b7d527f957">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="1c14cb83-62d5-44e0-8dba-07a0e667a3e4">
     <editorState type="sltp.mm.core.EditorState" uuid="434b8890-3c8a-4ca0-9000-1091625f456d">
       <panelState type="sltp.mm.core.EditorPanelState" uuid="001f3b23-438c-4967-adf5-a71bdf3210be"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="c6474823-f129-48f7-8b6f-0c173377e2fa">
-      <context type="sltp.mm.core.Context" uuid="3561d055-5829-41ae-ae95-d7b7d527f957"/>
+    <rootTask type="sltp.mm.core.Task" uuid="1d310827-3737-4add-8e63-a97cdf6ac6f2">
+      <context type="sltp.mm.core.Context" uuid="1c14cb83-62d5-44e0-8dba-07a0e667a3e4"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="ff7d4ad6-596a-4236-9288-4fd993aa15d1"/>
+      <subgraph type="sltp.mm.core.Graph" uuid="8e9be2e6-9dd5-4731-bb7e-2b287e83f779"/>
     </rootTask>
   </sltp.mm.core.Context>
 </sltp_graph>
@@ -1656,7 +1656,6 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/chart_81.xml
       <P Name="subviewer">81</P>
       <P Name="type">OR_STATE</P>
       <P Name="decomposition">CLUSTER_STATE</P>
-      <eml/>
     </state>
     <state SSID="9">
       <P Name="labelString">EngineOff
@@ -1668,7 +1667,6 @@ entry:
       <P Name="subviewer">81</P>
       <P Name="type">OR_STATE</P>
       <P Name="decomposition">CLUSTER_STATE</P>
-      <eml/>
     </state>
     <state SSID="15">
       <P Name="labelString">EngineDriveGenerate
@@ -1680,7 +1678,6 @@ entry:
       <P Name="subviewer">81</P>
       <P Name="type">OR_STATE</P>
       <P Name="decomposition">CLUSTER_STATE</P>
-      <eml/>
     </state>
     <state SSID="3">
       <P Name="labelString">EngineDrive
@@ -1692,7 +1689,6 @@ entry:
       <P Name="subviewer">81</P>
       <P Name="type">OR_STATE</P>
       <P Name="decomposition">CLUSTER_STATE</P>
-      <eml/>
     </state>
     <state SSID="19">
       <P Name="labelString">EngineGenerate
@@ -1704,7 +1700,6 @@ entry:
       <P Name="subviewer">81</P>
       <P Name="type">OR_STATE</P>
       <P Name="decomposition">CLUSTER_STATE</P>
-      <eml/>
     </state>
     <data SSID="7" name="BattChgLvl">
       <P Name="scope">INPUT_DATA</P>
@@ -2666,52 +2661,50 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2918.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">2919#out:1</P>
-    <P Name="Dst">2999#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">2922#out:1</P>
-    <P Name="Points">[14, 0]</P>
+    <P Name="Src">2999#out:2</P>
+    <P Name="Points">[48, 0]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Points">[0, -35]</P>
+      <P Name="Dst">5986#in:1</P>
+    </Branch>
     <Branch>
       <P Name="ZOrder">3</P>
-      <P Name="Points">[0, -50]</P>
-      <P Name="Dst">3472#in:1</P>
+      <P Name="Points">[89, 0]</P>
+      <Branch>
+        <P Name="ZOrder">4</P>
+        <P Name="Dst">3683#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">5</P>
+        <P Name="Points">[0, -100]</P>
+        <P Name="Dst">3222#in:4</P>
+      </Branch>
     </Branch>
-    <Branch>
-      <P Name="ZOrder">4</P>
-      <P Name="Dst">2999#in:1</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">3009#out:1</P>
-    <P Name="Dst">2999#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">6</P>
-    <P Name="Src">3005#out:1</P>
-    <P Name="Dst">3222#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">7</P>
-    <P Name="Src">3006#out:1</P>
-    <P Name="Dst">3222#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">8</P>
-    <P Name="Src">3222#out:1</P>
-    <P Name="Dst">2920#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">9</P>
-    <P Name="Src">3177#out:1</P>
-    <P Name="Dst">3683#in:4</P>
+    <P Name="Src">2999#out:1</P>
+    <P Name="Points">[26, 0]</P>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Dst">3149#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, 105]</P>
+      <P Name="Dst">3683#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">9</P>
+      <P Name="Points">[0, -65]</P>
+      <P Name="Dst">3222#in:3</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">10</P>
-    <P Name="Src">3172#out:1</P>
-    <P Name="Dst">3683#in:5</P>
+    <P Name="Src">3473#out:1</P>
+    <P Name="Dst">3683#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">11</P>
@@ -2720,50 +2713,52 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2918.xml
   </Line>
   <Line>
     <P Name="ZOrder">12</P>
-    <P Name="Src">3473#out:1</P>
-    <P Name="Dst">3683#in:3</P>
+    <P Name="Src">3172#out:1</P>
+    <P Name="Dst">3683#in:5</P>
   </Line>
   <Line>
     <P Name="ZOrder">13</P>
-    <P Name="Src">2999#out:1</P>
-    <P Name="Points">[26, 0]</P>
-    <Branch>
-      <P Name="ZOrder">14</P>
-      <P Name="Points">[0, -65]</P>
-      <P Name="Dst">3222#in:3</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">15</P>
-      <P Name="Points">[0, 105]</P>
-      <P Name="Dst">3683#in:2</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">16</P>
-      <P Name="Dst">3149#in:1</P>
-    </Branch>
+    <P Name="Src">3177#out:1</P>
+    <P Name="Dst">3683#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">3222#out:1</P>
+    <P Name="Dst">2920#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">3006#out:1</P>
+    <P Name="Dst">3222#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">3005#out:1</P>
+    <P Name="Dst">3222#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">17</P>
-    <P Name="Src">2999#out:2</P>
-    <P Name="Points">[48, 0]</P>
+    <P Name="Src">3009#out:1</P>
+    <P Name="Dst">2999#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">2922#out:1</P>
+    <P Name="Points">[14, 0]</P>
     <Branch>
-      <P Name="ZOrder">18</P>
-      <P Name="Points">[89, 0]</P>
-      <Branch>
-        <P Name="ZOrder">19</P>
-        <P Name="Points">[0, -100]</P>
-        <P Name="Dst">3222#in:4</P>
-      </Branch>
-      <Branch>
-        <P Name="ZOrder">20</P>
-        <P Name="Dst">3683#in:1</P>
-      </Branch>
+      <P Name="ZOrder">19</P>
+      <P Name="Dst">2999#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">21</P>
-      <P Name="Points">[0, -35]</P>
-      <P Name="Dst">5986#in:1</P>
+      <P Name="ZOrder">20</P>
+      <P Name="Points">[0, -50]</P>
+      <P Name="Dst">3472#in:1</P>
     </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">2919#out:1</P>
+    <P Name="Dst">2999#in:2</P>
   </Line>
 </System>
 
@@ -2831,18 +2826,20 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2999.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">2999::101#out:1</P>
-    <P Name="Dst">2999::110#in:1</P>
+    <P Name="Src">2999::110#out:1</P>
+    <P Name="Dst">2999::111#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">2999::102#out:1</P>
-    <P Name="Dst">2999::110#in:2</P>
+    <P Name="Src">2999::111#out:1</P>
+    <P Name="Dst">2999::112#in:1</P>
   </Line>
   <Line>
+    <P Name="Name">EngGen</P>
     <P Name="ZOrder">3</P>
-    <P Name="Src">2999::106#out:1</P>
-    <P Name="Dst">2999::110#in:3</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">2999::110#out:3</P>
+    <P Name="Dst">2999::113#in:1</P>
   </Line>
   <Line>
     <P Name="Name">EngDrv</P>
@@ -2852,21 +2849,19 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2999.xml
     <P Name="Dst">2999::105#in:1</P>
   </Line>
   <Line>
-    <P Name="Name">EngGen</P>
     <P Name="ZOrder">5</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">2999::110#out:3</P>
-    <P Name="Dst">2999::113#in:1</P>
+    <P Name="Src">2999::106#out:1</P>
+    <P Name="Dst">2999::110#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">6</P>
-    <P Name="Src">2999::111#out:1</P>
-    <P Name="Dst">2999::112#in:1</P>
+    <P Name="Src">2999::102#out:1</P>
+    <P Name="Dst">2999::110#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">7</P>
-    <P Name="Src">2999::110#out:1</P>
-    <P Name="Dst">2999::111#in:1</P>
+    <P Name="Src">2999::101#out:1</P>
+    <P Name="Dst">2999::110#in:1</P>
   </Line>
 </System>
 
@@ -2950,59 +2945,59 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3010.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3399#out:1</P>
-    <P Name="Dst">3405#in:2</P>
+    <P Name="Src">3404#out:1</P>
+    <P Name="Dst">3407#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3398#out:1</P>
-    <P Name="Dst">3400#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">3406#out:1</P>
-    <P Name="Dst">3404#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">3405#out:1</P>
-    <P Name="Points">[20, 0]</P>
-    <Branch>
-      <P Name="ZOrder">5</P>
-      <P Name="Points">[0, -85]</P>
-      <P Name="Dst">3402#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">6</P>
-      <P Name="Dst">3403#in:1</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="ZOrder">7</P>
-    <P Name="Src">3402#out:1</P>
-    <P Name="Dst">3401#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">8</P>
-    <P Name="Src">3403#out:1</P>
-    <P Name="Dst">3406#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">9</P>
-    <P Name="Src">3401#out:1</P>
-    <P Name="Points">[50, 0]</P>
-    <P Name="Dst">3406#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">10</P>
     <P Name="Src">3400#out:1</P>
     <P Name="Points">[30, 0]</P>
     <P Name="Dst">3405#in:1</P>
   </Line>
   <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">3401#out:1</P>
+    <P Name="Points">[50, 0]</P>
+    <P Name="Dst">3406#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3403#out:1</P>
+    <P Name="Dst">3406#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3402#out:1</P>
+    <P Name="Dst">3401#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3405#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Dst">3403#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, -85]</P>
+      <P Name="Dst">3402#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">3406#out:1</P>
+    <P Name="Dst">3404#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3398#out:1</P>
+    <P Name="Dst">3400#in:1</P>
+  </Line>
+  <Line>
     <P Name="ZOrder">11</P>
-    <P Name="Src">3404#out:1</P>
-    <P Name="Dst">3407#in:1</P>
+    <P Name="Src">3399#out:1</P>
+    <P Name="Dst">3405#in:2</P>
   </Line>
 </System>
 
@@ -3054,23 +3049,23 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3130.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3321#out:1</P>
-    <P Name="Dst">3322#in:1</P>
+    <P Name="Src">3302#out:1</P>
+    <P Name="Dst">3320#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3303#out:1</P>
-    <P Name="Dst">3320#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
     <P Name="Src">3320#out:1</P>
     <P Name="Dst">3321#in:1</P>
   </Line>
   <Line>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">3303#out:1</P>
+    <P Name="Dst">3320#in:2</P>
+  </Line>
+  <Line>
     <P Name="ZOrder">4</P>
-    <P Name="Src">3302#out:1</P>
-    <P Name="Dst">3320#in:1</P>
+    <P Name="Src">3321#out:1</P>
+    <P Name="Dst">3322#in:1</P>
   </Line>
 </System>
 
@@ -3118,33 +3113,33 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3181.xml
     <P Name="Unit">rpm</P>
   </Block>
   <Line>
+    <P Name="Name">&lt;EngSpd&gt;</P>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3162#out:1</P>
-    <P Name="Dst">3169#in:1</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3169#out:1</P>
+    <P Name="Dst">3180#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3180#out:1</P>
-    <P Name="Dst">3184#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
     <P Name="Src">3182#out:1</P>
     <P Name="Dst">3162#in:1</P>
   </Line>
   <Line>
-    <P Name="Name">&lt;EngSpd&gt;</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Src">3180#out:1</P>
+    <P Name="Dst">3184#in:1</P>
+  </Line>
+  <Line>
     <P Name="ZOrder">4</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3169#out:1</P>
-    <P Name="Dst">3180#in:1</P>
+    <P Name="Src">3162#out:1</P>
+    <P Name="Dst">3169#in:1</P>
   </Line>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_3192.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[43, 40, 1289, 874]</P>
+  <P Name="Location">[52, 7, 1293, 852]</P>
   <P Name="SystemRect">[0.000000, 0.000000, 0.000000, 0.000000]</P>
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
@@ -3158,14 +3153,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3192.xml
     <P Name="Ports">[1, 3]</P>
     <P Name="Position">[-55, -20, -50, 160]</P>
     <P Name="ZOrder">26402</P>
-    <P Name="OutputSignals">Incline,VehSpdKph,AxleSpd</P>
+    <P Name="OutputSignals">Incline,VehSpdKPH,AxleSpd</P>
     <Port>
       <P Name="PortNumber">1</P>
       <P Name="Name">&lt;Incline&gt;</P>
     </Port>
     <Port>
       <P Name="PortNumber">2</P>
-      <P Name="Name">&lt;VehSpdKph&gt;</P>
+      <P Name="Name">&lt;VehSpdKPH&gt;</P>
     </Port>
     <Port>
       <P Name="PortNumber">3</P>
@@ -3214,23 +3209,21 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3192.xml
     <P Name="Unit">km/hr</P>
   </Block>
   <Line>
-    <P Name="Name">&lt;AxleSpd&gt;</P>
     <P Name="ZOrder">1</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3196#out:3</P>
-    <P Name="Dst">3637#in:1</P>
+    <P Name="Src">3637#out:1</P>
+    <P Name="Dst">3638#in:1</P>
   </Line>
   <Line>
+    <P Name="Name">&lt;VehSpdKPH&gt;</P>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3442#out:1</P>
-    <P Name="Dst">3443#in:1</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3196#out:2</P>
+    <P Name="Dst">3143#in:1</P>
   </Line>
   <Line>
-    <P Name="Name">&lt;Incline&gt;</P>
     <P Name="ZOrder">3</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3196#out:1</P>
-    <P Name="Dst">3442#in:1</P>
+    <P Name="Src">3193#out:1</P>
+    <P Name="Dst">3196#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">4</P>
@@ -3238,21 +3231,23 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3192.xml
     <P Name="Dst">3194#in:1</P>
   </Line>
   <Line>
+    <P Name="Name">&lt;Incline&gt;</P>
     <P Name="ZOrder">5</P>
-    <P Name="Src">3193#out:1</P>
-    <P Name="Dst">3196#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">&lt;VehSpdKph&gt;</P>
-    <P Name="ZOrder">6</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3196#out:2</P>
-    <P Name="Dst">3143#in:1</P>
+    <P Name="Src">3196#out:1</P>
+    <P Name="Dst">3442#in:1</P>
   </Line>
   <Line>
+    <P Name="ZOrder">6</P>
+    <P Name="Src">3442#out:1</P>
+    <P Name="Dst">3443#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">&lt;AxleSpd&gt;</P>
     <P Name="ZOrder">7</P>
-    <P Name="Src">3637#out:1</P>
-    <P Name="Dst">3638#in:1</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3196#out:3</P>
+    <P Name="Dst">3637#in:1</P>
   </Line>
 </System>
 
@@ -3399,74 +3394,67 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3222.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3413#out:1</P>
-    <P Name="Dst">3412#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">engine off</P>
-    <P Name="ZOrder">2</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">3017#out:1</P>
-    <P Name="Dst">3428#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">3428#out:1</P>
-    <P Name="Points">[21, 0; 0, -65]</P>
-    <P Name="Dst">3426#in:3</P>
+    <P Name="Src">3158#out:1</P>
+    <P Name="Points">[77, 0; 0, 40]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Points">[0, 195]</P>
+      <P Name="Dst">3428#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Dst">3425#in:2</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">4</P>
-    <P Name="Src">3414#out:1</P>
-    <P Name="Dst">3428#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">3417#out:1</P>
-    <P Name="Dst">3426#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">3426#out:1</P>
-    <P Name="Points">[18, 0; 0, -65]</P>
-    <P Name="Dst">3413#in:3</P>
+    <P Name="Src">3010#out:1</P>
+    <P Name="Points">[138, 0; 0, 100]</P>
+    <Branch>
+      <P Name="ZOrder">5</P>
+      <P Name="Points">[0, 135]</P>
+      <P Name="Dst">3426#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Dst">3425#in:1</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">7</P>
-    <P Name="Src">3425#out:1</P>
-    <P Name="Points">[33, 0; 0, 30]</P>
-    <P Name="Dst">3413#in:1</P>
+    <P Name="Src">3224#out:1</P>
+    <P Name="Dst">3010#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">8</P>
-    <P Name="Src">3420#out:1</P>
-    <P Name="Dst">3413#in:2</P>
+    <P Name="Src">3223#out:1</P>
+    <P Name="Dst">3010#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">9</P>
-    <P Name="Src">3416#out:1</P>
-    <P Name="Dst">3417#in:1</P>
+    <P Name="Src">3412#out:1</P>
+    <P Name="Dst">3227#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">10</P>
-    <P Name="Src">3226#out:1</P>
-    <P Name="Points">[49, 0]</P>
+    <P Name="Src">3225#out:1</P>
+    <P Name="Points">[26, 0]</P>
     <Branch>
       <P Name="ZOrder">11</P>
       <P Name="Points">[0, 90]</P>
       <Branch>
         <P Name="ZOrder">12</P>
-        <P Name="Points">[0, 90]</P>
-        <P Name="Dst">3414#in:1</P>
+        <P Name="Dst">3417#in:2</P>
       </Branch>
       <Branch>
         <P Name="ZOrder">13</P>
-        <P Name="Dst">3416#in:1</P>
+        <P Name="Points">[0, 90]</P>
+        <P Name="Dst">3415#in:1</P>
       </Branch>
     </Branch>
     <Branch>
       <P Name="ZOrder">14</P>
-      <P Name="Dst">3420#in:1</P>
+      <P Name="Dst">3420#in:2</P>
     </Branch>
   </Line>
   <Line>
@@ -3476,68 +3464,75 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3222.xml
   </Line>
   <Line>
     <P Name="ZOrder">16</P>
-    <P Name="Src">3225#out:1</P>
-    <P Name="Points">[26, 0]</P>
+    <P Name="Src">3226#out:1</P>
+    <P Name="Points">[49, 0]</P>
     <Branch>
       <P Name="ZOrder">17</P>
-      <P Name="Dst">3420#in:2</P>
+      <P Name="Dst">3420#in:1</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">18</P>
       <P Name="Points">[0, 90]</P>
       <Branch>
         <P Name="ZOrder">19</P>
-        <P Name="Points">[0, 90]</P>
-        <P Name="Dst">3415#in:1</P>
+        <P Name="Dst">3416#in:1</P>
       </Branch>
       <Branch>
         <P Name="ZOrder">20</P>
-        <P Name="Dst">3417#in:2</P>
+        <P Name="Points">[0, 90]</P>
+        <P Name="Dst">3414#in:1</P>
       </Branch>
     </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">21</P>
-    <P Name="Src">3412#out:1</P>
-    <P Name="Dst">3227#in:1</P>
+    <P Name="Src">3416#out:1</P>
+    <P Name="Dst">3417#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">22</P>
-    <P Name="Src">3223#out:1</P>
-    <P Name="Dst">3010#in:1</P>
+    <P Name="Src">3420#out:1</P>
+    <P Name="Dst">3413#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">23</P>
-    <P Name="Src">3224#out:1</P>
-    <P Name="Dst">3010#in:2</P>
+    <P Name="Src">3425#out:1</P>
+    <P Name="Points">[33, 0; 0, 30]</P>
+    <P Name="Dst">3413#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">24</P>
-    <P Name="Src">3010#out:1</P>
-    <P Name="Points">[138, 0; 0, 100]</P>
-    <Branch>
-      <P Name="ZOrder">25</P>
-      <P Name="Dst">3425#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">26</P>
-      <P Name="Points">[0, 135]</P>
-      <P Name="Dst">3426#in:1</P>
-    </Branch>
+    <P Name="Src">3426#out:1</P>
+    <P Name="Points">[18, 0; 0, -65]</P>
+    <P Name="Dst">3413#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">25</P>
+    <P Name="Src">3417#out:1</P>
+    <P Name="Dst">3426#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">26</P>
+    <P Name="Src">3414#out:1</P>
+    <P Name="Dst">3428#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">27</P>
-    <P Name="Src">3158#out:1</P>
-    <P Name="Points">[77, 0; 0, 40]</P>
-    <Branch>
-      <P Name="ZOrder">28</P>
-      <P Name="Dst">3425#in:2</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">29</P>
-      <P Name="Points">[0, 195]</P>
-      <P Name="Dst">3428#in:1</P>
-    </Branch>
+    <P Name="Src">3428#out:1</P>
+    <P Name="Points">[21, 0; 0, -65]</P>
+    <P Name="Dst">3426#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">engine off</P>
+    <P Name="ZOrder">28</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3017#out:1</P>
+    <P Name="Dst">3428#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">29</P>
+    <P Name="Src">3413#out:1</P>
+    <P Name="Dst">3412#in:1</P>
   </Line>
 </System>
 
@@ -3591,13 +3586,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3320.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3320::112#out:1</P>
-    <P Name="Dst">3320::113#in:1</P>
+    <P Name="Src">3320::101#out:1</P>
+    <P Name="Points">[120, 0]</P>
+    <P Name="Dst">3320::112#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3320::113#out:1</P>
-    <P Name="Dst">3320::114#in:1</P>
+    <P Name="Src">3320::105#out:1</P>
+    <P Name="Dst">3320::112#in:2</P>
   </Line>
   <Line>
     <P Name="Name">MechBrkOn</P>
@@ -3608,14 +3604,13 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3320.xml
   </Line>
   <Line>
     <P Name="ZOrder">4</P>
-    <P Name="Src">3320::105#out:1</P>
-    <P Name="Dst">3320::112#in:2</P>
+    <P Name="Src">3320::113#out:1</P>
+    <P Name="Dst">3320::114#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">5</P>
-    <P Name="Src">3320::101#out:1</P>
-    <P Name="Points">[120, 0]</P>
-    <P Name="Dst">3320::112#in:1</P>
+    <P Name="Src">3320::112#out:1</P>
+    <P Name="Dst">3320::113#in:1</P>
   </Line>
 </System>
 
@@ -3682,43 +3677,43 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3356.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3372#out:1</P>
-    <P Name="Dst">3369#in:1</P>
+    <P Name="Src">3368#out:1</P>
+    <P Name="Dst">3370#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3357#out:1</P>
-    <P Name="Points">[22, 0]</P>
-    <Branch>
-      <P Name="ZOrder">3</P>
-      <P Name="Dst">3372#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">4</P>
-      <P Name="Points">[0, 65]</P>
-      <P Name="Dst">3370#in:2</P>
-    </Branch>
+    <P Name="Src">3370#out:1</P>
+    <P Name="Dst">3371#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">3369#out:1</P>
-    <P Name="Dst">3358#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
+    <P Name="ZOrder">3</P>
     <P Name="Src">3358#out:1</P>
     <P Name="Points">[23, 0; 0, 35]</P>
     <P Name="Dst">3370#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">7</P>
-    <P Name="Src">3370#out:1</P>
-    <P Name="Dst">3371#in:1</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3369#out:1</P>
+    <P Name="Dst">3358#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3357#out:1</P>
+    <P Name="Points">[22, 0]</P>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Points">[0, 65]</P>
+      <P Name="Dst">3370#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">7</P>
+      <P Name="Dst">3372#in:1</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">8</P>
-    <P Name="Src">3368#out:1</P>
-    <P Name="Dst">3370#in:3</P>
+    <P Name="Src">3372#out:1</P>
+    <P Name="Dst">3369#in:1</P>
   </Line>
 </System>
 
@@ -3805,44 +3800,44 @@ To Zero</P>
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3360#out:1</P>
-    <P Name="Dst">3365#in:1</P>
+    <P Name="Src">3359#out:1</P>
+    <P Name="Dst">3365#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3363#out:1</P>
-    <P Name="Dst">3366#in:3</P>
+    <P Name="Src">3365#out:1</P>
+    <P Name="Dst">3367#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">3</P>
+    <P Name="Src">3361#out:1</P>
+    <P Name="Dst">3362#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">3362#out:1</P>
+    <P Name="Dst">3366#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3364#out:1</P>
+    <P Name="Dst">3366#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">6</P>
     <P Name="Src">3366#out:1</P>
     <P Name="Points">[24, 0; 0, -70]</P>
     <P Name="Dst">3365#in:3</P>
   </Line>
   <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">3364#out:1</P>
-    <P Name="Dst">3366#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">3362#out:1</P>
-    <P Name="Dst">3366#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">3361#out:1</P>
-    <P Name="Dst">3362#in:1</P>
-  </Line>
-  <Line>
     <P Name="ZOrder">7</P>
-    <P Name="Src">3365#out:1</P>
-    <P Name="Dst">3367#in:1</P>
+    <P Name="Src">3363#out:1</P>
+    <P Name="Dst">3366#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">8</P>
-    <P Name="Src">3359#out:1</P>
-    <P Name="Dst">3365#in:2</P>
+    <P Name="Src">3360#out:1</P>
+    <P Name="Dst">3365#in:1</P>
   </Line>
 </System>
 
@@ -3875,8 +3870,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3492.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3491#out:1</P>
-    <P Name="Dst">3494#in:1</P>
+    <P Name="Src">3490#out:1</P>
+    <P Name="Dst">3491#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
@@ -3885,8 +3880,8 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3492.xml
   </Line>
   <Line>
     <P Name="ZOrder">3</P>
-    <P Name="Src">3490#out:1</P>
-    <P Name="Dst">3491#in:1</P>
+    <P Name="Src">3491#out:1</P>
+    <P Name="Dst">3494#in:1</P>
   </Line>
 </System>
 
@@ -4016,56 +4011,51 @@ To Constant</P>
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3710#out:1</P>
-    <P Name="Dst">3727#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">3727#out:1</P>
-    <P Name="Dst">3728#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">3726#out:1</P>
-    <P Name="Points">[25, 0; 0, -105]</P>
-    <P Name="Dst">3727#in:3</P>
+    <P Name="Src">3685#out:1</P>
+    <P Name="Points">[23, 0]</P>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Dst">3691#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, 150]</P>
+      <P Name="Dst">3692#in:3</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">4</P>
-    <P Name="Src">3690#out:1</P>
-    <P Name="Points">[39, 0]</P>
+    <P Name="Src">3684#out:1</P>
+    <P Name="Points">[41, 0]</P>
     <Branch>
       <P Name="ZOrder">5</P>
-      <P Name="Points">[91, 0]</P>
-      <P Name="Dst">3710#enable</P>
+      <P Name="Points">[0, 150]</P>
+      <P Name="Dst">3692#in:2</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">6</P>
-      <P Name="Points">[0, 115]</P>
-      <P Name="Dst">3727#in:2</P>
+      <P Name="Dst">3691#in:1</P>
     </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">7</P>
-    <P Name="Src">3689#out:1</P>
-    <P Name="Dst">3690#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">8</P>
-    <P Name="Src">3692#out:1</P>
-    <P Name="Points">[23, 0; 0, 35]</P>
-    <P Name="Dst">3726#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">9</P>
-    <P Name="Src">3686#out:1</P>
-    <P Name="Dst">3692#in:1</P>
+    <P Name="Src">3691#out:1</P>
+    <P Name="Points">[20, 0]</P>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, 210]</P>
+      <P Name="Dst">3726#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">9</P>
+      <P Name="Points">[0, -35]</P>
+      <P Name="Dst">3690#in:2</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">10</P>
-    <P Name="Src">3715#out:1</P>
-    <P Name="Points">[16, 0; 0, -20]</P>
-    <P Name="Dst">3726#in:3</P>
+    <P Name="Src">3687#out:1</P>
+    <P Name="Dst">3715#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">11</P>
@@ -4073,61 +4063,66 @@ To Constant</P>
     <P Name="Points">[19, 0]</P>
     <Branch>
       <P Name="ZOrder">12</P>
-      <P Name="Points">[0, 320; 326, 0]</P>
-      <P Name="Dst">3715#in:1</P>
+      <P Name="Dst">3689#in:1</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">13</P>
-      <P Name="Dst">3689#in:1</P>
+      <P Name="Points">[0, 320; 326, 0]</P>
+      <P Name="Dst">3715#in:1</P>
     </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">14</P>
-    <P Name="Src">3687#out:1</P>
-    <P Name="Dst">3715#in:2</P>
+    <P Name="Src">3715#out:1</P>
+    <P Name="Points">[16, 0; 0, -20]</P>
+    <P Name="Dst">3726#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">15</P>
-    <P Name="Src">3691#out:1</P>
-    <P Name="Points">[20, 0]</P>
-    <Branch>
-      <P Name="ZOrder">16</P>
-      <P Name="Points">[0, -35]</P>
-      <P Name="Dst">3690#in:2</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">17</P>
-      <P Name="Points">[0, 210]</P>
-      <P Name="Dst">3726#in:2</P>
-    </Branch>
+    <P Name="Src">3686#out:1</P>
+    <P Name="Dst">3692#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
+    <P Name="Src">3692#out:1</P>
+    <P Name="Points">[23, 0; 0, 35]</P>
+    <P Name="Dst">3726#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3689#out:1</P>
+    <P Name="Dst">3690#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">18</P>
-    <P Name="Src">3684#out:1</P>
-    <P Name="Points">[41, 0]</P>
+    <P Name="Src">3690#out:1</P>
+    <P Name="Points">[39, 0]</P>
     <Branch>
       <P Name="ZOrder">19</P>
-      <P Name="Dst">3691#in:1</P>
+      <P Name="Points">[0, 115]</P>
+      <P Name="Dst">3727#in:2</P>
     </Branch>
     <Branch>
       <P Name="ZOrder">20</P>
-      <P Name="Points">[0, 150]</P>
-      <P Name="Dst">3692#in:2</P>
+      <P Name="Points">[91, 0]</P>
+      <P Name="Dst">3710#enable</P>
     </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">21</P>
-    <P Name="Src">3685#out:1</P>
-    <P Name="Points">[23, 0]</P>
-    <Branch>
-      <P Name="ZOrder">22</P>
-      <P Name="Points">[0, 150]</P>
-      <P Name="Dst">3692#in:3</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">23</P>
-      <P Name="Dst">3691#in:2</P>
-    </Branch>
+    <P Name="Src">3726#out:1</P>
+    <P Name="Points">[25, 0; 0, -105]</P>
+    <P Name="Dst">3727#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">3727#out:1</P>
+    <P Name="Dst">3728#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">3710#out:1</P>
+    <P Name="Dst">3727#in:1</P>
   </Line>
 </System>
 
@@ -4303,120 +4298,120 @@ To Constant</P>
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3699#out:1</P>
-    <P Name="Dst">3707#in:3</P>
+    <P Name="Src">3706#out:1</P>
+    <P Name="Dst">3708#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3704#out:1</P>
-    <P Name="Dst">3707#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">3</P>
-    <P Name="Src">3703#out:1</P>
-    <P Name="Dst">3707#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">3707#out:1</P>
-    <P Name="Points">[30, 0; 0, -100]</P>
-    <P Name="Dst">3706#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">3708#out:1</P>
-    <P Name="Dst">3709#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">3702#out:1</P>
-    <P Name="Dst">3706#in:2</P>
+    <P Name="Src">3693#out:1</P>
+    <P Name="Points">[16, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, 40]</P>
+      <Branch>
+        <P Name="ZOrder">4</P>
+        <P Name="Points">[0, 40]</P>
+        <P Name="Dst">3698#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">5</P>
+        <P Name="Dst">3697#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">6</P>
+      <P Name="Dst">3696#in:1</P>
+    </Branch>
   </Line>
   <Line>
     <P Name="ZOrder">7</P>
-    <P Name="Src">3705#out:1</P>
-    <P Name="Dst">3706#in:1</P>
+    <P Name="Src">3694#out:1</P>
+    <P Name="Points">[44, 0]</P>
+    <Branch>
+      <P Name="ZOrder">8</P>
+      <P Name="Points">[0, 155]</P>
+      <P Name="Dst">3703#in:2</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">9</P>
+      <P Name="Points">[25, 0]</P>
+      <Branch>
+        <P Name="ZOrder">10</P>
+        <P Name="Points">[0, 120]</P>
+        <P Name="Dst">3703#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">11</P>
+        <P Name="Dst">3702#in:2</P>
+      </Branch>
+    </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">8</P>
-    <P Name="Src">3696#out:1</P>
-    <P Name="Dst">3701#in:1</P>
+    <P Name="ZOrder">12</P>
+    <P Name="Src">3695#out:1</P>
+    <P Name="Dst">3700#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">9</P>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">3697#out:1</P>
+    <P Name="Dst">3701#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">3698#out:1</P>
+    <P Name="Dst">3701#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15</P>
+    <P Name="Src">3700#out:1</P>
+    <P Name="Dst">3702#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">16</P>
     <P Name="Src">3701#out:1</P>
     <P Name="Points">[23, 0; 0, 45]</P>
     <P Name="Dst">3702#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">10</P>
-    <P Name="Src">3700#out:1</P>
-    <P Name="Dst">3702#in:3</P>
+    <P Name="ZOrder">17</P>
+    <P Name="Src">3696#out:1</P>
+    <P Name="Dst">3701#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">11</P>
-    <P Name="Src">3698#out:1</P>
-    <P Name="Dst">3701#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">12</P>
-    <P Name="Src">3697#out:1</P>
-    <P Name="Dst">3701#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">13</P>
-    <P Name="Src">3695#out:1</P>
-    <P Name="Dst">3700#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">14</P>
-    <P Name="Src">3694#out:1</P>
-    <P Name="Points">[44, 0]</P>
-    <Branch>
-      <P Name="ZOrder">15</P>
-      <P Name="Points">[25, 0]</P>
-      <Branch>
-        <P Name="ZOrder">16</P>
-        <P Name="Dst">3702#in:2</P>
-      </Branch>
-      <Branch>
-        <P Name="ZOrder">17</P>
-        <P Name="Points">[0, 120]</P>
-        <P Name="Dst">3703#in:1</P>
-      </Branch>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">18</P>
-      <P Name="Points">[0, 155]</P>
-      <P Name="Dst">3703#in:2</P>
-    </Branch>
+    <P Name="ZOrder">18</P>
+    <P Name="Src">3705#out:1</P>
+    <P Name="Dst">3706#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">19</P>
-    <P Name="Src">3693#out:1</P>
-    <P Name="Points">[16, 0]</P>
-    <Branch>
-      <P Name="ZOrder">20</P>
-      <P Name="Dst">3696#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">21</P>
-      <P Name="Points">[0, 40]</P>
-      <Branch>
-        <P Name="ZOrder">22</P>
-        <P Name="Dst">3697#in:1</P>
-      </Branch>
-      <Branch>
-        <P Name="ZOrder">23</P>
-        <P Name="Points">[0, 40]</P>
-        <P Name="Dst">3698#in:1</P>
-      </Branch>
-    </Branch>
+    <P Name="Src">3702#out:1</P>
+    <P Name="Dst">3706#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">20</P>
+    <P Name="Src">3708#out:1</P>
+    <P Name="Dst">3709#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">21</P>
+    <P Name="Src">3707#out:1</P>
+    <P Name="Points">[30, 0; 0, -100]</P>
+    <P Name="Dst">3706#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">22</P>
+    <P Name="Src">3703#out:1</P>
+    <P Name="Dst">3707#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">23</P>
+    <P Name="Src">3704#out:1</P>
+    <P Name="Dst">3707#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">24</P>
-    <P Name="Src">3706#out:1</P>
-    <P Name="Dst">3708#in:1</P>
+    <P Name="Src">3699#out:1</P>
+    <P Name="Dst">3707#in:3</P>
   </Line>
 </System>
 
@@ -4454,13 +4449,13 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3710.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3713#out:1</P>
-    <P Name="Dst">3714#in:1</P>
+    <P Name="Src">3712#out:1</P>
+    <P Name="Dst">3713#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3712#out:1</P>
-    <P Name="Dst">3713#in:1</P>
+    <P Name="Src">3713#out:1</P>
+    <P Name="Dst">3714#in:1</P>
   </Line>
 </System>
 
@@ -4527,44 +4522,44 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3715.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3723#out:1</P>
-    <P Name="Dst">3724#in:1</P>
+    <P Name="Src">3718#out:1</P>
+    <P Name="Dst">3722#in:2</P>
   </Line>
   <Line>
     <P Name="ZOrder">2</P>
-    <P Name="Src">3719#out:1</P>
-    <P Name="Dst">3723#in:1</P>
+    <P Name="Src">3721#out:1</P>
+    <P Name="Dst">3723#in:3</P>
   </Line>
   <Line>
     <P Name="ZOrder">3</P>
-    <P Name="Src">3717#out:1</P>
-    <P Name="Dst">3720#in:1</P>
+    <P Name="Src">3716#out:1</P>
+    <P Name="Dst">3722#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">4</P>
-    <P Name="Src">3720#out:1</P>
-    <P Name="Dst">3723#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">5</P>
     <P Name="Src">3722#out:1</P>
     <P Name="Points">[13, 0; 0, -25]</P>
     <P Name="Dst">3720#in:2</P>
   </Line>
   <Line>
+    <P Name="ZOrder">5</P>
+    <P Name="Src">3720#out:1</P>
+    <P Name="Dst">3723#in:2</P>
+  </Line>
+  <Line>
     <P Name="ZOrder">6</P>
-    <P Name="Src">3716#out:1</P>
-    <P Name="Dst">3722#in:1</P>
+    <P Name="Src">3717#out:1</P>
+    <P Name="Dst">3720#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">7</P>
-    <P Name="Src">3721#out:1</P>
-    <P Name="Dst">3723#in:3</P>
+    <P Name="Src">3719#out:1</P>
+    <P Name="Dst">3723#in:1</P>
   </Line>
   <Line>
     <P Name="ZOrder">8</P>
-    <P Name="Src">3718#out:1</P>
-    <P Name="Dst">3722#in:2</P>
+    <P Name="Src">3723#out:1</P>
+    <P Name="Dst">3724#in:1</P>
   </Line>
   <Annotation SID="3725">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -4590,7 +4585,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">5986</P>
+  <P Name="SIDHighWatermark">11067</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="Inport" Name="In Bus Element1" SID="3067">
     <P Name="Position">[-150, 420, -140, 430]</P>
@@ -5140,334 +5135,346 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     <P Name="Port">3</P>
   </Block>
   <Line>
-    <P Name="ZOrder">15543</P>
-    <P Name="Src">3192#out:2</P>
-    <P Name="Dst">3644#in:1</P>
+    <P Name="Name">AxleSpd</P>
+    <P Name="ZOrder">15607</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3506#out:1</P>
+    <P Name="Dst">2957#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">15544</P>
-    <P Name="Src">3068#out:1</P>
-    <P Name="Dst">3492#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15545</P>
-    <P Name="Src">3195#out:1</P>
-    <P Name="Dst">3192#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15550</P>
-    <P Name="Src">3192#out:3</P>
-    <P Name="Points">[41, 0]</P>
+    <P Name="ZOrder">15611</P>
+    <P Name="Src">3492#out:1</P>
+    <P Name="Points">[47, 0]</P>
     <Branch>
-      <P Name="ZOrder">15549</P>
-      <P Name="Points">[0, 49; -85, 0; 0, 21]</P>
-      <P Name="Dst">2961#in:1</P>
+      <P Name="ZOrder">15610</P>
+      <P Name="Points">[0, -70]</P>
+      <P Name="Dst">3130#in:2</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">15548</P>
-      <P Name="Points">[28, 0]</P>
-      <Branch>
-        <P Name="ZOrder">15547</P>
-        <P Name="Dst">3506#in:1</P>
-      </Branch>
-      <Branch>
-        <P Name="ZOrder">15546</P>
-        <P Name="Points">[0, 70]</P>
-        <P Name="Dst">3130#in:1</P>
-      </Branch>
+      <P Name="ZOrder">15609</P>
+      <P Name="Points">[0, 60]</P>
+      <P Name="Dst">3007#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">15608</P>
+      <P Name="Dst">3505#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="Name">SOC</P>
-    <P Name="ZOrder">15551</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">3504#out:1</P>
-    <P Name="Dst">3057#in:1</P>
+    <P Name="ZOrder">15612</P>
+    <P Name="Src">3457#out:1</P>
+    <P Name="Dst">2901#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">15552</P>
-    <P Name="Src">3058#out:1</P>
-    <P Name="Dst">2969#in:6</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15553</P>
-    <P Name="Src">3056#out:1</P>
-    <P Name="Dst">2969#in:8</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15554</P>
-    <P Name="Src">3055#out:1</P>
-    <P Name="Dst">2969#in:7</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15555</P>
-    <P Name="Src">3054#out:1</P>
-    <P Name="Dst">2969#in:4</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15556</P>
-    <P Name="Src">3053#out:1</P>
-    <P Name="Dst">2969#in:3</P>
-  </Line>
-  <Line>
-    <P Name="Name">Mg1TrqCmd</P>
-    <P Name="ZOrder">15557</P>
-    <P Name="Labels">[-1, 0]</P>
-    <P Name="Src">2918#out:4</P>
-    <P Name="Dst">2898#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15558</P>
-    <P Name="Src">3008#out:1</P>
-    <P Name="Dst">2918#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15559</P>
-    <P Name="Src">3003#out:1</P>
-    <P Name="Dst">2918#in:5</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15560</P>
-    <P Name="Src">3004#out:1</P>
-    <P Name="Dst">2918#in:4</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15561</P>
-    <P Name="Src">2972#out:1</P>
-    <P Name="Dst">2969#in:2</P>
-  </Line>
-  <Line>
-    <P Name="Name">Driver</P>
-    <P Name="ZOrder">15562</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">2969#out:1</P>
-    <P Name="Dst">2970#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15563</P>
-    <P Name="Src">2411#out:1</P>
-    <P Name="Dst">2969#in:10</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15564</P>
-    <P Name="Src">2909#out:1</P>
-    <P Name="Dst">2969#in:9</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15565</P>
-    <P Name="Src">2408#out:1</P>
-    <P Name="Dst">2969#in:5</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15566</P>
-    <P Name="Src">2412#out:1</P>
-    <P Name="Dst">2969#in:11</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15567</P>
-    <P Name="Src">2967#out:1</P>
-    <P Name="Dst">2918#in:2</P>
-  </Line>
-  <Line>
-    <P Name="Name">DoMg2Regen</P>
-    <P Name="ZOrder">15568</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">3504#out:3</P>
-    <P Name="Dst">2879#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">ChgLvl</P>
-    <P Name="ZOrder">15569</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">3504#out:2</P>
-    <P Name="Dst">2880#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">EngTrqCmd</P>
-    <P Name="ZOrder">15570</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">2918#out:3</P>
-    <P Name="Dst">2926#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15571</P>
-    <P Name="Src">2916#out:1</P>
-    <P Name="Dst">2918#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15572</P>
-    <P Name="Src">2252#out:1</P>
-    <P Name="Dst">2190#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15573</P>
-    <P Name="Src">2251#out:1</P>
-    <P Name="Dst">2190#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15574</P>
-    <P Name="Src">2250#out:1</P>
-    <P Name="Dst">2190#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">PowerSplit</P>
-    <P Name="ZOrder">15575</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">2190#out:1</P>
-    <P Name="Dst">2191#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">AxleSpdRef</P>
-    <P Name="ZOrder">15576</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">3505#out:1</P>
-    <P Name="Dst">2954#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15577</P>
-    <P Name="Src">2973#out:1</P>
-    <P Name="Dst">3109#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">Brake</P>
-    <P Name="ZOrder">15578</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3109#out:1</P>
-    <P Name="Dst">2974#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15579</P>
-    <P Name="Src">3067#out:1</P>
-    <P Name="Dst">3504#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">EngGen</P>
-    <P Name="ZOrder">15580</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">2918#out:1</P>
-    <P Name="Dst">3150#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">EngDrv</P>
-    <P Name="ZOrder">15581</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">2918#out:2</P>
-    <P Name="Dst">3151#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15582</P>
-    <P Name="Src">3152#out:1</P>
-    <P Name="Dst">2969#in:12</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15583</P>
-    <P Name="Src">3153#out:1</P>
-    <P Name="Dst">2969#in:13</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15584</P>
-    <P Name="Src">3171#out:1</P>
-    <P Name="Dst">2918#in:6</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15585</P>
-    <P Name="Src">3176#out:1</P>
-    <P Name="Dst">2918#in:7</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15586</P>
-    <P Name="Src">3160#out:1</P>
-    <P Name="Dst">3181#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15587</P>
-    <P Name="Src">3181#out:1</P>
-    <P Name="Dst">3170#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15588</P>
-    <P Name="Src">3453#out:1</P>
-    <P Name="Dst">2901#in:2</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15589</P>
-    <P Name="Src">2958#out:1</P>
-    <P Name="Dst">2901#in:3</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15590</P>
-    <P Name="Src">2955#out:1</P>
-    <P Name="Dst">2901#in:4</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15591</P>
-    <P Name="Src">3452#out:1</P>
-    <P Name="Dst">3356#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">Incline</P>
-    <P Name="ZOrder">15592</P>
-    <P Name="Labels">[1, 1]</P>
-    <P Name="Src">3192#out:1</P>
-    <P Name="Dst">3444#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">Mg2TrqCmd</P>
-    <P Name="ZOrder">15593</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">2901#out:1</P>
-    <P Name="Dst">2900#in:1</P>
-  </Line>
-  <Line>
-    <P Name="Name">MechBrkOn</P>
-    <P Name="ZOrder">15594</P>
-    <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3130#out:1</P>
-    <P Name="Dst">3347#in:1</P>
+    <P Name="ZOrder">15613</P>
+    <P Name="Src">3454#out:1</P>
+    <P Name="Dst">2969#in:1</P>
   </Line>
   <Line>
     <P Name="Name">BrakeForce</P>
-    <P Name="ZOrder">15595</P>
+    <P Name="ZOrder">15614</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3356#out:1</P>
     <P Name="Dst">3297#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">15596</P>
-    <P Name="Src">3454#out:1</P>
-    <P Name="Dst">2969#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15597</P>
-    <P Name="Src">3457#out:1</P>
-    <P Name="Dst">2901#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">15601</P>
-    <P Name="Src">3492#out:1</P>
-    <P Name="Points">[47, 0]</P>
-    <Branch>
-      <P Name="ZOrder">15600</P>
-      <P Name="Dst">3505#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">15599</P>
-      <P Name="Points">[0, 60]</P>
-      <P Name="Dst">3007#in:1</P>
-    </Branch>
-    <Branch>
-      <P Name="ZOrder">15598</P>
-      <P Name="Points">[0, -70]</P>
-      <P Name="Dst">3130#in:2</P>
-    </Branch>
-  </Line>
-  <Line>
-    <P Name="Name">AxleSpd</P>
-    <P Name="ZOrder">15602</P>
+    <P Name="Name">MechBrkOn</P>
+    <P Name="ZOrder">15615</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3506#out:1</P>
-    <P Name="Dst">2957#in:1</P>
+    <P Name="Src">3130#out:1</P>
+    <P Name="Dst">3347#in:1</P>
   </Line>
+  <Line>
+    <P Name="Name">Mg2TrqCmd</P>
+    <P Name="ZOrder">15616</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">2901#out:1</P>
+    <P Name="Dst">2900#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Incline</P>
+    <P Name="ZOrder">15617</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3192#out:1</P>
+    <P Name="Dst">3444#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15618</P>
+    <P Name="Src">3452#out:1</P>
+    <P Name="Dst">3356#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15619</P>
+    <P Name="Src">2955#out:1</P>
+    <P Name="Dst">2901#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15620</P>
+    <P Name="Src">2958#out:1</P>
+    <P Name="Dst">2901#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15621</P>
+    <P Name="Src">3453#out:1</P>
+    <P Name="Dst">2901#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15622</P>
+    <P Name="Src">3181#out:1</P>
+    <P Name="Dst">3170#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15623</P>
+    <P Name="Src">3160#out:1</P>
+    <P Name="Dst">3181#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15624</P>
+    <P Name="Src">3176#out:1</P>
+    <P Name="Dst">2918#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15625</P>
+    <P Name="Src">3171#out:1</P>
+    <P Name="Dst">2918#in:6</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15626</P>
+    <P Name="Src">3153#out:1</P>
+    <P Name="Dst">2969#in:13</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15627</P>
+    <P Name="Src">3152#out:1</P>
+    <P Name="Dst">2969#in:12</P>
+  </Line>
+  <Line>
+    <P Name="Name">EngDrv</P>
+    <P Name="ZOrder">15628</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">2918#out:2</P>
+    <P Name="Dst">3151#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">EngGen</P>
+    <P Name="ZOrder">15629</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">2918#out:1</P>
+    <P Name="Dst">3150#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15630</P>
+    <P Name="Src">3067#out:1</P>
+    <P Name="Dst">3504#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">Brake</P>
+    <P Name="ZOrder">15631</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">3109#out:1</P>
+    <P Name="Dst">2974#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15632</P>
+    <P Name="Src">2973#out:1</P>
+    <P Name="Dst">3109#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">AxleSpdRef</P>
+    <P Name="ZOrder">15633</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3505#out:1</P>
+    <P Name="Dst">2954#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">PowerSplit</P>
+    <P Name="ZOrder">15634</P>
+    <P Name="Labels">[0, 0]</P>
+    <P Name="Src">2190#out:1</P>
+    <P Name="Dst">2191#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15635</P>
+    <P Name="Src">2250#out:1</P>
+    <P Name="Dst">2190#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15636</P>
+    <P Name="Src">2251#out:1</P>
+    <P Name="Dst">2190#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15637</P>
+    <P Name="Src">2252#out:1</P>
+    <P Name="Dst">2190#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15638</P>
+    <P Name="Src">2916#out:1</P>
+    <P Name="Dst">2918#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">EngTrqCmd</P>
+    <P Name="ZOrder">15639</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">2918#out:3</P>
+    <P Name="Dst">2926#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">ChgLvl</P>
+    <P Name="ZOrder">15640</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3504#out:2</P>
+    <P Name="Dst">2880#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">DoMg2Regen</P>
+    <P Name="ZOrder">15641</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3504#out:3</P>
+    <P Name="Dst">2879#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15642</P>
+    <P Name="Src">2967#out:1</P>
+    <P Name="Dst">2918#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15643</P>
+    <P Name="Src">2412#out:1</P>
+    <P Name="Dst">2969#in:11</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15644</P>
+    <P Name="Src">2408#out:1</P>
+    <P Name="Dst">2969#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15645</P>
+    <P Name="Src">2909#out:1</P>
+    <P Name="Dst">2969#in:9</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15646</P>
+    <P Name="Src">2411#out:1</P>
+    <P Name="Dst">2969#in:10</P>
+  </Line>
+  <Line>
+    <P Name="Name">Driver</P>
+    <P Name="ZOrder">15647</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">2969#out:1</P>
+    <P Name="Dst">2970#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15648</P>
+    <P Name="Src">2972#out:1</P>
+    <P Name="Dst">2969#in:2</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15649</P>
+    <P Name="Src">3004#out:1</P>
+    <P Name="Dst">2918#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15650</P>
+    <P Name="Src">3003#out:1</P>
+    <P Name="Dst">2918#in:5</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15651</P>
+    <P Name="Src">3008#out:1</P>
+    <P Name="Dst">2918#in:3</P>
+  </Line>
+  <Line>
+    <P Name="Name">Mg1TrqCmd</P>
+    <P Name="ZOrder">15652</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">2918#out:4</P>
+    <P Name="Dst">2898#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15653</P>
+    <P Name="Src">3053#out:1</P>
+    <P Name="Dst">2969#in:3</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15654</P>
+    <P Name="Src">3054#out:1</P>
+    <P Name="Dst">2969#in:4</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15655</P>
+    <P Name="Src">3055#out:1</P>
+    <P Name="Dst">2969#in:7</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15656</P>
+    <P Name="Src">3056#out:1</P>
+    <P Name="Dst">2969#in:8</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15657</P>
+    <P Name="Src">3058#out:1</P>
+    <P Name="Dst">2969#in:6</P>
+  </Line>
+  <Line>
+    <P Name="Name">SOC</P>
+    <P Name="ZOrder">15658</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">3504#out:1</P>
+    <P Name="Dst">3057#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15663</P>
+    <P Name="Src">3192#out:3</P>
+    <P Name="Points">[41, 0]</P>
+    <Branch>
+      <P Name="ZOrder">15662</P>
+      <P Name="Points">[28, 0]</P>
+      <Branch>
+        <P Name="ZOrder">15661</P>
+        <P Name="Points">[0, 70]</P>
+        <P Name="Dst">3130#in:1</P>
+      </Branch>
+      <Branch>
+        <P Name="ZOrder">15660</P>
+        <P Name="Dst">3506#in:1</P>
+      </Branch>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">15659</P>
+      <P Name="Points">[0, 49; -85, 0; 0, 21]</P>
+      <P Name="Dst">2961#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15664</P>
+    <P Name="Src">3195#out:1</P>
+    <P Name="Dst">3192#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15665</P>
+    <P Name="Src">3068#out:1</P>
+    <P Name="Dst">3492#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">15666</P>
+    <P Name="Src">3192#out:2</P>
+    <P Name="Dst">3644#in:1</P>
+  </Line>
+  <Annotation SID="2187">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Arial&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#000000;&quot;&gt;Copyright 2021-2022 The MathWorks, Inc.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[-394, 483, -167, 499]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="BackgroundColor">automatic</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-166</P>
+  </Annotation>
   <Annotation SID="3237">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -5479,19 +5486,7 @@ p, li { white-space: pre-wrap; }
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="BackgroundColor">automatic</P>
     <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-869</P>
-  </Annotation>
-  <Annotation SID="2187">
-    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Arial&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px; color:#000000;&quot;&gt;Copyright 2021-2022 The MathWorks, Inc.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[-394, 483, -167, 499]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="BackgroundColor">automatic</P>
-    <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-870</P>
+    <P Name="ZOrder">-167</P>
   </Annotation>
 </System>
 
@@ -5808,7 +5803,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">1c1326c8-8e3c-43be-a3c7-67492addd3a2</P>
     </Object>
-    <P Name="BDUuid" Class="char">a00e19f1-2972-4e94-9aaa-c24802e171d1</P>
+    <P Name="BDUuid" Class="char">8d0243d7-93dc-457f-93b1-de3c5b6bbd71</P>
   </Object>
 </WindowsInfo>
 

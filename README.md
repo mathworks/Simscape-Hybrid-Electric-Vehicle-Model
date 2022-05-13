@@ -2,7 +2,7 @@
 
 [![View Hybrid Electric Vehicle Model in Simscape on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/92820-hybrid-electric-vehicle-model-in-simscape)
 
-Version 1.3
+Version 1.3 for MATLAB R2022a or newer
 
 ## Introduction
 
@@ -115,6 +115,12 @@ click **Add** button, and select **Save to MATLAB Drive**.
 ## Changes
 
 See [`ChangeLog.md`](ChangeLog.md) for changes in each version.
+
+## See Also
+
+- [Battery Electric Vehicle Model in Simscape][url-gh-bev]
+
+[url-gh-bev]: https://github.com/mathworks/Simscape-Battery-Electric-Vehicle-Model#readme
 
 ## License
 

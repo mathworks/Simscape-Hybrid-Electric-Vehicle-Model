@@ -1,5 +1,5 @@
-function Vehicle1D_plot_results(logsout)
-% Creates plots of simulation results
+function Vehicle1D_plotResults(logsout)
+%% Creates plots of simulation results
 
 % Copyright 2022 The MathWorks, Inc.
 
@@ -16,7 +16,7 @@ tl.Padding = 'tight';
 tl.TileIndexing = 'columnmajor';
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Axle Torque"));
+vals = getValuesFromLogsout(logsout.get("Axle Torque Input"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, "dy_threshold",0.2);
@@ -51,7 +51,7 @@ tl.Padding = 'tight';
 tl.TileIndexing = 'columnmajor';
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed"));
+vals = getValuesFromLogsout(logsout.get("Vehicle Speed km/h"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 setMinimumYRange(ax, vals.Data, "dy_threshold",2);

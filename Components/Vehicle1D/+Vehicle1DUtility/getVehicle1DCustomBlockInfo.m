@@ -1,5 +1,5 @@
 function info = getVehicle1DCustomBlockInfo(blk_gcbh)
-% Collects block parameter values from Vehicle 1D Custom block.
+%% Collects block parameter values from Vehicle 1D Custom block.
 % To use this function, make sure to select the block in Simulink canvas and
 % then pass gcbh to this function.
 

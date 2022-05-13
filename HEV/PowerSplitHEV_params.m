@@ -14,17 +14,30 @@ vehicle.roadLoadB_N_per_kph = 0;
 vehicle.roadLoadC_N_per_kph2 = 0.032;  % C = 0.5 * Cd * frontal_area * air_density
 vehicle.roadLoad_gravAccel_m_per_s2 = 9.81;
 
+smoothing.vehicle_speedThreshold_kph = 1;
+smoothing.vehicle_axleSpeedThreshold_rpm = 1;
+
+initial.vehicle_speed_kph = 0;
+
 %% High Voltage Battery
 
 batteryHighVoltage.nominalCapacity_kWh = 4;
 % batteryHighVoltage.nominalCapacity_kWh = 1;
 
 batteryHighVoltage.voltagePerCell_V = 3.7;  % 3.5V to 3.7V assuming Lithium-ion
+
 batteryHighVoltage.nominalCharge_Ah = ...
-  batteryHighVoltage.nominalCapacity_kWh / batteryHighVoltage.voltagePerCell_V * 1000;
+  batteryHighVoltage.nominalCapacity_kWh*1000 / batteryHighVoltage.voltagePerCell_V;
 
 batteryHighVoltage.packVoltage_V = 200;
-batteryHighVoltage.internal_R_Ohm = 0.1;
+
+% batteryHighVoltage.internal_R_Ohm = 0.1;
+batteryHighVoltage.internalResistance_Ohm = 0.1;
+
+initial.highVoltageBatterySOC_pct = 70;
+
+initial.hvBatteryCharge_Ah = ...
+  batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
 
 %% DC-DC Converter
 
@@ -52,6 +65,10 @@ powerSplit.planetary_frictions_Nm_per_rpm = [0.001, 0.001];  % Sun-Carrier, Plan
 powerSplit.planetary_planetGearInertia_kg_m2 = 0.001;
 powerSplit.planetary_ringInertia_kg_m2 = 0.001;
 
+smoothing.planetary_meshing_loss_thresholds_W = [10, 10];
+
+smoothing.gear_meshing_loss_threshold_W = 10;
+
 %% Motor-Generator 2
 
 motorGenerator2.trqMax_Nm = 165;
@@ -68,6 +85,10 @@ motorGenerator2.kDamp_Nm_per_radPerS = 0.005;
 motorGenerator2.dampSpringStiffness_Nm_per_rad = 10000;
 motorGenerator2.dampSpringFriction_Nm_per_rpm = 100;
 
+smoothing.mg2_dampSpringVelTol_rpm = 0.1;
+
+initial.motorGenerator2_speed_rpm = 0;
+
 %% Motor-Generator 1
 
 motorGenerator1.trqMax_Nm = 40;
@@ -83,6 +104,10 @@ motorGenerator1.rotorInertia_kg_m2 = 0.002;
 motorGenerator1.kDamp_Nm_per_radPerS = 0.005;
 motorGenerator1.dampSpringStiffness_Nm_per_rad = 10000;
 motorGenerator1.dampSpringFriction_Nm_per_rpm = 100;
+
+smoothing.mg1_dampSpringVelTol_rpm = 0.1;
+
+initial.motorGenerator1_speed_rpm = 0;
 
 %% Engine
 
@@ -102,33 +127,10 @@ engine.damping_Nm_per_rpm = 0.02;
 engine.dampSpringStiffness_Nm_per_rad = 10000;
 engine.dampSpringFriction_Nm_per_rpm = 100;
 
-%% Initial conditions
-% These are for plant only.
-% ICs for controller/driver are defined elsewhere.
+smoothing.engine_dampSpringVelTol_rpm = 0.1;
 
-initial.highVoltageBatterySOC_pct = 70;
-
-initial.hvBatteryCharge_Ah = ...
-  batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
-
-initial.vehicleSpeed_kph = 0;
-initial.motorGenerator2_speed_rpm = 0;
-initial.motorGenerator1_speed_rpm = 0;
 initial.engine_speed_rpm = 0;
 initial.engine_torque_Nm = 0;
-
-%% Simulation smoothing parameters
-
-smoothing.planetary_meshing_loss_thresholds_W = [10, 10];
-
-smoothing.gear_meshing_loss_threshold_W = 10;
-
-smoothing.vehicle_speed_threshold_kph = 1;
-smoothing.axle_speed_threshold_rpm = 1;
-
-smoothing.mg2_dampSpringVelTol_rpm = 0.1;
-smoothing.mg1_dampSpringVelTol_rpm = 0.1;
-smoothing.engine_dampSpringVelTol_rpm = 0.1;
 
 %% Parameters for Controller
 

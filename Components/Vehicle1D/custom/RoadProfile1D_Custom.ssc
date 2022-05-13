@@ -1,0 +1,81 @@
+component RoadProfile1D_Custom
+% Simple Road Grade Profile
+% This custom component defines road grade Gr at horizontal position x
+% for the Longitudianl Vehicle block.<br/>
+% <br/>
+% Road grade is defined as the ratio of vertical distance to horizontal distance.
+% In this block, the vertical distance dH at position x is computed as
+% a difference between the front axle height F and the rear axle height R,
+% i.e., dH(x) = F(x + L/2) - R(x - L/2),
+% where L is vehicle wheelbase.
+% Then the road grade Gr at x is computed as Gr = dH/L.
+% Corresponding angle is obtained by tanh(Gr).<br/>
+% <br/>
+% Height outside the horizontal position vector
+% is determined by extrapolated
+
+% Copyright 2022 The MathWorks, Inc.
+
+parameters
+  horizontalPosVec = { [-10, 0, 10] 'm' }  % Horizontal position vector
+  heightVec = { [0, 0, .25] 'm' }  % Height vector
+  wheelbase = { 3 'm' }  % Vehicle wheelbase
+end
+equations
+  assert(length(horizontalPosVec) >= 3)
+  assert(all(diff(horizontalPosVec) > 0))
+  assert(length(heightVec) == length(horizontalPosVec))
+  assert(wheelbase > 0)
+end
+
+outputs
+  % Road height at x
+  z_out = { 0 'm' }  % Z:right
+
+  % Horizontal position
+  x_out = { 0 'm' }  % X:right
+end
+
+inputs
+  % Vehicle longitudinal speed
+  S = { 0 'm/s' }  % Spd:right
+end
+
+outputs
+  % Normalized road grade
+  grade_norm = { 0 '1' }  % Gr:right
+end
+
+variables
+  x = { value={ 0 'm' }, priority=priority.high }  % Horizontal position
+end
+
+intermediates
+  % Horizontal position of front axle
+  x_front = x + wheelbase/2
+
+  % Horizontal position of rear axle
+  x_rear = x - wheelbase/2
+
+  % Height of front axle
+  height_f = tablelookup(horizontalPosVec, heightVec, x_front, ...
+              interpolation=smooth, extrapolation=nearest)
+
+  % Height of rear axle
+  height_r = tablelookup(horizontalPosVec, heightVec, x_rear, ...
+              interpolation=smooth, extrapolation=nearest)
+end
+
+intermediates
+  height = tablelookup(horizontalPosVec, heightVec, x, interpolation=smooth, extrapolation=nearest)
+  slope = (height_f - height_r)/wheelbase
+end
+
+equations
+  der(x) == S
+  grade_norm == max(-1, min(slope, 1))
+  x_out == x
+  z_out == height
+end
+
+end  % component

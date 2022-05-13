@@ -1,24 +1,16 @@
 classdef Vehicle1D_InputSignalBuilder < handle
-% Class implementation of Input Signal Builder
+%% Class implementation of Input Signal Builder
 
 % Copyright 2022 The MathWorks, Inc.
 
-% You can run this class by selecting the following code
-% and pressing the F9 key.
-%{
-vehicleInputData = Vehicle1D_InputSignalBuilder().Input_Constant;
-vehicleInput_Signals = vehicleInputData.Signals;
-vehicleInput_Bus = vehicleInputData.Bus;
-%}
-
 properties
-  % ### Signals
+  % Signals
 
   AxleTrq timetable
   BrakeForce timetable
   RoadGrade timetable
 
-  % ### Other properties
+  % Other properties
 
   FunctionName (1,1) string
   StopTime (1,1) duration
@@ -91,6 +83,9 @@ methods
       inpObj.ParentFigure = figure;  % Do not use 'Visible','on'
     end
 
+    % Show pattern name in the window title.
+    inpObj.ParentFigure.Name = inpObj.FunctionName;
+
     stk = stackedplot( inpObj.ParentFigure, syncedInputs );
     stk.LineWidth = inpObj.LineWidth;
     stk.GridVisible = 'on';
@@ -103,7 +98,7 @@ methods
 
     % Making the figure taller than the default plot window height can
     % make the top part of the window go outside the monitor screen.
-    % To prevent it, lower the x position of the window,
+    % To prevent it, lower the y position of the window,
     % assuming that lowering the window position is safer
     % because the visibility of the window top is more important
     % that of the window bottom.
@@ -115,10 +110,10 @@ methods
 
     if inpObj.SavePlot_tf
       exportgraphics(gca, inpObj.SavePlotImageFileName)
-    end  % if
+    end
   end  % function
 
-  %% Input Signal Patterns
+  %% Signal Patterns
 
   function signalData = Constant(inpObj, nvpairs)
   %%
@@ -128,9 +123,10 @@ methods
       nvpairs.AxleTorque_Const_Nm (1,1) {mustBeNonnegative} = 10
       nvpairs.BrakeForce_Const_N (1,1) {mustBeNonnegative} = 0
       nvpairs.RoadGrade_Const_pct (1,1) {mustBeInRange(nvpairs.RoadGrade_Const_pct, -50, 50)} = 0
+      nvpairs.InitialVehicleSpeed_kph (1,1) double = 0
     end
 
-    % Record the function name for convenience.
+    % Record the function name. This is used for the plot window title.
     ds = dbstack;
     thisFunctionFullName = ds(1).name;
     inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
@@ -152,14 +148,19 @@ methods
     end
 
     signalData = BundleSignals(inpObj);
+
+    signalData.Options.InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph;
+
   end  % function
 
   function signalData = Coastdown(inpObj, nvpairs)
   %%
     arguments
       inpObj
-      nvpairs.StopTime (1,1) duration = seconds(500)
+
       nvpairs.InitialVehicleSpeed_kph (1,1) double = 100
+
+      nvpairs.StopTime (1,1) duration = seconds(500)
       nvpairs.AxleTorque_Const_Nm (1,1) {mustBeNonnegative} = 0
       nvpairs.BrakeForce_Const_N (1,1) {mustBeNonnegative} = 0
       nvpairs.RoadGrade_Const_pct (1,1) {mustBeInRange(nvpairs.RoadGrade_Const_pct, -50, 50)} = 0
@@ -169,14 +170,15 @@ methods
     inpObj.Plot_tf = false;
 
     Constant(inpObj, ...
-      "StopTime", nvpairs.StopTime, ...
-      "AxleTorque_Const_Nm", nvpairs.AxleTorque_Const_Nm, ...
-      "BrakeForce_Const_N", nvpairs.BrakeForce_Const_N, ...
-      "RoadGrade_Const_pct", nvpairs.RoadGrade_Const_pct );
+      StopTime = nvpairs.StopTime, ...
+      InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph, ...
+      AxleTorque_Const_Nm = nvpairs.AxleTorque_Const_Nm, ...
+      BrakeForce_Const_N = nvpairs.BrakeForce_Const_N, ...
+      RoadGrade_Const_pct = nvpairs.RoadGrade_Const_pct );
 
     inpObj.Plot_tf = tmp;
 
-    % Record the function name for convenience.
+    % Record the function name. This is used for the plot window title.
     ds = dbstack;
     thisFunctionFullName = ds(1).name;
     inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
@@ -187,7 +189,7 @@ methods
 
     signalData = BundleSignals(inpObj);
 
-    signalData.Options.Coastdown.InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph;
+    signalData.Options.InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph;
 
   end  % function
 
@@ -195,6 +197,8 @@ methods
   %%
     arguments
       inpObj
+
+      nvpairs.InitialVehicleSpeed_kph (1,1) double = 0
 
       nvpairs.BrakeForce_1_N (1,1) {mustBeNonnegative} = 7000
       nvpairs.BrakeForce_2_N (1,1) {mustBeNonnegative} = 2000
@@ -211,7 +215,7 @@ methods
       nvpairs.AxleTorque_Const_Nm (1,1) {mustBeNonnegative} = 0
     end
 
-    % Record the function name for convenience.
+    % Record the function name. This is used for the plot window title.
     ds = dbstack;
     thisFunctionFullName = ds(1).name;
     inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
@@ -246,12 +250,17 @@ methods
     end
 
     signalData = BundleSignals(inpObj);
+
+    signalData.Options.InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph;
+
   end  % function
 
   function signalData = RoadGrade3(inpObj, nvpairs)
   %%
     arguments
       inpObj
+
+      nvpairs.InitialVehicleSpeed_kph (1,1) double = 0
 
       nvpairs.RoadGrade_1_pct (1,1) {mustBeInRange(nvpairs.RoadGrade_1_pct, -50, 50)} = 40
       nvpairs.RoadGrade_2_pct (1,1) {mustBeInRange(nvpairs.RoadGrade_2_pct, -50, 50)} = -40
@@ -273,7 +282,7 @@ methods
       nvpairs.AxleTorque_Const_Nm (1,1) {mustBeNonnegative} = 0
     end
 
-    % Record the function name for convenience.
+    % Record the function name. This is used for the plot window title.
     ds = dbstack;
     thisFunctionFullName = ds(1).name;
     inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
@@ -316,12 +325,17 @@ methods
     end
 
     signalData = BundleSignals(inpObj);
+
+    signalData.Options.InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph;
+
   end  % function
 
   function signalData = DriveAxle(inpObj, nvpairs)
   %%
     arguments
       inpObj
+
+      nvpairs.InitialVehicleSpeed_kph (1,1) double = 0
 
       nvpairs.AxleTorque_1_Nm (1,1) {mustBeNonnegative} = 1000
       nvpairs.AxleTorque_2_Nm (1,1) {mustBeNonnegative} = 1500
@@ -343,7 +357,7 @@ methods
       nvpairs.RoadGrade_Const_pct (1,1) {mustBeInRange(nvpairs.RoadGrade_Const_pct, -50, 50)} = 10
     end
 
-    % Record the function name for convenience.
+    % Record the function name. This is used for the plot window title.
     ds = dbstack;
     thisFunctionFullName = ds(1).name;
     inpObj.FunctionName = extractAfter(thisFunctionFullName, ".");
@@ -386,6 +400,9 @@ methods
     end
 
     signalData = BundleSignals(inpObj);
+
+    signalData.Options.InitialVehicleSpeed_kph = nvpairs.InitialVehicleSpeed_kph;
+
   end  % function
 
 end  % methods

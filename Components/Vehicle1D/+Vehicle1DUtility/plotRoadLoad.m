@@ -70,8 +70,8 @@ for i = 1 : numGrades
   hold on
 end
 grid on
-lgd = legend(legendStr, "Location","northeast");
-title(lgd, "Road grade")
+xlim([0 v_kph_colvec(end)])
+lgd = legend(legendStr, "Location","northeast");  title(lgd, "Road grade")
 xlabel("Vehicle Speed (km/hr)")
 ylabel("Resisting Force (N)")
 
@@ -82,8 +82,8 @@ for i = 1 : numGrades
   hold on
 end
 grid on
-lgd = legend(legendStr, "Location","northwest");
-title(lgd, "Road grade")
+xlim([0 v_kph_colvec(end)])
+lgd = legend(legendStr, "Location","northwest");  title(lgd, "Road grade")
 xlabel("Vehicle Speed (km/hr)")
 ylabel("Resisting Power (kW)")
 

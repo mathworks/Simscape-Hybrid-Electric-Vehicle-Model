@@ -9,14 +9,14 @@ end
 
 methods (Test)
 
-function blockParameters_Vehicle1DDriveline(testCase)
+function blockParameters_Vehicle1D_Driveline(testCase)
 %% Check that block parameters are properly set up
-% Vehicle1DDriveline_refsub is the default referenced subsystem.
+% Default referenced subsystem
 
   close all
   bdclose all
 
-  mdl = "Vehicle1DDriveline_refsub";
+  mdl = "Vehicle1D_refsub_Driveline";
   load_system(mdl)
 
   function verifyParameter(test_case, block_path, parameter_name, expected_variable, expected_unit)
@@ -46,22 +46,22 @@ function blockParameters_Vehicle1DDriveline(testCase)
 
   verifyParameter(testCase, blkpath, 'g', 'vehicle.roadLoad_gravAccel_m_per_s2', 'm/s^2')
 
-  verifyParameter(testCase, blkpath, 'V_1', 'smoothing.vehicle_speed_threshold_kph', 'km/hr')
+  verifyParameter(testCase, blkpath, 'V_1', 'smoothing.vehicle_speedThreshold_kph', 'km/hr')
 
-  verifyParameter(testCase, blkpath, 'w_1', 'smoothing.axle_speed_threshold_rpm', 'rpm')
+  verifyParameter(testCase, blkpath, 'w_1', 'smoothing.vehicle_axleSpeedThreshold_rpm', 'rpm')
 
-  verifyParameter(testCase, blkpath, 'V_x', 'initial.vehicleSpeed_kph', 'km/hr')
+  verifyParameter(testCase, blkpath, 'V_x', 'initial.vehicle_speed_kph', 'km/hr')
 
 end  % function
 
-function blockParameters_Vehicle1DCustom(testCase)
+function blockParameters_Vehicle1D_Custom(testCase)
 %% Check that block parameters are properly set
-% Vehicle1DCustom_refsub is an optional referenced subsystem.
+% Optional referenced subsystem
 
   close all
   bdclose all
 
-  mdl = "Vehicle1DCustom_refsub";
+  mdl = "Vehicle1D_refsub_Custom";
   load_system(mdl)
 
   function verifyParameter(test_case, block_path, parameter_name, expected_variable, expected_unit)
@@ -88,11 +88,11 @@ function blockParameters_Vehicle1DCustom(testCase)
 
   verifyParameter(testCase, blkpath, 'C_rl', 'vehicle.roadLoadC_N_per_kph2', 'N/(km/hr)^2')
 
-  verifyParameter(testCase, blkpath, 'V_1', 'smoothing.vehicle_speed_threshold_kph', 'km/hr')
+  verifyParameter(testCase, blkpath, 'V_1', 'smoothing.vehicle_speedThreshold_kph', 'km/hr')
 
-  verifyParameter(testCase, blkpath, 'w_1', 'smoothing.axle_speed_threshold_rpm', 'rpm')
+  verifyParameter(testCase, blkpath, 'w_1', 'smoothing.vehicle_axleSpeedThreshold_rpm', 'rpm')
 
-  verifyParameter(testCase, blkpath, 'V_x', 'initial.vehicleSpeed_kph', 'km/hr')
+  verifyParameter(testCase, blkpath, 'V_x', 'initial.vehicle_speed_kph', 'km/hr')
 
 end  % function
 
@@ -120,7 +120,7 @@ end  % function
 
 function block_info_script_1(testCase)
 %% Check that the block info script works.
-% This check is only for Vehicle1DCustom_refsub.
+% This check is only for the custom Vehicle-1D case.
 
   close all
   bdclose all
@@ -128,15 +128,15 @@ function block_info_script_1(testCase)
   mdl = testCase.modelName;
   load_system(mdl)
 
-  % Must set Vehicle1DCustom_refsub because it is not the default.
+  % Set the non-default referenced subsystem.
   set_param(mdl+"/Longitudinal Vehicle", ...
-    "ReferencedSubsystem", "Vehicle1DCustom_refsub")
+    ReferencedSubsystem = "Vehicle1D_refsub_Custom")
 
-  % Select subsystem
-  set_param(0, "CurrentSystem", mdl+"/Longitudinal Vehicle")
+  % Select subsystem.
+  set_param(0, CurrentSystem = mdl+"/Longitudinal Vehicle")
 
-  % Select block
-  set_param(gcs, "CurrentBlock", "Longitudinal Vehicle")
+  % Select block.
+  set_param(gcs, CurrentBlock = "Longitudinal Vehicle")
 
   % A proper block must be selected for this script to work.
   Vehicle1DUtility.reportVehicle1DCustomBlock
@@ -199,38 +199,6 @@ end  % function
 %% Test for Scripts
 % Check that scripts run without any warnings or errors.
 
-function run_report_script_1(~)
-  close all
-  bdclose all
-
-  % Vehicle1DDriveline is the default.
-  % This generates a PNG file.
-  Vehicle1DDriveline_reportBlockProperty
-
-  close all
-  bdclose all
-end
-
-function run_report_script_2(~)
-  close all
-  bdclose all
-
-  % Vehicle1DCustom is optional.
-  % This generates a PNG file.
-  Vehicle1DCustom_reportBlockProperty
-
-  close all
-  bdclose all
-end
-
-function run_testcase_1(~)
-  close all
-  bdclose all
-  Vehicle1D_testcase_Constant
-  close all
-  bdclose all
-end
-
 function run_testcase_2(~)
   close all
   bdclose all
@@ -270,6 +238,76 @@ function run_main_script_1(~)
   close all
   bdclose all
 end
+
+%% Test for harness model with non-default referenced subsystems
+
+function harness_with_non_default_refsub_1(testCase)
+%% Check that the harness model works with non-default referenced subsystems.
+
+  close all
+  bdclose all
+
+  mdl = testCase.modelName;
+  load_system(mdl)
+
+  % Set the non-default referenced subsystem.
+  set_param(mdl+"/Longitudinal Vehicle", ...
+    ReferencedSubsystem = "Vehicle1D_refsub_Custom")
+
+  % === Test API
+
+  % Select subsystem.
+  set_param(0, CurrentSystem = mdl+"/Longitudinal Vehicle")
+
+  % Select block.
+  set_param(gcs, CurrentBlock = "Longitudinal Vehicle")
+
+  block_info = Vehicle1DUtility.getVehicle1DCustomBlockInfo(gcbh);
+
+  Vehicle1DUtility.plotRoadLoad( ...
+        VehicleMass_kg = block_info.M_e_kg, ...
+        RoadLoadA_N = block_info.A_rl_N, ...
+        RoadLoadB_N_per_kph = block_info.B_rl_N_per_kph, ...
+        RoadLoadC_N_per_kph2 = block_info.C_rl_N_per_kph2, ...
+        GravitationalAcceleration_m_per_s2 = block_info.grav_m_per_s2, ...
+        VehicleSpeedVector_kph = linspace(0, 160, 200), ...
+        RoadGradeVector_pct = [30, 15, 0] );
+
+  % === Test basic simulation
+
+  vehSigBuilder = Vehicle1D_InputSignalBuilder;
+
+  inpData = Constant(vehSigBuilder);
+
+  simIn = Simulink.SimulationInput(mdl);
+  simIn = setModelParameter(simIn, "StopTime",num2str(inpData.Options.StopTime_s));
+  simIn = setVariable(simIn, "vehicle_InputSignals", inpData.Signals);
+  simIn = setVariable(simIn, "vehicle_InputBus", inpData.Bus);
+  simIn = setVariable(simIn, "initial.vehicle_speed_kph", ...
+            inpData.Options.InitialVehicleSpeed_kph);
+
+  v0 = inpData.Options.InitialVehicleSpeed_kph;
+
+  simIn = setBlockParameter(simIn, ...
+    mdl+"/Longitudinal Vehicle/Longitudinal Vehicle", "V_x", num2str(v0), ...
+    mdl+"/Longitudinal Vehicle/Longitudinal Vehicle", "V_x_unit", "km/hr", ...
+    mdl+"/Longitudinal Vehicle/Longitudinal Vehicle", "V_x_priority", "high");
+
+  % Run simulation
+  simOut = sim(simIn);
+
+  Vehicle1D_plotResults(simOut.logsout)
+
+  % === Test otehr simulations
+
+  Vehicle1D_testcase_Coastdown
+  Vehicle1D_testcase_DriveAxle
+  Vehicle1D_testcase_Brake3
+  Vehicle1D_testcase_RoadGrade3
+
+  close all
+  bdclose all
+end  % function
 
 end  % methods (Test)
 end  % classdef

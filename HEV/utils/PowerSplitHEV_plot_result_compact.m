@@ -13,7 +13,7 @@ end
 logsout = nvpairs.Dataset;
 parent = nvpairs.PlotParent;
 
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed"));
+vals = getValuesFromLogsout(logsout.get("Vehicle Speed km/h"));
 x_end = vals.Time(end);
 
 %% Plot
@@ -24,7 +24,7 @@ tl = tiledlayout(parent, 3, 3, ...
       'TileSpacing','compact', 'Padding','compact' );
 
 ax = nexttile(tl);
-vals = getValuesFromLogsout(logsout.get("Vehicle Speed"));
+vals = getValuesFromLogsout(logsout.get("Vehicle Speed km/h"));
 plot(ax, vals.Time, vals.Data, 'LineWidth',2)
 hold on;  grid on
 xlim([0 x_end])
