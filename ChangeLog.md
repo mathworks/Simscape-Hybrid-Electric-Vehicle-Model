@@ -3,6 +3,7 @@
 ## Version 1.4 - In Development
 
 *This version is in development and maybe broken* ;)
+*Line items below may be work in progress, too.*
 
 Features
 

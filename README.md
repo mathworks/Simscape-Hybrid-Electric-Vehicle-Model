@@ -64,16 +64,16 @@ This version requires
 and optionally
 [Parallel Computing Toolbox&trade;](https://www.mathworks.com/products/parallel-computing.html).
 
-Fork or clone the repository:
+Fork or clone the repository.
+Note that the repository may be ahead of the released version and
+potentially broken.
 
 - https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/tree/R2022a
 
-To download the archived project without Git repository data,
-use the download button in [File Exchange][url-fx]
-or [GitHub][url-gh].
+To download the released version without Git repository data,
+use the link below.
 
-[url-fx]:https://www.mathworks.com/matlabcentral/fileexchange/92820
-[url-gh]:https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model
+- https://github.com/mathworks/Simscape-Hybrid-Electric-Vehicle-Model/archive/refs/tags/v1.3.2.zip
 
 ## For MATLAB R2021a and R2021b
 
