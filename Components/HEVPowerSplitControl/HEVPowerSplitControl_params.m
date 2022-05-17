@@ -13,8 +13,8 @@ hevcontrol.brakeOffSpdDiff_kph = 0.01; % must be On-Speed > Off-Speed
 hevcontrol.brakeForceMax_N = 8000;
 hevcontrol.brakeRate_N_per_s = 1000;
 
-hevcontrol.hvbattNominalCapacity_kWh = batteryHighVoltage.nominalCapacity_kWh;
-hevcontrol.hvbattVoltagePerCell_V = batteryHighVoltage.voltagePerCell_V;
+hevcontrol.hvbattNominalCapacity_kWh = batteryHV.nominalCapacity_kWh;
+hevcontrol.hvbattVoltagePerCell_V = batteryHV.voltagePerCell_V;
 hevcontrol.hvbattSocHighMid_pct = 80;
 hevcontrol.hvbattSocMidLow_pct = 30;
 hevcontrol.hvbattSocLowEmpty_pct = 20;
@@ -54,7 +54,7 @@ hevcontrol.engKp = 15;
 % These are for controller/driver only.
 % ICs for plant are defined elsewhere.
 
-initial.controllerHVBattSOC_pct = initial.highVoltageBatterySOC_pct;
+initial.controllerHVBattSOC_pct = initial.hvBattery_SOC_pct;
 
 initial.driverBrakeForce_N = 8000;
 initial.driverBrakeOn_tf = true;

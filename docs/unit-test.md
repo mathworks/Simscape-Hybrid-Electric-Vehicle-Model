@@ -11,7 +11,13 @@ so that unit test for a component or a system can be done
 in an isolated manner.
 There is also a project-level unit test
 which automatically finds component-level and system-level
-unit tests and runs them all in one go.
+tests and runs them all in one go.
+
+As a first step of automatic testing,
+the tests run models and scripts just to check that they run without errors.
+The correctness of simulation results is not checked automatically.
+For now, live scripts in `testcases` folders are used
+to run simulations and visually inspect the plots of simulation results.
 
 The result of unit tests is stored in two ways.
 One is _a test summary in XML_.

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="BatteryHV_UnitTest" skipped="0" tests="15" time="74.7345">
+    <testcase classname="BatteryHV_UnitTest" name="blockParameters_BatteryHV_Basic" time="3.3807"/>
+    <testcase classname="BatteryHV_UnitTest" name="blockParameters_BatteryHV_Driveline" time="1.1485"/>
+    <testcase classname="BatteryHV_UnitTest" name="blockParameters_BatteryHV_Electrical" time="1.1694"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_harness_model_with_Basic_refsub" time="18.3021"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_harness_model_with_Driveline_refsub" time="3.6138"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_harness_model_with_Electrical_refsub" time="4.6024"/>
+    <testcase classname="BatteryHV_UnitTest" name="input_Constant" time="0.028722"/>
+    <testcase classname="BatteryHV_UnitTest" name="input_Charge" time="4.5499"/>
+    <testcase classname="BatteryHV_UnitTest" name="input_Discharge" time="0.64491"/>
+    <testcase classname="BatteryHV_UnitTest" name="input_LoadCurrentStep3" time="4.2239"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_testcase_Charge" time="7.3893"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_testcase_Discharge" time="5.3387"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_testcase_LoadCurrentStep3" time="4.4052"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_main_script_1" time="5.8708"/>
+    <testcase classname="BatteryHV_UnitTest" name="run_takeScreenshots" time="10.0663"/>
+  </testsuite>
+</testsuites>

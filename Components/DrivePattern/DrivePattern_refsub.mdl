@@ -44,8 +44,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2021-01-25T16:26:04Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-05-13T15:33:06Z</dcterms:modified>
-  <cp:revision>4.4</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-05-17T11:28:12Z</dcterms:modified>
+  <cp:revision>4.5</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -67,11 +67,11 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version information for MathWorks R2022a Release -->
 <MathWorks_version_info>
-  <version>9.12.0.1953994</version>
+  <version>9.12.0.1884302</version>
   <release>R2022a</release>
-  <description>Update 2</description>
-  <date>May 09 2022</date>
-  <checksum>2519067153</checksum>
+  <description></description>
+  <date>Feb 16 2022</date>
+  <checksum>915613965</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -113,8 +113,8 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">574360368</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:4.4&gt;</P>
+      <P Name="RTWModifiedTimeStamp">574690646</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:4.5&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ScheduleConnectors">off</P>
@@ -935,8 +935,8 @@ __MWOPC_PART_BEGIN__ /simulink/graphicalInterface.xml
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="c33efa3b-3dee-4c74-a776-be94b58e65ae">
-    <Interface type="Interface" uuid="5d33e4f7-d094-4e4c-a275-69e3cac92540"/>
+  <System type="System" uuid="38dd4899-cb26-4694-ab3c-1e604baf1254">
+    <Interface type="Interface" uuid="5d997c02-0820-4b47-906d-fb3ec0f7b428"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
@@ -948,16 +948,16 @@ __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="f912725d-1a8a-43fc-8e2a-aa7c55a6383f">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="1d4e7ac0-e4c8-4ad2-ae66-1e7f48327561">
     <editorState type="sltp.mm.core.EditorState" uuid="ce323d06-1543-4c70-b5b9-b40051411401">
       <panelState type="sltp.mm.core.EditorPanelState" uuid="e6d4c691-1c89-42ff-87c8-cb911059e7e2"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="0b3b6575-aeae-4a1a-9f54-37b4fd03c101">
-      <context type="sltp.mm.core.Context" uuid="f912725d-1a8a-43fc-8e2a-aa7c55a6383f"/>
+    <rootTask type="sltp.mm.core.Task" uuid="002963a8-ced3-456c-86b2-c3b83a8b9478">
+      <context type="sltp.mm.core.Context" uuid="1d4e7ac0-e4c8-4ad2-ae66-1e7f48327561"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="b8ad97ab-2691-4ff9-b3c1-20d2278c677e"/>
+      <subgraph type="sltp.mm.core.Graph" uuid="99838747-b1e6-40e8-9817-37d66daa6e2c"/>
     </rootTask>
   </sltp.mm.core.Context>
 </sltp_graph>
@@ -1021,25 +1021,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3656.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3657#out:1</P>
-    <P Name="Dst">3271#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
     <P Name="Src">3271#out:1</P>
     <P Name="Dst">3658#in:1</P>
   </Line>
-  <Annotation SID="3667">
-    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Outport has unit specified.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[100, 120, 264, 138]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-1</P>
-  </Annotation>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">3657#out:1</P>
+    <P Name="Dst">3271#in:1</P>
+  </Line>
   <Annotation SID="3668">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1049,18 +1038,29 @@ p, li { white-space: pre-wrap; }
     <P Name="Position">[-30, -41, 143, -23]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="3667">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Outport has unit specified.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[100, 120, 264, 138]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-2</P>
   </Annotation>
   <Connector>
-    <P Name="Annotation">3667</P>
-    <P Name="Target">Block:3658</P>
+    <P Name="Annotation">3668</P>
+    <P Name="Target">Block:3657</P>
     <P Name="MarkupType">model</P>
     <P Name="StrokeWidth">2</P>
     <P Name="Color">[0.000000, 0.000000, 0.700000]</P>
   </Connector>
   <Connector>
-    <P Name="Annotation">3668</P>
-    <P Name="Target">Block:3657</P>
+    <P Name="Annotation">3667</P>
+    <P Name="Target">Block:3658</P>
     <P Name="MarkupType">model</P>
     <P Name="StrokeWidth">2</P>
     <P Name="Color">[0.000000, 0.000000, 0.700000]</P>
@@ -1091,25 +1091,14 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3669.xml
   </Block>
   <Line>
     <P Name="ZOrder">1</P>
-    <P Name="Src">3670#out:1</P>
-    <P Name="Dst">3671#in:1</P>
-  </Line>
-  <Line>
-    <P Name="ZOrder">2</P>
     <P Name="Src">3671#out:1</P>
     <P Name="Dst">3672#in:1</P>
   </Line>
-  <Annotation SID="3673">
-    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Outport has unit specified.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[100, 120, 264, 138]</P>
-    <P Name="InternalMargins">[0, 0, 0, 0]</P>
-    <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-1</P>
-  </Annotation>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">3670#out:1</P>
+    <P Name="Dst">3671#in:1</P>
+  </Line>
   <Annotation SID="3674">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1117,6 +1106,17 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Inport has no unit specified.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
     <P Name="Position">[-30, -41, 143, -23]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
+  <Annotation SID="3673">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:14px;&quot;&gt;Outport has unit specified.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[100, 120, 264, 138]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-2</P>
@@ -1145,7 +1145,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">10940</P>
+  <P Name="SIDHighWatermark">15361</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="BusCreator" Name="Bus&#xA;Creator" SID="202">
     <P Name="Ports">[1, 1]</P>
@@ -1249,15 +1249,7 @@ Interpolate: %&lt;Interpolate&gt;</P>
       <P Name="Name">VehSpdRef</P>
     </Port>
   </Block>
-  <Block BlockType="SubSystem" Name="Unit Conversion" SID="3656">
-    <P Name="Ports">[1, 1]</P>
-    <P Name="Position">[415, 4, 455, 26]</P>
-    <P Name="ZOrder">26186</P>
-    <P Name="ShowPortLabels">none</P>
-    <P Name="RequestExecContextInheritance">off</P>
-    <System Ref="system_3656"/>
-  </Block>
-  <Block BlockType="SubSystem" Name="Unit Conversion1" SID="3669">
+  <Block BlockType="SubSystem" Name="To m/s 1" SID="3669">
     <P Name="Ports">[1, 1]</P>
     <P Name="Position">[415, 134, 455, 156]</P>
     <P Name="ZOrder">26189</P>
@@ -1265,55 +1257,63 @@ Interpolate: %&lt;Interpolate&gt;</P>
     <P Name="RequestExecContextInheritance">off</P>
     <System Ref="system_3669"/>
   </Block>
+  <Block BlockType="SubSystem" Name="To m/s 2" SID="3656">
+    <P Name="Ports">[1, 1]</P>
+    <P Name="Position">[415, 4, 455, 26]</P>
+    <P Name="ZOrder">26186</P>
+    <P Name="ShowPortLabels">none</P>
+    <P Name="RequestExecContextInheritance">off</P>
+    <System Ref="system_3656"/>
+  </Block>
   <Block BlockType="Outport" Name="DrvPtn" SID="42">
     <P Name="Position">[745, 73, 775, 87]</P>
     <P Name="ZOrder">26177</P>
     <P Name="NameLocation">right</P>
   </Block>
   <Line>
-    <P Name="ZOrder">568</P>
-    <P Name="Src">3132#out:1</P>
-    <P Name="Dst">3131#in:2</P>
+    <P Name="Name">VehSpdRef</P>
+    <P Name="ZOrder">576</P>
+    <P Name="Labels">[-1, 0]</P>
+    <P Name="Src">3131#out:1</P>
+    <P Name="Points">[95, 0]</P>
+    <P Name="Dst">202#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">569</P>
-    <P Name="Src">36#out:1</P>
-    <P Name="Dst">2#in:1</P>
+    <P Name="ZOrder">577</P>
+    <P Name="Src">3669#out:1</P>
+    <P Name="Dst">3131#in:3</P>
   </Line>
   <Line>
-    <P Name="ZOrder">570</P>
-    <P Name="Src">202#out:1</P>
-    <P Name="Dst">42#in:1</P>
+    <P Name="ZOrder">578</P>
+    <P Name="Src">3#out:1</P>
+    <P Name="Dst">3669#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">579</P>
+    <P Name="Src">3656#out:1</P>
+    <P Name="Dst">3131#in:1</P>
   </Line>
   <Line>
     <P Name="Name">&lt;VehSpd&gt;</P>
-    <P Name="ZOrder">571</P>
+    <P Name="ZOrder">580</P>
     <P Name="Labels">[0, 0]</P>
     <P Name="Src">2#out:1</P>
     <P Name="Dst">3656#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">572</P>
-    <P Name="Src">3656#out:1</P>
-    <P Name="Dst">3131#in:1</P>
+    <P Name="ZOrder">581</P>
+    <P Name="Src">202#out:1</P>
+    <P Name="Dst">42#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">573</P>
-    <P Name="Src">3#out:1</P>
-    <P Name="Dst">3669#in:1</P>
+    <P Name="ZOrder">582</P>
+    <P Name="Src">36#out:1</P>
+    <P Name="Dst">2#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">574</P>
-    <P Name="Src">3669#out:1</P>
-    <P Name="Dst">3131#in:3</P>
-  </Line>
-  <Line>
-    <P Name="Name">VehSpdRef</P>
-    <P Name="ZOrder">575</P>
-    <P Name="Labels">[-1, 0]</P>
-    <P Name="Src">3131#out:1</P>
-    <P Name="Points">[95, 0]</P>
-    <P Name="Dst">202#in:1</P>
+    <P Name="ZOrder">583</P>
+    <P Name="Src">3132#out:1</P>
+    <P Name="Dst">3131#in:2</P>
   </Line>
   <Annotation SID="145">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1324,7 +1324,7 @@ p, li { white-space: pre-wrap; }
     <P Name="Position">[386, 219, 613, 235]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-117</P>
+    <P Name="ZOrder">-1859</P>
   </Annotation>
 </System>
 
@@ -1387,7 +1387,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">2c858eae-fcd2-41ed-83ed-82c8e2dff8c6</P>
     </Object>
-    <P Name="BDUuid" Class="char">8c0b43b6-a14e-49f2-8f30-8c3cf747d57a</P>
+    <P Name="BDUuid" Class="char">76c6ac9e-0cdd-40fa-9ca3-fc7be306f79f</P>
   </Object>
 </WindowsInfo>
 

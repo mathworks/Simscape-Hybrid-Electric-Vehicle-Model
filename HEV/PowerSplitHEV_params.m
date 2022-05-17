@@ -3,6 +3,21 @@
 
 % Copyright 2021-2022 The MathWorks, Inc.
 
+%% Load bus defition
+
+defineBus_HighVoltage
+
+%% Ambient
+% These parameters are used when thermal model is enabled
+% somewhere in the model, such as in the Battery component.
+% These are not used by the Basic version of the referenced subsystems.
+
+ambient.mass_t = 10000;  % tonnes
+ambient.SpecificHeat_J_per_Kkg = 1000;
+ambient.temp_K = 273.15 + 20;
+
+initial.ambientTemp_K = ambient.temp_K;
+
 %% Vehicle
 
 % Curb weight + fuel + load
@@ -21,23 +36,42 @@ initial.vehicle_speed_kph = 0;
 
 %% High Voltage Battery
 
-batteryHighVoltage.nominalCapacity_kWh = 4;
-% batteryHighVoltage.nominalCapacity_kWh = 1;
+% **Essential**
+batteryHV.nominalVoltage_V = 200;
+batteryHV.internalResistance_Ohm = 0.01;
+batteryHV.nominalCapacity_kWh = 25;
+batteryHV.voltagePerCell_V = 3.7;  % Open Circuit Voltage. 3.5V to 3.7V assuming Lithium-ion
 
-batteryHighVoltage.voltagePerCell_V = 3.7;  % 3.5V to 3.7V assuming Lithium-ion
+batteryHV.nominalCharge_Ahr = ...
+  batteryHV.nominalCapacity_kWh / batteryHV.nominalVoltage_V * 1000;
 
-batteryHighVoltage.nominalCharge_Ah = ...
-  batteryHighVoltage.nominalCapacity_kWh*1000 / batteryHighVoltage.voltagePerCell_V;
+% Assertion block stops simulation with this bound.
+% batteryHV_SOC_LowerBound_pct = 2;
 
-batteryHighVoltage.packVoltage_V = 200;
+% Initial conditions
+initial.hvBattery_SOC_pct = 70;
+initial.hvBattery_Charge_Ahr = batteryHV.nominalCharge_Ahr * initial.hvBattery_SOC_pct/100;
 
-% batteryHighVoltage.internal_R_Ohm = 0.1;
-batteryHighVoltage.internalResistance_Ohm = 0.1;
+% **Finite Capacity Battery**
+% At SOC 50%, voltage is 90% of the nominal.
+batteryHV.measuredCharge_Ahr = batteryHV.nominalCharge_Ahr * 0.5;
+batteryHV.measuredVoltage_V = batteryHV.nominalVoltage_V * 0.9;
 
-initial.highVoltageBatterySOC_pct = 70;
+batteryHV.RadiationArea_m2 = 1;
+batteryHV.RadiationCoeff_W_per_K4m2 = 5e-10;
 
-initial.hvBatteryCharge_Ah = ...
-  batteryHighVoltage.nominalCharge_Ah * initial.highVoltageBatterySOC_pct/100;
+batteryHV.thermalMass_kJ_per_K = 0.1;
+
+initial.hvBattery_Temperature_K = ambient.temp_K;
+
+% **More Thermal model parameters**
+% These parameters are used when thermal model is enabled
+% in the Battery block from Simscape Electrical.
+batteryHV.measurementTemperature_K = 273.15 + 25;
+batteryHV.secondMeasurementTemperature_K = 273.15 + 0;
+batteryHV.secondNominalVoltage_V = batteryHV.nominalVoltage_V * 0.95;
+batteryHV.secondInternalResistance_Ohm = batteryHV.internalResistance_Ohm * 2;
+batteryHV.secondMeasuredVoltage_V = batteryHV.nominalVoltage_V * 0.9;
 
 %% DC-DC Converter
 

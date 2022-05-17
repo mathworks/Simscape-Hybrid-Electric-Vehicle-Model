@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="PowerSplitHEV_UnitTest" skipped="0" tests="3" time="48.5475">
-    <testcase classname="PowerSplitHEV_UnitTest" name="run_system_model_1" time="17.2348"/>
-    <testcase classname="PowerSplitHEV_UnitTest" name="run_report_script_1" time="7.7054"/>
-    <testcase classname="PowerSplitHEV_UnitTest" name="run_main_script_1" time="23.6073"/>
+  <testsuite errors="0" failures="0" name="PowerSplitHEV_UnitTest" skipped="0" tests="3" time="63.1216">
+    <testcase classname="PowerSplitHEV_UnitTest" name="run_system_model_1" time="30.6949"/>
+    <testcase classname="PowerSplitHEV_UnitTest" name="run_report_script_1" time="8.7219"/>
+    <testcase classname="PowerSplitHEV_UnitTest" name="run_main_script_1" time="23.7048"/>
   </testsuite>
 </testsuites>

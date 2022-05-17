@@ -1,0 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Info Type="StartUp" Visible="0" Icon="" File="Interface/defineBus_HighVoltage.m" Name="defineBus_HighVoltage">
+    <Extension Value="f8d4c57f-73c0-406f-991e-1e9067e2ab7c" Name="StartUpPrev"/>
+</Info>

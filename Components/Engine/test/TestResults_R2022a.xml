@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="Engine_UnitTest" skipped="0" tests="10" time="31.2496">
-    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_1" time="0.64261"/>
-    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_2" time="0.63711"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_1" time="2.7799"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_1" time="2.7953"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_2" time="2.6737"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_1" time="4.9592"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_1" time="5.0277"/>
-    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_2" time="4.2105"/>
-    <testcase classname="Engine_UnitTest" name="plot_script_1" time="1.0022"/>
-    <testcase classname="Engine_UnitTest" name="run_main_script_1" time="6.5215"/>
+  <testsuite errors="0" failures="0" name="Engine_UnitTest" skipped="0" tests="10" time="33.7294">
+    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_1" time="2.7584"/>
+    <testcase classname="Engine_UnitTest" name="defaultReferencedSubsystem_2" time="0.89764"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_1" time="3.3632"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_1" time="2.7705"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessSimple_2_2" time="2.7483"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_1" time="4.8235"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_1" time="4.692"/>
+    <testcase classname="Engine_UnitTest" name="run_harnessPowerSplit_2_2" time="4.0925"/>
+    <testcase classname="Engine_UnitTest" name="plot_script_1" time="1.5003"/>
+    <testcase classname="Engine_UnitTest" name="run_main_script_1" time="6.0832"/>
   </testsuite>
 </testsuites>

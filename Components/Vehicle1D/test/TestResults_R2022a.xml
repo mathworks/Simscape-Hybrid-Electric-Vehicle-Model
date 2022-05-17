@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="14" time="57.6171">
-    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1D_Driveline" time="0.51159"/>
-    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1D_Custom" time="0.33999"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="2.999"/>
-    <testcase classname="Vehicle1D_UnitTest" name="block_info_script_1" time="1.9506"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.053888"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="0.67061"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="0.3772"/>
-    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="1.928"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="3.8612"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="3.4191"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="3.099"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.4115"/>
-    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="20.5542"/>
-    <testcase classname="Vehicle1D_UnitTest" name="harness_with_non_default_refsub_1" time="14.4413"/>
+  <testsuite errors="0" failures="0" name="Vehicle1D_UnitTest" skipped="0" tests="14" time="89.775">
+    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1D_Driveline" time="0.63126"/>
+    <testcase classname="Vehicle1D_UnitTest" name="blockParameters_Vehicle1D_Custom" time="0.66725"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_harness_model_1" time="3.0129"/>
+    <testcase classname="Vehicle1D_UnitTest" name="block_info_script_1" time="2.115"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Constant" time="0.069076"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_Brake3" time="0.62379"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_RoadGrade3" time="0.32875"/>
+    <testcase classname="Vehicle1D_UnitTest" name="input_DriveAxle" time="1.765"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_2" time="4.652"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_3" time="3.227"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_4" time="3.3797"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_testcase_5" time="3.2412"/>
+    <testcase classname="Vehicle1D_UnitTest" name="run_main_script_1" time="52.1709"/>
+    <testcase classname="Vehicle1D_UnitTest" name="harness_with_non_default_refsub_1" time="13.8911"/>
   </testsuite>
 </testsuites>

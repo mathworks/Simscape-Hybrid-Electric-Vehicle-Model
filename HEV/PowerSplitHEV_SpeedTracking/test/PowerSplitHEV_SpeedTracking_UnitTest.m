@@ -24,19 +24,19 @@ function setReferencedSubsystems(testCase)
   load_system(mdl)
 
   set_param( mdl + "/Controller & Environment", ...
-    "ReferencedSubsystem", "PowerSplitHEV_SpeedTracking_refsub");
+    ReferencedSubsystem = "PowerSplitHEV_SpeedTracking_refsub");
 
   set_param( mdl + "/High Voltage Battery", ...
-    "ReferencedSubsystem", "BatteryHVElec_refsub");
+    ReferencedSubsystem = "BatteryHV_refsub_Basic");
 
   set_param( mdl + "/DC-DC Converter", ...
-    "ReferencedSubsystem", "DcDcConverterElec_refsub");
+    ReferencedSubsystem = "DcDcConverterElec_refsub");
 
   set_param( mdl + "/Power Split Drive Unit", ...
-    "ReferencedSubsystem", "PowerSplitDriveUnitBasic_refsub");
+    ReferencedSubsystem = "PowerSplitDriveUnitBasic_refsub");
 
   set_param( mdl + "/Longitudinal Vehicle", ...
-    "ReferencedSubsystem", "Vehicle1DDriveline_refsub");
+    ReferencedSubsystem = "Vehicle1D_refsub_Driveline");
 
   save_system(mdl)
 
@@ -60,7 +60,7 @@ function openAndRun_1(testCase)
   load_system(mdl)
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, StopTime=num2str(t_end));
   sim(simIn);
 
   close all
@@ -81,19 +81,19 @@ function openAndRun_2_1(testCase)
   load_system(mdl)
 
   set_param(mdl+"/High Voltage Battery", ...
-    "ReferencedSubsystem", "BatteryHVBasic_refsub")
+    ReferencedSubsystem = "BatteryHV_refsub_Basic")
 
   set_param(mdl+"/DC-DC Converter", ...
-    "ReferencedSubsystem", "DcDcConverterBasic_refsub")
+    ReferencedSubsystem = "DcDcConverterBasic_refsub")
 
   set_param(mdl+"/Power Split Drive Unit/Engine", ...
-    "ReferencedSubsystem", "EngineBasic_refsub")
+    ReferencedSubsystem = "EngineBasic_refsub")
 
   set_param(mdl+"/Longitudinal Vehicle", ...
-    "ReferencedSubsystem", "Vehicle1DCustom_refsub")
+    ReferencedSubsystem = "Vehicle1D_refsub_Custom")
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, StopTime=num2str(t_end));
   sim(simIn);
 
   close all
@@ -114,16 +114,16 @@ function openAndRun_2_2(testCase)
   load_system(mdl)
 
   set_param(mdl+"/High Voltage Battery", ...
-    "ReferencedSubsystem", "BatteryHVElec_refsub")
+    ReferencedSubsystem = "BatteryHV_refsub_Electrical")
 
   set_param(mdl+"/DC-DC Converter", ...
-    "ReferencedSubsystem", "DcDcConverterElec_refsub")
+    ReferencedSubsystem = "DcDcConverterElec_refsub")
 
   set_param(mdl+"/Power Split Drive Unit/Engine", ...
-    "ReferencedSubsystem", "EngineCustom_refsub")
+    ReferencedSubsystem = "EngineCustom_refsub")
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, StopTime=num2str(t_end));
   sim(simIn);
 
   close all

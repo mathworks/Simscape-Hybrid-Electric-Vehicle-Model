@@ -23,7 +23,7 @@ function run_system_model_1(testCase)
   load_system(mdl)
 
   simIn = Simulink.SimulationInput(mdl);
-  simIn = setModelParameter(simIn, "StopTime",num2str(t_end));
+  simIn = setModelParameter(simIn, StopTime=num2str(t_end));
 
   sim(simIn);
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <testsuites>
-  <testsuite errors="0" failures="0" name="PowerSplitDriveUnit_UnitTest" skipped="0" tests="10" time="112.0458">
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_1" time="9.7236"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_1" time="10.0598"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_2" time="9.0989"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_main_script_1" time="18.4382"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_1" time="10.976"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_2" time="10.8664"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_3" time="10.6615"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_4" time="10.8422"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_5" time="10.6351"/>
-    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_6" time="10.744"/>
+  <testsuite errors="0" failures="0" name="PowerSplitDriveUnit_UnitTest" skipped="0" tests="10" time="107.6921">
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_1" time="10.1492"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_1" time="9.1998"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_harness_model_2_2" time="8.4142"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_main_script_1" time="18.031"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_1" time="10.3758"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_2" time="9.9485"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_3" time="10.1889"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_4" time="10.417"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_5" time="10.6482"/>
+    <testcase classname="PowerSplitDriveUnit_UnitTest" name="run_script_6" time="10.3194"/>
   </testsuite>
 </testsuites>

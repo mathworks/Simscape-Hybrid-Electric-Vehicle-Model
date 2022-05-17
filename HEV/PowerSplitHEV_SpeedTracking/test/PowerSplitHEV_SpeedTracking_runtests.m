@@ -8,7 +8,7 @@ RelStr = matlabRelease().Release;
 disp("This is MATLAB " + RelStr)
 
 ComponentName = "PowerSplitHEV_SpeedTracking";
-
+  
 PrjRoot = currentProject().RootFolder;
 
 TopFolder = fullfile(PrjRoot, "HEV", "PowerSplitHEV_SpeedTracking");

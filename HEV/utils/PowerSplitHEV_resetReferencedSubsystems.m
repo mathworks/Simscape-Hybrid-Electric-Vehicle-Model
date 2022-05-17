@@ -10,21 +10,46 @@ end
 
 load_system(modelName)
 
+refSubName = "PowerSplitHEV_SpeedTracking_refsub";
+checkModelFileExists(refSubName)
 set_param( modelName + "/Controller & Environment", ...
-  "ReferencedSubsystem", "PowerSplitHEV_SpeedTracking_refsub");
+  ReferencedSubsystem = refSubName);
 
+refSubName = "BatteryHV_refsub_Electrical";
+checkModelFileExists(refSubName)
 set_param( modelName + "/High Voltage Battery", ...
-  "ReferencedSubsystem", "BatteryHVElec_refsub");
+  ReferencedSubsystem = refSubName);
 
+refSubName = "DcDcConverterElec_refsub";
+checkModelFileExists(refSubName)
 set_param( modelName + "/DC-DC Converter", ...
-  "ReferencedSubsystem", "DcDcConverterElec_refsub");
+  ReferencedSubsystem = refSubName);
 
+refSubName = "PowerSplitDriveUnitBasic_refsub";
+checkModelFileExists(refSubName)
 set_param( modelName + "/Power Split Drive Unit", ...
-  "ReferencedSubsystem", "PowerSplitDriveUnitBasic_refsub");
+  ReferencedSubsystem = refSubName);
 
+refSubName = "Vehicle1D_refsub_Driveline"; 
+checkModelFileExists(refSubName)
 set_param( modelName + "/Longitudinal Vehicle", ...
-  "ReferencedSubsystem", "Vehicle1DDriveline_refsub");
+  ReferencedSubsystem = refSubName);
 
 save_system(modelName)
+
+end  % function
+
+function checkModelFileExists(modelName)
+
+arguments
+  % File extension (.mdl or .slx) is not necessary.
+  modelName {mustBeTextScalar}
+end
+
+pathToFile = which(modelName);
+
+if isempty(pathToFile)
+  error("Model not found: " + modelName)
+end
 
 end  % function

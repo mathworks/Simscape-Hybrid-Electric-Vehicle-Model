@@ -44,8 +44,8 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2020-07-02T15:36:37Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-05-13T16:31:18Z</dcterms:modified>
-  <cp:revision>5.21</cp:revision>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-05-14T12:01:27Z</dcterms:modified>
+  <cp:revision>5.22</cp:revision>
   <cp:version>R2022a</cp:version>
 </cp:coreProperties>
 
@@ -67,11 +67,11 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Version information for MathWorks R2022a Release -->
 <MathWorks_version_info>
-  <version>9.12.0.1953994</version>
+  <version>9.12.0.1884302</version>
   <release>R2022a</release>
-  <description>Update 2</description>
-  <date>May 09 2022</date>
-  <checksum>2519067153</checksum>
+  <description></description>
+  <date>Feb 16 2022</date>
+  <checksum>915613965</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -118,8 +118,8 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="RTWModifiedTimeStamp">574363871</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.21&gt;</P>
+      <P Name="RTWModifiedTimeStamp">574434060</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:5.22&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ScheduleConnectors">off</P>
@@ -1160,8 +1160,8 @@ Converter</P>
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2020b_20191110">
-  <System type="System" uuid="2418bf03-7479-48b5-a0e5-e3d89ec98442">
-    <Interface type="Interface" uuid="ac183327-c9d0-4786-b6bb-8fc20d7c457e"/>
+  <System type="System" uuid="0f41f7de-3abe-46ab-8221-4cb4486e773d">
+    <Interface type="Interface" uuid="32cdba9c-6cdc-4452-add5-8b479cbcafa5"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
@@ -1173,16 +1173,16 @@ __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2021b_202106150630">
-  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="57a6ead7-19cf-4525-a54f-b0ffb87adc63">
+  <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="ad0fb5bb-667b-4275-b417-2d3b74453515">
     <editorState type="sltp.mm.core.EditorState" uuid="f5a79810-fea5-4788-a7a7-fcf4a9849af5">
       <panelState type="sltp.mm.core.EditorPanelState" uuid="397064b4-82cc-492a-94ea-e1592177aac8"/>
     </editorState>
-    <rootTask type="sltp.mm.core.Task" uuid="aefc338c-7485-4e08-b941-d7384c407c05">
-      <context type="sltp.mm.core.Context" uuid="57a6ead7-19cf-4525-a54f-b0ffb87adc63"/>
+    <rootTask type="sltp.mm.core.Task" uuid="3b0fa900-7a6b-430a-a1ee-552248113a29">
+      <context type="sltp.mm.core.Context" uuid="ad0fb5bb-667b-4275-b417-2d3b74453515"/>
       <explicit>false</explicit>
       <name>Default</name>
       <priority>-2147483648</priority>
-      <subgraph type="sltp.mm.core.Graph" uuid="e12ff64f-c213-42fa-a129-f3cfdc382e95"/>
+      <subgraph type="sltp.mm.core.Graph" uuid="d47137e6-f436-4c3f-8638-11beddb0936b"/>
     </rootTask>
   </sltp.mm.core.Context>
 </sltp_graph>
@@ -1647,7 +1647,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
   <P Name="SetExecutionDomain">off</P>
   <P Name="ExecutionDomainType">Deduce</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">11067</P>
+  <P Name="SIDHighWatermark">12510</P>
   <P Name="SimulinkSubDomain">Simulink</P>
   <Block BlockType="Inport" Name="In Bus Element1" SID="2142">
     <P Name="Position">[-15, 45, -5, 55]</P>
@@ -1806,7 +1806,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
     </Port>
   </Block>
   <Block BlockType="From" Name="From8" SID="3790">
-    <P Name="Position">[490, 237, 535, 253]</P>
+    <P Name="Position">[465, 237, 510, 253]</P>
     <P Name="ZOrder">26315</P>
     <P Name="GotoTag">Info</P>
   </Block>
@@ -2008,7 +2008,7 @@ Priority: %&lt;V_x_priority&gt;</P>
   </Block>
   <Block BlockType="SubSystem" Name="Measurement" SID="3794">
     <P Name="Ports">[1]</P>
-    <P Name="Position">[555, 220, 760, 270]</P>
+    <P Name="Position">[530, 220, 780, 270]</P>
     <P Name="ZOrder">26305</P>
     <P Name="RequestExecContextInheritance">off</P>
     <P Name="ReferencedSubsystem">Vehicle1D_measurement_refsub_logging</P>
@@ -2101,7 +2101,7 @@ Converter</P>
     </InstanceData>
   </Block>
   <Block BlockType="CallbackButton" Name="Plot Vehicle Properties" SID="3748">
-    <P Name="Position">[-10, 190, 40, 220]</P>
+    <P Name="Position">[-55, 200, -5, 230]</P>
     <P Name="ZOrder">26230</P>
     <P Name="NameLocation">right</P>
     <P Name="HideAutomaticName">off</P>
@@ -2211,219 +2211,219 @@ Converter</P>
     <P Name="ZOrder">26316</P>
   </Block>
   <Line LineType="Connection">
-    <P Name="ZOrder">2921</P>
-    <P Name="Src">3746#rconn:1</P>
-    <P Name="Points">[2, 0]</P>
+    <P Name="ZOrder">16397</P>
+    <P Name="Src">3209#lconn:1</P>
+    <P Name="Points">[-21, 0; 0, 55]</P>
+    <Branch ConnectType="DEST_DEST">
+      <P Name="Src">3746#rconn:1</P>
+      <P Name="Points">[2, 0]</P>
+    </Branch>
     <Branch ConnectType="DEST_SRC">
       <P Name="Dst">1#lconn:1</P>
     </Branch>
-    <Branch ConnectType="DEST_DEST">
-      <P Name="Src">3209#lconn:1</P>
-      <P Name="Points">[-21, 0; 0, 55]</P>
-    </Branch>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">17916</P>
+    <P Name="ZOrder">17954</P>
     <P Name="Src">4#rconn:1</P>
     <P Name="Dst">3751#lconn:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">17917</P>
+    <P Name="ZOrder">17955</P>
     <P Name="Src">3746#rconn:2</P>
     <P Name="Dst">2#lconn:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">17918</P>
+    <P Name="ZOrder">17956</P>
     <P Name="Src">3746#lconn:2</P>
     <P Name="Points">[0, -29]</P>
     <P Name="Dst">2140#rconn:1</P>
   </Line>
   <Line>
     <P Name="Name">Brake Force (N)</P>
-    <P Name="ZOrder">17921</P>
+    <P Name="ZOrder">17959</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">2142#out:1</P>
     <P Name="Points">[99, 0]</P>
     <Branch>
-      <P Name="ZOrder">17920</P>
+      <P Name="ZOrder">17958</P>
       <P Name="Points">[0, -25]</P>
       <P Name="Dst">3452#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">17919</P>
+      <P Name="ZOrder">17957</P>
       <P Name="Dst">2140#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">17922</P>
+    <P Name="ZOrder">17960</P>
     <P Name="Src">3751#out:1</P>
     <P Name="Points">[0, -10]</P>
     <P Name="Dst">3750#in:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">17923</P>
+    <P Name="ZOrder">17961</P>
     <P Name="Src">3751#rconn:1</P>
     <P Name="Dst">3746#lconn:1</P>
   </Line>
   <Line LineType="Connection">
-    <P Name="ZOrder">17924</P>
+    <P Name="ZOrder">17962</P>
     <P Name="Src">3746#lconn:3</P>
     <P Name="Points">[0, -129]</P>
     <P Name="Dst">3775#rconn:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17925</P>
+    <P Name="ZOrder">17963</P>
     <P Name="Src">3770#out:1</P>
     <P Name="Points">[35, 0]</P>
     <P Name="Dst">3773#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17926</P>
+    <P Name="ZOrder">17964</P>
     <P Name="Src">3771#out:1</P>
     <P Name="Points">[35, 0]</P>
     <P Name="Dst">3774#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17927</P>
+    <P Name="ZOrder">17965</P>
     <P Name="Src">2#out:1</P>
     <P Name="Dst">3778#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17928</P>
+    <P Name="ZOrder">17966</P>
     <P Name="Src">1#out:1</P>
     <P Name="Dst">3777#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17929</P>
+    <P Name="ZOrder">17967</P>
     <P Name="Src">3209#out:1</P>
     <P Name="Dst">3776#in:1</P>
   </Line>
   <Line>
     <P Name="Name">HorPos</P>
-    <P Name="ZOrder">17930</P>
+    <P Name="ZOrder">17968</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3791#out:1</P>
     <P Name="Dst">3779#in:1</P>
   </Line>
   <Line>
     <P Name="Name">VehSpdKPH</P>
-    <P Name="ZOrder">17931</P>
+    <P Name="ZOrder">17969</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3785#out:1</P>
     <P Name="Dst">3779#in:5</P>
   </Line>
   <Line>
     <P Name="Name">&lt;AxleTrq&gt;</P>
-    <P Name="ZOrder">17932</P>
+    <P Name="ZOrder">17970</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3780#out:1</P>
     <P Name="Dst">3779#in:9</P>
   </Line>
   <Line>
     <P Name="Name">Height</P>
-    <P Name="ZOrder">17933</P>
+    <P Name="ZOrder">17971</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3783#out:1</P>
     <P Name="Dst">3779#in:8</P>
   </Line>
   <Line>
     <P Name="Name">&lt;AxleSpd&gt;</P>
-    <P Name="ZOrder">17934</P>
+    <P Name="ZOrder">17972</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3780#out:2</P>
     <P Name="Dst">3779#in:10</P>
   </Line>
   <Line>
     <P Name="Name">BrakeForce</P>
-    <P Name="ZOrder">17935</P>
+    <P Name="ZOrder">17973</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3784#out:1</P>
     <P Name="Dst">3779#in:4</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17936</P>
+    <P Name="ZOrder">17974</P>
     <P Name="Src">3788#out:1</P>
     <P Name="Dst">3795#in:1</P>
   </Line>
   <Line>
     <P Name="Name">VehSpdMPH</P>
-    <P Name="ZOrder">17937</P>
+    <P Name="ZOrder">17975</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3789#out:1</P>
     <P Name="Dst">3779#in:6</P>
   </Line>
   <Line>
     <P Name="Name">Incline</P>
-    <P Name="ZOrder">17938</P>
+    <P Name="ZOrder">17976</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3782#out:1</P>
     <P Name="Dst">3779#in:3</P>
   </Line>
   <Line>
     <P Name="Name">&lt;AxlePwr&gt;</P>
-    <P Name="ZOrder">17939</P>
+    <P Name="ZOrder">17977</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3780#out:3</P>
     <P Name="Dst">3779#in:11</P>
   </Line>
   <Line>
     <P Name="Name">Grade</P>
-    <P Name="ZOrder">17940</P>
+    <P Name="ZOrder">17978</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3787#out:1</P>
     <P Name="Dst">3779#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17943</P>
+    <P Name="ZOrder">17981</P>
     <P Name="Src">3779#out:1</P>
     <P Name="Points">[13, 0]</P>
     <Branch>
-      <P Name="ZOrder">17942</P>
+      <P Name="ZOrder">17980</P>
       <P Name="Points">[0, 40]</P>
       <P Name="Dst">3793#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">17941</P>
+      <P Name="ZOrder">17979</P>
       <P Name="Dst">3800#in:1</P>
     </Branch>
   </Line>
   <Line>
-    <P Name="ZOrder">17944</P>
+    <P Name="ZOrder">17982</P>
     <P Name="Src">3790#out:1</P>
     <P Name="Dst">3794#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17945</P>
+    <P Name="ZOrder">17983</P>
     <P Name="Src">3781#out:1</P>
     <P Name="Dst">3780#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17946</P>
+    <P Name="ZOrder">17984</P>
     <P Name="Src">3795#out:1</P>
     <P Name="Dst">3792#in:1</P>
   </Line>
   <Line>
     <P Name="Name">GForce</P>
-    <P Name="ZOrder">17947</P>
+    <P Name="ZOrder">17985</P>
     <P Name="Labels">[1, 1]</P>
     <P Name="Src">3786#out:1</P>
     <P Name="Dst">3779#in:7</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17948</P>
+    <P Name="ZOrder">17986</P>
     <P Name="Src">3801#out:1</P>
     <P Name="Dst">3802#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">17951</P>
+    <P Name="ZOrder">17989</P>
     <P Name="Src">3802#out:1</P>
     <P Name="Points">[21, 0]</P>
     <Branch>
-      <P Name="ZOrder">17950</P>
+      <P Name="ZOrder">17988</P>
       <P Name="Dst">3775#in:1</P>
     </Branch>
     <Branch>
-      <P Name="ZOrder">17949</P>
+      <P Name="ZOrder">17987</P>
       <P Name="Points">[0, -30]</P>
       <P Name="Dst">3772#in:1</P>
     </Branch>
@@ -2437,7 +2437,7 @@ p, li { white-space: pre-wrap; }
     <P Name="Position">[227, 274, 454, 290]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
-    <P Name="ZOrder">-165</P>
+    <P Name="ZOrder">-1255</P>
   </Annotation>
 </System>
 
@@ -2532,7 +2532,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">c9547b93-6186-4af6-90e8-27432ca8acbd</P>
     </Object>
-    <P Name="BDUuid" Class="char">e030fd43-b445-408a-a83d-1c40c9f10466</P>
+    <P Name="BDUuid" Class="char">c56487b8-c129-4328-8dd3-3a72e5024608</P>
   </Object>
 </WindowsInfo>
 

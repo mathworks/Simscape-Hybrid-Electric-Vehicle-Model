@@ -1,6 +1,28 @@
 # Change Log
 
-## Version 1.3 (2022)
+## Version 1.4 - In Development
+
+*This version is in development and maybe broken* ;)
+
+Features
+
+- Simulink Connection Bus for Simscape,
+  which was newly introduced in R2021b,
+  is used to define high-voltage line connection for Simscape Bus.
+  Connection Bus definition makes the use of Simscape Bus more robust.
+
+Models
+
+- High-voltage battery component has two new referenced subsystems,
+  and now there are 3 models.
+  First one is a simple iosthermal model as included from the first release.
+  Second one (new in this version) uses System-Level Battery block
+  from Simscape Driveline, and it can simulate battery temeprature.
+  Third one (new in this version) uses Battery block
+  from Simscape Electrical, and it can simulate more
+  battery characteristics such as fade.
+
+## Version 1.3 (April, 2022)
 
 MATLAB Release
 
@@ -24,7 +46,7 @@ GitHub Repository
 - GitHub Pages is enabled:
   https://mathworks.github.io/Simscape-Hybrid-Electric-Vehicle-Model/
 
-## Version 1.2 (2022)
+## Version 1.2 (April, 2022)
 
 MATLAB Release
 
@@ -102,7 +124,7 @@ Other updates
 
 - Refactored many folders, models, and scripts.
 
-## Version 1.1 (2021)
+## Version 1.1 (November, 2021)
 
 MATLAB Release
 
@@ -120,3 +142,7 @@ Highlights
     showing the workflow as well as real-time application.
     - Real-Time application presented in the video will be added
       to this project in future updates.
+
+## Version 1.0 (May, 2021)
+
+Initial release.
