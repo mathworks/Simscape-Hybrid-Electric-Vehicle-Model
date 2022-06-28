@@ -1,16 +1,15 @@
 # Change Log
 
-## Version 1.4 - In Development
-
-*This version is in development and maybe broken* ;)
-*Line items below may be work in progress, too.*
+## Version 1.4
 
 Features
 
 - Simulink Connection Bus for Simscape,
   which was newly introduced in R2021b,
-  is used to define high-voltage line connection for Simscape Bus.
+  is used to define high-voltage line connection
+  for Simscape Bus block.
   Connection Bus definition makes the use of Simscape Bus more robust.
+  See the `interface` folder for the definition.
 
 Models
 
