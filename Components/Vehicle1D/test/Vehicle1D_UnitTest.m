@@ -11,12 +11,12 @@ methods (Test)
 
 function blockParameters_Vehicle1D_Driveline(testCase)
 %% Check that block parameters are properly set up
-% Default referenced subsystem
+% Test using the default referenced subsystem.
 
   close all
   bdclose all
 
-  mdl = "Vehicle1D_refsub_Driveline";
+  mdl = "Vehicle1D_refsub_Driveline";  % Default refsub
   load_system(mdl)
 
   function verifyParameter(test_case, block_path, parameter_name, expected_variable, expected_unit)
@@ -56,12 +56,12 @@ end  % function
 
 function blockParameters_Vehicle1D_Custom(testCase)
 %% Check that block parameters are properly set
-% Optional referenced subsystem
+% Test using an optional referenced subsystem.
 
   close all
   bdclose all
 
-  mdl = "Vehicle1D_refsub_Custom";
+  mdl = "Vehicle1D_refsub_Custom";  % Optional refsub
   load_system(mdl)
 
   function verifyParameter(test_case, block_path, parameter_name, expected_variable, expected_unit)
@@ -162,7 +162,7 @@ end  % function
 function input_Brake3(~)
 % Make a plot.
   close all
-  builder = Vehicle1D_InputSignalBuilder('Plot_tf',true);
+  builder = Vehicle1D_InputSignalBuilder(Plot_tf=true);
   data = Brake3(builder);
   data.Signals;
   data.Bus;
@@ -173,7 +173,7 @@ end  % function
 function input_RoadGrade3(~)
 % Make a plot.
   close all
-  builder = Vehicle1D_InputSignalBuilder('Plot_tf',true);
+  builder = Vehicle1D_InputSignalBuilder(Plot_tf=true);
   data = RoadGrade3(builder);
   data.Signals;
   data.Bus;
@@ -184,7 +184,7 @@ end  % function
 function input_DriveAxle(~)
 % Make a plot and save it as PNG file.
   close all
-  builder = Vehicle1D_InputSignalBuilder('Plot_tf',true);
+  builder = Vehicle1D_InputSignalBuilder(Plot_tf=true);
   builder.VisiblePlot_tf = false;
   builder.SavePlot_tf = true;  % Save
   data = DriveAxle(builder);
@@ -298,7 +298,7 @@ function harness_with_non_default_refsub_1(testCase)
 
   Vehicle1D_plotResults(simOut.logsout)
 
-  % === Test otehr simulations
+  % === Test other simulations
 
   Vehicle1D_testcase_Coastdown
   Vehicle1D_testcase_DriveAxle
