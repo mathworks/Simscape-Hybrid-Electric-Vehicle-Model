@@ -1,5 +1,24 @@
 # Change Log
 
+_Copyright 2021-2023 The MathWorks, Inc._
+
+## Version 2.1
+
+- High voltage battery component has been updated to use the one developed
+  for [Battery Electric Vehicle model][utl-gh-bev].
+
+- All model files have been saved in R2023a.
+
+[url-gh-bev]: https://github.com/mathworks/Simscape-Battery-Electric-Vehicle-Model
+
+## Version 2.0
+
+- The project has been upgraded to MATLAB R2023a.
+- A shortcut button to open [MATLAB Test Manager][url-mltestmgr] is added to
+  the Project Shortcut tab in the toolstrip.
+
+[url-mltestmgr]: https://www.mathworks.com/help/matlab-test/ref/matlabtestmanager-app.html
+
 ## Version 1.6
 
 - Signal Source Block Library (`Utility` > `SignalDesigner` folder)

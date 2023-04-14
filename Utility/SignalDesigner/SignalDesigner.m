@@ -6,7 +6,7 @@ classdef SignalDesigner < handle
 properties
   % Signal specifications
 
-  Type {mustBeMember(Type, ["step", "continuous", "timedstep", "timedcontinuous"])} = "step"
+  Type {mustBeMember(Type, ["PieceWiseConstant", "ContinuousMultiStep", "Continuous"])} = "PieceWiseConstant"
 
   Title {mustBeTextScalar} = ""
   Description {mustBeTextScalar} = ""
@@ -24,9 +24,6 @@ properties
   % For continuous data
   DeltaX (1,1) double {mustBePositive} = 0.1
 
-  % For timed data
-  XDurationHandle (1,1) function_handle = @seconds
-
   % Properties for saving signal spec
   SpecFilename {mustBeTextScalar} = ""
   XSaveFormat {mustBeTextScalar} = "%0.2f"
@@ -36,9 +33,6 @@ properties
 
   TransformedData table
   Data table
-
-  % For timed data
-  TimedData timetable
 
   % For continous data
   XRefined (:,1) double
@@ -55,15 +49,15 @@ function sigObj = SignalDesigner(SignalType)
 %%
 
 arguments
-  SignalType {mustBeMember(SignalType, ["step", "continuous", "timedstep", "timedcontinuous"])} = "step"
+  SignalType {mustBeMember(SignalType, ["PieceWiseConstant", "ContinuousMultiStep", "Continuous"])} = "PieceWiseConstant"
 end
 
 sigObj.Type = SignalType;
 
-if sigObj.Type == "step" || sigObj.Type == "timedstep"
-  sigObj.XYData = [ 0 1 ; 1 2 ; 2 0 ; 3 0 ];
-else  % continuous or timedcontinuous
-  sigObj.XYData = [ 0 1 1 ; 2 3 2 ];
+if sigObj.Type == "PieceWiseConstant" || sigObj.Type == "Continuous"
+  sigObj.XYData = [ 0 0 ; 1 0 ];
+else  % ContinuousMultiStep
+  sigObj.XYData = [ 0 1 0 ];
 end
 
 update(sigObj);
@@ -78,28 +72,25 @@ arguments
   sigObj (1,1) SignalDesigner
 end
 
-if sigObj.Type == "timedstep" || sigObj.Type == "timedcontinuous"
-  % X variable is set to Time.
-  sigObj.XName = "Time";
-  sigObj.XVarName = "Time";
+switch sigObj.Type
 
-  % Use seconds for the default unit of time.
-  sigObj.XUnit = "s";
-  sigObj.XDurationHandle = @seconds;
-end
+case "ContinuousMultiStep"
 
-if sigObj.Type == "step" || sigObj.Type == "timedstep"
-  % sigObj.Data = transformDataPoints(sigObj, sigObj.XYData);
+  sigObj.TransformedData = transformDataPoints(sigObj, sigObj.XYData);
+  sigObj.InterpolatedData = interpolateDataPoints(sigObj, sigObj.TransformedData);
+  sigObj.Data = eliminateRedundantDataPoints(sigObj, sigObj.InterpolatedData);
+
+case "PieceWiseConstant"
 
   % Check X data points
   xPoints = sigObj.XYData(:, 1);
   assert( issorted(xPoints, "strictascend"), ...
-    "SignalDesigner: X must be strictly asending.")
+    "X must be strictly asending.")
 
   % Check Y data points
   yPoints = sigObj.XYData(:, 2);
   assert( all(not(isnan(yPoints))), ...
-    "SignalDesigner: Y start data points cannot have NaN.")
+    "Y data cannot have NaN.")
 
   % Build data
   newData = table(xPoints, yPoints);
@@ -107,12 +98,43 @@ if sigObj.Type == "step" || sigObj.Type == "timedstep"
   newData.Properties.VariableUnits = [sigObj.XUnit, sigObj.YUnit];
   sigObj.Data = newData;
 
-else  % continuous or timedcontinuous
-  sigObj.TransformedData = transformDataPoints(sigObj, sigObj.XYData);
-  sigObj.InterpolatedData = interpolateDataPoints(sigObj, sigObj.TransformedData);
-  sigObj.Data = eliminateRedundantDataPoints(sigObj, sigObj.InterpolatedData);
+case "Continuous"
 
-end  % if
+  dx = sigObj.DeltaX;
+
+  % Check X data points
+  xPoints = sigObj.XYData(:, 1);
+  assert( numel(xPoints) >= 2 , ...
+    "Only one row is defined, but Continuous signal type requires at least 2 rows.")
+  assert( issorted(xPoints, "strictascend"), ...
+    "X must be strictly asending.")
+
+  % Check that delta x makes sense for interpolation.
+  min_diff_x = min(diff(xPoints));
+  assert(dx <= min_diff_x/2, ...
+    "Interpolation step size dx must be smaller than or equal to the half of mininum value of diff(X)." ...
+    + newline + "dx/2 = " + dx + " " ...
+    + newline + "min(diff(x)) = " + min_diff_x/2 )
+
+  % Check Y data points
+  yPoints = sigObj.XYData(:, 2);
+  assert( all(not(isnan(yPoints))), ...
+    "Y data cannot have NaN.")
+
+  % Build data
+  x_refined = transpose(xPoints(1) : dx : xPoints(end));
+  if abs(x_refined(end) - xPoints(end)) > 10*eps
+    x_refined(end + 1) = xPoints(end);
+  end
+  y_refined = interp1(xPoints, yPoints, x_refined, "makima");
+  sigObj.InterpolatedData = table(x_refined, y_refined);
+  sigObj.InterpolatedData.Properties.VariableNames = [sigObj.XVarName sigObj.YVarName];
+  sigObj.InterpolatedData.Properties.VariableUnits = [sigObj.XUnit sigObj.YUnit];
+  sigObj.Data = sigObj.InterpolatedData;
+  sigObj.XRefined = x_refined;
+  sigObj.YRefined = y_refined;
+
+end  % switch
 
 end  % function
 
@@ -122,12 +144,14 @@ function fig = plotDataPoints(sigObj, nvpairs)
 
 arguments
   sigObj (1,1) SignalDesigner
-  nvpairs.SimplePlot (1,1) logical = true
+
+  % Debug=true shows intermediate points
+  nvpairs.Debug (1,1) logical = false
 end
 
 update(sigObj);
 
-plotMore = not(nvpairs.SimplePlot);
+plotMoreForDebug = nvpairs.Debug;
 
 fig = figure;
 fig.Position(3:4) = [800 400];
@@ -139,28 +163,27 @@ if sigObj.Title ~= ""
   title(sigObj.Title)
 end
 
-if sigObj.Type == "step" || sigObj.Type == "timedstep"
-  st = stairs(sigObj.Data, sigObj.XVarName, sigObj.YVarName);
-  st.LineWidth = 2;
+switch sigObj.Type
 
-  sc = scatter(sigObj.Data, sigObj.XVarName, sigObj.YVarName);
-  sc.Marker = "o";
-  sc.SizeData = 36*2;
-  sc.LineWidth = 2;
+case "ContinuousMultiStep"
 
-  legend(["Generated signal trace", "User data"], Location="best")
+  if plotMoreForDebug
 
-else  % continuous or timedcontinuous
-  if plotMore
-    % Simply interpolated points
-    sc = scatter(sigObj.InterpolatedData.(sigObj.XVarName), sigObj.InterpolatedData.(sigObj.YVarName), 36*1);
-    sc.Marker = "x";
-    sc.LineWidth = 1;
+    % Generated trace
+    plot(sigObj.Data.(sigObj.XVarName), sigObj.Data.(sigObj.YVarName), LineWidth=1);
 
-    % Interpolated points without redundancy
+    % Final data points ... interpolated, no redundancy in data points
     sc = scatter(sigObj.Data.(sigObj.XVarName), sigObj.Data.(sigObj.YVarName), 36*3);
     sc.Marker = "+";
     sc.LineWidth = 1.5;
+
+    % Interpolated points
+    % There may not exist interpolated data points.
+    if height(sigObj.InterpolatedData) >= 1
+      sc = scatter(sigObj.InterpolatedData.(sigObj.XVarName), sigObj.InterpolatedData.(sigObj.YVarName), 36*2);
+      sc.Marker = "x";
+      sc.LineWidth = 2;
+    end
 
     % User data
     lix = sigObj.TransformedData.Added == false;  % logical index
@@ -170,8 +193,14 @@ else  % continuous or timedcontinuous
     sc.Marker = "o";
     sc.LineWidth = 2;
 
-    legend(["Interpolated", "Final data", "User data"], Location="best")
-  else
+    if height(sigObj.InterpolatedData) >= 1
+      legend(["Generated trace", "Final data points", "Interpolated", "Data points"], Location="best")
+    else
+      legend(["Generated trace", "Final data points", "Data points"], Location="best")
+    end
+
+  else  % not debug
+
     % Interpolated points without redundancy
     plot(sigObj.Data.(sigObj.XVarName), sigObj.Data.(sigObj.YVarName), LineWidth=2);
 
@@ -183,10 +212,64 @@ else  % continuous or timedcontinuous
     sc.Marker = "o";
     sc.LineWidth = 2;
 
-    legend(["Generated signal trace", "Data points"], Location="best")
-  end
+    legend(["Generated trace", "Data points"], Location="best")
+  end  % if
 
-end  % if
+case "PieceWiseConstant"
+
+  st = stairs(sigObj.Data, sigObj.XVarName, sigObj.YVarName);
+  st.LineWidth = 2;
+
+  sc = scatter(sigObj.Data, sigObj.XVarName, sigObj.YVarName);
+  sc.Marker = "o";
+  sc.SizeData = 36*2;
+  sc.LineWidth = 2;
+
+  legend(["Generated trace", "Data points"], Location="best")
+
+case "Continuous"
+
+  if plotMoreForDebug
+
+    % Generated trace
+    plot(sigObj.Data.(sigObj.XVarName), sigObj.Data.(sigObj.YVarName), LineWidth=1);
+
+    % Interpolated points
+    sc = scatter(sigObj.InterpolatedData.(sigObj.XVarName), sigObj.InterpolatedData.(sigObj.YVarName), 36*2);
+    sc.Marker = "x";
+    sc.LineWidth = 2;
+
+    % User data
+    xPoints = sigObj.XYData(:, 1);
+    yPoints = sigObj.XYData(:, 2);
+    sc = scatter(xPoints, yPoints, 36*1.5);
+    sc.Marker = "o";
+    sc.SizeData = 36*2;
+    sc.LineWidth = 2;
+
+    if height(sigObj.InterpolatedData) >= 1
+      legend(["Generated trace", "Interpolated", "Data points"], Location="best")
+    else
+      legend(["Generated trace", "Data points"], Location="best")
+    end
+
+  else  % not debug
+
+    % Generated trace
+    plot(sigObj.Data.(sigObj.XVarName), sigObj.Data.(sigObj.YVarName), LineWidth=2);
+
+    % User data
+    xPoints = sigObj.XYData(:, 1);
+    yPoints = sigObj.XYData(:, 2);
+    sc = scatter(xPoints, yPoints, 36*1.5);
+    sc.Marker = "o";
+    sc.LineWidth = 2;
+
+    legend(["Generated trace", "Data points"], Location="best")
+  end  % if
+
+
+end  % switch
 
 xLabelStr = sigObj.XName;
 if sigObj.Data.Properties.VariableUnits(1) ~= "1"
@@ -226,7 +309,7 @@ signalSpec.YVarName = sigObj.YVarName;
 signalSpec.YUnit = sigObj.YUnit;
 signalSpec.XSaveFormat = sigObj.XSaveFormat;
 signalSpec.YSaveFormat = sigObj.YSaveFormat;
-if sigObj.Type == "continuous" || sigObj.Type == "timedcontinuous"
+if sigObj.Type == "ContinuousMultiStep" || sigObj.Type == "Continuous"
   signalSpec.DeltaX = sigObj.DeltaX;
 end
 signalSpec.XYData = sigObj.XYData;
@@ -239,12 +322,12 @@ jsonStr = string(jsonencode(signalSpec, PrettyPrint=true));
 % The code below combine those lines to a more compact yet readable style.
 jsonStrFirstPart = extractBefore(jsonStr, newline + whitespacePattern + "[" + newline) + newline;
 
-if sigObj.Type == "step" || sigObj.Type == "timedstep"
+if sigObj.Type == "PieceWiseConstant" || sigObj.Type == "Continuous"
   ptn = whitespacePattern + "[" + newline ...
     + whitespacePattern + digitsPattern + "," + newline ... x
     + whitespacePattern + digitsPattern + newline;   % y
 
-else
+else  % ContinuousMultiStep
   ptn = whitespacePattern + "[" + newline ...
     + whitespacePattern + digitsPattern + "," + newline ... x1
     + whitespacePattern + (digitsPattern | caseInsensitivePattern("null")) + "," + newline ... x2
@@ -298,7 +381,7 @@ sigObj.YVarName = string(specStruct.YVarName);
 sigObj.YUnit = string(specStruct.YUnit);
 sigObj.SpecFilename = string(SpecFilename);
 
-if sigObj.Type == "continuous" || sigObj.Type == "timedcontinuous"
+if sigObj.Type == "ContinuousMultiStep" || sigObj.Type == "Continuous"
  sigObj.DeltaX = specStruct.DeltaX;
 end
 
@@ -334,62 +417,6 @@ fclose(fid);
 end  % function
 
 
-function timedData = buildTimedData(sigObj, data)
-%% Builds timetable data from table data.
-
-arguments
-  sigObj (1,1) SignalDesigner
-  data table
-end
-
-assert( sigObj.Type ~= "step", ...
-  "SignalDesigner: Signal of type step cannot be converted to timed data." )
-
-assert( sigObj.Type ~= "continuous", ...
-  "SignalDesigner: Signal of type continuous cannot be converted to timed data." )
-
-timeVector = sigObj.XDurationHandle( data.(sigObj.XVarName) );
-
-timedData = timetable( data.(sigObj.YVarName), RowTime = timeVector );
-
-timedData.Properties.VariableNames(1) = sigObj.YVarName;
-timedData.Properties.VariableUnits(1) = sigObj.YUnit;
-
-% Variable continuity is specific to timetable. Table does not have it.
-if sigObj.Type == "timedstep"
-  timedData.Properties.VariableContinuity = "step";
-else
-  timedData.Properties.VariableContinuity = "continuous";
-end
-
-end  % function
-
-
-function [dataStruct, dataBus] = setupForFromWorkspaceBlock(sigObj)
-%% Sets up variables for use in From Workspace block in Simulink
-
-arguments
-  sigObj (1,1) SignalDesigner
-end
-
-assert( sigObj.Type ~= "step", ...
-  "SignalDesigner: Signal of type step cannot be converted to timed data." )
-
-assert( sigObj.Type ~= "continuous", ...
-  "SignalDesigner: Signal of type continuous cannot be converted to timed data." )
-
-sigObj.TimedData = buildTimedData(sigObj, sigObj.Data );
-
-dataStruct.(sigObj.YVarName) = sigObj.TimedData;
-
-dataBus = Simulink.Bus;
-dataBus.Elements = Simulink.BusElement;
-dataBus.Elements(1).Name = sigObj.TimedData.Properties.VariableNames{1};
-dataBus.Elements(1).Unit = sigObj.TimedData.Properties.VariableUnits{1};
-
-end  % function
-
-
 function result = transformDataPoints(~, xyData)
 %% Transforms compact xy-data points to a format suitable for processing
 % Converts a row in [x1 x2 y] format into [x1 y; x2 y] format.
@@ -413,14 +440,14 @@ numInputRows = height(xyData);
 xPoints = xyData(:, [1 2]);
 
 assert(issorted(xPoints(:,1), "strictascend"), ...
-  "SignalDesigner: X start vector must be strictly asending.")
+  "X start vector must be strictly asending.")
 
 tmpVec = xPoints(:,2);
 lix = not(isnan(tmpVec));  % logical index
 if any(lix)
   tmpVec = tmpVec(lix);
   assert(issorted(tmpVec, "strictascend"), ...
-    "SignalDesigner: X end vector must be strictly asending.")
+    "X end vector must be strictly asending.")
 
   dx = xPoints(:,2) - xPoints(:,1);
 
@@ -429,7 +456,7 @@ if any(lix)
   violating = not(cond_dx_is_nan | cond_dx_is_pos);
   lix = find(violating);  % logical index
   assert(isempty(lix), ...
-    "SignalDesigner: X start is after X end, which is invalid, at these rows: " + num2str(lix'));
+    "X start is after X end, which is invalid, at these rows: " + num2str(lix'));
 
 end  % if
 
@@ -438,7 +465,7 @@ end  % if
 yPoints = xyData(:, 3);
 
 assert(all( not(isnan( yPoints )) ), ...
-  "SignalDesigner: Y start data points cannot have NaN.")
+  "Y data cannot have NaN.")
 
 % Build data
 
@@ -493,7 +520,7 @@ end  % for
 transformedData(end).Refine = false;
 
 dx = diff([transformedData.X]);
-assert(all(dx > 0), "SignalDesigner: X data points are not strictly ascending.")
+assert(all(dx > 0), "X data points are not strictly ascending.")
 
 result = struct2table(transformedData);
 
@@ -516,13 +543,24 @@ x_delta = sigObj.DeltaX;
 % Check that delta x makes sense for interpolation.
 % This check must be made in interpolating segments only.
 indices = find(transformedData.Refine == true);
+
+if isempty(indices)
+  result = table(Size=[0, 2], VariableTypes=["double", "double"]);
+  return  % <======================================================= RETURN
+end
+
 nextElementIndices = indices + 1;
-x_refine = transformedData.X;
-dx = x_refine(nextElementIndices) - x_refine(indices);
+xPoints = transformedData.X;
+dx = xPoints(nextElementIndices) - xPoints(indices);
 assert(x_delta <= min(dx)/2, ...
-  "SignalDesigner: Delta X must be smaller than the half of min(dx) in interpolating segments.")
+  "Delta X must be smaller than the half of min(dx) in interpolating segments." ...
+  + newline + "Delta X = " + x_delta + " " ...
+  + newline + "min(dx)/2 = " + min(dx)/2 )
 
 x_refined = transpose(x_1 : x_delta : x_end);
+if abs(x_refined(end) - x_end) > 10*eps
+  x_refined(end + 1) = x_end;
+end
 
 y_refined = interp1(transformedData.X, transformedData.Y, x_refined, "makima");
 
@@ -551,7 +589,7 @@ newData.Properties.VariableNames = [sigObj.XVarName sigObj.YVarName];
 newData.Properties.VariableUnits = [sigObj.XUnit sigObj.YUnit];
 
 idx = 1;
-while idx < height(sigObj.TransformedData) - 1
+while idx < height(sigObj.TransformedData)
 
   if sigObj.TransformedData.Refine(idx) == true
     % Use interpolated points.
@@ -580,8 +618,7 @@ while idx < height(sigObj.TransformedData) - 1
   end
 end
 
-assert(issorted(newData.(sigObj.XVarName), "strictascend"), ...
-  "SignalDesigner: Generated data are not strictly asending.")
+assert(issorted(newData.(sigObj.XVarName), "strictascend"))
 
 result = newData;
 

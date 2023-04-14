@@ -2,10 +2,10 @@
 % This script runs unit tests and generates a test result summary in XML
 % and a MATLAB code coverage report in HTML.
 
-% Copyright 2022 The MathWorks, Inc.
+% Copyright 2022-2023 The MathWorks, Inc.
 
 RelStr = matlabRelease().Release;
-disp("This is MATLAB " + RelStr)
+disp("This is MATLAB " + RelStr + ".")
 
 ComponentName = "PowerSplitHEV";
 

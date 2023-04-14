@@ -1,13 +1,12 @@
 # MathWorks OPC Text Package
 Model {
-  Version  10.6
-  Description "Simulink model saved in R2022b"
+  Version  10.7
+  Description "Simulink model saved in R2023a"
 }
-__MWOPC_PACKAGE_BEGIN__ R2022b
+__MWOPC_PACKAGE_BEGIN__ R2023a
 __MWOPC_PART_BEGIN__ /[Content_Types].xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
-  <Default ContentType="image/png" Extension="png"/>
   <Default ContentType="application/vnd.openxmlformats-package.relationships+xml" Extension="rels"/>
   <Default ContentType="application/vnd.mathworks.simulink.mdl+xml" Extension="xml"/>
   <Override ContentType="application/vnd.openxmlformats-package.core-properties+xml" PartName="/metadata/coreProperties.xml"/>
@@ -46,9 +45,9 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2020-08-04T16:28:06Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-12-22T15:04:53Z</dcterms:modified>
-  <cp:revision>6.4</cp:revision>
-  <cp:version>R2022b</cp:version>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-04-12T10:35:33Z</dcterms:modified>
+  <cp:revision>7.0</cp:revision>
+  <cp:version>R2023a</cp:version>
 </cp:coreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
@@ -56,7 +55,7 @@ __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
 <mwcoreProperties xmlns="http://schemas.mathworks.com/package/2012/coreProperties">
   <contentType>application/vnd.mathworks.simulink.model</contentType>
   <contentTypeFriendlyName>Simulink Model</contentTypeFriendlyName>
-  <matlabRelease>R2022b</matlabRelease>
+  <matlabRelease>R2023a</matlabRelease>
 </mwcoreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
@@ -67,13 +66,13 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Version information for MathWorks R2022b Release -->
+<!-- Version information for MathWorks R2023a Release -->
 <MathWorks_version_info>
-  <version>9.13.0.2143701</version>
-  <release>R2022b</release>
-  <description>Update 3</description>
-  <date>Dec 08 2022</date>
-  <checksum>3517180572</checksum>
+  <version>9.14.0.2206163</version>
+  <release>R2023a</release>
+  <description></description>
+  <date>Feb 22 2023</date>
+  <checksum>2058108452</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -84,7 +83,6 @@ __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
   <Relationship Id="stateflow_machine" Target="stateflow/machine.xml" Type="http://schemas.mathworks.com/simulinkModel/2014/relationships/stateflowMachine"/>
   <Relationship Id="system_root" Target="systems/system_root.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="windowsInfo" Target="windowsInfo.xml" Type="http://schemas.mathworks.com/simulinkModel/2019/relationships/windowsInfo"/>
-  <Relationship Id="x_simulink_resources_mwimg_099939b0_f141_4b52_9db1_3677931c6c97" Target="resources/mwimg_099939b0-f141-4b52-9db1-3677931c6c97.png" Type="http://schemas.mathworks.com/simulinkModel/2010/relationships/resources"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/configSetInfo.xml.rels
@@ -111,11 +109,11 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
   <Subsystem>
     <P Name="ModelUUID">b9d247bb-8b32-4f51-aab2-8be31d42e548</P>
     <P Name="DefaultTestHarness">HEVPowerSplitControl_refsub_Harness1</P>
-    <P Name="LastSavedArchitecture">glnxa64</P>
+    <P Name="LastSavedArchitecture">win64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:6.4&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.0&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ScheduleConnectors">off</P>
@@ -176,11 +174,11 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ConfigSet>
-  <Object Version="22.1.0" ClassName="Simulink.ConfigSet">
+  <Object Version="23.0.0" ClassName="Simulink.ConfigSet">
     <P Name="DisabledProps" Class="double">[]</P>
     <P Name="Description"/>
     <Array PropName="Components" Type="Handle" Dimension="1*10">
-      <Object ObjectID="2" Version="22.1.0" ClassName="Simulink.SolverCC">
+      <Object ObjectID="2" Version="23.0.0" ClassName="Simulink.SolverCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -225,7 +223,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="MaxZcPerStep">2</P>
         <P Name="MaxZcBracketingIterations">10</P>
       </Object>
-      <Object ObjectID="3" Version="22.1.0" ClassName="Simulink.DataIOCC">
+      <Object ObjectID="3" Version="23.0.0" ClassName="Simulink.DataIOCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -266,7 +264,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="LoggingFileName">out.mat</P>
         <P Name="LoggingIntervals">[-inf, inf]</P>
       </Object>
-      <Object ObjectID="4" Version="22.1.0" ClassName="Simulink.OptimizationCC">
+      <Object ObjectID="4" Version="23.0.0" ClassName="Simulink.OptimizationCC">
         <Array PropName="DisabledProps" Type="Cell" Dimension="1*9">
           <Cell Class="char">BooleansAsBitfields</Cell>
           <Cell Class="char">PassReuseOutputArgsAs</Cell>
@@ -320,6 +318,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="EfficientFloat2IntCast">off</P>
         <P Name="EfficientMapNaN2IntZero">on</P>
         <P Name="LifeSpan">auto</P>
+        <P Name="ClockResolution">-1</P>
         <P Name="MaxStackSize">Inherit from target</P>
         <P Name="BufferReusableBoundary">on</P>
         <P Name="SimCompilerOptimization">off</P>
@@ -337,7 +336,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DenormalBehavior">GradualUnderflow</P>
         <P Name="EfficientTunableParamExpr">off</P>
       </Object>
-      <Object ObjectID="5" Version="22.1.0" ClassName="Simulink.DebuggingCC">
+      <Object ObjectID="5" Version="23.0.0" ClassName="Simulink.DebuggingCC">
         <Array PropName="DisabledProps" Type="Cell" Dimension="1*1">
           <Cell Class="char">UseOnlyExistingSharedCode</Cell>
         </Array>
@@ -417,6 +416,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="OperatingPointInterfaceChecksumMismatchMsg">warning</P>
         <P Name="NonCurrentReleaseOperatingPointMsg">error</P>
         <P Name="PregeneratedLibrarySubsystemCodeDiagnostic">warning</P>
+        <P Name="SubsystemReferenceDiagnosticForUnitTest">error</P>
         <P Name="MatchCodeGenerationContextForUpdateDiagram">none</P>
         <P Name="InitInArrayFormatMsg">warning</P>
         <P Name="StrictBusMsg">ErrorLevel1</P>
@@ -439,7 +439,6 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SFTemporalDelaySmallerThanSampleTimeDiag">warning</P>
         <P Name="SFSelfTransitionDiag">warning</P>
         <P Name="SFExecutionAtInitializationDiag">warning</P>
-        <P Name="SFMachineParentedDataDiag">warning</P>
         <P Name="IntegerSaturationMsg">warning</P>
         <P Name="AllowedUnitSystems">all</P>
         <P Name="UnitsInconsistencyMsg">warning</P>
@@ -454,8 +453,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="VariantConditionMismatch">none</P>
         <P Name="InheritVATfromSVC">warning</P>
         <P Name="VariantConfigNotUsedByTopModel">warning</P>
+        <P Name="ParamWriterValidationControl">UseLocalSettings</P>
       </Object>
-      <Object ObjectID="6" Version="22.1.0" ClassName="Simulink.HardwareCC">
+      <Object ObjectID="6" Version="23.0.0" ClassName="Simulink.HardwareCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -503,7 +503,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="UseSimulinkCoderFeatures">on</P>
         <P Name="HardwareBoardFeatureSet">EmbeddedCoderHSP</P>
       </Object>
-      <Object ObjectID="7" Version="22.1.0" ClassName="Simulink.ModelReferenceCC">
+      <Object ObjectID="7" Version="23.0.0" ClassName="Simulink.ModelReferenceCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -522,7 +522,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SupportModelReferenceSimTargetCustomCode">off</P>
         <P Name="UseModelRefSolver">off</P>
       </Object>
-      <Object ObjectID="8" Version="22.1.0" ClassName="Simulink.SFSimCC">
+      <Object ObjectID="8" Version="23.0.0" ClassName="Simulink.SFSimCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -569,8 +569,8 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SimDLTargetLibrary">mkl-dnn</P>
         <P Name="SimDLAutoTuning">on</P>
       </Object>
-      <Object BackupClass="Simulink.RTWCC" ObjectID="9" Version="22.1.0" ClassName="Simulink.RTWCC">
-        <Array PropName="DisabledProps" Type="Cell" Dimension="1*16">
+      <Object BackupClass="Simulink.RTWCC" ObjectID="9" Version="23.0.0" ClassName="Simulink.RTWCC">
+        <Array PropName="DisabledProps" Type="Cell" Dimension="1*17">
           <Cell Class="char">IncludeHyperlinkInReport</Cell>
           <Cell Class="char">GenerateTraceInfo</Cell>
           <Cell Class="char">GenerateTraceReport</Cell>
@@ -587,6 +587,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           <Cell Class="char">CodeProfilingInstrumentation</Cell>
           <Cell Class="char">CodeStackProfiling</Cell>
           <Cell Class="char">EmbeddedCoderDictionary</Cell>
+          <Cell Class="char">DataTypeReplacement</Cell>
         </Array>
         <P Name="Description"/>
         <P Name="SystemTargetFile">grt.tlc</P>
@@ -610,6 +611,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="TLCDebug">off</P>
         <P Name="TLCCoverage">off</P>
         <P Name="TLCAssert">off</P>
+        <P Name="BuiltinFFTWCallback">off</P>
         <P Name="RTWUseLocalCustomCode">on</P>
         <P Name="RTWUseSimCustomCode">off</P>
         <P Name="CustomSourceCode"/>
@@ -636,7 +638,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="CodeProfilingInstrumentation">off</P>
         <P Name="CodeStackProfiling">off</P>
         <P Name="CodeStackProfileVariable">stackProfile</P>
-        <P Name="SILDebugging">off</P>
+        <P Name="SILPILDebugging">off</P>
+        <P Name="DataTypeReplacement">CoderTypedefs</P>
+        <P Name="CoderTypedefsCompatibility">off</P>
         <P Name="TargetLang">C</P>
         <P Name="GenerateGPUCode">None</P>
         <P Name="IncludeBusHierarchyInRTWFileBlockHierarchyMap">off</P>
@@ -673,7 +677,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DLArmComputeVersion">19.05</P>
         <P Name="DLArmComputeArch">unspecified</P>
         <Array PropName="Components" Type="Handle" Dimension="1*2">
-          <Object ObjectID="10" Version="22.1.0" ClassName="Simulink.CodeAppCC">
+          <Object ObjectID="10" Version="23.0.0" ClassName="Simulink.CodeAppCC">
             <Array PropName="DisabledProps" Type="Cell" Dimension="1*28">
               <Cell Class="char">IgnoreCustomStorageClasses</Cell>
               <Cell Class="char">IgnoreTestpoints</Cell>
@@ -757,7 +761,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
             <P Name="ReservedNameArray" Class="double">[]</P>
             <P Name="EnumMemberNameClash">error</P>
           </Object>
-          <Object BackupClass="Simulink.TargetCC" ObjectID="11" Version="22.1.0" ClassName="Simulink.GRTTargetCC">
+          <Object BackupClass="Simulink.TargetCC" ObjectID="11" Version="23.0.0" ClassName="Simulink.GRTTargetCC">
             <Array PropName="DisabledProps" Type="Cell" Dimension="1*19">
               <Cell Class="char">IncludeMdlTerminateFcn</Cell>
               <Cell Class="char">SuppressErrorStatus</Cell>
@@ -864,7 +868,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           </Object>
         </Array>
       </Object>
-      <Object ObjectID="12" Version="22.1.0" ClassName="SlCovCC.ConfigComp">
+      <Object ObjectID="12" Version="23.0.0" ClassName="SlCovCC.ConfigComp">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description">Simulink Coverage Configuration Component</P>
         <P Name="Components" Class="double">[]</P>
@@ -902,7 +906,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="CovMcdcMode">Masking</P>
         <P Name="CovExcludeInactiveVariants">off</P>
       </Object>
-      <Object ObjectID="13" Version="22.1.0" ClassName="hdlcoderui.hdlcc">
+      <Object ObjectID="13" Version="23.0.0" ClassName="hdlcoderui.hdlcc">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description">HDL Coder custom configuration component</P>
         <P Name="Components" Class="double">[]</P>
@@ -1059,9 +1063,9 @@ To Zero</P>
 
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2022b_20220222">
-  <System type="System" uuid="ab1f2ff1-ae97-4dbf-be7e-17314a322ed6">
-    <Interface type="Interface" uuid="2487de05-573a-4f5b-bb2a-7f318b5d7583"/>
+<MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
+  <System type="System" uuid="adc48bdf-ef9a-4028-b49e-1ed6bb361114">
+    <Interface type="Interface" uuid="162458f2-bf27-417b-a728-ef76763e094a"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
@@ -1070,224 +1074,6 @@ __MWOPC_PART_BEGIN__ /simulink/plugins/SimscapeModelParametersPlugin.xml
   <P Name="SimscapeDaeAutoSolver">ode23t</P>
 </SimscapeModelParametersPlugin>
 
-__MWOPC_PART_BEGIN__ /simulink/resources/mwimg_099939b0-f141-4b52-9db1-3677931c6c97.png BASE64
-iVBORw0KGgoAAAANSUhEUgAAAfMAAAEXCAYAAAC52q3fAAAAAXNSR0IArs4c6QAAAARnQU1BAACx
-jwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAC/GSURBVHhe7d0P7BRlnufxh7tN7jaziMLcbs5x
-CSuQSCTB8EeMiolm/cGMk+xwOgN4s8aNExEmmcTBAYefZuaCMII4JiYDPyazt8RxBGYmO+xEGcFE
-EkFzCszBHRNNBJaoS24vgHLsn7vsJlx/qp/nx7frV/+6f13dXd3vFyl+T1VXV1dVd9X3eZ566qkJ
-V2ocAACorH/j/wIAgIoimAMAUHEEcwAAKo5gDgBAxRHMAQCoOII5AAAVRzAHAKDiCOYAAFQcwRwA
-gIojmAMAUHEEcwAAKo5gDgBAxRHMgS6bMWOGmzBhgps8ebKfAgDN4alpQJcpkAccjgBaQckcQE8Y
-Hh6OMjYaTpw44acCKIJgDqAnHDt2zKecu3z5sk8BKIJgDgBAxRHMAQCoOII50ON0/Th+LfnMmTNu
-9erVoy3hNSxZssTt3r07ej1N0rIuXLjgtmzZ0rCsBQsWRNP0Wpp9+/aNzr9jxw4/NZnWNcxrr4dr
-fcP0/fv3+6nOLVq0aHS6Bq0bgHQEc6DH2evHSisATp8+3W3fvt2dPn3av+KiYLhixYoocKaJL0sB
-eebMmW7dunUNyzp69Gg0TRmEtIB+8uRJn3Lu0qVLPpVMmY/ArkPe+4KLFy/6FIAkBHOgQh5//PEo
-YIsC+vr1693mzZvd/Pnzo2miIJ9XQpdXXnnF3Xfffe7TTz9tWNayZcv8HPWgroBelgceeMAdOnQo
-Guw2jIyMjE7XcPDgQf8KgES6zxxA9+gwDEOSWjBrmEdDLfD6V69atWrV6Ou14OynNkpb1vnz5/0c
-dbt27WqYR+NxtcA/+rrSWRYvXjw6r9YhSZF5ACSjZA5UjEqtGzdu9GNXbdiwwadcVGVuq7bT1IJ0
-tKwpU6b4KXXLly93tcyBH3Nu7969PgWgFxHMgQpRFfjKlSv9WCMF5Frp1o85d+7cOZ9KpmUpaKex
-n7Nnzx6fAtCLCOZAhcydO9enks2bN8+n8uUta86cOT5VZ1uhA+gtBHOgj0yaNMmn2sM2SrOt0AH0
-FoI5gFTxa+kAehPBHECqrE5jAPQOgjmAVLrPPJg1a5ZP1bW7Sh9A6wjmwIDK631NvcMF6lQmXuV+
-8803+5RzZ8+e9anW3XjjjT4FoFkEc2BAbdq0KbOnuJdeesmnnBsaGvKpqyZOnOhTzh04cMCnxtJn
-2H7X00ybNs2nnPvkk098CkARBHNggKlrWD1QJU4B2N5bnnRvu25du+6666K0OqmJ9wmv6+2aFrqf
-bcbOnTt9CkARBHNgQIVArAeq6Klkw8PDUWDXE9NsAFaf7fF7zoMnn3zSp+p9woenrWlZCxcujKaJ
-vcUtje3wRiV59QmvZYWnwwHI4Lt1BdAlOgzDkMT2p57XB7rtLz2pf/P4skZGRkbHkwb1957H9qke
-H2oZhqhf97z1Cmz/8nbQcgCko2QOdJkal0koKcfZa9N5Lcjt6/Z9aVR9fvz48ahr1/D5+qvxWtB1
-27Zti6Zlef3116M+3m3pOzyFTa3h1WXs7Nmz/SvZ66XPqwX+0X0iWm6R9QAG2QRFdJ8G0OcOHz7s
-Fi1aFKUVNNeuXRulAVQbJXMAACqOYA4AQMURzAEAqDiCOQAAFUcwBwZIMy3jAVQHrdkBAKg4SuYA
-AFQcwRwAgIojmAMAUHEEcwAAKo5gDgBAxRHMAQCoOII5AAAVRzAHAKDiCOYAAFQcwRwAgIojmAMA
-UHEEc6AJFy5ccDt27HBLlixxEyZMGB0WLFjghoeH3ZkzZ/ycnaXPDuui9eukffv2udWrV0f7wO4T
-7SOti/ZZJ+hzdu/e7ZYvX+5mzJgxuh6TJ0+O1kWvAX1LD1oBkO/48eNXrrvuOj2YKHXQ67t27fLv
-KJ/Waf78+Q3rsHnzZv9qufTZ06dPb/jspEHzaN4yaZ/nfTcatK/Onz/v3wX0D56aBhRw4sQJd/fd
-d7tPP/00Gq8FKLds2bLoMaJnz56NSn3hNXnttdfcl770JT9Wji1btrh169b5satqwdytXbvWj5VH
-pd39+/dHabs/5Mc//rE7ffp0lJZaoHUffvihmzJlip/SXiqBB7WA7YaGhqJ1uXTpktuzZ0/Duixe
-vNi9/vrrfgzoE1FIB5DJlkBXrVrlp16l0l4tSIzOo/nLUgtMDaVxfVYtkI6Od6pkrs/Uvjh06JCf
-0kivhXUqe71UKtfytW+SxNel7JoCoNMI5kAOVeGGIKAgmkYB3Vb1llXdbjMWCqj6XAWyMK1TwbwI
-u65Z+64T7HfTS/sIaAcawAE59u7d61POrVmzxqfGUhVyrQTox5x76623fKq9VGWsamtV5at6v6yq
-63Z49NFHfcq5o0eP+lR33HrrrT4F9B+COZBD11yDe++916eS3XHHHT7l3IEDB3yqvWol/uj6c9nX
-5PtZuLYP9AuCOZBBDd+C6dOn55aCb7rpJp+ql6DLoFuverk0nkYN07pFtwyGxnqSlykDqoZgDmS4
-fPmyT7no3uU8N954o0/Vdeu+817x5ptv+pSL7kPvBt1/rpb2wfr168d8T0DVEcyBDO+8845Ptebc
-uXM+NXjipeG77rrLp8pz+PDh0UGd2agznZkzZ45er1ebho0bN0ZpoJ8QzIGC5s2b51PZdB8znNu6
-datP1S9R6PJAmdQYcNGiRaPDfffd5zZt2hTd/68qfjUY3LZtm58b6C8Ec6AgGk0Vp5Lx9u3b/Zhz
-O3fu9Kny3HDDDT41lkrmCu7q6GbQL32gPxHMgYLU0xvy6Rr1ww8/7MfqVdt33nmnHyuPPuNKve+M
-0eHQoUNRj3i6lU9U7a9Sum3YCPQDgjlQUNES3XvvvedTg0ml39CSX4Fzw4YNUbobFODVta1u5Qut
-6VXtfv/990dpoF8QzIEMs2fP9qnibB/ts2bN8qnBoKenhcZmKg2rD/ReuI1O6/DCCy/4sfptg2og
-B/QLgjmQ4ZprrvEp506dOuVT6eKP+6zi/eCtUiAP18kVyA8ePNhT269SuhriBSdPnvQpoPoI5kAG
-W7JWaS7v2dzvvvuuTw1Wq3bdAhYP5HPmzInGe0mRvgKAKiKYAxlUsrSlORusk7z66qs+5dzSpUt9
-qr/pljDdAia9HMjFtmfg7gT0E4I5kMP2Hvbiiy/61FhqIKfAFgxCl6Ha3hUrVvgx515++eWeDeRa
-V9ue4bbbbvMpoPoI5kCORx55xKfqtzbp2nBc6DI0BAvdjtXvXYbqXnIbyPUAmG48/EXfh1rQZzVo
-07ra702XQHo10wG0YsIV3YwJINOWLVvcunXr/Fi9RzMFb1XV6v5zW+rTa6qOL6vxl4JWvPGW+kAP
-XacqUN1zzz1ROlCGpJ3ro8yLukkN26zbvr761a9G6SxTp05te09wCuRh21XNPzQ05ObOnRuNX7p0
-KXp6nX38qubROP2zo58QzIGC1MgrXBtOo6CmR6aWGShs8CpKnae0s+MWlXTVZWor2n3KUebm61//
-ekMVehp9Pz/5yU8olaPvDHw1++TJk92ECRNK7zca1acHdCgoqgrdNopTSU+ldFUzHzlypPQS37XX
-XutTxU2cONGn2uP666+PtrtZdr+1i6r21SmM9r++m9A5TKDP1HT1za7vh0COftTRkvmOHTvcY489
-5sfG0kGnA/ErX/lKx4KrArmoalIdXPQLVfu+9dZb0cnLVjFqH+v2HLW0fuCBBwbqPmig2zguq0vf
-3d69e6PLNvaSmi7rPPjggx3psjiTgnmn1AKmMg6FhtpOunL8+HH/zvKEz9O69YNa6SPad3Zfpg21
-ktWVzZs3+3cCKAvHZXWdP3/+Sq2Qmfhd2WH9+vX+Hd3R0ZK5vdanaq9p06ZFaelWQ5V+KpknXdON
-N4ayDaUCfRc8GrK4E6cuuf9x5v+4t09ecH9/8f9F0/5o8r9zc6ZPckPz/9BN/8LnommAVOG4VLsD
-PVVORkZG3MqVK6N01bR7O9TQU3ErxCXFJNUaK3YpZql9THgOgdQCeveelx+F9A6xJfNDhw75qY00
-XTnTMF/tB+1fKUf4nKqXzGs/3NFt0bBs2bIoR5lE07Vf7fzdzlVWweV/+pcr2/aeufKn3z6cOWge
-QKpyXKomIHxmlWsF2r0d9vtQ6Tzpu9N3FObRUAvu/pXO6rkGcLru8OSTT/qx+nUKZFNnJbYtgnL0
-2m9p1900XTl+zReo5KAWykh2+u/+0T32w+Pur98656ek0zxLn3o3KsFjcHFcVpu+P9tFsUrhSd+d
-SuKqaQm2bt3qU53Vk63Z7Y4pcrvJoLM/Hu27olVzms+2/H3llVd8CtY//PO/uuf2fDhapV6E3vP9
-nR/4MQwijstqe+ONN3zKRVXrWZd7v/Wtb/mUiy4Xd0NPBvNmbqPRNQ21ktd1DV3/DoPGNT3vwRhF
-hM/QFxpuZdOgtKYl1R7o2k2YT9fM8ij3HeZP6mEsjdYt5B7F/qiKWLNmjU+5huVYYZu1D0SfqU5U
-FixYMLrOSmtaO/Z3r/npgY+jknmzooD+VwT0QVT2calSY9HbanV+CsdpOIZFywjTbYdISofpYdC8
-VvycIPoce05Q63ydy+Lvtbq9HVl+9atf+ZRzX/7yl30q2cKFC32q/kCmZj6nXbrWAC6rEwvbiEHV
-GxcvXozScUU6i9D7sx78oC9YlHNOagCnAPXss8/m1hCoaszmvPVl6raF4Pz586nVa6IffThom2m4
-UXRfpdFJ5/Of/7wfS/5ewj7avHlztJ/uvvvu1P2hEkWvPMN6PO5d87ZPod+98fwdPtU+ZR+XttOe
-tHNXYHsv1DG8du3aKH3ixAl3yy23ROk8x48fbziHxs8J3/jGNxoaL1tZ5+Bub0cWZTLCeU4BOq8h
-tjIvoTFcVnwrS8+VzPUj/t73vufHXMP1c0s/Ah0sYWcrmKpTCO1EdR6hTjxEryv4tJpT0o9Hy9AP
-0n6GBrVc1HRRILYldH3xtqrMVtkkse/VfaZF2W49b731Vp8qTkHXrufvfvc7nxrrF7/4RXTQ2P2h
-gyrsa9EB/fTTT/sxYDB18rhslYJaOJfZ6/RKh+lhSAuAv/3tb6Pzq457e07Q33BuHO85OE87tiNJ
-iC1S5I4q+3jdTz75xKc6p2eCuYK4Apq9DUA/ZvuQi0DzPvzww36sngtSqVg9QSk3FKq+VcIVfSkK
-vK1Q6Vo/TvUwZT9Dgxo+/PrXv/ZzOvf888/7VJ2tKtu5c6dPjaVcfPjhKDA2U6rVwRTE++Muyn6e
-brdIE74X5aDD/lDuWPtaGahAGZtuVDMBvaKTx+V4hHOZvU1Y6TA9DGnUKEznLp0TdH4I5wT9VWnc
-BvQyG4aF9Wx1O+LG2+jwo48+8qnO6VowV9VKuI6hQVVKegKTDRhp1bUq5YbqDAXatC9JVdWhqls/
-OmUCmnXq1Knox5kWYPXZ4TPCugf2EZi6vJAW4OwzsNX7XTM+++wzn2pdM92DKrOR9L0oA2VLEva5
-0cCg6fRx2U0qAeucEC+9qhSsoB7Y2scqsee1LK1m2tql56rZlZNTVXZaIBdbys2rkrZVwO+//75P
-tZetXrG0/rbaJ62qPfzIte3deAZ2eMJUHmVafvSjH/mxsexTs7qRMwX6SdHjspt0TtiwYYMfG0uZ
-fFs6H2+JtxvS4lCv6VowV5BTqTrp+opafmZV09qeks6dOxf9QNKGUH0t77zzjk+NT/wzskr8thWk
-ntYUZ6vY9cPvxg/HVglmUaYla/1mz57tUwDGq+hx2U155wSxbQbKuPZfNtXOVkLUdUyHLM7oAU49
-68w3/d8qnSbM0+xQyzj4JVwVXtO6pVGPPurlp5YLbVhe0pDEvk/LsmoZmdHX1H9zs+w+Tdq+IvKW
-EV7L2kei7zRrOVVUpMe3vOF7//V9v7T+teZH//PKyuf/ux9D2celPdbyjku9N205QZF5rDBv3meL
-7SGt17YjjV0vDUUsW7asLZ/dqp6pZlfuTlXroYSu68/tvMai5d5+++1+rDitg66ZqCemcJ2+Wbaq
-/y//8i99qs5WsatxXbPmzZvnU63n5G3Os5V91M/U1/p43bvgP/hUf1JPdydOX4ruxW/lfvx+xHF5
-1aRJk3yqOmbNmuVTxdl2Et2opeypa+YK6PZWtKeeesqn0tUyJIUG3efZTGtG0f2LapQXqsF1OaCW
-Yxuz7FqOMno9zde+9jWfqjfEC2wVu7223oypU6f61NgGeEXocobNpOg51bhKD025Y3brlz6GFvzh
-uN5fBepUJ1BPeeC4tMpqiV+m+KWDInfn2Mut11xzjU91Ts81gLO3ounHrGvS3WJ7Gdq8eXPUMrPZ
-DIGoVWdoEaltUiZBbCt2G/Cbcdttt/lU47KLso3ytI5F7qccNE8snxE9Fa1Zf/D7v+dW/dmf+LH+
-FErlAaXzurKPy2Z6yey2Y8eO+dTYEmsvb0c4Z8sHH2T35KhAbjNtrcSJ8eq5YK4ckS2lJvVLbHdy
-mcHe5saa6cgliXpICn7+859Hf0MVu1qENtOZgaX36f2BzYDk0Q/wueee82ON98XjKgXl//LwrKYC
-ut6jTID+9jNbKg8onZd/XNrzRTsaaNmahGZkNf4VvW4bLN90000+Vdcr25FEXdMGb7+d3SOkzXzZ
-y6qd1HPBXB588EGfqge8+A9maGjIp7r/EAKtW5Efoc0MqKrdVrE/+uij0d9WPfPMMz41tie6LOqp
-LVTl6cTTjdviqkLV7S8Pz4+qzfPoueY/HZ7X99Xr8VJ5QOm8ruzjMrQv0rxp1cCqEVB31HluuOEG
-n3Lu7NmzPpVPpdGsZ0n88pe/9Kn6tiTV/PXCdiSxdyLp+8vKuNgOw5rtK6RdejKY245YFPDi92er
-Kj78AIocJPoSilzziLOdNtgfZaBlqse6cOBlUY1DyLFpfvvghfGW+nVLm71ur+v86sc4TVhv7btA
-9+7HrxNhrO8sn+m+/xeNpQtLr21dPbvvS+SSVCoPKJ2Xf1zaQo3OLfFgo9qA0P1yM5IKUFm0vtrW
-+HsUgL/73e/6sdqx853v+FSjXtmOODVItnFI303S8pSZCVXsml/7oht68kErYjvVV7X6kSNHonSg
-L0oHR6CDZunSpe7mm2/2U+r3laslqUrCel2t5ePCAwOSXrcPSxB1CfvFL34xSv/mN7+JfsTxH1jW
-7oyvsyRtWyv0I9P+tddtlOHRgWI7n1D/6vEGOeqKNesHmLWPLF3yCA9NUBuD8CCEfpT2IJYyHtrR
-i1Qqf2L71f7Hk4x8+5aoRmOQlXlc2uNNFEgUDNV63C5P55iQzjou7YNFtCzVGKrxms5zer8tVYdz
-grYlvEdpra+6UQ3n3SDrPNfN7cgTXze7jVqmttEW5pp5kEvbKZh3Si0YjN6Hp/v4stR20Oi8Gmo7
-yb9yVe3HfqW2cxvmSxtqPw7/rkbhda1bEnsfeNJQ+4E1zJMnvr4jIyP+lfHTvfp562sHrXvSfo0L
-86fto8Dem9mN+yw7Kel+cg2DQveVJ22/HbjvvK6s41J0nCUtIwy6x7vocanzqX2vHeLrE6brnKDl
-Z52HtT3aB1m6tR1FFIkzej0vppWto9XsNkeU14pR8yp3FiR1xaocknJatS+2oTpLajs3mqbStLqH
-TauK13yS1g+yWrDr/VqXMK9o2co5K7cZrq3Y19PYxn0y3ip2S9VxWl/lFMM+ia+Tpmkdaj+8aN2L
-5CLz9lFgv9Mq3luKYtKulcdx7byurONSVDrVe+y5UssOy9LDoHRbW/i8rONS51Od61QCDlSy1Tk0
-a31Uw6oHL+kzNX9gz5F5l/B6YTvShDij99tlirZRD/TS9nejBbvV0Wp2NFa164eblslAbxvkavYn
-tp0sFMxF1eyqbkd/KXrpDZ3Tkw3g+pl9SMxDDz3kU0A1FC2VB5TOgc4gmHeQWneGBoCqLmql+1ag
-m7JasKehZTtQPoJ5B9mOI3QtCKiSZkvlAaVzoHwE8w7RLSr2/lHbbS1QBa2UygNK50C5COYdEu/u
-r5l7HYFua7VUHlA67y+hVXneHS7oHFqzAy0YtNbszbRgT0PLdqA8lMwBZBpvqTygdA6Uh2AOINN4
-rpXHce0cKAfBHECqdpXKA0rnQDkI5gBStbNUHlA6B9qPYA4gUbtL5QGlc6D9COYAEpVRKg8onQPt
-RTAHMEZZpfKA0jnQXgRzAGOUWSoPKJ0D7UMwB9Cg7FJ5QOkcaB+COYAGnSiVB5TOgfYgmAMY1alS
-eUDpHGgPgjmAUZ0slQeUzoHx40ErQAsG7UEradgPQG+gZA4AQMURzAEAqDiCOQAAFUcwBwCg4gjm
-AABUHMEcAICKI5gDAFBxBHMAACqOYA4AQMURzAEAqDiCOQAAFUcwBwCg4gjmAABUHMEcAICKI5gD
-AFBxBHMAACqOYA4AQMURzAEAqDiCOQAAFUcwBwCg4gjmAABUHMEcAICKI5gDAFBxBHMAACqOYA4A
-QMURzAEAqDiCOQAAFUcwBwCg4gjmAABUHMEcAICKI5gDAFBxBHMAACqOYA4AQMURzAEAqDiCOQAA
-FUcwBwCg4gjmAABUHMEcAICKI5gDAFBxBHMAACpuwpUanwYG1k8PfOxTxby0/yOfavTQ4qk+le9z
-//7fuv901/V+rJruXfO2TzV64/k7fApAJxDMgRoF87QAXRYF/j8f+mM/Vk0Ec6A3UM0O1Cxd9B99
-qjP+4Pd/r+OfCaB/EcyBGgXXZqrIx0vV6/pMAGgHgjngdaqkTKkcQLsRzAGvU6VzSuUA2o1gDhhl
-l5gplQMoA8EcMMounVMqB1AGgjkQU1bJmVI5gLIQzIGYskrnlMoBlIVgDiRodwmaUjmAMhHMgQTt
-Lp1TKgdQJoI5kKJdJWlK5QDKRjAHUrSrdE6pHEDZCOZAhvGWqCmVA+gEgjmQYbylc0rlADqBYA7k
-aLVkTakcQKcQzIEcrZbOKZUD6BSCOVBAsyVsSuUAOolgDhTQbOmcUjmATiKYAwUVLWlTKgfQaQMf
-zJcvX+4mTJjgJk+e7KcgzYULF9zw8LCbMWNGtM80LFiwwO3evdvPcdWJEyfc6tWro/0a5l2yZEk0
-vaqKls4plQPotI4G88OHDzec3OODXtMJf8eOHVHg6ITPPvss+vvpp59Gf/uF9rUCr/Zn0j7Wa2fO
-nPFz59P3ofdt2rTJnT592k917ujRo27nzp1+rE4B++6773bbt29v2K/79++PhirLK3FTKgfQDR0N
-5u+8805m0NRrOtk/9thjbubMmYklPmRTIFXQXbRoURR448Ez7GO9Nn369Kj0XCTj9MMf/jAK3DJ/
-/nz32muvuUOHDrmRkRE3b968aHrwjW98Y/R7XrZsWTSfhvXr17upU8ffo1o35ZXOB6VUfvrv/tF9
-/68+8GNj6bX/dfH/+jGIzmc63lSbZTPYqunqdCEGrdH5NdRM9lpt7oQrNT5dui1btrh169ZF6cWL
-F7t77rknSgdvvvnmmOCjoPGlL33Jj7WfDqLwmR3cFaUIJwubYVLgHRoacpMmTYrGf/vb37oDBw6M
-mef11193U6ZM8VPG0g84lMj198Ybb4zScSrtK5Mg+nvq1Kko3U/+4Z//1S196l0/dpWC+E+H5/V9
-MN9/5O/dyN+cjfZDnlV/9idRBmeQ7du3z33rW99qqNFKc91117knn3zSrV271k9Br7DxK+ilmNG1
-YL558+bEH6yCgUpzoRRYdkDol2CuHOMtt9zix+oB+ic/+YmbM2eOn9JIpQDVgASa/8iRI35sLOVE
-g6z9pOp91QqIMmzKJPSjnx742L20/yM/VqcS+58P/bEf60/b/+Zv3V+/dc6PFXPH7Cnu+39xkx8b
-LLqcpVowK16QSSrErFq1ym3bts2PlUuZjfvuuy9Kq6Zt5cqVUbpqytoOnVtV2xhiktVLMaPnGsCp
-xPfCCy/4sXopUDsT2e6//36fulrSTgvkoh/6rl27/Fj92rcyW3l0IioqXvPST+LXxQfhWvmJU5ea
-DuTy9skL0TBolGG2gVyFlPPnz0fHpgoyYdC4piuAB2pvooxAJ5w8edKnnLt06ZJPVU8Z26HvUIWk
-EMh1qbBX9WRr9jvvvDOqbgouX77sU0ii6vVQhaf9lldlHqglv/1x/vjHP/Yp5IlfO+/3a+WqUt/+
-67/1Y83buvtUoWr5fqEaRlvzpUCt4zTtuNR0lcRtQFdGQDVd6A59X+E71HlVl3w3btwYjfeinr01
-rZnGBdrpCky2pbwamTTbYjtLuB5tb8vSkNZwRZ8b1kfrkkfvD/PrM5rx/PPP+1T9pFEkkAePPPKI
-T9VrQezJQ9sWtjNQdWCYZtc1jIcqdtElFTuv9l8/CSXxQSiVHzjyv6NGb61SINcyBsXWrVt9ql6b
-VbTKXPOpZi145ZVXfAqd9tFH9ctoqlH58MMPS2271Q49d81cFNg+//nP+zHnjh8/nlhlnHUtw1J1
-soJ9krxr5kUbryQ1IrONxvIa8imzsGLFiiitH4/Giyi6r7IosxH2of1e7L7Jov2mYJ2n166h37vm
-bZ9CL3jj+Tt8qtrix2SzjXjtuUDi5yUVFHS+USPWvHOFXZa9jqxlhIaqeXQOsw1eVejQZ9vl6XNU
-qAjnES1bDW+feOKJzMay3dyOPFr2Bx98MOa7s+e6DobPXD1ZMn/66ad9qh4AkoKTDhjdyxx+PJpP
-QVu3QOngsdXH+hEoKLfixRdfHA3I+sGFzwi3ZYUfktbDrrdo/uDVV1/1qWR79+71Keceeughn8r3
-/vvv+1Rds4FcdNAFau0eqJQQtjXQwRemaVDmQfRX49ongWoJ7LydatADdNO7716900HVs82W6O69
-916fqotXtZ87d270bpTQT0aaULoUex25mUuX8XnDZ2t5KlCpMKBzrC1U6Zyp6/46X6S1eer2duRR
-4O/10rjVU8FcAVclaP0IRAeCSopJvvnNb47+EDSPSnx6r6636wvQtY0QaOTrX/+6TzXn2muvjYKS
-fpzKHYbP0KDcoQ7ccH1f661MRmCrsPVe+5ql6Xv27InSzR78v/vd73yqucZpVrhtTexBpR9z2NZA
-NQ9hmoaQedBfjd98883RuEybNq1h3mZyxUBV2YZYt956q08Vp2NMQTCwx3i76HgNmWx7nT6eAdeQ
-VkBQxj8UqHTe0nt1LtbfcE7UOVrzqJRbhnZsR7/oWjCPX0/VoNsKQlBTiffgwYOJX4B+GGE+BbC0
-6nq9N3zB+lG1UjpXEFaJMi0Q6cCzVfi2pKz3hINSn//GG29E6Tg7Pe1yQJp2tNq0wRzA+NjarVbv
-6LCX69rVMjsuZLKV6Q7iGXANaXQO1nlN52AFdJ0ndS7WX527bUC3bQjaLaxnq9vRL3qyml25O91b
-npaT+uUvf+lTzj388MM+lezLX/6yTzXmmNvJ/oji1qxZ41ONVemWnf7ggw/6VOfY0jSA8cmrMi5C
-NYJVoMKSakXjhR2du+1ltazr4WiPrgVz5eYUtDXo+rZtxPDss89mlqLVyUKgXKuuKaUNH3/8sZ+z
-8X3joWtA9jPOnj3rXxnLXv9STjZe1W6r2LUPupGDLKMaD/3lSu0fOmfu3Lk+1bt0vtqwYYMfG0u1
-jLZ0rnMlSnSlg2qBW2eEaFA6rpbLG3299iO4cvr0af9Ko1pGYHS+Zga9L84uK8358+evjIyMXJk/
-f37D8pKGQ4cO+XddZbdr165dfmqdxsNrtUyNn1qc3adJ21dEkWUU/Qxtf5g36TtGNV3+p3+58p+f
-OXLlT799uKXhK8P/LVrGILDnlFaPgWXLlqUuwx5jecejPbbT1qXIPFaYt8j5xu4LnUOtbm9Hq8Jn
-aOglPVXNrmqZ2pcapcu4zrJ06VKfKk6l8IULF0adB9jWms2wVf32nnCxVexf+9rXfKq42bNn+5Rz
-7733nk81x9Ys9HOvbWid7qX/zrKZfqx5Tyyf0ded6rRbO6rqe4F9CFNZ1/5R13PXzJ966imfqrcO
-z2sFqVaKtUxJoSHcm1iUqsDVTWq4NU0ZDd32pq4X7XJrucDo9TRqnR6qm5QhCNtkq9jVUK6V1pZf
-+MIXfKqeAWql1agevBJU/almKM+cGZOiftabpd7xWnlfVdkAZhvDNcM+j+L222/3qeqhcW3n9Fww
-1zVje1uGbezWaWplbgO5GnooMNuWpkWFVvUSWq/bVuzq/KYVygCEjIKktZhPo5qHsI0Sv8cVsPTA
-FD0JrQiVxDVvvz98Js5miFupzVOG3B6T119f3afOURrvnJ5szW5bgCf1F25zvnpGellsRwV5rebz
-2Cp0Pc1MbBX7eIKovZ3tueee86lifvCDH/hUPcPRSkYFg0Ul7ZFv3+LmTE8vdem1ratmD8zz3a3b
-brvNp1p7UJTNkKtgE28pPnHiRJ/qfceOHfOpxkuCUqXtqIKeDOYKbKG0qYMh3gryjjuudvvYCw8H
-KVKVphJ0qHFQbl0HuL1XfjwdqqjLxED7q2gf6LpdJKyDNHsZAoNr+hc+57aunu1+9czC6Hq4Hjqj
-UrgGBXq9pnkGkY51e3eOnt1QlC692Qy5LdgE9nJcOx4P3eqltfidOXF63XYHfdNNjY/B7ZXt6Bc9
-GczjHbHEHzagqu4QGIsGr2Zzx2Kv9+zcudOnrtKPVZ9tA2IWW5VuH1k63lK/MgL2ur3aGmj/pR1s
-mq6H0Nj+n/V+e3ABRajUvXjBH0VV6SqFaxjUIG4988wzPlU/HoveZ60uoUMVuzIEaTV2trCT1k5G
-5zzd5pvnhhtu8KnGxrB5VCjJOvfaS6TalqQCSy9sR9+40kHN3Dpgb1vQoNvDrOPHj0e3r4XXaz+W
-aJl6Xxh0K4RuCwvzJdEtEWEZcbUfWMNn6HaR1157bXTZ+szwWhj0WhotLz6/hvi2tcreAhcGbZ/2
-SxjsLS9h0PvyhHm1vCza/jBv3ncM9DN7bsk7HnRuiM+fdS6xx3GtYDPmHKLzk12WhrTPt8esznd5
-5yO7TA1al7zzc/y2tKCb29Equy69pGeDudhgmfRj0A8mKaAmDfpyk2QFc7H3gScNWq7drqwDUOLB
-VOPtpHWxB1HWoPmUOSkivIdgDhSjYKIAFY4HDTrmdMzr2AhDfB4N8f4o4uxxpkHnQfVTEV+eTWcd
-j/acEQpGWp6mK6Nhhfnse5RWoUDvi5/jtA5purkdefT96f3xISw/rIsdip5Py9DRYG4DY1pOzbK5
-srTSo3a4lqsgY79IDZqm9+n1tFxa+OHpvWmUadBybMZBPy59eVquLcFr3iz6ssMyNJTx5WudtO+0
-bXadNWi9NT3vZBEXtk/vzaLtD59V5DsG+pmORZ07wjGRN+j4zDuHBDr/JC0jDApiRTPX9twcH+Lr
-E6br/Krlx8+7dtD2pJ17g25tR554RqPIkFfYKVNv1RMMAFvVnpWBQG8KGSUdtPYg1klLJ51mc//t
-os8O69LpTJQypApY2gd2n2gfaV3yTuaDQL8LBSHtk3jw0zTtPwWPZuk9tiSsZdtl2YJG3u9C36P9
-DkMpOS68HgJXyLDYgoNea6bA0I3tyGMLJkWHvMJOmQjmHWZzoa38wNA9OrjjJ+L4oNebrfUYD61T
-PIhmlVzaSZ8dr/lJGjRPs6Ui9K7wvYZgjt4wQf/Vvhh0yOTJk6Oe2qR2gqMFeUWoRa2eyxy+u1qA
-crVceHTHg1rOqrVyeE1qpYOmnkvfii1btkSPEo6rBfPUxwK305IlS0ZvPbL7Q3TLaK00FaWllslx
-H374If0Y9AE9rlpqwTzqSAs9Igrp6Ah7PUelKVSHLYGq+i9OVY0qqYR5NH9ZVOUYr0a0VZSdKpnr
-M7Oqh/VaWKdOrhfKFb5PSua9pSfvM+9X9iErSZ1BoDep1B1KmbUg2vCc5kAlzp/97GcN982W9Qzn
-oaGh0W5CVRp+9913u/LITG2f9kXaY3v1mkrswS9+8QufAtBuBPMOUYcI4QSsExx9oFeH7XY3KxOm
-gF4rjfox59566y2fai9lFJRpUFW+AmovV10/+uijPtVaP+UAiiGYd4h6P7pSb3AYdV3ItcPqsD38
-5WXCbFfD9ml07bRr167o+nPZ1+SBJKH26dprr43+ojcQzIEMthtg1ajkZcJs/9O2AVg7qaveKmYG
-dYkC1Xfx4sWoUFLWZSS0hmAOZLh8+bJPOTdjxgyfShfvf7qV58v3kzfffNOnnFuwYIFPAWg3gjmQ
-YbyP2D137pxPDR5lZOxTs+666y6fAtBuBHOgIPsc/Sy6/xbObd261afqlyjskxABtBfBHCjIPhIX
-2Q4fPhw9+jNIeoQwgPYhmAMFDeQzklug5+XbZ/Trdr20e9EBtAfBHCioaGO29957z6cGk7p5tZ3s
-bNiwIUoDKA/BHMgwe/ZsnyrO9tE+a9YsnxoMq1evHu0cRvcjq+9u+lQAykcwBzJcc801PuWizn7y
-qIrZGqRApkAerpMrkB88eJBADnQIwRzIYEvWqjqOB+s49ZMeDFKr9uHh4TGBnCcCAp1DMAcyqGRp
-HxZig3WSV1991aecW7p0qU/1N/UEtmnTpihNIAe6g2AO5NCTyYIXX3zRp8ZSAznbxeUgPExH27ti
-xQo/5tzLL79MIAe6gGAO5HjkkUd8ykU9munacJyq3xX0Q+M33Y4V79q13+hechvI9QAYHv4CdMcE
-PdTcpwGk2LJli1u3bp0fq/dopuCtjmR0/7lKqCGQ6zVVx5fV+Gvfvn3u5MmTfqxOfaCHrlN1rf6e
-e+6J0oEyJO1cH2VeZs6cObrNugXtq1/9apTOMnXqVHqCA0pAMAcKUiOvcG04jYKaHplaZqlc93Hb
-Ps+LOHToUFs7blGpfNGiRX6sOZxygPajmh0oaOPGjVFQVBW6bRSnRl8qpaua+ciRI6VXr7fyHOmJ
-Eyf6VHtcf/310XY3y+43AO1DyRwAgIqjZA4AQMURzAEAqDiCOQAAFUcwBwCg4gjmAABUHMEcAICK
-I5gDAFBxBHMAACqOYA4AQMURzAEAqDiCOQAAFUcwBwCg4gjmAABUHMEcAICKI5gDLZoxY4abMGGC
-mzx5sp8CAN3B88yBFimQBxxGALqJkjmAcRkeHo4yNhpOnDjhpwLoJII5gHE5duyYTzl3+fJlnwLQ
-SQRzAAAqjmAOAEDFEcyBkuj6cfxa8pkzZ9zq1atHW8JrWLJkidu9e3f0epqkZV24cMFt2bKlYVkL
-FiyIpum1NPv27Rudf8eOHX5qMq1rmNdeD9f6hun79+/3U51btGjR6HQNWjcA5SOYAyWx14+VVgCc
-Pn262759uzt9+rR/xUXBcMWKFVHgTBNflgLyzJkz3bp16xqWdfTo0WiaMghpAf3kyZM+5dylS5d8
-KpkyH4Fdh7z3BRcvXvQpAGUimAMd8Pjjj0cBWxTQ169f7zZv3uzmz58fTRMF+bwSurzyyivuvvvu
-c59++mnDspYtW+bnqAd1BfSyPPDAA+7QoUPRYLdhZGRkdLqGgwcP+lcAlEr3mQNong6fMCSpBbOG
-eTTUAq9/9apVq1aNvl4Lzn5qo7RlnT9/3s9Rt2vXroZ5NB5XC/yjryudZfHixaPzah2SFJkHQLko
-mQMdolLrxo0b/dhVGzZs8CkXVZnbqu00tSAdLWvKlCl+St3y5ctdLXPgx5zbu3evTwHoZwRzoANU
-Bb5y5Uo/1kgBuVa69WPOnTt3zqeSaVkK2mns5+zZs8enAPQzgjnQAXPnzvWpZPPmzfOpfHnLmjNn
-jk/V2VboAPoTwRzoAZMmTfKp9rCN0mwrdAD9iWAO9KH4tXQA/Y1gDvShrE5jAPQfgjnQh3SfeTBr
-1iyfqmt3lT6A7iOYAxWT1/uaeocL1KlMvMr95ptv9innzp4961Otu/HGG30KQLcQzIGK2bRpU2ZP
-cS+99JJPOTc0NORTV02cONGnnDtw4IBPjaXPsP2up5k2bZpPOffJJ5/4FIBOIpgDFaSuYfVAlTgF
-YHtvedK97bp17brrrovS6qQm3ie8rrdrWuh+thk7d+70KQCdRDAHKiYEYj1QRU8lGx4ejgK7nphm
-A7D6bI/fcx48+eSTPlXvEz48bU3LWrhwYTRN7C1uaWyHNyrJq094LSs8HQ5AB/huXQE0SYdPGJLY
-/tTz+kC3/aUn9W8eX9bIyMjoeNKg/t7z2D7V40MtwxD16563XoHtX94OWg6A8lEyB1qkxmUSSspx
-9tp0Xgty+7p9XxpVnx8/fjzq2jV8vv5qvBZ03bZt26JpWV5//fWoj3db+g5PYVNreHUZO3v2bP9K
-9nrp82qBf3SfiJZbZD0AjN8ERXSfBtCjDh8+7BYtWhSlFTTXrl0bpQFAKJkDAFBxBHMAACqOYA4A
-QMURzAEAqDiCOVABzbSMBzB4aM0OAEDFUTIHAKDiCOYAAFQcwRwAgIojmAMAUHEEcwAAKo5gDgBA
-pTn3/wGMj4ZujdIl2wAAAABJRU5ErkJggg
 __MWOPC_PART_BEGIN__ /simulink/stateflow/_rels/machine.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
@@ -1305,7 +1091,6 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/chart_111.xml
   <P Name="zoomFactor">1.418</P>
   <P Name="screen">[1 1 3200 1200 1.25]</P>
   <P Name="viewObj">111</P>
-  <subviewS/>
   <P Name="ssIdHighWaterMark">60</P>
   <P Name="decomposition">CLUSTER_CHART</P>
   <P Name="chartFileNumber">4</P>
@@ -2142,7 +1927,6 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/chart_62.xml
   <P Name="zoomFactor">1.333</P>
   <P Name="screen">[1 1 3200 1200 1.25]</P>
   <P Name="viewObj">62</P>
-  <subviewS/>
   <P Name="ssIdHighWaterMark">29</P>
   <P Name="decomposition">CLUSTER_CHART</P>
   <P Name="chartFileNumber">1</P>
@@ -2449,7 +2233,6 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/chart_81.xml
   <P Name="screen">[1 1 3200 1200 1.25]</P>
   <P Name="viewObj">81</P>
   <P Name="toolbarMode">LIBRARY_TOOLBAR</P>
-  <subviewS/>
   <P Name="ssIdHighWaterMark">33</P>
   <P Name="decomposition">CLUSTER_CHART</P>
   <P Name="chartFileNumber">3</P>
@@ -2939,7 +2722,7 @@ __MWOPC_PART_BEGIN__ /simulink/stateflow/machine.xml
 <?xml version="1.0" encoding="utf-8"?>
 <Stateflow>
   <machine id="61">
-    <P Name="sfVersion">80000051</P>
+    <P Name="sfVersion">80000056</P>
     <Children>
       <target id="162" name="sfun">
         <P Name="description">Default Simulink S-Function Target.</P>
@@ -3025,7 +2808,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_15380.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
   <P Name="Location">[1237, 109, 2391, 857]</P>
-  <P Name="SIDHighWatermark">120</P>
+  <P Name="SIDHighWatermark">123</P>
   <Block BlockType="Inport" Name="SOC" SID="15380::101">
     <P Name="Position">[20, 101, 40, 119]</P>
     <P Name="ZOrder">81</P>
@@ -3035,22 +2818,22 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_15380.xml
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="Demux" Name=" Demux " SID="15380::119">
+  <Block BlockType="Demux" Name=" Demux " SID="15380::122">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[270, 230, 320, 270]</P>
-    <P Name="ZOrder">98</P>
+    <P Name="ZOrder">101</P>
     <P Name="Outputs">1</P>
   </Block>
-  <Block BlockType="S-Function" Name=" SFunction " SID="15380::118">
+  <Block BlockType="S-Function" Name=" SFunction " SID="15380::121">
     <P Name="Tag">Stateflow S-Function 3</P>
     <PortCounts in="1" out="3"/>
     <P Name="Position">[180, 100, 230, 180]</P>
-    <P Name="ZOrder">97</P>
+    <P Name="ZOrder">100</P>
     <P Name="FunctionName">sf_sfun</P>
     <P Name="Parameters">SocEmpty,SocHigh,SocLow</P>
     <P Name="PortCounts">[1 3]</P>
     <P Name="SFunctionDeploymentMode">off</P>
-    <P Name="EnableBusSupport">on</P>
+    <P Name="EnableBusSupport">off</P>
     <P Name="SFcnIsStateOwnerBlock">off</P>
     <PortProperties>
       <Port Type="out" Index="2">
@@ -3061,9 +2844,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_15380.xml
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="Terminator" Name=" Terminator " SID="15380::120">
+  <Block BlockType="Terminator" Name=" Terminator " SID="15380::123">
     <P Name="Position">[460, 241, 480, 259]</P>
-    <P Name="ZOrder">99</P>
+    <P Name="ZOrder">102</P>
   </Block>
   <Block BlockType="Outport" Name="DoRegen" SID="15380::106">
     <P Name="Position">[460, 101, 480, 119]</P>
@@ -3075,33 +2858,33 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_15380.xml
     <P Name="Port">2</P>
   </Block>
   <Line>
-    <P Name="ZOrder">1</P>
+    <P Name="ZOrder">6</P>
     <P Name="Src">15380::101#out:1</P>
-    <P Name="Dst">15380::118#in:1</P>
+    <P Name="Dst">15380::121#in:1</P>
   </Line>
   <Line>
     <P Name="Name">DoRegen</P>
-    <P Name="ZOrder">2</P>
+    <P Name="ZOrder">7</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">15380::118#out:2</P>
+    <P Name="Src">15380::121#out:2</P>
     <P Name="Dst">15380::106#in:1</P>
   </Line>
   <Line>
     <P Name="Name">BatteryChargeLevel</P>
-    <P Name="ZOrder">3</P>
+    <P Name="ZOrder">8</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">15380::118#out:3</P>
+    <P Name="Src">15380::121#out:3</P>
     <P Name="Dst">15380::107#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">15380::119#out:1</P>
-    <P Name="Dst">15380::120#in:1</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">15380::122#out:1</P>
+    <P Name="Dst">15380::123#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">15380::118#out:1</P>
-    <P Name="Dst">15380::119#in:1</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">15380::121#out:1</P>
+    <P Name="Dst">15380::122#in:1</P>
   </Line>
 </System>
 
@@ -3522,7 +3305,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2999.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
   <P Name="Location">[52, 167, 1219, 960]</P>
-  <P Name="SIDHighWatermark">117</P>
+  <P Name="SIDHighWatermark">120</P>
   <Block BlockType="Inport" Name="BattChgLvl" SID="2999::101">
     <P Name="Position">[20, 101, 40, 119]</P>
     <P Name="ZOrder">81</P>
@@ -3542,22 +3325,22 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2999.xml
     <P Name="ZOrder">86</P>
     <P Name="Port">3</P>
   </Block>
-  <Block BlockType="Demux" Name=" Demux " SID="2999::116">
+  <Block BlockType="Demux" Name=" Demux " SID="2999::119">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[270, 230, 320, 270]</P>
-    <P Name="ZOrder">95</P>
+    <P Name="ZOrder">98</P>
     <P Name="Outputs">1</P>
   </Block>
-  <Block BlockType="S-Function" Name=" SFunction " SID="2999::115">
+  <Block BlockType="S-Function" Name=" SFunction " SID="2999::118">
     <P Name="Tag">Stateflow S-Function 4</P>
     <PortCounts in="3" out="3"/>
     <P Name="Position">[180, 100, 230, 180]</P>
-    <P Name="ZOrder">94</P>
+    <P Name="ZOrder">97</P>
     <P Name="FunctionName">sf_sfun</P>
     <P Name="Parameters">hevcontrol.chgSpd_kph,hevcontrol.engOnVehSpd_kph</P>
     <P Name="PortCounts">[3 3]</P>
     <P Name="SFunctionDeploymentMode">off</P>
-    <P Name="EnableBusSupport">on</P>
+    <P Name="EnableBusSupport">off</P>
     <P Name="SFcnIsStateOwnerBlock">off</P>
     <PortProperties>
       <Port Type="out" Index="2">
@@ -3568,9 +3351,9 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2999.xml
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="Terminator" Name=" Terminator " SID="2999::117">
+  <Block BlockType="Terminator" Name=" Terminator " SID="2999::120">
     <P Name="Position">[460, 241, 480, 259]</P>
-    <P Name="ZOrder">96</P>
+    <P Name="ZOrder">99</P>
   </Block>
   <Block BlockType="Outport" Name="EngDrv" SID="2999::105">
     <P Name="Position">[460, 101, 480, 119]</P>
@@ -3582,43 +3365,43 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_2999.xml
     <P Name="Port">2</P>
   </Block>
   <Line>
-    <P Name="ZOrder">1</P>
+    <P Name="ZOrder">8</P>
     <P Name="Src">2999::101#out:1</P>
-    <P Name="Dst">2999::115#in:1</P>
+    <P Name="Dst">2999::118#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2</P>
+    <P Name="ZOrder">9</P>
     <P Name="Src">2999::102#out:1</P>
-    <P Name="Dst">2999::115#in:2</P>
+    <P Name="Dst">2999::118#in:2</P>
   </Line>
   <Line>
-    <P Name="ZOrder">3</P>
+    <P Name="ZOrder">10</P>
     <P Name="Src">2999::106#out:1</P>
-    <P Name="Dst">2999::115#in:3</P>
+    <P Name="Dst">2999::118#in:3</P>
   </Line>
   <Line>
     <P Name="Name">EngDrv</P>
-    <P Name="ZOrder">4</P>
+    <P Name="ZOrder">11</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">2999::115#out:2</P>
+    <P Name="Src">2999::118#out:2</P>
     <P Name="Dst">2999::105#in:1</P>
   </Line>
   <Line>
     <P Name="Name">EngGen</P>
-    <P Name="ZOrder">5</P>
+    <P Name="ZOrder">12</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">2999::115#out:3</P>
+    <P Name="Src">2999::118#out:3</P>
     <P Name="Dst">2999::113#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">6</P>
-    <P Name="Src">2999::116#out:1</P>
-    <P Name="Dst">2999::117#in:1</P>
+    <P Name="ZOrder">13</P>
+    <P Name="Src">2999::119#out:1</P>
+    <P Name="Dst">2999::120#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">7</P>
-    <P Name="Src">2999::115#out:1</P>
-    <P Name="Dst">2999::116#in:1</P>
+    <P Name="ZOrder">14</P>
+    <P Name="Src">2999::118#out:1</P>
+    <P Name="Dst">2999::119#in:1</P>
   </Line>
 </System>
 
@@ -4321,7 +4104,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3320.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
   <P Name="Location">[581, 52, 1748, 845]</P>
-  <P Name="SIDHighWatermark">117</P>
+  <P Name="SIDHighWatermark">120</P>
   <Block BlockType="Inport" Name="VehSpd" SID="3320::101">
     <P Name="Position">[20, 101, 40, 119]</P>
     <P Name="ZOrder">81</P>
@@ -4331,22 +4114,22 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3320.xml
     <P Name="ZOrder">85</P>
     <P Name="Port">2</P>
   </Block>
-  <Block BlockType="Demux" Name=" Demux " SID="3320::116">
+  <Block BlockType="Demux" Name=" Demux " SID="3320::119">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[270, 230, 320, 270]</P>
-    <P Name="ZOrder">96</P>
+    <P Name="ZOrder">99</P>
     <P Name="Outputs">1</P>
   </Block>
-  <Block BlockType="S-Function" Name=" SFunction " SID="3320::115">
+  <Block BlockType="S-Function" Name=" SFunction " SID="3320::118">
     <P Name="Tag">Stateflow S-Function 1</P>
     <PortCounts in="2" out="2"/>
     <P Name="Position">[180, 100, 230, 160]</P>
-    <P Name="ZOrder">95</P>
+    <P Name="ZOrder">98</P>
     <P Name="FunctionName">sf_sfun</P>
     <P Name="Parameters">hevcontrol.brakeOffSpdDiff_kph,hevcontrol.brakeOnSpd_kph</P>
     <P Name="PortCounts">[2 2]</P>
     <P Name="SFunctionDeploymentMode">off</P>
-    <P Name="EnableBusSupport">on</P>
+    <P Name="EnableBusSupport">off</P>
     <P Name="SFcnIsStateOwnerBlock">off</P>
     <PortProperties>
       <Port Type="out" Index="2">
@@ -4354,41 +4137,41 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_3320.xml
       </Port>
     </PortProperties>
   </Block>
-  <Block BlockType="Terminator" Name=" Terminator " SID="3320::117">
+  <Block BlockType="Terminator" Name=" Terminator " SID="3320::120">
     <P Name="Position">[460, 241, 480, 259]</P>
-    <P Name="ZOrder">97</P>
+    <P Name="ZOrder">100</P>
   </Block>
   <Block BlockType="Outport" Name="MechBrkOn" SID="3320::104">
     <P Name="Position">[460, 101, 480, 119]</P>
     <P Name="ZOrder">84</P>
   </Block>
   <Line>
-    <P Name="ZOrder">1</P>
+    <P Name="ZOrder">6</P>
     <P Name="Src">3320::101#out:1</P>
     <P Name="Points">[120, 0]</P>
-    <P Name="Dst">3320::115#in:1</P>
+    <P Name="Dst">3320::118#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2</P>
+    <P Name="ZOrder">7</P>
     <P Name="Src">3320::105#out:1</P>
-    <P Name="Dst">3320::115#in:2</P>
+    <P Name="Dst">3320::118#in:2</P>
   </Line>
   <Line>
     <P Name="Name">MechBrkOn</P>
-    <P Name="ZOrder">3</P>
+    <P Name="ZOrder">8</P>
     <P Name="Labels">[0, 0]</P>
-    <P Name="Src">3320::115#out:2</P>
+    <P Name="Src">3320::118#out:2</P>
     <P Name="Dst">3320::104#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">4</P>
-    <P Name="Src">3320::116#out:1</P>
-    <P Name="Dst">3320::117#in:1</P>
+    <P Name="ZOrder">9</P>
+    <P Name="Src">3320::119#out:1</P>
+    <P Name="Dst">3320::120#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">5</P>
-    <P Name="Src">3320::115#out:1</P>
-    <P Name="Dst">3320::116#in:1</P>
+    <P Name="ZOrder">10</P>
+    <P Name="Src">3320::118#out:1</P>
+    <P Name="Dst">3320::119#in:1</P>
   </Line>
 </System>
 
@@ -7048,7 +6831,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">1c1326c8-8e3c-43be-a3c7-67492addd3a2</P>
     </Object>
-    <P Name="BDUuid" Class="char">c67c5f70-9f31-4cd1-a7d6-c453235045a0</P>
+    <P Name="BDUuid" Class="char">5d895402-5554-4949-a1ed-2849ceeb7c21</P>
   </Object>
 </WindowsInfo>
 

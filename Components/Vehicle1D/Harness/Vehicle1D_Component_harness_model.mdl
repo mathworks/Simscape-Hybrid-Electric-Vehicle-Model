@@ -1,9 +1,9 @@
 # MathWorks OPC Text Package
 Model {
-  Version  10.6
-  Description "Simulink model saved in R2022b"
+  Version  10.7
+  Description "Simulink model saved in R2023a"
 }
-__MWOPC_PACKAGE_BEGIN__ R2022b
+__MWOPC_PACKAGE_BEGIN__ R2023a
 __MWOPC_PART_BEGIN__ /[Content_Types].xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -45,9 +45,9 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2020-07-03T11:51:10Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2022-12-22T13:03:54Z</dcterms:modified>
-  <cp:revision>6.33</cp:revision>
-  <cp:version>R2022b</cp:version>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-04-12T15:14:54Z</dcterms:modified>
+  <cp:revision>7.1</cp:revision>
+  <cp:version>R2023a</cp:version>
 </cp:coreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
@@ -55,7 +55,7 @@ __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
 <mwcoreProperties xmlns="http://schemas.mathworks.com/package/2012/coreProperties">
   <contentType>application/vnd.mathworks.simulink.model</contentType>
   <contentTypeFriendlyName>Simulink Model</contentTypeFriendlyName>
-  <matlabRelease>R2022b</matlabRelease>
+  <matlabRelease>R2023a</matlabRelease>
 </mwcoreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
@@ -66,13 +66,13 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Version information for MathWorks R2022b Release -->
+<!-- Version information for MathWorks R2023a Release -->
 <MathWorks_version_info>
-  <version>9.13.0.2143701</version>
-  <release>R2022b</release>
-  <description>Update 3</description>
-  <date>Dec 08 2022</date>
-  <checksum>3517180572</checksum>
+  <version>9.14.0.2206163</version>
+  <release>R2023a</release>
+  <description></description>
+  <date>Feb 22 2023</date>
+  <checksum>2058108452</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -113,7 +113,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <P Name="ModelUUID">75498fc3-ec5f-40d0-8d5f-838a90dad4d2</P>
     <P Name="PreLoadFcn">Vehicle1D_Component_harness_setup
 </P>
-    <P Name="LastSavedArchitecture">glnxa64</P>
+    <P Name="LastSavedArchitecture">win64</P>
     <UserParameters>
       <P Name="PhysicalModelingChecksum">2635502522</P>
       <P Name="PhysicalModelingParameterChecksum">2434665424</P>
@@ -122,7 +122,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:6.33&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:7.1&gt;</P>
     </ConfigManagerSettings>
     <EditorSettings>
       <P Name="ShowPortUnits">on</P>
@@ -304,9 +304,9 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
             <Field Name="VisualType_" Class="char"/>
           </MATStruct>
           <MATStruct>
-            <Field Name="UUID" Class="char">d21ae2a0-c741-4f45-882b-e497491c2b53</Field>
-            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From34</Field>
-            <Field Name="SID_" Class="char">3432</Field>
+            <Field Name="UUID" Class="char">9e7fbe3c-7fd3-4cc8-a721-f70faa2c21ef</Field>
+            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From</Field>
+            <Field Name="SID_" Class="char">3424</Field>
             <Field Name="SubPath_" Class="char"/>
             <Field Name="OutputPortIndex_" Class="double">1.0</Field>
             <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
@@ -324,87 +324,7 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
             <Field Name="VisualType_" Class="char"/>
           </MATStruct>
           <MATStruct>
-            <Field Name="UUID" Class="char">924edd4b-adc2-4d2c-a12b-a981c348f9c3</Field>
-            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From27</Field>
-            <Field Name="SID_" Class="char">3430</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">451faac6-b533-46e1-9dd3-ab4859993015</Field>
-            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From21</Field>
-            <Field Name="SID_" Class="char">3429</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">d8ef2d91-6cdb-49bf-bb4c-c650b3040164</Field>
-            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From19</Field>
-            <Field Name="SID_" Class="char">3427</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">d6037118-358a-4fcb-953f-1595764fb853</Field>
-            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From20</Field>
-            <Field Name="SID_" Class="char">3428</Field>
-            <Field Name="SubPath_" Class="char"/>
-            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
-            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
-            <Field Name="SignalName_" Class="char"/>
-            <Field Name="SubSysPath_" Class="char"/>
-            <Field Name="Decimation_" Class="double">1.0</Field>
-            <Field Name="MaxPoints_" Class="double">0.0</Field>
-            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
-            <Field Name="IsFrameBased_" Class="double">0.0</Field>
-            <Field Name="HideInSDI_" Class="double">0.0</Field>
-            <Field Name="DomainType_" Class="char"/>
-            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
-              <MATStruct/>
-            </Array>
-            <Field Name="VisualType_" Class="char"/>
-          </MATStruct>
-          <MATStruct>
-            <Field Name="UUID" Class="char">8a6f7e58-7a75-4004-8603-f92ea28a295a</Field>
+            <Field Name="UUID" Class="char">df2cfaa0-1fc0-4c94-9634-07fa47964845</Field>
             <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From1</Field>
             <Field Name="SID_" Class="char">50108</Field>
             <Field Name="SubPath_" Class="char"/>
@@ -424,9 +344,89 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
             <Field Name="VisualType_" Class="char"/>
           </MATStruct>
           <MATStruct>
-            <Field Name="UUID" Class="char">964c7d14-4d01-4b47-8470-4d5069ca02a5</Field>
-            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From</Field>
-            <Field Name="SID_" Class="char">3424</Field>
+            <Field Name="UUID" Class="char">df101ade-59c7-4644-b7a6-375e55748b06</Field>
+            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From19</Field>
+            <Field Name="SID_" Class="char">3427</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">72ebc5dd-4d83-4bd3-9848-c32fd7f93bc8</Field>
+            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From20</Field>
+            <Field Name="SID_" Class="char">3428</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">4014ad18-b5a1-4a49-b47f-3d60cc6f6ef6</Field>
+            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From27</Field>
+            <Field Name="SID_" Class="char">3430</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">71679577-3a85-4333-a931-f588f13f8c02</Field>
+            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From21</Field>
+            <Field Name="SID_" Class="char">3429</Field>
+            <Field Name="SubPath_" Class="char"/>
+            <Field Name="OutputPortIndex_" Class="double">1.0</Field>
+            <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
+            <Field Name="SignalName_" Class="char"/>
+            <Field Name="SubSysPath_" Class="char"/>
+            <Field Name="Decimation_" Class="double">1.0</Field>
+            <Field Name="MaxPoints_" Class="double">0.0</Field>
+            <Field Name="TargetBufferedStreaming_" Class="double">0.0</Field>
+            <Field Name="IsFrameBased_" Class="double">0.0</Field>
+            <Field Name="HideInSDI_" Class="double">0.0</Field>
+            <Field Name="DomainType_" Class="char"/>
+            <Array PropName="DomainParams_" Type="Struct" Dimension="1*1">
+              <MATStruct/>
+            </Array>
+            <Field Name="VisualType_" Class="char"/>
+          </MATStruct>
+          <MATStruct>
+            <Field Name="UUID" Class="char">34f8ba61-6305-4c18-b5a9-86298ae01900</Field>
+            <Field Name="BlockPath_" Class="char">Longitudinal Vehicle/Measurement/From34</Field>
+            <Field Name="SID_" Class="char">3432</Field>
             <Field Name="SubPath_" Class="char"/>
             <Field Name="OutputPortIndex_" Class="double">1.0</Field>
             <Field Name="LogicalPortIndex_" Class="double">0.0</Field>
@@ -464,11 +464,11 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ConfigSet>
-  <Object Version="22.1.0" ClassName="Simulink.ConfigSet">
+  <Object Version="23.0.0" ClassName="Simulink.ConfigSet">
     <P Name="DisabledProps" Class="double">[]</P>
     <P Name="Description"/>
     <Array PropName="Components" Type="Handle" Dimension="1*11">
-      <Object ObjectID="2" Version="22.1.0" ClassName="Simulink.SolverCC">
+      <Object ObjectID="2" Version="23.0.0" ClassName="Simulink.SolverCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -513,7 +513,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="MaxZcPerStep">2</P>
         <P Name="MaxZcBracketingIterations">10</P>
       </Object>
-      <Object ObjectID="3" Version="22.1.0" ClassName="Simulink.DataIOCC">
+      <Object ObjectID="3" Version="23.0.0" ClassName="Simulink.DataIOCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -554,7 +554,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="LoggingFileName">out.mat</P>
         <P Name="LoggingIntervals">[-inf, inf]</P>
       </Object>
-      <Object ObjectID="4" Version="22.1.0" ClassName="Simulink.OptimizationCC">
+      <Object ObjectID="4" Version="23.0.0" ClassName="Simulink.OptimizationCC">
         <Array PropName="DisabledProps" Type="Cell" Dimension="1*9">
           <Cell Class="char">BooleansAsBitfields</Cell>
           <Cell Class="char">PassReuseOutputArgsAs</Cell>
@@ -608,6 +608,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="EfficientFloat2IntCast">off</P>
         <P Name="EfficientMapNaN2IntZero">on</P>
         <P Name="LifeSpan">auto</P>
+        <P Name="ClockResolution">-1</P>
         <P Name="MaxStackSize">Inherit from target</P>
         <P Name="BufferReusableBoundary">on</P>
         <P Name="SimCompilerOptimization">off</P>
@@ -625,7 +626,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DenormalBehavior">GradualUnderflow</P>
         <P Name="EfficientTunableParamExpr">off</P>
       </Object>
-      <Object ObjectID="5" Version="22.1.0" ClassName="Simulink.DebuggingCC">
+      <Object ObjectID="5" Version="23.0.0" ClassName="Simulink.DebuggingCC">
         <Array PropName="DisabledProps" Type="Cell" Dimension="1*1">
           <Cell Class="char">UseOnlyExistingSharedCode</Cell>
         </Array>
@@ -705,6 +706,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="OperatingPointInterfaceChecksumMismatchMsg">warning</P>
         <P Name="NonCurrentReleaseOperatingPointMsg">error</P>
         <P Name="PregeneratedLibrarySubsystemCodeDiagnostic">warning</P>
+        <P Name="SubsystemReferenceDiagnosticForUnitTest">error</P>
         <P Name="MatchCodeGenerationContextForUpdateDiagram">none</P>
         <P Name="InitInArrayFormatMsg">warning</P>
         <P Name="StrictBusMsg">ErrorLevel1</P>
@@ -727,7 +729,6 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SFTemporalDelaySmallerThanSampleTimeDiag">warning</P>
         <P Name="SFSelfTransitionDiag">warning</P>
         <P Name="SFExecutionAtInitializationDiag">warning</P>
-        <P Name="SFMachineParentedDataDiag">warning</P>
         <P Name="IntegerSaturationMsg">warning</P>
         <P Name="AllowedUnitSystems">all</P>
         <P Name="UnitsInconsistencyMsg">warning</P>
@@ -742,8 +743,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="VariantConditionMismatch">none</P>
         <P Name="InheritVATfromSVC">warning</P>
         <P Name="VariantConfigNotUsedByTopModel">warning</P>
+        <P Name="ParamWriterValidationControl">UseLocalSettings</P>
       </Object>
-      <Object ObjectID="6" Version="22.1.0" ClassName="Simulink.HardwareCC">
+      <Object ObjectID="6" Version="23.0.0" ClassName="Simulink.HardwareCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -791,7 +793,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="UseSimulinkCoderFeatures">on</P>
         <P Name="HardwareBoardFeatureSet">EmbeddedCoderHSP</P>
       </Object>
-      <Object ObjectID="7" Version="22.1.0" ClassName="Simulink.ModelReferenceCC">
+      <Object ObjectID="7" Version="23.0.0" ClassName="Simulink.ModelReferenceCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -810,7 +812,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SupportModelReferenceSimTargetCustomCode">off</P>
         <P Name="UseModelRefSolver">off</P>
       </Object>
-      <Object ObjectID="8" Version="22.1.0" ClassName="Simulink.SFSimCC">
+      <Object ObjectID="8" Version="23.0.0" ClassName="Simulink.SFSimCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -857,8 +859,8 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SimDLTargetLibrary">mkl-dnn</P>
         <P Name="SimDLAutoTuning">on</P>
       </Object>
-      <Object BackupClass="Simulink.RTWCC" ObjectID="9" Version="22.1.0" ClassName="Simulink.RTWCC">
-        <Array PropName="DisabledProps" Type="Cell" Dimension="1*16">
+      <Object BackupClass="Simulink.RTWCC" ObjectID="9" Version="23.0.0" ClassName="Simulink.RTWCC">
+        <Array PropName="DisabledProps" Type="Cell" Dimension="1*17">
           <Cell Class="char">IncludeHyperlinkInReport</Cell>
           <Cell Class="char">GenerateTraceInfo</Cell>
           <Cell Class="char">GenerateTraceReport</Cell>
@@ -875,6 +877,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           <Cell Class="char">CodeProfilingInstrumentation</Cell>
           <Cell Class="char">CodeStackProfiling</Cell>
           <Cell Class="char">EmbeddedCoderDictionary</Cell>
+          <Cell Class="char">DataTypeReplacement</Cell>
         </Array>
         <P Name="Description"/>
         <P Name="SystemTargetFile">grt.tlc</P>
@@ -898,6 +901,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="TLCDebug">off</P>
         <P Name="TLCCoverage">off</P>
         <P Name="TLCAssert">off</P>
+        <P Name="BuiltinFFTWCallback">off</P>
         <P Name="RTWUseLocalCustomCode">on</P>
         <P Name="RTWUseSimCustomCode">off</P>
         <P Name="CustomSourceCode"/>
@@ -924,7 +928,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="CodeProfilingInstrumentation">off</P>
         <P Name="CodeStackProfiling">off</P>
         <P Name="CodeStackProfileVariable">stackProfile</P>
-        <P Name="SILDebugging">off</P>
+        <P Name="SILPILDebugging">off</P>
+        <P Name="DataTypeReplacement">CoderTypedefs</P>
+        <P Name="CoderTypedefsCompatibility">off</P>
         <P Name="TargetLang">C</P>
         <P Name="GenerateGPUCode">None</P>
         <P Name="IncludeBusHierarchyInRTWFileBlockHierarchyMap">off</P>
@@ -961,7 +967,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DLArmComputeVersion">19.05</P>
         <P Name="DLArmComputeArch">unspecified</P>
         <Array PropName="Components" Type="Handle" Dimension="1*2">
-          <Object ObjectID="10" Version="22.1.0" ClassName="Simulink.CodeAppCC">
+          <Object ObjectID="10" Version="23.0.0" ClassName="Simulink.CodeAppCC">
             <Array PropName="DisabledProps" Type="Cell" Dimension="1*28">
               <Cell Class="char">IgnoreCustomStorageClasses</Cell>
               <Cell Class="char">IgnoreTestpoints</Cell>
@@ -1045,7 +1051,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
             <P Name="ReservedNameArray" Class="double">[]</P>
             <P Name="EnumMemberNameClash">error</P>
           </Object>
-          <Object BackupClass="Simulink.TargetCC" ObjectID="11" Version="22.1.0" ClassName="Simulink.GRTTargetCC">
+          <Object BackupClass="Simulink.TargetCC" ObjectID="11" Version="23.0.0" ClassName="Simulink.GRTTargetCC">
             <Array PropName="DisabledProps" Type="Cell" Dimension="1*19">
               <Cell Class="char">IncludeMdlTerminateFcn</Cell>
               <Cell Class="char">SuppressErrorStatus</Cell>
@@ -1152,7 +1158,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           </Object>
         </Array>
       </Object>
-      <Object ObjectID="12" Version="22.1.0" ClassName="SlCovCC.ConfigComp">
+      <Object ObjectID="12" Version="23.0.0" ClassName="SlCovCC.ConfigComp">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description">Simulink Coverage Configuration Component</P>
         <P Name="Components" Class="double">[]</P>
@@ -1190,7 +1196,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="CovMcdcMode">Masking</P>
         <P Name="CovExcludeInactiveVariants">off</P>
       </Object>
-      <Object ObjectID="13" Version="22.1.0" ClassName="hdlcoderui.hdlcc">
+      <Object ObjectID="13" Version="23.0.0" ClassName="hdlcoderui.hdlcc">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description">HDL Coder custom configuration component</P>
         <P Name="Components" Class="double">[]</P>
@@ -1204,11 +1210,11 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <Array PropName="Components" Type="Handle" Dimension="1*1">
-          <Object ObjectID="15" Version="22.1.0" ClassName="simmechanics.ConfigurationSet">
+          <Object ObjectID="15" Version="23.0.0" ClassName="simmechanics.ConfigurationSet">
             <P Name="DisabledProps" Class="double">[]</P>
             <P Name="Description">Simscape Multibody</P>
             <Array PropName="Components" Type="Handle" Dimension="1*2">
-              <Object ObjectID="16" Version="22.1.0" ClassName="simmechanics.DiagnosticsConfigSet">
+              <Object ObjectID="16" Version="23.0.0" ClassName="simmechanics.DiagnosticsConfigSet">
                 <P Name="DisabledProps" Class="double">[]</P>
                 <P Name="Description">Diagnostics</P>
                 <P Name="Components" Class="double">[]</P>
@@ -1223,7 +1229,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
                 <P Name="SimMechanicsUnsatisfiedHighPriorityTargets">warning</P>
                 <P Name="SimMechanicsJointTargetOverSpecification">error</P>
               </Object>
-              <Object ObjectID="17" Version="22.1.0" ClassName="simmechanics.ExplorerConfigSet">
+              <Object ObjectID="17" Version="23.0.0" ClassName="simmechanics.ExplorerConfigSet">
                 <P Name="DisabledProps" Class="double">[]</P>
                 <P Name="Description">Explorer</P>
                 <P Name="Components" Class="double">[]</P>
@@ -1452,15 +1458,15 @@ __MWOPC_PART_BEGIN__ /simulink/hdlParams.xml
 
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2022b_20220222">
-  <System type="System" uuid="f2d6bb68-efa9-4b99-af18-8eb3c26c36b0">
-    <Interface type="Interface" uuid="20f26b6a-ac15-4f8d-823e-6a5c17492ad5"/>
+<MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
+  <System type="System" uuid="e7801520-d669-458d-9eec-417d06ac89c7">
+    <Interface type="Interface" uuid="0c30e6fa-ce86-4c0d-89c9-9b2052ea0643"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/plugins/LogicAnalyzerPlugin.xml
 <?xml version="1.0" encoding="utf-8"?>
 <LogicAnalyzerPlugin>
-  <P Name="LogicAnalyzerSignalOrdering">21757ff4-2291-4334-9c60-70d7ec1f609d,15be0b54-9c1d-4694-816d-d412df870a5e,170af2be-b24d-402b-9456-139aca7be19b,49f86501-0eb6-4d3e-a96c-ed06b7153405,c6f0ab80-833f-4b9e-8b50-533680bf0ff2,3994912d-5f48-49b2-b714-a3116d906bb9,2e03c151-361b-4af7-97a6-c7bd0a20a8e4,9cec3763-4856-4a30-a363-d1ce7fffb1ff,d8ef2d91-6cdb-49bf-bb4c-c650b3040164,8a6f7e58-7a75-4004-8603-f92ea28a295a,964c7d14-4d01-4b47-8470-4d5069ca02a5,924edd4b-adc2-4d2c-a12b-a981c348f9c3,451faac6-b533-46e1-9dd3-ab4859993015,d21ae2a0-c741-4f45-882b-e497491c2b53,d6037118-358a-4fcb-953f-1595764fb853</P>
+  <P Name="LogicAnalyzerSignalOrdering">21757ff4-2291-4334-9c60-70d7ec1f609d,15be0b54-9c1d-4694-816d-d412df870a5e,170af2be-b24d-402b-9456-139aca7be19b,49f86501-0eb6-4d3e-a96c-ed06b7153405,c6f0ab80-833f-4b9e-8b50-533680bf0ff2,3994912d-5f48-49b2-b714-a3116d906bb9,2e03c151-361b-4af7-97a6-c7bd0a20a8e4,9cec3763-4856-4a30-a363-d1ce7fffb1ff,df101ade-59c7-4644-b7a6-375e55748b06,df2cfaa0-1fc0-4c94-9634-07fa47964845,9e7fbe3c-7fd3-4cc8-a721-f70faa2c21ef,4014ad18-b5a1-4a49-b47f-3d60cc6f6ef6,71679577-3a85-4333-a931-f588f13f8c02,34f8ba61-6305-4c18-b5a9-86298ae01900,72ebc5dd-4d83-4bd3-9848-c32fd7f93bc8</P>
 </LogicAnalyzerPlugin>
 
 __MWOPC_PART_BEGIN__ /simulink/plugins/NotesPlugin.xml
@@ -1471,9 +1477,10 @@ __MWOPC_PART_BEGIN__ /simulink/plugins/NotesPlugin.xml
 
 __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2022b_202203181029">
+<sltp_graph version="1.1" packageUris="http://schema.mathworks.com/mf0/sltp_mm/R2023a_202209151115">
   <sltp.mm.core.Context type="sltp.mm.core.Context" uuid="0ba9e45e-f769-4a06-9bf5-2e2929d80413">
     <priorityDirection>HighNumberLast</priorityDirection>
+    <defaultEventBehavior type="sltp.mm.core.EventBehavior" uuid="af58ed50-4eb8-48c2-a47d-aa2ace38c6e2"/>
     <editorState type="sltp.mm.core.EditorState" uuid="1486826e-5bbb-4f6f-bcd0-a0a6a7fec561">
       <isSynchronized>true</isSynchronized>
       <panelState type="sltp.mm.core.EditorPanelState" uuid="d17c28e7-4beb-4642-98c7-06c2d98fa9d6"/>
@@ -1496,6 +1503,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             <annotation>Cont</annotation>
             <color>255</color>
             <hasBlocks>true</hasBlocks>
+            <rateIndex>0</rateIndex>
             <rateSpec type="sltp.mm.core.RateSpec">
               <period>0.0</period>
             </rateSpec>
@@ -1505,6 +1513,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
             <annotation>FiM</annotation>
             <color>-2139062017</color>
             <hasBlocks>true</hasBlocks>
+            <rateIndex>1</rateIndex>
             <rateSpec type="sltp.mm.core.RateSpec">
               <offset>1.0</offset>
               <period>0.0</period>
@@ -1518,7 +1527,7 @@ __MWOPC_PART_BEGIN__ /simulink/ScheduleCore.xml
 </sltp_graph>
 __MWOPC_PART_BEGIN__ /simulink/ScheduleEditor.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<sltp_editor version="1.1" packageUris="http://schema.mathworks.com/mf0/DiagramEditor/R2019a_20181107 http://schema.mathworks.com/mf0/SltpSyntax/R2022b_202203181006">
+<sltp_editor version="1.1" packageUris="http://schema.mathworks.com/mf0/DiagramEditor/R2019a_20181107 http://schema.mathworks.com/mf0/SltpSyntax/R2023a_202207220222">
   <sltp.mm.syntax.Context type="sltp.mm.syntax.Context" uuid="ce3d3b3b-4184-45cc-a601-2570044a950b">
     <rootGraph type="sltp.mm.syntax.Graph" uuid="b2bd28b2-1a0b-4a99-9bbc-75b1b83df918">
       <children type="sltp.mm.syntax.Node" uuid="f5c5f14e-a8ac-4605-991e-71453bcaa5c7">
@@ -1590,7 +1599,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_347.xml
     <P Name="HideAutomaticName">off</P>
     <P Name="AttributesFormatString">%&lt;inertia&gt;
 %&lt;inertia_unit&gt;</P>
-    <P Name="LibraryVersion">10006000.1</P>
+    <P Name="LibraryVersion">10007000.1</P>
     <P Name="SourceBlock">fl_lib/Mechanical/Rotational Elements/Inertia</P>
     <P Name="SourceType">Inertia</P>
     <InstanceData>
@@ -1674,7 +1683,7 @@ Converter</P>
     <P Name="BlockMirror">on</P>
     <P Name="NameLocation">top</P>
     <P Name="HideAutomaticName">off</P>
-    <P Name="LibraryVersion">10006000.1</P>
+    <P Name="LibraryVersion">10007000.1</P>
     <P Name="SourceBlock">fl_lib/Mechanical/Mechanical Sources/Ideal Torque Source</P>
     <P Name="SourceType">Ideal Torque Source</P>
     <InstanceData>
@@ -1917,7 +1926,7 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_82.xml
     <PortCounts in="8"/>
     <P Name="Position">[255, -119, 330, 59]</P>
     <P Name="ZOrder">26298</P>
-    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData1&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-62.5&apos;,&apos;MaxYLimReal&apos;,&apos;562.5&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;562.5&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Axle torque input&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;-62.5&apos;,&apos;MaxYLimReal&apos;,&apos;562.5&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Brake force&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-3.22021&apos;,&apos;MaxYLimReal&apos;,&apos;0.3578&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Road inclination&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3),struct(&apos;MinYLimReal&apos;,&apos;-5.625&apos;,&apos;MaxYLimReal&apos;,&apos;0.625&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Road grade&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,4),struct(&apos;MinYLimReal&apos;,&apos;-0.07438&apos;,&apos;MaxYLimReal&apos;,&apos;0.14234&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;G force&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,5),struct(&apos;MinYLimReal&apos;,&apos;-6.4464&apos;,&apos;MaxYLimReal&apos;,&apos;58.01764&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Vehicle speed kph&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,6),struct(&apos;MinYLimReal&apos;,&apos;-4.00561&apos;,&apos;MaxYLimReal&apos;,&apos;36.05049&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Vehicle speed mph&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,7),struct(&apos;MinYLimReal&apos;,&apos;-56.99873&apos;,&apos;MaxYLimReal&apos;,&apos;512.98859&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Axle speed&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,8)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),&apos;DisplayLayoutDimensions&apos;,[4 2],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;AutoscaleMode&apos;,&apos;Auto&apos;,&apos;ExpandOnly&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2022b&apos;)),&apos;Version&apos;,&apos;2022b&apos;,&apos;Position&apos;,[422 550 931 601],&apos;VisibleAtModelOpen&apos;,&apos;on&apos;)</P>
+    <P Name="ScopeSpecificationString">Simulink.scopes.TimeScopeBlockCfg(&apos;CurrentConfiguration&apos;, extmgr.ConfigurationSet(extmgr.Configuration(&apos;Core&apos;,&apos;General UI&apos;,true),extmgr.Configuration(&apos;Core&apos;,&apos;Source UI&apos;,true),extmgr.Configuration(&apos;Sources&apos;,&apos;WiredSimulink&apos;,true,&apos;DataLoggingVariableName&apos;,&apos;ScopeData1&apos;),extmgr.Configuration(&apos;Visuals&apos;,&apos;Time Domain&apos;,true,&apos;SerializedDisplays&apos;,{struct(&apos;MinYLimReal&apos;,&apos;-62.5&apos;,&apos;MaxYLimReal&apos;,&apos;562.5&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0.00000&apos;,&apos;MaxYLimMag&apos;,&apos;562.5&apos;,&apos;LegendVisibility&apos;,&apos;Off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Axle torque input&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,1),struct(&apos;MinYLimReal&apos;,&apos;-62.5&apos;,&apos;MaxYLimReal&apos;,&apos;562.5&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Brake force&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,2),struct(&apos;MinYLimReal&apos;,&apos;-3.22021&apos;,&apos;MaxYLimReal&apos;,&apos;0.3578&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Road inclination&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,3),struct(&apos;MinYLimReal&apos;,&apos;-5.625&apos;,&apos;MaxYLimReal&apos;,&apos;0.625&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Road grade&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,4),struct(&apos;MinYLimReal&apos;,&apos;-0.07837&apos;,&apos;MaxYLimReal&apos;,&apos;0.04847&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;G force&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,5),struct(&apos;MinYLimReal&apos;,&apos;-7.54662&apos;,&apos;MaxYLimReal&apos;,&apos;67.91962&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Vehicle speed kph&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,6),struct(&apos;MinYLimReal&apos;,&apos;-4.68926&apos;,&apos;MaxYLimReal&apos;,&apos;42.2033&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Vehicle speed mph&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,7),struct(&apos;MinYLimReal&apos;,&apos;-66.72681&apos;,&apos;MaxYLimReal&apos;,&apos;600.54133&apos;,&apos;YLabelReal&apos;,&apos;&apos;,&apos;MinYLimMag&apos;,&apos;0&apos;,&apos;MaxYLimMag&apos;,&apos;10&apos;,&apos;LegendVisibility&apos;,&apos;off&apos;,&apos;XGrid&apos;,true,&apos;YGrid&apos;,true,&apos;PlotMagPhase&apos;,false,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[1 1 0.0666666666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],&apos;Title&apos;,&apos;%&lt;SignalLabel&gt;&apos;,&apos;LinePropertiesCache&apos;,{{}},&apos;UserDefinedChannelNames&apos;,{{}},&apos;NumLines&apos;,1,&apos;LineNames&apos;,{{&apos;Axle speed&apos;}},&apos;ShowContent&apos;,true,&apos;Placement&apos;,8)},&apos;DisplayPropertyDefaults&apos;,struct(&apos;YLabelReal&apos;,&apos;&apos;,&apos;AxesColor&apos;,[0 0 0],&apos;AxesTickColor&apos;,[0.686274509803922 0.686274509803922 0.686274509803922],&apos;ColorOrder&apos;,[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]),&apos;DisplayLayoutDimensions&apos;,[4 2],&apos;DisplayContentCache&apos;,[]),extmgr.Configuration(&apos;Tools&apos;,&apos;Plot Navigation&apos;,true,&apos;AutoscaleMode&apos;,&apos;Auto&apos;,&apos;ExpandOnly&apos;,false),extmgr.Configuration(&apos;Tools&apos;,&apos;Measurements&apos;,true,&apos;Version&apos;,&apos;2023a&apos;)),&apos;Version&apos;,&apos;2023a&apos;,&apos;Position&apos;,[599.4 153.8 930.4 600.8],&apos;VisibleAtModelOpen&apos;,&apos;on&apos;)</P>
     <P Name="NumInputPorts">8</P>
     <P Name="Floating">off</P>
   </Block>
@@ -2131,7 +2140,7 @@ Final: %&lt;After&gt;</P>
     <P Name="ZOrder">64</P>
     <P Name="BlockRotation">270</P>
     <P Name="BlockMirror">on</P>
-    <P Name="LibraryVersion">10006000.1</P>
+    <P Name="LibraryVersion">10007000.1</P>
     <P Name="SourceBlock">fl_lib/Mechanical/Rotational Elements/Mechanical
 Rotational Reference</P>
     <P Name="SourceType">Mechanical
@@ -2233,23 +2242,27 @@ Configuration</P>
       <P Name="PartitionMethod">ROBUST</P>
     </InstanceData>
   </Block>
-  <Block BlockType="CallbackButton" Name="harness model" SID="427">
+  <Block BlockType="CustomCallbackButton" Name="harness model" SID="427">
     <P Name="Position">[730, 20, 840, 55]</P>
     <P Name="ZOrder">26337</P>
+    <P Name="ForegroundColor">[0.011765, 0.011765, 0.011765]</P>
+    <P Name="BackgroundColor">[0.956863, 0.956863, 0.956863]</P>
     <P Name="NameLocation">right</P>
     <P Name="HideAutomaticName">off</P>
-    <P Name="ClickFcn">Vehicle1D_Component_resetHarnessModel
-</P>
-    <P Name="ButtonText">Reset</P>
+    <P Name="FontSize">12</P>
+    <P Name="Configuration">{&quot;components&quot;:[{&quot;name&quot;:&quot;BackgroundImageComponent&quot;,&quot;settings&quot;:{&quot;image&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;position&quot;:[0,0,1,1]}},{&quot;name&quot;:&quot;ButtonStateComponent&quot;,&quot;settings&quot;:{&quot;buttonType&quot;:&quot;momentary&quot;,&quot;clickFcn&quot;:&quot;Vehicle1D_Component_resetHarnessModel\n&quot;,&quot;onValue&quot;:1,&quot;position&quot;:[0,0,1,1],&quot;pressDelay&quot;:&quot;500&quot;,&quot;pressFcn&quot;:&quot;&quot;,&quot;repeatInterval&quot;:&quot;0&quot;,&quot;states&quot;:[{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Reset&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Reset&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Reset&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Reset&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;}]}},{&quot;name&quot;:&quot;ForegroundImageComponent&quot;,&quot;settings&quot;:{&quot;image&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;isForeground&quot;:1,&quot;position&quot;:[0,0,1,1]}}],&quot;settings&quot;:{&quot;BindingType&quot;:&quot;standalone&quot;,&quot;backgroundColor&quot;:[244,244,244,1],&quot;backgroundOffset&quot;:0.2,&quot;backgroundOpacity&quot;:1,&quot;fixedAspectRatio&quot;:&quot;off&quot;,&quot;foregroundColor&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;migratedFromLegacy&quot;:true,&quot;useBackgroundColor&quot;:true,&quot;variant&quot;:&quot;callback&quot;,&quot;version&quot;:&quot;R2023a&quot;},&quot;type&quot;:&quot;Button&quot;}</P>
+    <P Name="CustomBackgroundColor">{&quot;color&quot;:[0.9568627451,0.9568627451,0.9568627451],&quot;show&quot;:true}</P>
   </Block>
-  <Block BlockType="CallbackButton" Name="setup script" SID="428">
+  <Block BlockType="CustomCallbackButton" Name="setup script" SID="428">
     <P Name="Position">[730, -25, 840, 10]</P>
     <P Name="ZOrder">26338</P>
+    <P Name="ForegroundColor">[0.011765, 0.011765, 0.011765]</P>
+    <P Name="BackgroundColor">[0.956863, 0.956863, 0.956863]</P>
     <P Name="NameLocation">right</P>
     <P Name="HideAutomaticName">off</P>
-    <P Name="ClickFcn">edit Vehicle1D_Component_harness_setup
-</P>
-    <P Name="ButtonText">Open</P>
+    <P Name="FontSize">12</P>
+    <P Name="Configuration">{&quot;components&quot;:[{&quot;name&quot;:&quot;BackgroundImageComponent&quot;,&quot;settings&quot;:{&quot;image&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;position&quot;:[0,0,1,1]}},{&quot;name&quot;:&quot;ButtonStateComponent&quot;,&quot;settings&quot;:{&quot;buttonType&quot;:&quot;momentary&quot;,&quot;clickFcn&quot;:&quot;edit Vehicle1D_Component_harness_setup\n&quot;,&quot;onValue&quot;:1,&quot;position&quot;:[0,0,1,1],&quot;pressDelay&quot;:&quot;500&quot;,&quot;pressFcn&quot;:&quot;&quot;,&quot;repeatInterval&quot;:&quot;0&quot;,&quot;states&quot;:[{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Open&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Open&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Open&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;},{&quot;horizontalAlignment&quot;:&quot;center&quot;,&quot;image&quot;:{&quot;position&quot;:[0,0,1,1],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;label&quot;:{&quot;color&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;icon&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;iconPlacement&quot;:&quot;left&quot;,&quot;text&quot;:{&quot;content&quot;:&quot;Open&quot;}},&quot;labelOffset&quot;:[0,0],&quot;verticalAlignment&quot;:&quot;middle&quot;}]}},{&quot;name&quot;:&quot;ForegroundImageComponent&quot;,&quot;settings&quot;:{&quot;image&quot;:{&quot;size&quot;:[0,0],&quot;src&quot;:&quot;default&quot;,&quot;srcOrientation&quot;:&quot;Right&quot;},&quot;isForeground&quot;:1,&quot;position&quot;:[0,0,1,1]}}],&quot;settings&quot;:{&quot;BindingType&quot;:&quot;standalone&quot;,&quot;backgroundColor&quot;:[244,244,244,1],&quot;backgroundOffset&quot;:0.2,&quot;backgroundOpacity&quot;:1,&quot;fixedAspectRatio&quot;:&quot;off&quot;,&quot;foregroundColor&quot;:[0.01176470588,0.01176470588,0.01176470588,1],&quot;migratedFromLegacy&quot;:true,&quot;useBackgroundColor&quot;:true,&quot;variant&quot;:&quot;callback&quot;,&quot;version&quot;:&quot;R2023a&quot;},&quot;type&quot;:&quot;Button&quot;}</P>
+    <P Name="CustomBackgroundColor">{&quot;color&quot;:[0.9568627451,0.9568627451,0.9568627451],&quot;show&quot;:true}</P>
   </Block>
   <Line>
     <P Name="ZOrder">183</P>
@@ -2369,10 +2382,10 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[1027.0, 452.0]</P>
+          <P Name="Extents" Class="double">[1310.0, 574.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[212.5, -83.5]</P>
-          <P Name="SceneRectInView" Class="double">[212.5, -83.5, 1027.0, 452.0]</P>
+          <P Name="Offset" Class="double">[202.0, -72.6]</P>
+          <P Name="SceneRectInView" Class="double">[202.0, -72.6, 1048.0, 459.2]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
@@ -2457,6 +2470,18 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       </Array>
       <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
         <Object ObjectID="14">
+          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
+          <P Name="ID" Class="char">Property Inspector</P>
+          <P Name="Visible" Class="logical">0</P>
+          <P Name="CreateCallback" Class="char"/>
+          <P Name="UserData" Class="char"/>
+          <P Name="Floating" Class="logical">0</P>
+          <P Name="DockPosition" Class="char">Right</P>
+          <P Name="Width" Class="int32">300</P>
+          <P Name="Height" Class="int32">400</P>
+          <P Name="Minimized" Class="char">Off</P>
+        </Object>
+        <Object ObjectID="15">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">1</P>
@@ -2465,28 +2490,16 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
 </P>
           <P Name="Floating" Class="logical">0</P>
           <P Name="DockPosition" Class="char">Left</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
+          <P Name="Width" Class="int32">169</P>
+          <P Name="Height" Class="int32">106</P>
           <P Name="Minimized" Class="char">On</P>
         </Object>
-        <Object ObjectID="15">
-          <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
-          <P Name="ID" Class="char">Property Inspector</P>
-          <P Name="Visible" Class="logical">0</P>
-          <P Name="CreateCallback" Class="char"/>
-          <P Name="UserData" Class="char"/>
-          <P Name="Floating" Class="logical">0</P>
-          <P Name="DockPosition" Class="char">Right</P>
-          <P Name="Width" Class="int32">640</P>
-          <P Name="Height" Class="int32">480</P>
-          <P Name="Minimized" Class="char">Off</P>
-        </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAEqAAAB0fwCAAAABfsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAAdEAAACOAP////wAAAB5AAAB0QAAAAAA////+gAAAAACAAAAAfsAAACeAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AVgBlAGgAaQBjAGwAZQAxAEQAXwBDAG8AbQBwAG8AbgBlAG4AdABfAGgAYQByAG4AZQBzAHMAXwBtAG8AZABlAGwAAAAAAP////8AAAAAAAAAAPsAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAwQD///8AAAABAAACbAAAAh78AgAAAAH8AAAAeQAAAh4AAAAAAP////oAAAABAgAAAAL7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////+wAAAF4ARwBMAFUARQAyADoATgBvAHQAZQBzACAAQgByAG8AdwBzAGUAcgAgAEMAbwBtAHAAbwBuAGUAbgB0AC8AUwB5AHMARABvAGMATQBpAHgAZQBkAEUAZABpAHQAbwByAAAAAAD/////AAAAAAAAAAAAAAADAAAAAAAAAAD8AQAAAAH7/////wAAAAAA/////wAAAVkA////AAAEKQAAAgEAAAABAAAAAgAAAAEAAAAC/AAAAAMAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEwAZQBmAHQDAAAAAP////8AAAAAAAAAAAAAAAEAAAABAAAAOABjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAUgBpAGcAaAB0AgAAAAD/////AAAAAAAAAAAAAAADAAAAAQAAADoAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEIAbwB0AHQAbwBtAAAAAAD/////AAAAAAAAAAA=</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAEqAAAB0fwCAAAABfsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAeQAAAdEAAAB5AP////wAAAB5AAAB0QAAAAAA////+gAAAAACAAAAAfsAAACeAEwAaQBiAHIAYQByAHkAQgByAG8AdwBzAGUAcgAyACAATABpAGIAcgBhAHIAeQBCAHIAbwB3AHMAZQByAFMAdAB1AGQAaQBvAEMAbwBtAHAAbwBuAGUAbgB0AC8AVgBlAGgAaQBjAGwAZQAxAEQAXwBDAG8AbQBwAG8AbgBlAG4AdABfAGgAYQByAG4AZQBzAHMAXwBtAG8AZABlAGwAAAAAAP////8AAAAAAAAAAPsAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAApwD///8AAAABAAACbAAAAh78AgAAAAH8AAAAeQAAAh4AAAAAAP////oAAAABAgAAAAL7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAEgA////+wAAAF4ARwBMAFUARQAyADoATgBvAHQAZQBzACAAQgByAG8AdwBzAGUAcgAgAEMAbwBtAHAAbwBuAGUAbgB0AC8AUwB5AHMARABvAGMATQBpAHgAZQBkAEUAZABpAHQAbwByAAAAAAD/////AAAAAAAAAAAAAAADAAAAAAAAAAD8AQAAAAH7/////wAAAAAA/////wAAAa4A////AAAFSwAAAoUAAAABAAAAAgAAAAEAAAAC/AAAAAMAAAAAAAAAAQAAADYAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEwAZQBmAHQDAAAAAP////8AAAAAAAAAAAAAAAEAAAABAAAAOABjAG8AbABsAGEAcABzAGkAYgBsAGUAUABhAG4AZQBsAFQAbwBvAGwAQgBhAHIAUgBpAGcAaAB0AgAAAAD/////AAAAAAAAAAAAAAADAAAAAQAAADoAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAEIAbwB0AHQAbwBtAAAAAAD/////AAAAAAAAAAA=</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">0b82776b-3568-4091-8b56-551a033ff4d9</P>
     </Object>
-    <P Name="BDUuid" Class="char">166c0165-ad9b-437f-a7de-810a266f7b11</P>
+    <P Name="BDUuid" Class="char">cac56cd8-e367-45be-80b9-d173802d9a9c</P>
   </Object>
 </WindowsInfo>
 

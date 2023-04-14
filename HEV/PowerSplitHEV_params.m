@@ -36,6 +36,11 @@ initial.vehicle_speed_kph = 0;
 
 %% High Voltage Battery
 
+BatteryHV_refsub_Basic_params
+
+batteryHV.voltagePerCell_V = 3.7;  % Open Circuit Voltage. 3.5V to 3.7V assuming Lithium-ion
+
+%{
 % **Essential**
 batteryHV.nominalVoltage_V = 200;
 batteryHV.internalResistance_Ohm = 0.01;
@@ -72,7 +77,7 @@ batteryHV.secondMeasurementTemperature_K = 273.15 + 0;
 batteryHV.secondNominalVoltage_V = batteryHV.nominalVoltage_V * 0.95;
 batteryHV.secondInternalResistance_Ohm = batteryHV.internalResistance_Ohm * 2;
 batteryHV.secondMeasuredVoltage_V = batteryHV.nominalVoltage_V * 0.9;
-
+%}
 %% DC-DC Converter
 
 % Constant boost voltage is used in this model.

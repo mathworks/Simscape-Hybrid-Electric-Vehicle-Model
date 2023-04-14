@@ -11,7 +11,7 @@ tEnd = eval(get_param(mdl, "StopTime"));
 blkPath = mdl + "/Engine torque command";
 dataPoints = eval(get_param(blkPath, "dataPoints"));
 deltaT = eval(get_param(blkPath, "deltaT"));
-sig = SignalDesigner("continuous");
+sig = SignalDesigner("Continuous");
 sig.XYData = dataPoints;
 sig.DeltaX = deltaT;
 update(sig)
@@ -21,7 +21,7 @@ EngTrqCmd = sig.Data.Y;
 blkPath = mdl + "/MG1 torque command";
 dataPoints = eval(get_param(blkPath, "dataPoints"));
 deltaT = eval(get_param(blkPath, "deltaT"));
-sig = SignalDesigner("continuous");
+sig = SignalDesigner("Continuous");
 sig.XYData = dataPoints;
 sig.DeltaX = deltaT;
 update(sig)
@@ -31,7 +31,7 @@ MG1TrqCmd = sig.Data.Y;
 blkPath = mdl + "/MG2 torque command";
 dataPoints = eval(get_param(blkPath, "dataPoints"));
 deltaT = eval(get_param(blkPath, "deltaT"));
-sig = SignalDesigner("continuous");
+sig = SignalDesigner("Continuous");
 sig.XYData = dataPoints;
 sig.DeltaX = deltaT;
 update(sig)
@@ -41,7 +41,7 @@ MG2TrqCmd = sig.Data.Y;
 blkPath = mdl + "/Road grade";
 dataPoints = eval(get_param(blkPath, "dataPoints"));
 deltaT = eval(get_param(blkPath, "deltaT"));
-sig = SignalDesigner("continuous");
+sig = SignalDesigner("Continuous");
 sig.XYData = dataPoints;
 sig.DeltaX = deltaT;
 update(sig)
@@ -51,7 +51,7 @@ GradeData = sig.Data.Y;
 blkPath = mdl + "/Brake force";
 dataPoints = eval(get_param(blkPath, "dataPoints"));
 deltaT = eval(get_param(blkPath, "deltaT"));
-sig = SignalDesigner("continuous");
+sig = SignalDesigner("Continuous");
 sig.XYData = dataPoints;
 sig.DeltaX = deltaT;
 update(sig)

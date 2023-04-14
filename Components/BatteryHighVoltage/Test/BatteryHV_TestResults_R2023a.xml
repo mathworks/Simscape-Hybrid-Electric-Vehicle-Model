@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<testsuites>
+  <testsuite errors="0" failures="0" name="BatteryHV_UnitTest" skipped="0" tests="3" time="5.0623">
+    <testcase classname="BatteryHV_UnitTest" name="blockParameters_BatteryHV_Basic" time="2.1008"/>
+    <testcase classname="BatteryHV_UnitTest" name="blockParameters_BatteryHV_Driveline" time="0.68523"/>
+    <testcase classname="BatteryHV_UnitTest" name="blockParameters_BatteryHV_Electrical" time="2.2763"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" name="BatteryHV_UnitTest_MQC" skipped="0" tests="42" time="64.8591">
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_CallbackButtons_1" time="1.9552"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_2" time="3.0963"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_3" time="2.1088"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_4" time="2.208"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Model_TableBased_1" time="1.3157"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Model_TableBased_2" time="1.1694"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_SimulationCase_1" time="5.4392"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_SimulationCase_2" time="3.9607"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_SimulationCase_3" time="3.6111"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_SimulationCase_4" time="3.4829"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_1" time="0.213"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_2" time="0.18996"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_3" time="0.16183"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_4" time="0.16789"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_5" time="0.24073"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_6" time="0.0052728"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_7" time="0.42262"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_8" time="0.39993"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_9" time="0.43038"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_10" time="0.42807"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Configuration_11" time="0.28089"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Utility_1" time="0.0036446"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Utility_2" time="0.012682"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Utility_4" time="0.55208"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Utility_5" time="3.2849"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_TopFolder_1" time="0.0042453"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_TopFolder_2" time="0.0068806"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_TopFolder_3" time="0.0057591"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_TopFolder_4" time="0.0051903"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_TopFolder_5" time="0.016042"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_Basic,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Constant)" time="1.9889"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_Basic,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Charge)" time="1.9904"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_Basic,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Discharge)" time="1.8315"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_Basic,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Random)" time="2.0647"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_SystemSimple,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Constant)" time="2.4992"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_SystemSimple,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Charge)" time="2.2885"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_SystemSimple,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Discharge)" time="2.4254"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_SystemSimple,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Random)" time="2.431"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_System,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Constant)" time="3.1553"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_System,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Charge)" time="2.8857"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_System,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Discharge)" time="3.0372"/>
+    <testcase classname="BatteryHV_UnitTest_MQC" name="MQC_Harness_combination_1(useRefSubFunction=@BatteryHV_useRefsub_System,loadSimulationCaseFunction=@BatteryHV_loadSimulationCase_Random)" time="3.0821"/>
+  </testsuite>
+</testsuites>

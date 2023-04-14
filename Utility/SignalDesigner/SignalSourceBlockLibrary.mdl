@@ -1,9 +1,9 @@
 # MathWorks OPC Text Package
 Model {
-  Version  10.6
-  Description "Simulink model saved in R2022b"
+  Version  10.7
+  Description "Simulink model saved in R2023a"
 }
-__MWOPC_PACKAGE_BEGIN__ R2022b
+__MWOPC_PACKAGE_BEGIN__ R2023a
 __MWOPC_PART_BEGIN__ /[Content_Types].xml
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
@@ -40,9 +40,9 @@ __MWOPC_PART_BEGIN__ /metadata/coreProperties.xml
   <dcterms:created xsi:type="dcterms:W3CDTF">2023-01-05T09:17:32Z</dcterms:created>
   <dc:creator>isaacito</dc:creator>
   <cp:lastModifiedBy>isaacito</cp:lastModifiedBy>
-  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-01-10T10:26:38Z</dcterms:modified>
-  <cp:revision>1.9</cp:revision>
-  <cp:version>R2022b</cp:version>
+  <dcterms:modified xsi:type="dcterms:W3CDTF">2023-04-12T14:09:58Z</dcterms:modified>
+  <cp:revision>2.0</cp:revision>
+  <cp:version>R2023a</cp:version>
 </cp:coreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
@@ -50,7 +50,7 @@ __MWOPC_PART_BEGIN__ /metadata/mwcoreProperties.xml
 <mwcoreProperties xmlns="http://schemas.mathworks.com/package/2012/coreProperties">
   <contentType>application/vnd.mathworks.simulink.model</contentType>
   <contentTypeFriendlyName>Simulink Model</contentTypeFriendlyName>
-  <matlabRelease>R2022b</matlabRelease>
+  <matlabRelease>R2023a</matlabRelease>
 </mwcoreProperties>
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
@@ -61,13 +61,13 @@ __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesExtension.xml
 
 __MWOPC_PART_BEGIN__ /metadata/mwcorePropertiesReleaseInfo.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Version information for MathWorks R2022b Release -->
+<!-- Version information for MathWorks R2023a Release -->
 <MathWorks_version_info>
-  <version>9.13.0.2158767</version>
-  <release>R2022b</release>
-  <description>Update 4</description>
-  <date>Dec 31 2022</date>
-  <checksum>433223369</checksum>
+  <version>9.14.0.2206163</version>
+  <release>R2023a</release>
+  <description></description>
+  <date>Feb 22 2023</date>
+  <checksum>2058108452</checksum>
 </MathWorks_version_info>
 
 __MWOPC_PART_BEGIN__ /simulink/_rels/blockdiagram.xml.rels
@@ -102,11 +102,11 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
   <Library>
     <P Name="ModelUUID">d42d1ca4-80d8-4217-97d6-71a4b47af93f</P>
     <P Name="LibraryType">BlockLibrary</P>
-    <P Name="LastSavedArchitecture">glnxa64</P>
+    <P Name="LastSavedArchitecture">win64</P>
     <ConfigManagerSettings>
       <P Name="ModifiedByFormat">%&lt;Auto&gt;</P>
       <P Name="ModifiedDateFormat">%&lt;Auto&gt;</P>
-      <P Name="ModelVersionFormat">%&lt;AutoIncrement:1.9&gt;</P>
+      <P Name="ModelVersionFormat">%&lt;AutoIncrement:2.0&gt;</P>
     </ConfigManagerSettings>
     <SimulationSettings>
       <P Name="SimulationMode">normal</P>
@@ -121,11 +121,11 @@ __MWOPC_PART_BEGIN__ /simulink/blockdiagram.xml
 __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
 <?xml version="1.0" encoding="utf-8"?>
 <ConfigSet>
-  <Object Version="22.1.0" ClassName="Simulink.ConfigSet">
+  <Object Version="23.0.0" ClassName="Simulink.ConfigSet">
     <P Name="DisabledProps" Class="double">[]</P>
     <P Name="Description"/>
     <Array PropName="Components" Type="Handle" Dimension="1*10">
-      <Object ObjectID="2" Version="22.1.0" ClassName="Simulink.SolverCC">
+      <Object ObjectID="2" Version="23.0.0" ClassName="Simulink.SolverCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -170,7 +170,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="MaxZcPerStep">2</P>
         <P Name="MaxZcBracketingIterations">10</P>
       </Object>
-      <Object ObjectID="3" Version="22.1.0" ClassName="Simulink.DataIOCC">
+      <Object ObjectID="3" Version="23.0.0" ClassName="Simulink.DataIOCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -211,7 +211,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="LoggingFileName">out.mat</P>
         <P Name="LoggingIntervals">[-inf, inf]</P>
       </Object>
-      <Object ObjectID="4" Version="22.1.0" ClassName="Simulink.OptimizationCC">
+      <Object ObjectID="4" Version="23.0.0" ClassName="Simulink.OptimizationCC">
         <Array PropName="DisabledProps" Type="Cell" Dimension="1*9">
           <Cell Class="char">BooleansAsBitfields</Cell>
           <Cell Class="char">PassReuseOutputArgsAs</Cell>
@@ -265,6 +265,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="EfficientFloat2IntCast">off</P>
         <P Name="EfficientMapNaN2IntZero">on</P>
         <P Name="LifeSpan">auto</P>
+        <P Name="ClockResolution">-1</P>
         <P Name="MaxStackSize">Inherit from target</P>
         <P Name="BufferReusableBoundary">on</P>
         <P Name="SimCompilerOptimization">off</P>
@@ -282,7 +283,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DenormalBehavior">GradualUnderflow</P>
         <P Name="EfficientTunableParamExpr">off</P>
       </Object>
-      <Object ObjectID="5" Version="22.1.0" ClassName="Simulink.DebuggingCC">
+      <Object ObjectID="5" Version="23.0.0" ClassName="Simulink.DebuggingCC">
         <Array PropName="DisabledProps" Type="Cell" Dimension="1*1">
           <Cell Class="char">UseOnlyExistingSharedCode</Cell>
         </Array>
@@ -362,6 +363,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="OperatingPointInterfaceChecksumMismatchMsg">warning</P>
         <P Name="NonCurrentReleaseOperatingPointMsg">error</P>
         <P Name="PregeneratedLibrarySubsystemCodeDiagnostic">warning</P>
+        <P Name="SubsystemReferenceDiagnosticForUnitTest">error</P>
         <P Name="MatchCodeGenerationContextForUpdateDiagram">none</P>
         <P Name="InitInArrayFormatMsg">warning</P>
         <P Name="StrictBusMsg">ErrorLevel1</P>
@@ -384,7 +386,6 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SFTemporalDelaySmallerThanSampleTimeDiag">warning</P>
         <P Name="SFSelfTransitionDiag">warning</P>
         <P Name="SFExecutionAtInitializationDiag">warning</P>
-        <P Name="SFMachineParentedDataDiag">error</P>
         <P Name="IntegerSaturationMsg">warning</P>
         <P Name="AllowedUnitSystems">all</P>
         <P Name="UnitsInconsistencyMsg">warning</P>
@@ -399,8 +400,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="VariantConditionMismatch">none</P>
         <P Name="InheritVATfromSVC">warning</P>
         <P Name="VariantConfigNotUsedByTopModel">warning</P>
+        <P Name="ParamWriterValidationControl">UseLocalSettings</P>
       </Object>
-      <Object ObjectID="6" Version="22.1.0" ClassName="Simulink.HardwareCC">
+      <Object ObjectID="6" Version="23.0.0" ClassName="Simulink.HardwareCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -448,7 +450,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="UseSimulinkCoderFeatures">on</P>
         <P Name="HardwareBoardFeatureSet">EmbeddedCoderHSP</P>
       </Object>
-      <Object ObjectID="7" Version="22.1.0" ClassName="Simulink.ModelReferenceCC">
+      <Object ObjectID="7" Version="23.0.0" ClassName="Simulink.ModelReferenceCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -467,7 +469,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SupportModelReferenceSimTargetCustomCode">off</P>
         <P Name="UseModelRefSolver">off</P>
       </Object>
-      <Object ObjectID="8" Version="22.1.0" ClassName="Simulink.SFSimCC">
+      <Object ObjectID="8" Version="23.0.0" ClassName="Simulink.SFSimCC">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description"/>
         <P Name="Components" Class="double">[]</P>
@@ -514,8 +516,8 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="SimDLTargetLibrary">mkl-dnn</P>
         <P Name="SimDLAutoTuning">on</P>
       </Object>
-      <Object BackupClass="Simulink.RTWCC" ObjectID="9" Version="22.1.0" ClassName="Simulink.RTWCC">
-        <Array PropName="DisabledProps" Type="Cell" Dimension="1*16">
+      <Object BackupClass="Simulink.RTWCC" ObjectID="9" Version="23.0.0" ClassName="Simulink.RTWCC">
+        <Array PropName="DisabledProps" Type="Cell" Dimension="1*17">
           <Cell Class="char">IncludeHyperlinkInReport</Cell>
           <Cell Class="char">GenerateTraceInfo</Cell>
           <Cell Class="char">GenerateTraceReport</Cell>
@@ -532,6 +534,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           <Cell Class="char">CodeProfilingInstrumentation</Cell>
           <Cell Class="char">CodeStackProfiling</Cell>
           <Cell Class="char">EmbeddedCoderDictionary</Cell>
+          <Cell Class="char">DataTypeReplacement</Cell>
         </Array>
         <P Name="Description">Generic Real-Time Target</P>
         <P Name="SystemTargetFile">grt.tlc</P>
@@ -555,6 +558,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="TLCDebug">off</P>
         <P Name="TLCCoverage">off</P>
         <P Name="TLCAssert">off</P>
+        <P Name="BuiltinFFTWCallback">off</P>
         <P Name="RTWUseLocalCustomCode">on</P>
         <P Name="RTWUseSimCustomCode">off</P>
         <P Name="CustomSourceCode"/>
@@ -581,7 +585,9 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="CodeProfilingInstrumentation">off</P>
         <P Name="CodeStackProfiling">off</P>
         <P Name="CodeStackProfileVariable">stackProfile</P>
-        <P Name="SILDebugging">off</P>
+        <P Name="SILPILDebugging">off</P>
+        <P Name="DataTypeReplacement">CoderTypedefs</P>
+        <P Name="CoderTypedefsCompatibility">off</P>
         <P Name="TargetLang">C</P>
         <P Name="GenerateGPUCode">None</P>
         <P Name="IncludeBusHierarchyInRTWFileBlockHierarchyMap">off</P>
@@ -618,7 +624,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="DLArmComputeVersion">20.02.1</P>
         <P Name="DLArmComputeArch">unspecified</P>
         <Array PropName="Components" Type="Handle" Dimension="1*2">
-          <Object ObjectID="10" Version="22.1.0" ClassName="Simulink.CodeAppCC">
+          <Object ObjectID="10" Version="23.0.0" ClassName="Simulink.CodeAppCC">
             <Array PropName="DisabledProps" Type="Cell" Dimension="1*28">
               <Cell Class="char">IgnoreCustomStorageClasses</Cell>
               <Cell Class="char">IgnoreTestpoints</Cell>
@@ -702,7 +708,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
             <P Name="ReservedNameArray" Class="double">[]</P>
             <P Name="EnumMemberNameClash">error</P>
           </Object>
-          <Object BackupClass="Simulink.TargetCC" ObjectID="11" Version="22.1.0" ClassName="Simulink.GRTTargetCC">
+          <Object BackupClass="Simulink.TargetCC" ObjectID="11" Version="23.0.0" ClassName="Simulink.GRTTargetCC">
             <Array PropName="DisabledProps" Type="Cell" Dimension="1*19">
               <Cell Class="char">IncludeMdlTerminateFcn</Cell>
               <Cell Class="char">SuppressErrorStatus</Cell>
@@ -809,7 +815,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
           </Object>
         </Array>
       </Object>
-      <Object ObjectID="12" Version="22.1.0" ClassName="SlCovCC.ConfigComp">
+      <Object ObjectID="12" Version="23.0.0" ClassName="SlCovCC.ConfigComp">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description">Simulink Coverage Configuration Component</P>
         <P Name="Components" Class="double">[]</P>
@@ -847,7 +853,7 @@ __MWOPC_PART_BEGIN__ /simulink/configSet0.xml
         <P Name="CovMcdcMode">Masking</P>
         <P Name="CovExcludeInactiveVariants">off</P>
       </Object>
-      <Object ObjectID="13" Version="22.1.0" ClassName="hdlcoderui.hdlcc">
+      <Object ObjectID="13" Version="23.0.0" ClassName="hdlcoderui.hdlcc">
         <P Name="DisabledProps" Class="double">[]</P>
         <P Name="Description">HDL Coder custom configuration component</P>
         <P Name="Components" Class="double">[]</P>
@@ -884,22 +890,24 @@ __MWOPC_PART_BEGIN__ /simulink/hdlParams.xml
 
 __MWOPC_PART_BEGIN__ /simulink/modelDictionary.xml
 <?xml version="1.0" encoding="UTF-8"?>
-<MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2022b_20220222">
-  <System type="System" uuid="1cd8449c-83d2-4e31-8b9d-f028f28f866d">
-    <Interface type="Interface" uuid="9a3455e7-1b60-4c95-bcbd-0004c89d049c"/>
+<MF0 version="1.1" defaultPackage="slid" packageUris="http://schema.mathworks.com/mf0/slid/R2023a_20220628">
+  <System type="System" uuid="66b17009-e3f7-486b-9b05-c04dad4dcc28">
+    <Interface type="Interface" uuid="79f2d454-f230-4f5b-b419-d38d81a5eaa4"/>
   </System>
 </MF0>
 __MWOPC_PART_BEGIN__ /simulink/systems/_rels/system_root.xml.rels
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">
   <Relationship Id="system_1" Target="system_1.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_16" Target="system_16.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
+  <Relationship Id="system_25" Target="system_25.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
   <Relationship Id="system_5" Target="system_5.xml" Type="http://schemas.mathworks.com/simulink/2010/relationships/system"/>
 </Relationships>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[114, 127, 1108, 826]</P>
+  <P Name="Location">[27, 141, 1167, 781]</P>
   <Block BlockType="Lookup_n-D" Name="1-D Lookup Table" SID="2">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[225, 78, 290, 142]</P>
@@ -907,15 +915,41 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
     <P Name="HideAutomaticName">off</P>
     <P Name="InputPortMap">u0</P>
     <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">[0           1        1.05         1.1        1.15         1.2        1.25         1.3        1.35         1.4        1.45         1.5        1.55         1.6        1.65         1.7        1.75         1.8        1.85         1.9        1.95           2        2.05         2.1        2.15         2.2        2.25         2.3        2.35         2.4        2.45         2.5        2.55         2.6        2.65         2.7        2.75         2.8        2.85         2.9        2.95           3        3.05         3.1        3.15         3.2        3.25         3.3        3.35         3.4        3.45         3.5        3.55         3.6        3.65         3.7        3.75         3.8        3.85         3.9        3.95           4        4.05         4.1        4.15         4.2        4.25         4.3        4.35         4.4        4.45         4.5        4.55         4.6        4.65         4.7        4.75         4.8        4.85         4.9        4.95           5        5.05         5.1        5.15         5.2        5.25         5.3        5.35         5.4        5.45         5.5        5.55         5.6        5.65         5.7        5.75         5.8        5.85         5.9        5.95           6           8]</P>
-    <P Name="Table">[0           0    0.016594     0.06525     0.14428       0.252     0.38672     0.54675     0.73041       0.936      1.1618      1.4062      1.6675       1.944       2.234      2.5358      2.8477       3.168      3.4951      3.8273      4.1628         4.5      4.8372      5.1728      5.5049       5.832      6.1523      6.4643       6.766       7.056      7.3325      7.5938      7.8382       8.064      8.2696      8.4533      8.6133       8.748      8.8557      8.9348      8.9834           9      8.9984      8.9935      8.9855      8.9745      8.9606       8.944      8.9247      8.9028      8.8785      8.8519       8.823       8.792       8.759      8.7241      8.6875      8.6492      8.6093       8.568      8.5254      8.4815      8.4365      8.3905      8.3436       8.296      8.2477      8.1988      8.1495      8.0999        8.05           8        7.95      7.9001      7.8505      7.8012      7.7523       7.704      7.6564      7.6095      7.5635      7.5185      7.4746       7.432      7.3907      7.3508      7.3125      7.2759       7.241       7.208       7.177      7.1481      7.1215      7.0972      7.0753       7.056      7.0394      7.0255      7.0145      7.0065      7.0016           7           7]</P>
+    <P Name="BreakpointsForDimension1">sig.Data.X</P>
+    <P Name="Table">sig.Data.Y</P>
     <P Name="InternalRulePriority">Speed</P>
     <P Name="RndMeth">Simplest</P>
   </Block>
-  <Block BlockType="Clock" Name="Clock" SID="3">
-    <P Name="Position">[135, 100, 155, 120]</P>
-    <P Name="ZOrder">1</P>
+  <Block BlockType="Reference" Name="Ramp" SID="14">
+    <PortCounts out="1"/>
+    <P Name="Position">[125, 95, 155, 125]</P>
+    <P Name="ZOrder">3</P>
     <P Name="HideAutomaticName">off</P>
+    <P Name="AttributesFormatString">Slope: %&lt;slope&gt;
+Start time: %&lt;start&gt;
+Initial output: %&lt;InitialOutput&gt;
+
+</P>
+    <P Name="LibraryVersion">3.4</P>
+    <P Name="SourceBlock">simulink/Sources/Ramp</P>
+    <P Name="SourceType">Ramp</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="slope">1</P>
+      <P Name="start">0</P>
+      <P Name="InitialOutput">0</P>
+      <P Name="VectorParams1D">on</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">time</P>
+      </Port>
+    </PortProperties>
   </Block>
   <Block BlockType="Outport" Name="Out1" SID="4">
     <P Name="Position">[360, 103, 390, 117]</P>
@@ -927,16 +961,150 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_1.xml
     <P Name="Dst">4#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">3#out:1</P>
+    <P Name="Name">time</P>
+    <P Name="ZOrder">3</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">14#out:1</P>
     <P Name="Dst">2#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_16.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[27, 141, 1167, 781]</P>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup Table" SID="17">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[225, 78, 290, 142]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">sig.Data.X</P>
+    <P Name="Table">sig.Data.Y</P>
+    <P Name="ExtrapMethod">Clip</P>
+    <P Name="UseLastTableValue">on</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Reference" Name="Ramp" SID="18">
+    <PortCounts out="1"/>
+    <P Name="Position">[125, 95, 155, 125]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="AttributesFormatString">Slope: %&lt;slope&gt;
+Start time: %&lt;start&gt;
+Initial output: %&lt;InitialOutput&gt;
+
+</P>
+    <P Name="LibraryVersion">3.4</P>
+    <P Name="SourceBlock">simulink/Sources/Ramp</P>
+    <P Name="SourceType">Ramp</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="slope">1</P>
+      <P Name="start">0</P>
+      <P Name="InitialOutput">0</P>
+      <P Name="VectorParams1D">on</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">time</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="19">
+    <P Name="Position">[360, 103, 390, 117]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">17#out:1</P>
+    <P Name="Dst">19#in:1</P>
+  </Line>
+  <Line>
+    <P Name="Name">time</P>
+    <P Name="ZOrder">2</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">18#out:1</P>
+    <P Name="Dst">17#in:1</P>
+  </Line>
+</System>
+
+__MWOPC_PART_BEGIN__ /simulink/systems/system_25.xml
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[27, 141, 1167, 781]</P>
+  <Block BlockType="Lookup_n-D" Name="1-D Lookup Table" SID="26">
+    <PortCounts in="1" out="1"/>
+    <P Name="Position">[225, 78, 290, 142]</P>
+    <P Name="ZOrder">2</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="InputPortMap">u0</P>
+    <P Name="NumberOfTableDimensions">1</P>
+    <P Name="BreakpointsForDimension1">sig.Data.X</P>
+    <P Name="Table">sig.Data.Y</P>
+    <P Name="InternalRulePriority">Speed</P>
+    <P Name="RndMeth">Simplest</P>
+  </Block>
+  <Block BlockType="Reference" Name="Ramp" SID="27">
+    <PortCounts out="1"/>
+    <P Name="Position">[125, 95, 155, 125]</P>
+    <P Name="ZOrder">3</P>
+    <P Name="HideAutomaticName">off</P>
+    <P Name="AttributesFormatString">Slope: %&lt;slope&gt;
+Start time: %&lt;start&gt;
+Initial output: %&lt;InitialOutput&gt;
+
+</P>
+    <P Name="LibraryVersion">3.4</P>
+    <P Name="SourceBlock">simulink/Sources/Ramp</P>
+    <P Name="SourceType">Ramp</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="slope">1</P>
+      <P Name="start">0</P>
+      <P Name="InitialOutput">0</P>
+      <P Name="VectorParams1D">on</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">time</P>
+      </Port>
+    </PortProperties>
+  </Block>
+  <Block BlockType="Outport" Name="Out1" SID="28">
+    <P Name="Position">[360, 103, 390, 117]</P>
+    <P Name="ZOrder">-2</P>
+  </Block>
+  <Line>
+    <P Name="Name">time</P>
+    <P Name="ZOrder">1</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">27#out:1</P>
+    <P Name="Dst">26#in:1</P>
+  </Line>
+  <Line>
+    <P Name="ZOrder">2</P>
+    <P Name="Src">26#out:1</P>
+    <P Name="Dst">28#in:1</P>
   </Line>
 </System>
 
 __MWOPC_PART_BEGIN__ /simulink/systems/system_5.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[183, 74, 1177, 833]</P>
+  <P Name="Location">[27, 141, 1167, 781]</P>
   <Block BlockType="Lookup_n-D" Name="1-D Lookup Table" SID="6">
     <PortCounts in="1" out="1"/>
     <P Name="Position">[225, 78, 290, 142]</P>
@@ -944,16 +1112,42 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_5.xml
     <P Name="HideAutomaticName">off</P>
     <P Name="InputPortMap">u0</P>
     <P Name="NumberOfTableDimensions">1</P>
-    <P Name="BreakpointsForDimension1">[0  2  4  5]</P>
-    <P Name="Table">[1  3  2  2]</P>
+    <P Name="BreakpointsForDimension1">sig.Data.X</P>
+    <P Name="Table">sig.Data.Y</P>
     <P Name="InterpMethod">Flat</P>
     <P Name="InternalRulePriority">Speed</P>
     <P Name="RndMeth">Simplest</P>
   </Block>
-  <Block BlockType="Clock" Name="Clock" SID="7">
-    <P Name="Position">[135, 100, 155, 120]</P>
-    <P Name="ZOrder">1</P>
+  <Block BlockType="Reference" Name="Ramp" SID="15">
+    <PortCounts out="1"/>
+    <P Name="Position">[125, 95, 155, 125]</P>
+    <P Name="ZOrder">4</P>
     <P Name="HideAutomaticName">off</P>
+    <P Name="AttributesFormatString">Slope: %&lt;slope&gt;
+Start time: %&lt;start&gt;
+Initial output: %&lt;InitialOutput&gt;
+
+</P>
+    <P Name="LibraryVersion">3.4</P>
+    <P Name="SourceBlock">simulink/Sources/Ramp</P>
+    <P Name="SourceType">Ramp</P>
+    <InstanceData>
+      <P Name="RTWMemSecFuncInitTerm">Inherit from model</P>
+      <P Name="RTWMemSecFuncExecute">Inherit from model</P>
+      <P Name="RTWMemSecDataConstants">Inherit from model</P>
+      <P Name="RTWMemSecDataInternal">Inherit from model</P>
+      <P Name="RTWMemSecDataParameters">Inherit from model</P>
+      <P Name="ContentPreviewEnabled">on</P>
+      <P Name="slope">1</P>
+      <P Name="start">0</P>
+      <P Name="InitialOutput">0</P>
+      <P Name="VectorParams1D">on</P>
+    </InstanceData>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">time</P>
+      </Port>
+    </PortProperties>
   </Block>
   <Block BlockType="Outport" Name="Out1" SID="8">
     <P Name="Position">[360, 103, 390, 117]</P>
@@ -965,8 +1159,10 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_5.xml
     <P Name="Dst">8#in:1</P>
   </Line>
   <Line>
-    <P Name="ZOrder">2</P>
-    <P Name="Src">7#out:1</P>
+    <P Name="Name">time</P>
+    <P Name="ZOrder">4</P>
+    <P Name="Labels">[1, 1]</P>
+    <P Name="Src">15#out:1</P>
     <P Name="Dst">6#in:1</P>
   </Line>
 </System>
@@ -974,16 +1170,108 @@ __MWOPC_PART_BEGIN__ /simulink/systems/system_5.xml
 __MWOPC_PART_BEGIN__ /simulink/systems/system_root.xml
 <?xml version="1.0" encoding="utf-8"?>
 <System>
-  <P Name="Location">[27, 192, 1021, 783]</P>
-  <P Name="Open">on</P>
+  <P Name="Location">[47, 111, 1187, 751]</P>
   <P Name="ReportName">simulink-default.rpt</P>
-  <P Name="SIDHighWatermark">13</P>
+  <P Name="SIDHighWatermark">32</P>
+  <Block BlockType="SubSystem" Name="Continuous" SID="16">
+    <PortCounts out="1"/>
+    <P Name="Position">[435, 101, 510, 129]</P>
+    <P Name="ZOrder">47</P>
+    <P Name="CopyFcn">set_param(gcb, LinkStatus = &quot;none&quot;);
+set_param(gcb, CopyFcn = &quot;&quot;);</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Mask>
+      <Type>Continuous Multi-Step Signal</Type>
+      <Display RunInitForIconRedraw="off">disp(&quot;Continuous&quot;)
+</Display>
+      <Description>This block generates a signal consisting of smoothly connected flat segments. Data points parameter takes an N-by-3 matrix where each row specifies a flat segment. First column and second column define start and end time of the segment, respectively. Third column defines the value of the segment. Second column can also be NaN to define a point value. Flat segments and point values are smoothly interpolated by Akima spline with the specified interpolation step.
+
+For example, a matrix [0 1 5; 3 nan 9; 6 8 7] for Data points defines a signal as follows. First row defines a flat segment from t=0 to t=1 of value 5. Second row defines a point at t=3 of value 9. Third row defines a flat segment from t=6 to t=8 of value 7.</Description>
+      <Initialization>
+sig = SignalDesigner(&quot;Continuous&quot;);
+
+% Initialization function can access parameter names directly
+sig.XYData = dataPoints;
+sig.DeltaX = deltaT;
+
+update(sig)
+</Initialization>
+      <MaskParameter Name="dataPoints" Type="edit">
+        <Prompt>Data points</Prompt>
+        <Value>[0 0; 1 0; 2 5; 4 2; 5 2]</Value>
+      </MaskParameter>
+      <MaskParameter Name="deltaT" Type="edit">
+        <Prompt>Interpolation step [s]</Prompt>
+        <Value>0.05</Value>
+        <ConstraintName>constraint_deltaT</ConstraintName>
+      </MaskParameter>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="ParameterGroupVar">
+        <Prompt>Parameters</Prompt>
+        <DialogControl Type="Edit" Name="dataPoints">
+          <Prompt>Data points</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="deltaT">
+          <Prompt>Interpolation step [s]</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Text" Name="Control3">
+        <Prompt>horizontal spacer 1</Prompt>
+        <ControlOptions Visible="off"/>
+      </DialogControl>
+      <DialogControl Type="Text" Name="Control4">
+        <Prompt>horizontal spacer 2</Prompt>
+        <ControlOptions Visible="off" Row="current"/>
+      </DialogControl>
+      <DialogControl Type="Text" Name="Control5">
+        <Prompt>horizontal spacer 3</Prompt>
+        <ControlOptions Visible="off" Row="current"/>
+      </DialogControl>
+      <DialogControl Type="Button" Name="PlotButton">
+        <Prompt>Plot</Prompt>
+        <Callback>SignalSourceBlockCallback.plotContinuous(gcb);</Callback>
+        <ControlOptions Row="current" HorizontalStretch="off"/>
+      </DialogControl>
+      <ParameterConstraints Name="constraint_deltaT">
+        <ParameterConstraintRule>
+          <StringList PropName="DataTypes">
+            <String>numeric</String>
+          </StringList>
+          <StringList PropName="Dimension">
+            <String>scalar</String>
+          </StringList>
+          <StringList PropName="Fraction"/>
+          <StringList PropName="Complexity">
+            <String>real</String>
+          </StringList>
+          <StringList PropName="Sign">
+            <String>positive</String>
+          </StringList>
+          <StringList PropName="Finiteness">
+            <String>finite</String>
+          </StringList>
+          <Minimum/>
+          <Maximum/>
+          <CustomConstraint/>
+          <CustomErrorMessage/>
+        </ParameterConstraintRule>
+      </ParameterConstraints>
+    </Mask>
+    <System Ref="system_16"/>
+  </Block>
   <Block BlockType="SubSystem" Name="Continuous Multi-Step" SID="1">
     <PortCounts out="1"/>
-    <P Name="Position">[485, 76, 560, 104]</P>
+    <P Name="Position">[435, 41, 510, 69]</P>
     <P Name="ZOrder">2</P>
-    <P Name="CopyFcn">set_param(gcb,&apos;LinkStatus&apos;,&apos;none&apos;);
-set_param(gcb,&apos;CopyFcn&apos;,&apos;&apos;);</P>
+    <P Name="CopyFcn">set_param(gcb, LinkStatus = &quot;none&quot;);
+set_param(gcb, CopyFcn = &quot;&quot;);</P>
     <P Name="ContentPreviewEnabled">on</P>
     <Mask>
       <Type>Continuous Multi-Step Signal</Type>
@@ -993,19 +1281,13 @@ set_param(gcb,&apos;CopyFcn&apos;,&apos;&apos;);</P>
 
 For example, a matrix [0 1 5; 3 nan 9; 6 8 7] for Data points defines a signal as follows. First row defines a flat segment from t=0 to t=1 of value 5. Second row defines a point at t=3 of value 9. Third row defines a flat segment from t=6 to t=8 of value 7.</Description>
       <Initialization>
-sig = SignalDesigner(&quot;continuous&quot;);
+sig = SignalDesigner(&quot;ContinuousMultiStep&quot;);
 
 % Initialization function can access parameter names directly
 sig.XYData = dataPoints;
 sig.DeltaX = deltaT;
 
 update(sig)
-
-xStr = &quot;[&quot; + num2str(sig.Data.X&apos;) + &quot;]&quot;;
-yStr = &quot;[&quot; + num2str(sig.Data.Y&apos;) + &quot;]&quot;;
-
-set_param([gcb &apos;/1-D Lookup Table&apos;], &apos;Table&apos;, yStr)
-set_param([gcb &apos;/1-D Lookup Table&apos;], &apos;BreakpointsForDimension1&apos;, xStr)
 </Initialization>
       <MaskParameter Name="dataPoints" Type="edit">
         <Prompt>Data points</Prompt>
@@ -1033,25 +1315,9 @@ set_param([gcb &apos;/1-D Lookup Table&apos;], &apos;BreakpointsForDimension1&ap
           <ControlOptions PromptLocation="left"/>
         </DialogControl>
       </DialogControl>
-      <DialogControl Type="Button" Name="PlotButton">
-        <Prompt>Plot</Prompt>
-        <Callback>
-dataPoints = eval(get_param(gcb, &quot;dataPoints&quot;));
-deltaT = eval(get_param(gcb, &quot;deltaT&quot;));
-
-sig = SignalDesigner(&quot;continuous&quot;);
-sig.DeltaX = deltaT;
-sig.XYData = dataPoints;
-sig.XVarName = &quot;Time (s)&quot;;
-sig.YVarName = &quot;Data&quot;;
-update(sig)
-plotDataPoints(sig);
-</Callback>
-        <ControlOptions HorizontalStretch="off"/>
-      </DialogControl>
       <DialogControl Type="Text" Name="Control3">
         <Prompt>horizontal spacer 1</Prompt>
-        <ControlOptions Visible="off" Row="current"/>
+        <ControlOptions Visible="off"/>
       </DialogControl>
       <DialogControl Type="Text" Name="Control4">
         <Prompt>horizontal spacer 2</Prompt>
@@ -1060,6 +1326,11 @@ plotDataPoints(sig);
       <DialogControl Type="Text" Name="Control5">
         <Prompt>horizontal spacer 3</Prompt>
         <ControlOptions Visible="off" Row="current"/>
+      </DialogControl>
+      <DialogControl Type="Button" Name="PlotButton">
+        <Prompt>Plot</Prompt>
+        <Callback>SignalSourceBlockCallback.plotContinuousMultiStep(gcb);</Callback>
+        <ControlOptions Row="current" HorizontalStretch="off"/>
       </DialogControl>
       <ParameterConstraints Name="constraint_deltaT">
         <ParameterConstraintRule>
@@ -1090,10 +1361,10 @@ plotDataPoints(sig);
   </Block>
   <Block BlockType="SubSystem" Name="Piece-Wise Constant" SID="5">
     <PortCounts out="1"/>
-    <P Name="Position">[625, 76, 700, 104]</P>
+    <P Name="Position">[435, 161, 510, 189]</P>
     <P Name="ZOrder">3</P>
-    <P Name="CopyFcn">set_param(gcb,&apos;LinkStatus&apos;,&apos;none&apos;);
-set_param(gcb,&apos;CopyFcn&apos;,&apos;&apos;);</P>
+    <P Name="CopyFcn">set_param(gcb, LinkStatus = &quot;none&quot;);
+set_param(gcb, CopyFcn = &quot;&quot;);</P>
     <P Name="ContentPreviewEnabled">on</P>
     <Mask>
       <Type>Piece-Wise Constant Signal</Type>
@@ -1103,18 +1374,12 @@ set_param(gcb,&apos;CopyFcn&apos;,&apos;&apos;);</P>
 
 For example, a matrix [0 6; 1 7;2 5] for Data points defines a signal as follows. First row defines a constant segment from t=0 of value 6. Second row defines a point at t=1 of value 7. Third row defines a constant segment from t=2 of value 5. The value makes a discrete jump from one segment to the next.</Description>
       <Initialization>
-sig = SignalDesigner(&quot;step&quot;);
+sig = SignalDesigner(&quot;PieceWiseConstant&quot;);
 
 % Initialization function can access parameter names directly
 sig.XYData = dataPoints;
 
 update(sig)
-
-xStr = &quot;[&quot; + num2str(sig.Data.X&apos;) + &quot;]&quot;;
-yStr = &quot;[&quot; + num2str(sig.Data.Y&apos;) + &quot;]&quot;;
-
-set_param([gcb &apos;/1-D Lookup Table&apos;], &apos;Table&apos;, yStr)
-set_param([gcb &apos;/1-D Lookup Table&apos;], &apos;BreakpointsForDimension1&apos;, xStr)
 </Initialization>
       <MaskParameter Name="dataPoints" Type="edit">
         <Prompt>Data points</Prompt>
@@ -1133,23 +1398,9 @@ set_param([gcb &apos;/1-D Lookup Table&apos;], &apos;BreakpointsForDimension1&ap
           <ControlOptions PromptLocation="left"/>
         </DialogControl>
       </DialogControl>
-      <DialogControl Type="Button" Name="PlotButton">
-        <Prompt>Plot</Prompt>
-        <Callback>
-dataPoints = eval(get_param(gcb, &quot;dataPoints&quot;));
-
-sig = SignalDesigner(&quot;step&quot;);
-sig.XYData = dataPoints;
-sig.XVarName = &quot;Time (s)&quot;;
-sig.YVarName = &quot;Data&quot;;
-update(sig)
-plotDataPoints(sig);
-</Callback>
-        <ControlOptions HorizontalStretch="off"/>
-      </DialogControl>
       <DialogControl Type="Text" Name="Control3">
         <Prompt>invisible horizontal spacer 1</Prompt>
-        <ControlOptions Visible="off" Row="current"/>
+        <ControlOptions Visible="off"/>
       </DialogControl>
       <DialogControl Type="Text" Name="Control4">
         <Prompt>invisible horizontal spacer 2</Prompt>
@@ -1159,18 +1410,200 @@ plotDataPoints(sig);
         <Prompt>invisible horizontal spacer 3</Prompt>
         <ControlOptions Visible="off" Row="current"/>
       </DialogControl>
+      <DialogControl Type="Button" Name="PlotButton">
+        <Prompt>Plot</Prompt>
+        <Callback>SignalSourceBlockCallback.plotPieceWiseConstant(gcb)</Callback>
+        <ControlOptions Row="current" HorizontalStretch="off"/>
+      </DialogControl>
     </Mask>
     <System Ref="system_5"/>
   </Block>
-  <Block BlockType="CallbackButton" Name="example script" SID="13">
-    <P Name="Position">[50, 225, 160, 260]</P>
-    <P Name="ZOrder">46</P>
-    <P Name="NameLocation">right</P>
-    <P Name="HideAutomaticName">off</P>
-    <P Name="ClickFcn">edit SignalDesigner_example
-</P>
-    <P Name="ButtonText">Open</P>
+  <Block BlockType="SubSystem" Name="Trace Generator" SID="25">
+    <PortCounts out="1"/>
+    <P Name="Position">[435, 221, 510, 249]</P>
+    <P Name="ZOrder">55</P>
+    <P Name="CopyFcn">set_param(gcb, LinkStatus = &quot;none&quot;);
+set_param(gcb, CopyFcn = &quot;&quot;);</P>
+    <P Name="ContentPreviewEnabled">on</P>
+    <Mask>
+      <Type>Trace Generator</Type>
+      <Display RunInitForIconRedraw="off">disp(&quot;Trace&quot; + newline + &quot;Generator&quot;)
+</Display>
+      <Description>This block generates a smooth signal consisting of flat segments.</Description>
+      <Initialization>
+xydata = SignalDesignUtility.buildXYData( ...
+  RandomSeed = randomSeed, ...
+  XScale = tScale, ...
+  YScale = yScale, ...
+  XInitialFlatLength = tInitialFlatLength, ...
+  YInitialValue = yInitialValue, ...
+  NumTransitions  = numTransitions, ...
+  TransitionRange = transitionRange, ...
+  FlatRange = flatRange, ...
+  YRange = yRange, ...
+  XFinalTransitionLength = tFinalTransitionDuration, ...
+  XFinalFlatLength = tFinalFlatDuration, ...
+  YFinalValue = yFinalValue );
+
+sig = SignalDesigner(&quot;ContinuousMultiStep&quot;);
+sig.XYData = xydata;
+sig.DeltaX = interpolationStepSize;
+
+update(sig)
+</Initialization>
+      <MaskParameter Name="yScale" Type="edit">
+        <Prompt>Data value scaler</Prompt>
+        <Value>1</Value>
+      </MaskParameter>
+      <MaskParameter Name="tScale" Type="edit">
+        <Prompt>Time scaler</Prompt>
+        <Value>1</Value>
+      </MaskParameter>
+      <MaskParameter Name="randomSeed" Type="edit">
+        <Prompt>Random seed</Prompt>
+        <Value>5</Value>
+      </MaskParameter>
+      <MaskParameter Name="interpolationStepSize" Type="edit">
+        <Prompt>Interpolation step [s]</Prompt>
+        <Value>0.1</Value>
+      </MaskParameter>
+      <MaskParameter Name="tInitialFlatLength" Type="edit">
+        <Prompt>Initial constant duration</Prompt>
+        <Value>3</Value>
+      </MaskParameter>
+      <MaskParameter Name="yInitialValue" Type="edit">
+        <Prompt>Initial data value</Prompt>
+        <Value>0</Value>
+      </MaskParameter>
+      <MaskParameter Name="numTransitions" Type="edit">
+        <Prompt>Number of transitions</Prompt>
+        <Value>2</Value>
+      </MaskParameter>
+      <MaskParameter Name="transitionRange" Type="edit">
+        <Prompt>Range of transition duration</Prompt>
+        <Value>[2 5]</Value>
+      </MaskParameter>
+      <MaskParameter Name="flatRange" Type="edit">
+        <Prompt>Range of constant duration</Prompt>
+        <Value>[5 10]</Value>
+      </MaskParameter>
+      <MaskParameter Name="yRange" Type="edit">
+        <Prompt>Range of data value</Prompt>
+        <Value>[-5 10]</Value>
+      </MaskParameter>
+      <MaskParameter Name="tFinalTransitionDuration" Type="edit">
+        <Prompt>Final transition duration</Prompt>
+        <Value>3</Value>
+      </MaskParameter>
+      <MaskParameter Name="tFinalFlatDuration" Type="edit">
+        <Prompt>Final constant duration</Prompt>
+        <Value>4</Value>
+      </MaskParameter>
+      <MaskParameter Name="yFinalValue" Type="edit">
+        <Prompt>Final data value</Prompt>
+        <Value>0</Value>
+      </MaskParameter>
+      <DialogControl Type="Group" Name="DescGroupVar">
+        <Prompt>%&lt;MaskType&gt;</Prompt>
+        <DialogControl Type="Text" Name="DescTextVar">
+          <Prompt>%&lt;MaskDescription&gt;</Prompt>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Group" Name="ParameterGroupVar">
+        <Prompt>Parameters</Prompt>
+        <DialogControl Type="Edit" Name="randomSeed">
+          <Prompt>Random seed</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="interpolationStepSize">
+          <Prompt>Interpolation step [s]</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="tInitialFlatLength">
+          <Prompt>Initial constant duration</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="yInitialValue">
+          <Prompt>Initial data value</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="numTransitions">
+          <Prompt>Number of transitions</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="transitionRange">
+          <Prompt>Range of transition duration</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="flatRange">
+          <Prompt>Range of constant duration</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="yRange">
+          <Prompt>Range of data value</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="tFinalTransitionDuration">
+          <Prompt>Final transition duration</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="tFinalFlatDuration">
+          <Prompt>Final constant duration</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="Edit" Name="yFinalValue">
+          <Prompt>Final data value</Prompt>
+          <ControlOptions PromptLocation="left"/>
+        </DialogControl>
+        <DialogControl Type="CollapsiblePanel" Name="Container3">
+          <Prompt>Advanced</Prompt>
+          <DialogControl Type="Edit" Name="yScale">
+            <Prompt>Data value scaler</Prompt>
+            <ControlOptions PromptLocation="left"/>
+          </DialogControl>
+          <DialogControl Type="Edit" Name="tScale">
+            <Prompt>Time scaler</Prompt>
+            <ControlOptions PromptLocation="left"/>
+          </DialogControl>
+        </DialogControl>
+      </DialogControl>
+      <DialogControl Type="Text" Name="Control3">
+        <Prompt>horizontal spacer 1</Prompt>
+        <ControlOptions Visible="off"/>
+      </DialogControl>
+      <DialogControl Type="Text" Name="Control4">
+        <Prompt>horizontal spacer 2</Prompt>
+        <ControlOptions Visible="off" Row="current"/>
+      </DialogControl>
+      <DialogControl Type="Text" Name="Control5">
+        <Prompt>horizontal spacer 3</Prompt>
+        <ControlOptions Visible="off" Row="current"/>
+      </DialogControl>
+      <DialogControl Type="Button" Name="PlotButton">
+        <Prompt>Plot</Prompt>
+        <Callback>SignalSourceBlockCallback.plotTraceGenerator(gcb);</Callback>
+        <ControlOptions Row="current" HorizontalStretch="off"/>
+      </DialogControl>
+    </Mask>
+    <PortProperties>
+      <Port Type="out" Index="1">
+        <P Name="Name">signal</P>
+      </Port>
+    </PortProperties>
+    <System Ref="system_25"/>
   </Block>
+  <Annotation SID="24">
+    <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;The blocks need &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;SignalDesigner.m&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;which is part of this library.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[589, 37, 847, 73]</P>
+    <P Name="InternalMargins">[0, 0, 0, 0]</P>
+    <P Name="Interpreter">rich</P>
+    <P Name="ZOrder">-1</P>
+  </Annotation>
   <Annotation SID="12">
     <P Name="Name">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -1181,7 +1614,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;this library is automatically removed.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;SignalDesigner.m is still required for&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;the copied block to work.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[460, 153, 745, 240]</P>
+    <P Name="Position">[589, 89, 874, 176]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-1</P>
@@ -1192,7 +1625,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:12px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12px;&quot;&gt;Copyright 2023 The MathWorks, Inc.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[50, 275, 246, 291]</P>
+    <P Name="Position">[341, 296, 537, 312]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-2</P>
@@ -1203,7 +1636,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:16px; font-weight:600;&quot;&gt;Signal Source Block Library&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[50, 3, 300, 24]</P>
+    <P Name="Position">[-37, -36, 213, -15]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-3</P>
@@ -1213,17 +1646,23 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body align=&quot;left&quot; style=&quot; font-family:&apos;Helvetica&apos;; font-size:10px; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;This block library provides two blocks:&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;This library provides the following blocks:&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt; Continuous Multi-Step&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;Block&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; generates&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  a signal with smoothly connected flat segments.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt; Continuous Multi-Step&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; block generates&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  a smooth signal consisting of flat segments and points.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  You can specify data points in an N-by-3 matrix.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;Piece-Wise Constant&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;Block&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; generates&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  a piece-wise constant signal.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;-&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt; Continuous &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;block generates a smooth signal.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  You can specify data points using a low-level format.&lt;/span&gt;&lt;/p&gt;
 &lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;The blocks need &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;SignalDesigner.m&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; which is&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;part of this library.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
-    <P Name="Position">[50, 38, 400, 210]</P>
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;Piece-Wise Constant&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; block generates&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  a piece-wise constant discrete signal.&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;- &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px; font-weight:600;&quot;&gt;Trace Generator&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; block&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt; generates a smooth signal&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;similar to Continuous Multi-Step block, but&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  this block lets you specify the high-level characteristics&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;left&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:14px;&quot;&gt;  of a signal.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</P>
+    <P Name="Position">[-37, -7, 361, 267]</P>
     <P Name="InternalMargins">[0, 0, 0, 0]</P>
     <P Name="Interpreter">rich</P>
     <P Name="ZOrder">-1</P>
@@ -1236,7 +1675,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
   <Object PropName="BdWindowsInfo" ObjectID="1" ClassName="Simulink.BDWindowsInfo">
     <Object PropName="WindowsInfo" ObjectID="2" ClassName="Simulink.WindowInfo">
       <P Name="IsActive" Class="logical">1</P>
-      <P Name="Location" Class="double">[27.0, 192.0, 994.0, 591.0]</P>
+      <P Name="Location" Class="double">[47.0, 111.0, 1140.0, 640.0]</P>
       <Object PropName="ModelBrowserInfo" ObjectID="3" ClassName="Simulink.ModelBrowserInfo">
         <P Name="Visible" Class="logical">1</P>
         <P Name="DockPosition" Class="char">Left</P>
@@ -1248,30 +1687,60 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
       <Object PropName="ExplorerBarInfo" ObjectID="4" ClassName="Simulink.ExplorerBarInfo">
         <P Name="Visible" Class="logical">1</P>
       </Object>
-      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*2">
+      <Array PropName="EditorsInfo" Type="Simulink.EditorInfo" Dimension="1*5">
         <Object ObjectID="5">
           <P Name="IsActive" Class="logical">1</P>
           <P Name="IsTabbed" Class="logical">1</P>
           <P Name="ViewObjType" Class="char">SimulinkTopLevel</P>
           <P Name="LoadSaveID" Class="char">0</P>
-          <P Name="Extents" Class="double">[866.0, 352.0]</P>
+          <P Name="Extents" Class="double">[1028.0, 409.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-35.265625, -29.0]</P>
-          <P Name="SceneRectInView" Class="double">[-35.265625, -29.0, 866.0, 352.0]</P>
+          <P Name="Offset" Class="double">[-95.265625, -66.5]</P>
+          <P Name="SceneRectInView" Class="double">[-95.265625, -66.5, 1028.0, 409.0]</P>
         </Object>
         <Object ObjectID="6">
           <P Name="IsActive" Class="logical">0</P>
           <P Name="IsTabbed" Class="logical">0</P>
           <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
-          <P Name="LoadSaveID" Class="char">1</P>
-          <P Name="Extents" Class="double">[868.0, 461.0]</P>
+          <P Name="LoadSaveID" Class="char">16</P>
+          <P Name="Extents" Class="double">[1028.0, 409.0]</P>
           <P Name="ZoomFactor" Class="double">1.0</P>
-          <P Name="Offset" Class="double">[-173.49609375, -111.5]</P>
-          <P Name="SceneRectInView" Class="double">[-173.49609375, -111.5, 868.0, 461.0]</P>
+          <P Name="Offset" Class="double">[-265.7109375, -60.5]</P>
+          <P Name="SceneRectInView" Class="double">[-265.7109375, -60.5, 1028.0, 409.0]</P>
+        </Object>
+        <Object ObjectID="7">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">25</P>
+          <P Name="Extents" Class="double">[1028.0, 409.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-265.7109375, -60.5]</P>
+          <P Name="SceneRectInView" Class="double">[-265.7109375, -60.5, 1028.0, 409.0]</P>
+        </Object>
+        <Object ObjectID="8">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">1</P>
+          <P Name="Extents" Class="double">[1028.0, 409.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-265.7109375, -61.0]</P>
+          <P Name="SceneRectInView" Class="double">[-265.7109375, -61.0, 1028.0, 409.0]</P>
+        </Object>
+        <Object ObjectID="9">
+          <P Name="IsActive" Class="logical">0</P>
+          <P Name="IsTabbed" Class="logical">0</P>
+          <P Name="ViewObjType" Class="char">SimulinkSubsys</P>
+          <P Name="LoadSaveID" Class="char">5</P>
+          <P Name="Extents" Class="double">[1028.0, 409.0]</P>
+          <P Name="ZoomFactor" Class="double">1.0</P>
+          <P Name="Offset" Class="double">[-265.7109375, -61.0]</P>
+          <P Name="SceneRectInView" Class="double">[-265.7109375, -61.0, 1028.0, 409.0]</P>
         </Object>
       </Array>
       <Array PropName="DockComponentsInfo" Type="Simulink.DockComponentInfo" Dimension="1*2">
-        <Object ObjectID="7">
+        <Object ObjectID="10">
           <P Name="Type" Class="char">GLUE2:PropertyInspector</P>
           <P Name="ID" Class="char">Property Inspector</P>
           <P Name="Visible" Class="logical">1</P>
@@ -1283,7 +1752,7 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Height" Class="int32">480</P>
           <P Name="Minimized" Class="char">On</P>
         </Object>
-        <Object ObjectID="8">
+        <Object ObjectID="11">
           <P Name="Type" Class="char">Simulink:Editor:ReferencedFiles</P>
           <P Name="ID" Class="char">Referenced Files</P>
           <P Name="Visible" Class="logical">0</P>
@@ -1297,11 +1766,11 @@ __MWOPC_PART_BEGIN__ /simulink/windowsInfo.xml
           <P Name="Minimized" Class="char">Unset</P>
         </Object>
       </Array>
-      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACTAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAyAD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAFZAP///wAAA4gAAAGdAAAAAQAAAAIAAAABAAAAAvwAAAADAAAAAAAAAAEAAAA2AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBMAGUAZgB0AwAAAAD/////AAAAAAAAAAAAAAABAAAAAQAAADgAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAFIAaQBnAGgAdAMAAAAA/////wAAAAAAAAAAAAAAAwAAAAEAAAA6AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBCAG8AdAB0AG8AbQAAAAAA/////wAAAAAAAAAA</P>
+      <P Name="WindowState" Class="char">AAAA/wAAAAD9AAAAAwAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAAAAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABsAP////sAAABgAFMAaQBtAHUAbABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZQBzAAAAAAD/////AAAAlgD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAdABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAAAwAAAAAAAAAA/AEAAAAB+/////8AAAAAAP////8AAAFZAP///wAABCoAAAHWAAAAAQAAAAIAAAABAAAAAvwAAAADAAAAAAAAAAEAAAA2AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBMAGUAZgB0AwAAAAD/////AAAAAAAAAAAAAAABAAAAAQAAADgAYwBvAGwAbABhAHAAcwBpAGIAbABlAFAAYQBuAGUAbABUAG8AbwBsAEIAYQByAFIAaQBnAGgAdAMAAAAA/////wAAAAAAAAAAAAAAAwAAAAEAAAA6AGMAbwBsAGwAYQBwAHMAaQBiAGwAZQBQAGEAbgBlAGwAVABvAG8AbABCAGEAcgBCAG8AdAB0AG8AbQAAAAAA/////wAAAAAAAAAA</P>
       <Array PropName="PersistedApps" Type="Cell" Dimension="0*1"/>
       <P Name="WindowUuid" Class="char">3fce3d09-803e-468d-8408-e10978d48109</P>
     </Object>
-    <P Name="BDUuid" Class="char">ec099b06-7328-4994-bbdb-a3f7b69e83c8</P>
+    <P Name="BDUuid" Class="char">a106da5d-99ae-42a9-a3c4-104b1b2cc689</P>
   </Object>
 </WindowsInfo>
 

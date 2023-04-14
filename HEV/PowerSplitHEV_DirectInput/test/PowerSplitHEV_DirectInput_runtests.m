@@ -5,7 +5,7 @@
 % Copyright 2022 The MathWorks, Inc.
 
 RelStr = matlabRelease().Release;
-disp("This is MATLAB " + RelStr)
+disp("This is MATLAB " + RelStr + ".")
 
 ComponentName = "PowerSplitHEV_DirectInput";
 
@@ -80,5 +80,4 @@ addPlugin(runner, plugin)
 %%
 
 results = run(runner, suite);
-
-disp(results)
+assertSuccess(results)
