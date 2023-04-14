@@ -15,7 +15,7 @@ checkModelFileExists(refSubName)
 set_param( modelName + "/Controller & Environment", ...
   ReferencedSubsystem = refSubName);
 
-refSubName = "BatteryHV_refsub_Basic";
+refSubName = "BatteryHV_refsub_Electrical";
 checkModelFileExists(refSubName)
 set_param( modelName + "/High Voltage Battery", ...
   ReferencedSubsystem = refSubName);
